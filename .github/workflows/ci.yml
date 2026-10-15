@@ -26,8 +26,7 @@ jobs:
         run: uv run ruff check .
 
       - name: pytest
-        # ponytail: exit 5 = no tests collected; drop the allowance once the first tests land.
-        run: uv run pytest || [ $? -eq 5 ]
+        run: uv run pytest
 
       - name: gitleaks
         env:
