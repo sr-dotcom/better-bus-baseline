@@ -23,6 +23,12 @@ uv sync
 uv run pytest
 ```
 
+Run the collector (writes under `DATA_DIR`, default `/data`; set `NTFY_TOPIC` for notifications):
+
+```
+DATA_DIR=./data python collector/collect.py
+```
+
 All timestamps are stored in UTC.
 
 ## License
