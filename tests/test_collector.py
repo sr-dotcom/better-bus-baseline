@@ -77,6 +77,14 @@ def test_body_exactly_content_length_is_saved(tmp_path):
     assert rows(tmp_path)[0][-1] == "true"
 
 
+def test_empty_200_without_content_length_is_failed_and_not_saved(tmp_path):
+    # GTFS Realtime reference: every FeedMessage requires a FeedHeader, so a zero-byte body is never a valid feed
+    f = Fake(responses={ALERTS: (200, b"", None)})
+    assert not f.collector(tmp_path).poll("alerts", ALERTS, 8)
+    assert not (tmp_path / "raw").exists()
+    assert rows(tmp_path) == [["2026-10-15T20:02:41Z", "alerts", "200", "0", "false"]]
+
+
 # 2. Startup zone check -------------------------------------------------------
 
 
@@ -218,6 +226,23 @@ def test_overrun_skips_to_next_slot_and_logs(tmp_path, caplog):
         c.run(max_rounds=1)
     assert "skipped 1 slot" in caplog.text
     assert f.slept == [25.0]  # next slot is 60 s after start, 35 s have passed
+
+
+def test_round_of_exactly_one_slot_is_not_an_overrun(tmp_path, caplog):
+    # boundary: a round that ends exactly on the next slot (30 s) skips nothing
+    f = Fake()
+    c = f.collector(tmp_path)
+    orig = c.run_round
+
+    def exact():
+        orig()
+        f.now += timedelta(seconds=30)
+
+    c.run_round = exact
+    with caplog.at_level(logging.WARNING, logger="collector"):
+        c.run(max_rounds=1)
+    assert "skipped" not in caplog.text
+    assert f.slept == [0.0]
 
 
 def test_empty_topic_warns_and_does_not_crash(caplog):
@@ -381,6 +406,7 @@ def test_sleep_is_capped_at_one_slot_when_clock_steps_back(tmp_path):
 
 
 # Static failure counter ---------------------------------------------------------
+# Collector rule: alert on every failed static download; static and realtime counters are separate.
 
 
 def test_first_static_failure_alerts(tmp_path):
@@ -451,6 +477,7 @@ def test_round_passes_8_s_to_realtime_feeds_and_60_s_to_static(tmp_path):
 
 
 # Static alerts every failed day -------------------------------------------------
+# Collector rule: static runs once a day, so every failed day sends an alert.
 
 
 def test_static_failure_alerts_every_day(tmp_path):

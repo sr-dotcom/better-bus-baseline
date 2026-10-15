@@ -166,13 +166,10 @@ class Collector:
         self.hb_ok += ok
         self.fails[feed] = 0 if ok else self.fails.get(feed, 0) + 1
         # static runs once a day: alert on every failed day; realtime: once per streak of 3
-        alert = (
-            (None if ok else "static GTFS download failed")
-            if feed == "static"
-            else (f"{feed}: {ALERT_AFTER} failed polls in a row" if self.fails[feed] == ALERT_AFTER else None)
-        )
-        if alert:
-            self.notify(alert)
+        if feed == "static" and not ok:
+            self.notify("static GTFS download failed")
+        elif feed != "static" and self.fails[feed] == ALERT_AFTER:
+            self.notify(f"{feed}: {ALERT_AFTER} failed polls in a row")
 
     def run_round(self) -> None:
         for feed, url in FEEDS.items():
