@@ -31,16 +31,12 @@ SLOT = timedelta(seconds=30)
 FEED_TIMEOUT = 8  # seconds in total per request; 3 x 8 = 24 s fits the 30 s slot
 STATIC_TIMEOUT = 60  # total seconds; the zip is large and is fetched when no buses run
 ALERT_AFTER = 3  # failed realtime polls in a row
-STATIC_ALERT_AFTER = 1  # the static download runs once a day: alert on the first failure
 STATIC_AT = dtime(3, 0)  # local time in ZONE
 ZONE = "America/New_York"
+NTFY_TIMEOUT = 8  # seconds per socket operation (urlopen), not a total deadline
 HEARTBEAT = timedelta(hours=1)
 
 log = logging.getLogger("collector")
-
-
-def utc_stamp(t: datetime) -> str:
-    return t.strftime("%Y-%m-%dT%H:%M:%SZ")
 
 
 def static_due(now: datetime, last_done: date | None, tz: ZoneInfo) -> bool:
@@ -53,8 +49,8 @@ def http_fetch(url: str, deadline: float, now=time.monotonic, connect=None) -> t
     """GET url and return (status, body, content_length) within a total deadline in seconds.
 
     The clock starts before the connection is opened. Every blocking step gets the time
-    that is left, not a fresh timeout. Elapsed >= deadline is a failure (TimeoutError),
-    even if the last byte just arrived. A short body is returned, not raised.
+    that is left, not a fresh timeout. Elapsed >= deadline before any read, including the
+    final empty read that signals the end of the body, is a failure (TimeoutError). A short body is returned, not raised.
 
     Bounded: TCP connect, TLS handshake, response headers, each body read.
     NOT bounded: the DNS lookup inside connect (getaddrinfo has no timeout in the
@@ -84,7 +80,6 @@ def http_fetch(url: str, deadline: float, now=time.monotonic, connect=None) -> t
             if not chunk:
                 break
             chunks.append(chunk)
-        left()  # finishing at or after the deadline is a failed poll
         return resp.status, b"".join(chunks), int(length) if length else None
     finally:
         conn.close()
@@ -99,7 +94,7 @@ def make_ntfy(topic: str):
     def send(message: str) -> None:
         req = urllib.request.Request(f"https://ntfy.sh/{topic}", data=message.encode(), method="POST")
         try:
-            urllib.request.urlopen(req, timeout=FEED_TIMEOUT).close()
+            urllib.request.urlopen(req, timeout=NTFY_TIMEOUT).close()
         except Exception as e:  # noqa: BLE001 - a failed notification must never stop collecting
             log.warning("ntfy send failed: %s", type(e).__name__)
 
@@ -159,10 +154,10 @@ class Collector:
             path.parent.mkdir(parents=True, exist_ok=True)
             new = not path.exists()
             with path.open("a", newline="") as f:
-                w = csv.writer(f)
+                w = csv.writer(f, lineterminator="\n")
                 if new:
                     w.writerow(["utc_time", "feed", "http_status", "bytes", "ok"])
-                w.writerow([utc_stamp(t), feed, status, size, str(ok).lower()])
+                w.writerow([f"{t:%Y-%m-%dT%H:%M:%SZ}", feed, status, size, str(ok).lower()])
         except OSError as e:
             log.error("polls.csv write failed: %s", type(e).__name__)
 
@@ -170,12 +165,14 @@ class Collector:
         self.hb_polls += 1
         self.hb_ok += ok
         self.fails[feed] = 0 if ok else self.fails.get(feed, 0) + 1
-        limit = STATIC_ALERT_AFTER if feed == "static" else ALERT_AFTER
-        if self.fails[feed] == limit:  # once per streak, not on every further failure
-            if feed == "static":
-                self.notify("static GTFS download failed")
-            else:
-                self.notify(f"{feed}: {limit} failed polls in a row")
+        # static runs once a day: alert on every failed day; realtime: once per streak of 3
+        alert = (
+            (None if ok else "static GTFS download failed")
+            if feed == "static"
+            else (f"{feed}: {ALERT_AFTER} failed polls in a row" if self.fails[feed] == ALERT_AFTER else None)
+        )
+        if alert:
+            self.notify(alert)
 
     def run_round(self) -> None:
         for feed, url in FEEDS.items():
@@ -186,8 +183,11 @@ class Collector:
             self.poll("static", STATIC_URL, STATIC_TIMEOUT)
 
     def heartbeat(self) -> None:
-        pct = 100 * self.hb_ok / self.hb_polls if self.hb_polls else 0
-        self.notify(f"heartbeat: {self.hb_polls} polls, {pct:.1f}% ok in the last hour")
+        if self.hb_polls:
+            pct = 100 * self.hb_ok / self.hb_polls
+            self.notify(f"heartbeat: {self.hb_polls} polls, {pct:.1f}% ok in the last hour")
+        else:
+            self.notify("heartbeat: 0 polls in the last hour")
         self.hb_polls = self.hb_ok = 0
 
     def run(self, max_rounds: int | None = None) -> None:
@@ -207,7 +207,7 @@ class Collector:
             now = self.clock()
             if now >= next_hb:
                 self.heartbeat()
-                next_hb += HEARTBEAT
+                next_hb = now + HEARTBEAT  # not +=: after a clock jump that would fire once per missed hour
             slot += SLOT
             if now > slot:
                 skipped = math.ceil((now - slot) / SLOT)

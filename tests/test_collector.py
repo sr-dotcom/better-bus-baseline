@@ -23,6 +23,7 @@ class Fake:
         self.sent = []
         self.slept = []
         self.fetched = []
+        self.deadlines = []
 
     def clock(self):
         return self.now
@@ -33,6 +34,7 @@ class Fake:
 
     def fetch(self, url, timeout):
         self.fetched.append(url)
+        self.deadlines.append(timeout)
         r = self.responses.get(url, (200, FIXTURE, len(FIXTURE)))
         if isinstance(r, Exception):
             raise r
@@ -85,7 +87,7 @@ def test_startup_alerts_and_exits_nonzero_when_zone_missing(tmp_path):
     f = Fake()
     c = collect.Collector(tmp_path, f.clock, f.fetch, f.notify, f.sleep, zone_loader=broken)
     with pytest.raises(SystemExit) as e:
-        c.run()
+        c.run(max_rounds=1)
     assert e.value.code != 0
     assert len(f.sent) == 1 and "time zone" in f.sent[0]
     assert f.fetched == []  # never polled
@@ -397,3 +399,74 @@ def test_static_and_realtime_counters_are_separate(tmp_path):
     c.poll("alerts", ALERTS, 8)  # 3rd realtime failure: realtime alert only
     assert f.sent[1:] == ["alerts: 3 failed polls in a row"]
     assert c.fails["static"] == 1 and c.fails["alerts"] == 3
+
+
+# Heartbeat ----------------------------------------------------------------------
+
+
+def test_heartbeat_success_percent_known_answer(tmp_path):
+    # hand-calculated: 7 of 8 polls ok = 7 / 8 = 87.5%
+    f = Fake()
+    c = f.collector(tmp_path)
+    for _ in range(7):
+        c.poll("alerts", ALERTS, 8)
+    f.responses[ALERTS] = (500, b"", None)
+    c.poll("alerts", ALERTS, 8)
+    f.sent.clear()
+    c.heartbeat()
+    assert f.sent == ["heartbeat: 8 polls, 87.5% ok in the last hour"]
+
+
+def test_heartbeat_with_zero_polls_has_no_percentage(tmp_path):
+    f = Fake()
+    f.collector(tmp_path).heartbeat()
+    assert f.sent == ["heartbeat: 0 polls in the last hour"]
+
+
+def test_forward_clock_jump_gives_one_heartbeat(tmp_path):
+    f = Fake()
+    c = f.collector(tmp_path)
+    orig = c.run_round
+    jumped = []
+
+    def jump():
+        orig()
+        if not jumped:
+            jumped.append(1)
+            f.now += timedelta(hours=5)
+
+    c.run_round = jump
+    c.run(max_rounds=3)
+    assert len([m for m in f.sent if m.startswith("heartbeat")]) == 1
+
+
+# Per-request limits -------------------------------------------------------------
+
+
+def test_round_passes_8_s_to_realtime_feeds_and_60_s_to_static(tmp_path):
+    f = Fake(now=at(2026, 10, 31, 7, 0, 0))  # 03:00 New York: static is due
+    f.collector(tmp_path).run_round()
+    assert f.deadlines == [8, 8, 8, 60]
+    assert f.fetched[-1] == collect.STATIC_URL
+
+
+# Static alerts every failed day -------------------------------------------------
+
+
+def test_static_failure_alerts_every_day(tmp_path):
+    f = Fake(responses={collect.STATIC_URL: (500, b"", None)})
+    c = f.collector(tmp_path)
+    c.poll("static", collect.STATIC_URL, 60)  # day 1
+    c.poll("static", collect.STATIC_URL, 60)  # day 2
+    assert f.sent == ["static GTFS download failed"] * 2
+
+
+# polls.csv format ---------------------------------------------------------------
+
+
+def test_polls_csv_format_and_lf_line_endings(tmp_path):
+    f = Fake()
+    f.collector(tmp_path).poll("alerts", ALERTS, 8)
+    raw = (tmp_path / "log" / "polls.csv").read_bytes()
+    assert b"\r" not in raw
+    assert raw == b"utc_time,feed,http_status,bytes,ok\n2026-10-15T20:02:41Z,alerts,200,7327,true\n"
