@@ -415,6 +415,12 @@ def test_first_static_failure_alerts(tmp_path):
     assert f.sent == ["static GTFS download failed"]
 
 
+def test_successful_static_download_sends_no_alert(tmp_path):
+    f = Fake()
+    assert f.collector(tmp_path).poll("static", collect.STATIC_URL, 60)
+    assert f.sent == []
+
+
 def test_static_and_realtime_counters_are_separate(tmp_path):
     f = Fake(responses={collect.STATIC_URL: (500, b"", None), ALERTS: (500, b"", None)})
     c = f.collector(tmp_path)
