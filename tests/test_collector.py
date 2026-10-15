@@ -1,5 +1,8 @@
 import logging
+import threading
+import time
 from datetime import UTC, datetime, timedelta
+from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from zoneinfo import ZoneInfo, ZoneInfoNotFoundError
 
@@ -54,6 +57,7 @@ ALERTS = collect.FEEDS["alerts"]
 
 
 # 1. Short response -----------------------------------------------------------
+# RFC 9110 §8.6: Content-Length is the expected body size in bytes
 
 
 def test_short_response_is_not_saved_and_logged_not_ok(tmp_path):
@@ -133,7 +137,7 @@ def test_round_before_0300_does_not_download_static(tmp_path):
 
 
 # 5. Alert after exactly 3 failed polls in a row -------------------------------
-# Collector rule: alert after 3 failed polls in a row for any feed.
+# Collector rule: alert after 3 failed polls in a row for any realtime feed.
 
 
 def failing(tmp_path):
@@ -233,3 +237,163 @@ def test_start_after_0300_waits_for_next_day(tmp_path):
     f = Fake()  # 16:02 in New York
     f.collector(tmp_path).run(max_rounds=1)
     assert collect.STATIC_URL not in f.fetched
+
+
+# Total deadline per request ----------------------------------------------------
+# Collector rule: 8 s total per request, connect included; elapsed >= 8 s is failed.
+
+
+class Clock:
+    t = 100.0
+
+    def __call__(self):
+        return self.t
+
+
+class FakeSock:
+    def __init__(self):
+        self.timeouts = []
+
+    def settimeout(self, t):
+        self.timeouts.append(t)
+
+
+class FakeResp:
+    status = 200
+
+    def __init__(self, clock, chunks, per_chunk):
+        self.clock, self.chunks, self.per_chunk = clock, list(chunks), per_chunk
+        self.length = sum(map(len, chunks))
+
+    def getheader(self, name):
+        return str(self.length)
+
+    def read(self, n):
+        if not self.chunks:
+            return b""
+        self.clock.t += self.per_chunk  # each chunk takes per_chunk seconds to arrive
+        return self.chunks.pop(0)
+
+
+class FakeConn:
+    def __init__(self, clock, chunks, per_chunk, connect_time):
+        self.clock, self.connect_time = clock, connect_time
+        self.sock = FakeSock()
+        self.resp = FakeResp(clock, chunks, per_chunk)
+        self.closed = False
+
+    def request(self, *a, **k):
+        self.clock.t += self.connect_time
+
+    def getresponse(self):
+        return self.resp
+
+    def close(self):
+        self.closed = True
+
+
+def fetch_with(chunks, per_chunk, connect_time=0.0):
+    clock, holder = Clock(), {}
+
+    def connect(netloc, timeout):
+        holder["c"] = FakeConn(clock, chunks, per_chunk, connect_time)
+        return holder["c"]
+
+    try:
+        r = collect.http_fetch("https://example.test/x.pb", 8, now=clock, connect=connect)
+    except TimeoutError as e:
+        r = e
+    return r, holder["c"]
+
+
+def test_slow_server_known_answer():
+    # 4 chunks at 2 s each = 8 s elapsed against an 8 s deadline: failed
+    r, conn = fetch_with([b"aa"] * 4, per_chunk=2.0)
+    assert isinstance(r, TimeoutError) and conn.closed
+
+
+def test_deadline_boundary_just_under_is_ok_exactly_8_is_failed():
+    r, _ = fetch_with([b"ab"] * 4, per_chunk=1.99)  # 7.96 s
+    assert r == (200, b"ab" * 4, 8)
+    r, _ = fetch_with([b"ab"] * 4, per_chunk=2.0)  # exactly 8.0 s
+    assert isinstance(r, TimeoutError)
+
+
+def test_connect_time_counts_and_each_read_gets_the_time_left():
+    r, _ = fetch_with([b"a"], per_chunk=0.5, connect_time=7.5)  # 8.0 s in total
+    assert isinstance(r, TimeoutError)
+    _, conn = fetch_with([b"a", b"b"], per_chunk=1.0, connect_time=3.0)
+    assert conn.sock.timeouts == [5.0, 5.0, 4.0, 3.0]  # headers, then before each of 3 reads
+
+
+def test_poll_with_deadline_failure_is_failed_and_not_saved(tmp_path):
+    f = Fake(responses={ALERTS: TimeoutError("deadline exceeded")})
+    assert not f.collector(tmp_path).poll("alerts", ALERTS, 8)
+    assert not (tmp_path / "raw").exists() and rows(tmp_path)[0][-1] == "false"
+
+
+def test_real_localhost_server_stalls_past_a_tiny_deadline():
+    release = threading.Event()
+
+    class Slow(BaseHTTPRequestHandler):
+        def do_GET(self):
+            self.send_response(200)
+            self.send_header("Content-Length", "10")
+            self.end_headers()
+            self.wfile.write(b"12345")
+            self.wfile.flush()
+            release.wait(5)  # stall with half the body sent
+
+        def log_message(self, *a):
+            pass
+
+    srv = ThreadingHTTPServer(("127.0.0.1", 0), Slow)
+    srv.daemon_threads = True
+    threading.Thread(target=srv.serve_forever, daemon=True).start()
+    try:
+        t0 = time.monotonic()
+        with pytest.raises(TimeoutError):
+            collect.http_fetch(f"http://127.0.0.1:{srv.server_port}/a.pb", 0.3)
+        assert time.monotonic() - t0 < 2
+    finally:
+        release.set()
+        srv.shutdown()
+        srv.server_close()
+
+
+# Clock jump ---------------------------------------------------------------------
+
+
+def test_sleep_is_capped_at_one_slot_when_clock_steps_back(tmp_path):
+    f = Fake()
+    c = f.collector(tmp_path)
+    orig = c.run_round
+
+    def jump():
+        orig()
+        f.now -= timedelta(hours=1)
+
+    c.run_round = jump
+    c.run(max_rounds=1)
+    assert f.slept == [30.0]  # uncapped it would sleep 1 h 30 s
+
+
+# Static failure counter ---------------------------------------------------------
+
+
+def test_first_static_failure_alerts(tmp_path):
+    f = Fake(responses={collect.STATIC_URL: (500, b"", None)})
+    f.collector(tmp_path).poll("static", collect.STATIC_URL, 60)
+    assert f.sent == ["static GTFS download failed"]
+
+
+def test_static_and_realtime_counters_are_separate(tmp_path):
+    f = Fake(responses={collect.STATIC_URL: (500, b"", None), ALERTS: (500, b"", None)})
+    c = f.collector(tmp_path)
+    c.poll("alerts", ALERTS, 8)
+    c.poll("alerts", ALERTS, 8)
+    c.poll("static", collect.STATIC_URL, 60)  # must not count as the 3rd realtime failure
+    assert f.sent == ["static GTFS download failed"]
+    c.poll("alerts", ALERTS, 8)  # 3rd realtime failure: realtime alert only
+    assert f.sent[1:] == ["alerts: 3 failed polls in a row"]
+    assert c.fails["static"] == 1 and c.fails["alerts"] == 3

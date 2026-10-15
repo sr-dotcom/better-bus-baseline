@@ -12,7 +12,7 @@ import math
 import os
 import sys
 import time
-import urllib.error
+import urllib.parse
 import urllib.request
 from datetime import UTC, date, datetime, timedelta
 from datetime import time as dtime
@@ -28,9 +28,10 @@ FEEDS = {
 STATIC_URL = f"{BASE}/GTFSStatic/api/GTFSDownload/GTFS.zip"
 
 SLOT = timedelta(seconds=30)
-FEED_TIMEOUT = 8  # seconds; 3 x 8 = 24 s fits the 30 s slot
-STATIC_TIMEOUT = 60  # the zip is large and is fetched when no buses run
-ALERT_AFTER = 3  # failed polls in a row
+FEED_TIMEOUT = 8  # seconds in total per request; 3 x 8 = 24 s fits the 30 s slot
+STATIC_TIMEOUT = 60  # total seconds; the zip is large and is fetched when no buses run
+ALERT_AFTER = 3  # failed realtime polls in a row
+STATIC_ALERT_AFTER = 1  # the static download runs once a day: alert on the first failure
 STATIC_AT = dtime(3, 0)  # local time in ZONE
 ZONE = "America/New_York"
 HEARTBEAT = timedelta(hours=1)
@@ -48,19 +49,45 @@ def static_due(now: datetime, last_done: date | None, tz: ZoneInfo) -> bool:
     return local.time() >= STATIC_AT and last_done != local.date()
 
 
-def http_fetch(url: str, timeout: float) -> tuple[int, bytes, int | None]:
-    """Return (status, body, content_length). A short body is returned, not raised."""
-    req = urllib.request.Request(url, headers={"User-Agent": "better-bus-baseline-collector"})
+def http_fetch(url: str, deadline: float, now=time.monotonic, connect=None) -> tuple[int, bytes, int | None]:
+    """GET url and return (status, body, content_length) within a total deadline in seconds.
+
+    The clock starts before the connection is opened. Every blocking step gets the time
+    that is left, not a fresh timeout. Elapsed >= deadline is a failure (TimeoutError),
+    even if the last byte just arrived. A short body is returned, not raised.
+
+    Bounded: TCP connect, TLS handshake, response headers, each body read.
+    NOT bounded: the DNS lookup inside connect (getaddrinfo has no timeout in the
+    standard library), so a hung resolver can overrun the deadline.
+    """
+    start = now()
+
+    def left() -> float:
+        remaining = deadline - (now() - start)
+        if remaining <= 0:
+            raise TimeoutError("deadline exceeded")
+        return remaining
+
+    u = urllib.parse.urlsplit(url)
+    connect = connect or (http.client.HTTPSConnection if u.scheme == "https" else http.client.HTTPConnection)
+    conn = connect(u.netloc, timeout=left())
     try:
-        with urllib.request.urlopen(req, timeout=timeout) as r:
-            length = r.headers.get("Content-Length")
-            try:
-                body = r.read()
-            except http.client.IncompleteRead as e:
-                body = e.partial
-            return r.status, body, int(length) if length else None
-    except urllib.error.HTTPError as e:
-        return e.code, b"", None
+        conn.request("GET", u.path or "/", headers={"User-Agent": "better-bus-baseline-collector"})
+        sock = conn.sock  # kept: http.client sets conn.sock to None once the body is read
+        sock.settimeout(left())
+        resp = conn.getresponse()
+        length = resp.getheader("Content-Length")
+        chunks = []
+        while True:
+            sock.settimeout(left())
+            chunk = resp.read(65536)
+            if not chunk:
+                break
+            chunks.append(chunk)
+        left()  # finishing at or after the deadline is a failed poll
+        return resp.status, b"".join(chunks), int(length) if length else None
+    finally:
+        conn.close()
 
 
 def make_ntfy(topic: str):
@@ -143,8 +170,12 @@ class Collector:
         self.hb_polls += 1
         self.hb_ok += ok
         self.fails[feed] = 0 if ok else self.fails.get(feed, 0) + 1
-        if self.fails[feed] == ALERT_AFTER:  # once per streak, not on every further failure
-            self.notify(f"{feed}: {ALERT_AFTER} failed polls in a row")
+        limit = STATIC_ALERT_AFTER if feed == "static" else ALERT_AFTER
+        if self.fails[feed] == limit:  # once per streak, not on every further failure
+            if feed == "static":
+                self.notify("static GTFS download failed")
+            else:
+                self.notify(f"{feed}: {limit} failed polls in a row")
 
     def run_round(self) -> None:
         for feed, url in FEEDS.items():
@@ -182,7 +213,8 @@ class Collector:
                 skipped = math.ceil((now - slot) / SLOT)
                 slot += skipped * SLOT
                 log.warning("round overran its slot: skipped %d slot(s)", skipped)
-            self.sleep(max(0.0, (slot - now).total_seconds()))
+            # never sleep longer than one slot, even if the clock stepped backwards
+            self.sleep(min(SLOT.total_seconds(), max(0.0, (slot - now).total_seconds())))
 
 
 def main() -> None:
