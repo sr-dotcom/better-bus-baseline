@@ -8,12 +8,18 @@ import pytest
 
 from ingest.gtfs_time import parse_gtfs_time
 from ingest.headway import (
+    HEADWAY_ABOVE_STANDARD,
     LIMIT_15_SECONDS,
     LIMIT_30_SECONDS,
+    NO_SERVICE_IN_PERIOD,
     departures_in_period,
+    express_meets_standard,
     express_peak_meets_standard,
     headway_stats,
     meets_standard,
+    peak_flow_count,
+    period_fail_reason,
+    route_fail_reason,
     span_meets_standard,
 )
 
@@ -121,12 +127,72 @@ def test_span_boundaries(start, end, ok):
     assert span_meets_standard(parse_gtfs_time(start), parse_gtfs_time(end)) is ok
 
 
+# ---- fail_reason on the tier metrics: "no service in period" (fewer than 2 departures) vs "headway above standard"
+
+
+def test_fail_reason_no_service_in_period_for_zero_or_one_departure():
+    # Decision: fewer than 2 in-period departures means no headway; the period fails with its own reason.
+    assert period_fail_reason(headway_stats([]), LIMIT_30_SECONDS) == NO_SERVICE_IN_PERIOD
+    assert period_fail_reason(headway_stats([7 * 3600]), LIMIT_30_SECONDS) == NO_SERVICE_IN_PERIOD
+    assert NO_SERVICE_IN_PERIOD == "no service in period"
+
+
+def test_fail_reason_headway_above_standard_for_a_real_long_median():
+    # MTC-06 3.7: 31:00 service is below "at least 30-minute service"; this is a real median, not missing service.
+    assert period_fail_reason(headway_stats(at([1860, 1860])), LIMIT_30_SECONDS) == HEADWAY_ABOVE_STANDARD
+    assert period_fail_reason(headway_stats(at([1801, 1801])), LIMIT_30_SECONDS) == HEADWAY_ABOVE_STANDARD
+    assert HEADWAY_ABOVE_STANDARD == "headway above standard"
+
+
+def test_fail_reason_is_none_on_the_boundary_and_below():
+    assert period_fail_reason(headway_stats(at([900, 900])), LIMIT_15_SECONDS) is None
+    assert period_fail_reason(headway_stats(at([1800, 1800])), LIMIT_30_SECONDS) is None
+    # the same 30:00 median fails the 15-minute standard with the headway reason, not the no-service reason
+    assert period_fail_reason(headway_stats(at([1800, 1800])), LIMIT_15_SECONDS) == HEADWAY_ABOVE_STANDARD
+
+
+def test_route_fail_reason_collects_distinct_reasons():
+    assert route_fail_reason([None, None]) is None
+    assert route_fail_reason([None, NO_SERVICE_IN_PERIOD, NO_SERVICE_IN_PERIOD]) == NO_SERVICE_IN_PERIOD
+    assert route_fail_reason([HEADWAY_ABOVE_STANDARD, None]) == HEADWAY_ABOVE_STANDARD
+    assert route_fail_reason([NO_SERVICE_IN_PERIOD, HEADWAY_ABOVE_STANDARD]) == (
+        f"{HEADWAY_ABOVE_STANDARD}; {NO_SERVICE_IN_PERIOD}"
+    )
+
+
 # ---- express_peak_trips: MTC-06 3.7 "a minimum of three trips in each peak direction"
+# Decision: count the peak-flow direction only, the direction with more trips in that peak, AM and PM separately.
 
 
 def test_express_peak_boundary():
     assert express_peak_meets_standard(3)
     assert not express_peak_meets_standard(2)
+
+
+def test_peak_flow_direction_is_the_one_with_more_trips():
+    assert peak_flow_count([6, 0]) == 6
+    assert peak_flow_count([0, 7]) == 7
+    assert peak_flow_count([2, 1]) == 2
+
+
+def test_peak_flow_tie_gives_the_shared_count():
+    # Equal counts in both directions: either direction is the peak flow and the count is the same.
+    assert peak_flow_count([3, 3]) == 3
+    assert express_meets_standard([3, 3], [3, 3])
+    assert not express_meets_standard([2, 2], [3, 3])
+
+
+def test_express_boundary_in_the_peak_flow_direction():
+    assert express_meets_standard([3, 0], [0, 3])  # exactly 3 in each peak-flow direction passes
+    assert not express_meets_standard([2, 0], [0, 3])  # 2 in the AM peak fails
+    assert not express_meets_standard([3, 0], [0, 2])  # 2 in the PM peak fails
+
+
+def test_express_off_peak_direction_is_ignored():
+    # MTC-06 3.7: "each peak direction" is read as the peak-flow direction, so a thin opposite direction cannot fail it.
+    assert express_meets_standard([6, 0], [1, 7])  # 64x: AM flow direction 0, PM flow direction 1
+    assert express_meets_standard([3, 0], [0, 3]) == express_meets_standard([3, 2], [2, 3])
+    assert not express_meets_standard([2, 1], [0, 3])  # 40x: the AM flow direction has only 2 trips
 
 
 # ---- known answers on real rows, hand-copied from docs/known-answers.md (Route 9, direction 0, AM peak)
@@ -162,6 +228,12 @@ def test_route39_after_known_answer_fails_30():
     assert stats["gaps"] == [38 * MIN, 35 * MIN, 42 * MIN, 43 * MIN]
     assert stats["median"] == 40 * MIN
     assert not meets_standard(stats, LIMIT_30_SECONDS)
+
+
+def test_express_known_answers_64x_and_40x():
+    # Hand counts of first-stop departures from docs/known-answers.md section 4, Wed 2026-10-14, [direction 0, direction 1].
+    assert express_meets_standard([6, 0], [1, 7])  # 64x: AM flow 6, PM flow 7 -> pass
+    assert not express_meets_standard([2, 1], [0, 3])  # 40x: AM flow 2 -> fail; PM flow 3 would pass
 
 
 # ---- mart checks: expected values from docs/known-answers.md, switched on in L3
@@ -210,14 +282,28 @@ def test_mart_span(feed, date, route, start, end, span_pass):
 
 
 @MARTS_LAND_IN_L3
-def test_mart_express_peak_trips_64x_and_40x():
-    # Counts from docs/known-answers.md, Wed 2026-10-14; by the decided rule both routes fail.
-    expected = {
-        "64x": {("0", "am_peak"): 6, ("0", "pm_peak"): 1, ("1", "am_peak"): 0, ("1", "pm_peak"): 7},
-        "40x": {("0", "am_peak"): 2, ("0", "pm_peak"): 0, ("1", "am_peak"): 1, ("1", "pm_peak"): 3},
-    }
-    for route, counts in expected.items():
-        assert mart("express_peak_trips", feed="2026-09-29", date="2026-10-14", route=route) == counts
+@pytest.mark.parametrize(
+    ("route", "am_flow", "pm_flow", "express_pass"),
+    [("64x", 6, 7, True), ("40x", 2, 3, False)],  # docs/known-answers.md section 4, Wed 2026-10-14
+)
+def test_mart_express_peak_flow_counts(route, am_flow, pm_flow, express_pass):
+    row = mart("express_peak_trips", feed="2026-09-29", date="2026-10-14", route=route)
+    assert (row["am_peak_flow_count"], row["pm_peak_flow_count"], row["express_pass"]) == (
+        am_flow,
+        pm_flow,
+        express_pass,
+    )
+
+
+@MARTS_LAND_IN_L3
+@pytest.mark.parametrize(
+    ("route", "direction", "reason"),
+    [("35", "0", NO_SERVICE_IN_PERIOD), ("28", "0", NO_SERVICE_IN_PERIOD), ("39", "0", HEADWAY_ABOVE_STANDARD)],
+)
+def test_mart_tier_fail_reason_am_peak(route, direction, reason):
+    # docs/known-answers.md section 6: route 35 has 0 AM-peak departures, route 28 has 1, route 39 has a 40:00 median.
+    row = mart("tier", feed="2026-09-29", date="2026-10-14", route=route, direction=direction, period="am_peak")
+    assert (row["tier_15_fail_reason"], row["tier_30_fail_reason"]) == (reason, reason)
 
 
 @MARTS_LAND_IN_L3
