@@ -1,4 +1,4 @@
-# MTC-06 Transit Service Guidelines: sections used by the metrics
+# MPTA-04 (formerly MTC-06) Transit Service Guidelines: sections used by the metrics
 
 Policy MTC-06, "Transit Service Guidelines", approved by the Metropolitan Transit Commission, responsible division CATS Operations. This file quotes only the sections the metrics rely on. The PDF is not stored in this repository; fetch it from the URL below and check the SHA-256.
 
@@ -14,6 +14,21 @@ Policy MTC-06, "Transit Service Guidelines", approved by the Metropolitan Transi
 | Previous revision | November 28, 2018 (page 15) |
 
 Page numbers below are the PDF's own "Page Number: N of 15" header, which matches the PDF page index. Section numbers are the PDF's own. The text was extracted with `pdftotext -layout`. Quotes are verbatim, including the PDF's typographical errors (marked [sic]). The PDF's bullet symbols do not extract as text; they are shown here as "-".
+
+## Current policy number: MPTA-04
+
+CATS now publishes the same Transit Service Guidelines as MPTA-04. The quotes in this file are from the MTC-06 PDF above and keep their clause numbers.
+
+| Item | Value |
+| --- | --- |
+| Named on | `https://www.charlottenc.gov/CATS/Plans-Projects/Service-Change` ("The CATS Transit Service Guidelines (MPTA-04)") |
+| URL | `https://mpta.granicus.com/DocumentViewer.php?file=mpta_0b4ad2892ad5de1c5a7bde67b65bd0d8.pdf&view=1` |
+| Downloaded (UTC) | 2026-10-16T19:51:01Z |
+| SHA-256 | `e53f29b45b33b763b94620cfc259d4e5998ec51fba45d6599bf44867d5c8e5e2` |
+| Size | 213,888 bytes, 12 pages |
+| Effective date | July 1, 2026 (approved by the MPTA Board of Trustees) |
+
+Sections 3.3 and 3.7 were compared with the text quoted here. Section 3.7 is word for word the same (after whitespace is normalised, the only difference is a line break inside "off-peak"). Section 3.3 is the same apart from one corrected typo ("andremedial" is correct in MPTA-04) and one added sentence on rail ("CATS will monitor Rail services for on-time performance. ..."). Details in `mpta04.md`.
 
 ## Approval date (page 1)
 
