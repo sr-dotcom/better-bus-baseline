@@ -1,0 +1,5725 @@
+{
+  "equity": {
+    "acs_vintage": "2024 5-year",
+    "buffer_m": 800,
+    "caveats": [
+      "Area weighting assumes people are spread evenly inside a census tract.",
+      "A tier is a schedule property of the published timetable, not delivered service.",
+      "Each date has one route in the 15-min tier, so the change mostly compares the corridors of two routes.",
+      "Distance is a straight line of 800 m, not a walking distance.",
+      "ACS values are 5-year estimates with margins of error that are not carried through.",
+      "The near-miss row adds routes that miss the 15-minute standard by at most 60 seconds on a median; they still fail it, and the tiers do not change."
+    ],
+    "crs": "EPSG:32119",
+    "method": "Residents = sum over census tracts of total population (ACS 5-year B01003_001E) x share of the tract's area inside the union of 800 m straight-line buffers around every stop served on the date by the routes of the row (strict tier: routes in the 15-min tier; incl. near-miss routes: those plus routes with a 15-min near miss, a covered direction-period with a median of 901-960 s); area weighting assumes uniform density inside a tract.",
+    "rows": [
+      {
+        "after": {
+          "date": "2026-10-14",
+          "n_stops": 33,
+          "near_miss_routes_added": [],
+          "residents": 21796,
+          "routes": [
+            "5"
+          ],
+          "tracts_touched": 23,
+          "tracts_without_estimate": 0
+        },
+        "before": {
+          "date": "2026-09-30",
+          "n_stops": 67,
+          "near_miss_routes_added": [],
+          "residents": 41296,
+          "routes": [
+            "9"
+          ],
+          "tracts_touched": 33,
+          "tracts_without_estimate": 0
+        },
+        "change_residents": -19500,
+        "label": "strict tier"
+      },
+      {
+        "after": {
+          "date": "2026-10-14",
+          "n_stops": 100,
+          "near_miss_routes_added": [
+            "9"
+          ],
+          "residents": 56396,
+          "routes": [
+            "5",
+            "9"
+          ],
+          "tracts_touched": 47,
+          "tracts_without_estimate": 0
+        },
+        "before": {
+          "date": "2026-09-30",
+          "n_stops": 67,
+          "near_miss_routes_added": [],
+          "residents": 41296,
+          "routes": [
+            "9"
+          ],
+          "tracts_touched": 33,
+          "tracts_without_estimate": 0
+        },
+        "change_residents": 15100,
+        "label": "incl. near-miss routes"
+      }
+    ],
+    "source": "data/equity.csv (analysis/equity.py)",
+    "status": "computed",
+    "tiger_vintage": 2024
+  },
+  "generated_by": "analysis/findings.py",
+  "headline": {
+    "before_after_changes": {
+      "all_routes": {
+        "down": {
+          "count": 2,
+          "routes": [
+            "9",
+            "23"
+          ]
+        },
+        "gone": {
+          "count": 0,
+          "routes": []
+        },
+        "new": {
+          "count": 1,
+          "routes": [
+            "177"
+          ]
+        },
+        "same": {
+          "count": 58,
+          "routes": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "6",
+            "7",
+            "8",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "24",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "34",
+            "35",
+            "39",
+            "40x",
+            "41x",
+            "42",
+            "43",
+            "46x",
+            "48x",
+            "50",
+            "51",
+            "52x",
+            "53x",
+            "54",
+            "55",
+            "56",
+            "57",
+            "58",
+            "59",
+            "60",
+            "61x",
+            "62x",
+            "63x",
+            "64x",
+            "74x",
+            "77x",
+            "85x",
+            "88x",
+            "211",
+            "221",
+            "222",
+            "235"
+          ]
+        },
+        "up": {
+          "count": 1,
+          "routes": [
+            "5"
+          ]
+        }
+      },
+      "express_routes": {
+        "down": {
+          "count": 0,
+          "routes": []
+        },
+        "gone": {
+          "count": 0,
+          "routes": []
+        },
+        "new": {
+          "count": 0,
+          "routes": []
+        },
+        "same": {
+          "count": 14,
+          "routes": [
+            "40x",
+            "41x",
+            "46x",
+            "48x",
+            "52x",
+            "53x",
+            "61x",
+            "62x",
+            "63x",
+            "64x",
+            "74x",
+            "77x",
+            "85x",
+            "88x"
+          ]
+        },
+        "up": {
+          "count": 0,
+          "routes": []
+        }
+      },
+      "local_routes": {
+        "down": {
+          "count": 2,
+          "routes": [
+            "9",
+            "23"
+          ]
+        },
+        "gone": {
+          "count": 0,
+          "routes": []
+        },
+        "new": {
+          "count": 1,
+          "routes": [
+            "177"
+          ]
+        },
+        "same": {
+          "count": 44,
+          "routes": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "6",
+            "7",
+            "8",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "24",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "34",
+            "35",
+            "39",
+            "42",
+            "43",
+            "50",
+            "51",
+            "54",
+            "55",
+            "56",
+            "57",
+            "58",
+            "59",
+            "60",
+            "211",
+            "221",
+            "222",
+            "235"
+          ]
+        },
+        "up": {
+          "count": 1,
+          "routes": [
+            "5"
+          ]
+        }
+      }
+    },
+    "express_peak_trips": {
+      "after": {
+        "date": "2026-10-14",
+        "fail": {
+          "count": 4,
+          "routes": [
+            "40x",
+            "52x",
+            "74x",
+            "85x"
+          ]
+        },
+        "no service": {
+          "count": 0,
+          "routes": []
+        },
+        "pass": {
+          "count": 10,
+          "routes": [
+            "41x",
+            "46x",
+            "48x",
+            "53x",
+            "61x",
+            "62x",
+            "63x",
+            "64x",
+            "77x",
+            "88x"
+          ]
+        }
+      },
+      "before": {
+        "date": "2026-09-30",
+        "fail": {
+          "count": 4,
+          "routes": [
+            "40x",
+            "52x",
+            "74x",
+            "85x"
+          ]
+        },
+        "no service": {
+          "count": 0,
+          "routes": []
+        },
+        "pass": {
+          "count": 10,
+          "routes": [
+            "41x",
+            "46x",
+            "48x",
+            "53x",
+            "61x",
+            "62x",
+            "63x",
+            "64x",
+            "77x",
+            "88x"
+          ]
+        }
+      }
+    },
+    "express_routes": 14,
+    "local_routes": 48,
+    "period": {
+      "after": "2026-10-14",
+      "before": "2026-09-30",
+      "day": "Wednesday",
+      "feeds": {
+        "after": "2026-09-29",
+        "before": "2026-09-10"
+      }
+    },
+    "source": "data/marts/route_compliance.csv and data/marts/before_after.csv",
+    "span_local_routes": {
+      "after": {
+        "date": "2026-10-14",
+        "fail": {
+          "count": 45,
+          "routes": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "6",
+            "7",
+            "8",
+            "10",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "34",
+            "35",
+            "39",
+            "42",
+            "43",
+            "50",
+            "51",
+            "54",
+            "55",
+            "56",
+            "57",
+            "58",
+            "59",
+            "60",
+            "177",
+            "211",
+            "221",
+            "222",
+            "235"
+          ]
+        },
+        "no service": {
+          "count": 0,
+          "routes": []
+        },
+        "pass": {
+          "count": 3,
+          "routes": [
+            "5",
+            "9",
+            "11"
+          ]
+        }
+      },
+      "before": {
+        "date": "2026-09-30",
+        "fail": {
+          "count": 45,
+          "routes": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "10",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "34",
+            "35",
+            "39",
+            "42",
+            "43",
+            "50",
+            "51",
+            "54",
+            "55",
+            "56",
+            "57",
+            "58",
+            "59",
+            "60",
+            "211",
+            "221",
+            "222",
+            "235"
+          ]
+        },
+        "no service": {
+          "count": 1,
+          "routes": [
+            "177"
+          ]
+        },
+        "pass": {
+          "count": 2,
+          "routes": [
+            "9",
+            "11"
+          ]
+        }
+      }
+    },
+    "tiers": {
+      "after": {
+        "15-min": {
+          "count": 1,
+          "routes": [
+            "5"
+          ]
+        },
+        "30-min": {
+          "count": 15,
+          "routes": [
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "14",
+            "15",
+            "16",
+            "17",
+            "21",
+            "24",
+            "34",
+            "58",
+            "211"
+          ]
+        },
+        "below standard": {
+          "count": 32,
+          "routes": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "12",
+            "13",
+            "18",
+            "19",
+            "20",
+            "22",
+            "23",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "35",
+            "39",
+            "42",
+            "43",
+            "50",
+            "51",
+            "54",
+            "55",
+            "56",
+            "57",
+            "59",
+            "60",
+            "177",
+            "221",
+            "222",
+            "235"
+          ]
+        },
+        "date": "2026-10-14",
+        "feed_version": "2026-09-29",
+        "no service": {
+          "count": 0,
+          "routes": []
+        }
+      },
+      "before": {
+        "15-min": {
+          "count": 1,
+          "routes": [
+            "9"
+          ]
+        },
+        "30-min": {
+          "count": 16,
+          "routes": [
+            "5",
+            "6",
+            "7",
+            "8",
+            "10",
+            "11",
+            "14",
+            "15",
+            "16",
+            "17",
+            "21",
+            "23",
+            "24",
+            "34",
+            "58",
+            "211"
+          ]
+        },
+        "below standard": {
+          "count": 30,
+          "routes": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "12",
+            "13",
+            "18",
+            "19",
+            "20",
+            "22",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "35",
+            "39",
+            "42",
+            "43",
+            "50",
+            "51",
+            "54",
+            "55",
+            "56",
+            "57",
+            "59",
+            "60",
+            "221",
+            "222",
+            "235"
+          ]
+        },
+        "date": "2026-09-30",
+        "feed_version": "2026-09-10",
+        "no service": {
+          "count": 1,
+          "routes": [
+            "177"
+          ]
+        }
+      }
+    }
+  },
+  "inputs_sha256": {
+    "data/equity.csv": "b30eccf308d1ac7edc22882ae79684968e31eea9a6c1f3ce742b825280c654ca",
+    "data/marts/before_after.csv": "ae9e4e0cbb13a8c9a9c1f542f7554c66cd66d88d66ac9ad296d58e40bd2e9c6e",
+    "data/marts/before_after_headway.csv": "61e0443ad27e0ec8962e9f9ee9c39dfbf38bcb8c672e72f2244674e1a43cd1c7",
+    "data/marts/express_peak_trips.csv": "63b1c940c9c49d1476e0dd90aeb83643c7ba33a5ec84449b33933daab836d9ad",
+    "data/marts/route_compliance.csv": "e7674c0384992bf2ef220848c1a3893b1f48b9b55c41dbf786f54b509cef12e4",
+    "data/marts/route_period_headway.csv": "33e5e9db21e86ba99dd9b1d462aa10d9e6b5de1a9c607b3c53bedca8c775982e",
+    "data/marts/route_span.csv": "2f149ff99a09c08f73f6d9ab8b422385be5771eadc6998501857d0265d8bdcc2",
+    "data/marts/routes.csv": "cf33510627a3ebfb6cf0e49e7dbf80e3791131f8a9540ad6e02cbcc6fc2f8420",
+    "data/reference/cats_claims.csv": "1d19b0ec6c16eef263d4a46bbf499483f6b33ec9d6a94a50e0b7ee1bca8f3bcd",
+    "data/reference/otp.csv": "6ea769a1f7c219c62daae6c14a8bceb62ce5e2c4f6f3f6c14dc53e972d5e4761"
+  },
+  "limits": {
+    "cannot_measure": [
+      {
+        "clause": "MPTA-04 (formerly MTC-06) 3.2 (load standards)",
+        "item": "crowding",
+        "needs": "automatic passenger count data by trip and stop",
+        "why": "GTFS holds no boardings or loads"
+      },
+      {
+        "clause": "MPTA-04 (formerly MTC-06) 3.0 (route monitoring, passengers per hour)",
+        "item": "route-level ridership",
+        "needs": "boardings by route from CATS",
+        "why": "GTFS holds no boardings; the public board packets give ridership by mode, not by route"
+      },
+      {
+        "clause": "MPTA-04 (formerly MTC-06) 3.3",
+        "item": "delivered on-time performance (schedule adherence)",
+        "needs": "automatic vehicle location or stop-arrival records per trip with the scheduled time",
+        "why": "the audit reads the published schedule, which holds scheduled times and no observed arrivals"
+      },
+      {
+        "clause": "MPTA-04 (formerly MTC-06) 3.7",
+        "item": "missed trips and headway as riders see it",
+        "needs": "the same observed arrival records",
+        "why": "scheduled spacing only: a trip that did not run, or buses that bunched, are not visible"
+      }
+    ],
+    "policy_gaps": [
+      {
+        "clauses": "2.4, 3.2, 3.7",
+        "gap": "MPTA-04 (formerly MTC-06) defines no peak hours",
+        "method_choice": "docs/metrics.md decision 1: AM peak 06:00-09:00, midday 09:00-15:00, PM peak 15:00-18:00, evening 18:00-22:00",
+        "quote": "CATS will strive to provide at least 15-minute peak service on high frequency routes"
+      },
+      {
+        "clauses": "2.4, 3.7",
+        "gap": "MPTA-04 (formerly MTC-06) sets no weekend frequency standard",
+        "method_choice": "docs/metrics.md decision 3: weekend headways are reported, with no pass or fail",
+        "quote": "Common / Local Routes - Bus routes that provide all day service on weekdays and weekends"
+      },
+      {
+        "clauses": "3.7",
+        "gap": "the headway and span wording is a goal, not a rule",
+        "method_choice": "docs/metrics.md: a route that misses a figure is below the goal, not in breach of a hard rule",
+        "quote": "As resources become available, CATS will strive to provide"
+      },
+      {
+        "clauses": "3.7",
+        "gap": "exceptions are allowed and depend on data the public does not have",
+        "method_choice": "docs/metrics.md decision 4: no exception is applied; every local route is scored against both 15 and 30 minutes",
+        "quote": "Exceptions will be based on ridership and productivity."
+      },
+      {
+        "clauses": "3.7",
+        "gap": "the express rule does not say how to pick the peak direction",
+        "method_choice": "docs/metrics.md decision 6: the peak-flow direction, at least 3 trips in the AM peak and in the PM peak",
+        "quote": "Express and Regional Express services will have a minimum of three trips in each peak direction."
+      },
+      {
+        "clauses": "3.3",
+        "gap": "the on-time trigger is per route and over two service changes, which public data cannot test",
+        "method_choice": "docs/metrics.md: context only; the one system-wide figure is in the otp field",
+        "quote": "CATS bus routes that achieve an on-time performance score of 80 percent or less over a course of two service changes"
+      }
+    ],
+    "scope": [
+      "Schedule-based audit: it scores the published timetable (GTFS), not the buses that ran.",
+      "One service change only: MPTA-04 (formerly MTC-06) 3.3 looks over two service changes.",
+      "Rail (routes 501 and 510) is out of scope.",
+      "Two Wednesdays, not a month: the schedule on those days is read as typical."
+    ],
+    "source": "data/reference/mtc06.md and docs/metrics.md"
+  },
+  "near_miss": {
+    "count": 10,
+    "period": {
+      "dates": [
+        "2026-09-30",
+        "2026-10-14"
+      ],
+      "feeds": {
+        "after": "2026-09-29",
+        "before": "2026-09-10"
+      }
+    },
+    "rows": [
+      {
+        "date": "2026-09-30",
+        "direction": 0,
+        "max_mmss": "31:00",
+        "max_s": 1860,
+        "median_mmss": "31:00",
+        "median_s": 1860,
+        "n_departures": 6,
+        "period": "am_peak",
+        "route": "4",
+        "threshold_s": 1800
+      },
+      {
+        "date": "2026-09-30",
+        "direction": 0,
+        "max_mmss": "33:00",
+        "max_s": 1980,
+        "median_mmss": "31:00",
+        "median_s": 1860,
+        "n_departures": 6,
+        "period": "am_peak",
+        "route": "27",
+        "threshold_s": 1800
+      },
+      {
+        "date": "2026-09-30",
+        "direction": 0,
+        "max_mmss": "35:00",
+        "max_s": 2100,
+        "median_mmss": "31:00",
+        "median_s": 1860,
+        "n_departures": 6,
+        "period": "am_peak",
+        "route": "29",
+        "threshold_s": 1800
+      },
+      {
+        "date": "2026-09-30",
+        "direction": 0,
+        "max_mmss": "37:00",
+        "max_s": 2220,
+        "median_mmss": "31:00",
+        "median_s": 1860,
+        "n_departures": 5,
+        "period": "pm_peak",
+        "route": "56",
+        "threshold_s": 1800
+      },
+      {
+        "date": "2026-10-14",
+        "direction": 0,
+        "max_mmss": "31:00",
+        "max_s": 1860,
+        "median_mmss": "31:00",
+        "median_s": 1860,
+        "n_departures": 6,
+        "period": "am_peak",
+        "route": "4",
+        "threshold_s": 1800
+      },
+      {
+        "date": "2026-10-14",
+        "direction": 0,
+        "max_mmss": "18:00",
+        "max_s": 1080,
+        "median_mmss": "15:30",
+        "median_s": 930,
+        "n_departures": 11,
+        "period": "pm_peak",
+        "route": "9",
+        "threshold_s": 900
+      },
+      {
+        "date": "2026-10-14",
+        "direction": 0,
+        "max_mmss": "32:00",
+        "max_s": 1920,
+        "median_mmss": "31:00",
+        "median_s": 1860,
+        "n_departures": 6,
+        "period": "pm_peak",
+        "route": "23",
+        "threshold_s": 1800
+      },
+      {
+        "date": "2026-10-14",
+        "direction": 0,
+        "max_mmss": "33:00",
+        "max_s": 1980,
+        "median_mmss": "31:00",
+        "median_s": 1860,
+        "n_departures": 6,
+        "period": "am_peak",
+        "route": "27",
+        "threshold_s": 1800
+      },
+      {
+        "date": "2026-10-14",
+        "direction": 0,
+        "max_mmss": "35:00",
+        "max_s": 2100,
+        "median_mmss": "31:00",
+        "median_s": 1860,
+        "n_departures": 6,
+        "period": "am_peak",
+        "route": "29",
+        "threshold_s": 1800
+      },
+      {
+        "date": "2026-10-14",
+        "direction": 0,
+        "max_mmss": "37:00",
+        "max_s": 2220,
+        "median_mmss": "31:00",
+        "median_s": 1860,
+        "n_departures": 5,
+        "period": "pm_peak",
+        "route": "56",
+        "threshold_s": 1800
+      }
+    ],
+    "rule": "scored direction-period (the standard covers the period) whose median is above the threshold by at most 60 seconds",
+    "source": "data/marts/route_period_headway.csv",
+    "status": "reported, never scored: a near miss still fails its standard and the tiers do not change",
+    "window_s": {
+      "15-min": [
+        901,
+        960
+      ],
+      "30-min": [
+        1801,
+        1860
+      ]
+    }
+  },
+  "no_morning_service": {
+    "count": 16,
+    "period": {
+      "am_peak": "06:00:00 up to but not including 09:00:00",
+      "date": "2026-10-14",
+      "feed_version": "2026-09-29"
+    },
+    "route_directions_scored": 96,
+    "routes": [
+      "28",
+      "35",
+      "42",
+      "43",
+      "50",
+      "51",
+      "59",
+      "177",
+      "222"
+    ],
+    "rows": [
+      {
+        "direction": 0,
+        "long_name": "Fairview Road",
+        "n_am_peak_departures": 1,
+        "route": "28"
+      },
+      {
+        "direction": 1,
+        "long_name": "Fairview Road",
+        "n_am_peak_departures": 1,
+        "route": "28"
+      },
+      {
+        "direction": 0,
+        "long_name": "Wilkinson-Amazon",
+        "n_am_peak_departures": 0,
+        "route": "35"
+      },
+      {
+        "direction": 1,
+        "long_name": "Wilkinson-Amazon",
+        "n_am_peak_departures": 1,
+        "route": "35"
+      },
+      {
+        "direction": 0,
+        "long_name": "Carowinds",
+        "n_am_peak_departures": 0,
+        "route": "42"
+      },
+      {
+        "direction": 0,
+        "long_name": "Ballantyne",
+        "n_am_peak_departures": 0,
+        "route": "43"
+      },
+      {
+        "direction": 1,
+        "long_name": "Ballantyne",
+        "n_am_peak_departures": 1,
+        "route": "43"
+      },
+      {
+        "direction": 0,
+        "long_name": "URP/CIC",
+        "n_am_peak_departures": 0,
+        "route": "50"
+      },
+      {
+        "direction": 0,
+        "long_name": "Pineville-Matthews Road",
+        "n_am_peak_departures": 1,
+        "route": "51"
+      },
+      {
+        "direction": 1,
+        "long_name": "Pineville-Matthews Road",
+        "n_am_peak_departures": 1,
+        "route": "51"
+      },
+      {
+        "direction": 0,
+        "long_name": "UNC Charlotte-Huntersville",
+        "n_am_peak_departures": 1,
+        "route": "59"
+      },
+      {
+        "direction": 1,
+        "long_name": "UNC Charlotte-Huntersville",
+        "n_am_peak_departures": 1,
+        "route": "59"
+      },
+      {
+        "direction": 0,
+        "long_name": "Northern Meck Connector",
+        "n_am_peak_departures": 0,
+        "route": "177"
+      },
+      {
+        "direction": 1,
+        "long_name": "Northern Meck Connector",
+        "n_am_peak_departures": 0,
+        "route": "177"
+      },
+      {
+        "direction": 0,
+        "long_name": "Pence Road",
+        "n_am_peak_departures": 1,
+        "route": "222"
+      },
+      {
+        "direction": 1,
+        "long_name": "Pence Road",
+        "n_am_peak_departures": 1,
+        "route": "222"
+      }
+    ],
+    "rule": "local (category bus) route-directions with fewer than 2 AM-peak departures; fewer than 2 means no headway",
+    "source": "data/marts/route_period_headway.csv"
+  },
+  "notable_routes": {
+    "note": "direction_periods are the weekday periods the 30-minute standard covers (AM peak, midday, PM peak); the 15-minute standard covers AM peak and PM peak only. A flip is a direction-period whose pass or fail changed.",
+    "period": {
+      "after": "2026-10-14",
+      "before": "2026-09-30",
+      "feeds": {
+        "after": "2026-09-29",
+        "before": "2026-09-10"
+      }
+    },
+    "routes": {
+      "177": {
+        "change": "new",
+        "direction_periods": [
+          {
+            "after": {
+              "covers_15": true,
+              "covers_30": true,
+              "max_mmss": null,
+              "max_s": null,
+              "median_mmss": null,
+              "median_s": null,
+              "n_departures": 0,
+              "passes_15": false,
+              "passes_30": false,
+              "reason_15": "fewer than 2 departures in period",
+              "reason_30": "fewer than 2 departures in period"
+            },
+            "before": null,
+            "direction": 0,
+            "median_change_s": null,
+            "period": "am_peak"
+          },
+          {
+            "after": {
+              "covers_15": false,
+              "covers_30": true,
+              "max_mmss": "60:00",
+              "max_s": 3600,
+              "median_mmss": "60:00",
+              "median_s": 3600,
+              "n_departures": 6,
+              "passes_15": null,
+              "passes_30": false,
+              "reason_15": null,
+              "reason_30": "headway above standard"
+            },
+            "before": null,
+            "direction": 0,
+            "median_change_s": null,
+            "period": "midday"
+          },
+          {
+            "after": {
+              "covers_15": true,
+              "covers_30": true,
+              "max_mmss": "60:00",
+              "max_s": 3600,
+              "median_mmss": "60:00",
+              "median_s": 3600,
+              "n_departures": 2,
+              "passes_15": false,
+              "passes_30": false,
+              "reason_15": "headway above standard",
+              "reason_30": "headway above standard"
+            },
+            "before": null,
+            "direction": 0,
+            "median_change_s": null,
+            "period": "pm_peak"
+          },
+          {
+            "after": {
+              "covers_15": true,
+              "covers_30": true,
+              "max_mmss": null,
+              "max_s": null,
+              "median_mmss": null,
+              "median_s": null,
+              "n_departures": 0,
+              "passes_15": false,
+              "passes_30": false,
+              "reason_15": "fewer than 2 departures in period",
+              "reason_30": "fewer than 2 departures in period"
+            },
+            "before": null,
+            "direction": 1,
+            "median_change_s": null,
+            "period": "am_peak"
+          },
+          {
+            "after": {
+              "covers_15": false,
+              "covers_30": true,
+              "max_mmss": "60:00",
+              "max_s": 3600,
+              "median_mmss": "60:00",
+              "median_s": 3600,
+              "n_departures": 6,
+              "passes_15": null,
+              "passes_30": false,
+              "reason_15": null,
+              "reason_30": "headway above standard"
+            },
+            "before": null,
+            "direction": 1,
+            "median_change_s": null,
+            "period": "midday"
+          },
+          {
+            "after": {
+              "covers_15": true,
+              "covers_30": true,
+              "max_mmss": null,
+              "max_s": null,
+              "median_mmss": null,
+              "median_s": null,
+              "n_departures": 0,
+              "passes_15": false,
+              "passes_30": false,
+              "reason_15": "fewer than 2 departures in period",
+              "reason_30": "fewer than 2 departures in period"
+            },
+            "before": null,
+            "direction": 1,
+            "median_change_s": null,
+            "period": "pm_peak"
+          }
+        ],
+        "flipped_15_min_standard": [],
+        "flipped_30_min_standard": [],
+        "long_name": "Northern Meck Connector",
+        "span_after": {
+          "end": "17:01:00",
+          "pass": false,
+          "start": "09:00:00"
+        },
+        "span_before": {
+          "end": null,
+          "pass": null,
+          "start": null
+        },
+        "tier_after": "below standard",
+        "tier_before": "no service on date"
+      },
+      "23": {
+        "change": "down",
+        "direction_periods": [
+          {
+            "after": {
+              "covers_15": true,
+              "covers_30": true,
+              "max_mmss": "33:00",
+              "max_s": 1980,
+              "median_mmss": "30:00",
+              "median_s": 1800,
+              "n_departures": 6,
+              "passes_15": false,
+              "passes_30": true,
+              "reason_15": "headway above standard",
+              "reason_30": null
+            },
+            "before": {
+              "covers_15": true,
+              "covers_30": true,
+              "max_mmss": "38:00",
+              "max_s": 2280,
+              "median_mmss": "30:00",
+              "median_s": 1800,
+              "n_departures": 6,
+              "passes_15": false,
+              "passes_30": true,
+              "reason_15": "headway above standard",
+              "reason_30": null
+            },
+            "direction": 0,
+            "median_change_s": 0,
+            "period": "am_peak"
+          },
+          {
+            "after": {
+              "covers_15": false,
+              "covers_30": true,
+              "max_mmss": "32:00",
+              "max_s": 1920,
+              "median_mmss": "30:00",
+              "median_s": 1800,
+              "n_departures": 12,
+              "passes_15": null,
+              "passes_30": true,
+              "reason_15": null,
+              "reason_30": null
+            },
+            "before": {
+              "covers_15": false,
+              "covers_30": true,
+              "max_mmss": "33:00",
+              "max_s": 1980,
+              "median_mmss": "30:00",
+              "median_s": 1800,
+              "n_departures": 12,
+              "passes_15": null,
+              "passes_30": true,
+              "reason_15": null,
+              "reason_30": null
+            },
+            "direction": 0,
+            "median_change_s": 0,
+            "period": "midday"
+          },
+          {
+            "after": {
+              "covers_15": true,
+              "covers_30": true,
+              "max_mmss": "32:00",
+              "max_s": 1920,
+              "median_mmss": "31:00",
+              "median_s": 1860,
+              "n_departures": 6,
+              "passes_15": false,
+              "passes_30": false,
+              "reason_15": "headway above standard",
+              "reason_30": "headway above standard"
+            },
+            "before": {
+              "covers_15": true,
+              "covers_30": true,
+              "max_mmss": "32:00",
+              "max_s": 1920,
+              "median_mmss": "30:00",
+              "median_s": 1800,
+              "n_departures": 6,
+              "passes_15": false,
+              "passes_30": true,
+              "reason_15": "headway above standard",
+              "reason_30": null
+            },
+            "direction": 0,
+            "median_change_s": 60,
+            "period": "pm_peak"
+          },
+          {
+            "after": {
+              "covers_15": true,
+              "covers_30": true,
+              "max_mmss": "30:00",
+              "max_s": 1800,
+              "median_mmss": "30:00",
+              "median_s": 1800,
+              "n_departures": 6,
+              "passes_15": false,
+              "passes_30": true,
+              "reason_15": "headway above standard",
+              "reason_30": null
+            },
+            "before": {
+              "covers_15": true,
+              "covers_30": true,
+              "max_mmss": "35:00",
+              "max_s": 2100,
+              "median_mmss": "30:00",
+              "median_s": 1800,
+              "n_departures": 6,
+              "passes_15": false,
+              "passes_30": true,
+              "reason_15": "headway above standard",
+              "reason_30": null
+            },
+            "direction": 1,
+            "median_change_s": 0,
+            "period": "am_peak"
+          },
+          {
+            "after": {
+              "covers_15": false,
+              "covers_30": true,
+              "max_mmss": "30:00",
+              "max_s": 1800,
+              "median_mmss": "30:00",
+              "median_s": 1800,
+              "n_departures": 12,
+              "passes_15": null,
+              "passes_30": true,
+              "reason_15": null,
+              "reason_30": null
+            },
+            "before": {
+              "covers_15": false,
+              "covers_30": true,
+              "max_mmss": "30:00",
+              "max_s": 1800,
+              "median_mmss": "30:00",
+              "median_s": 1800,
+              "n_departures": 12,
+              "passes_15": null,
+              "passes_30": true,
+              "reason_15": null,
+              "reason_30": null
+            },
+            "direction": 1,
+            "median_change_s": 0,
+            "period": "midday"
+          },
+          {
+            "after": {
+              "covers_15": true,
+              "covers_30": true,
+              "max_mmss": "30:00",
+              "max_s": 1800,
+              "median_mmss": "30:00",
+              "median_s": 1800,
+              "n_departures": 6,
+              "passes_15": false,
+              "passes_30": true,
+              "reason_15": "headway above standard",
+              "reason_30": null
+            },
+            "before": {
+              "covers_15": true,
+              "covers_30": true,
+              "max_mmss": "30:00",
+              "max_s": 1800,
+              "median_mmss": "30:00",
+              "median_s": 1800,
+              "n_departures": 6,
+              "passes_15": false,
+              "passes_30": true,
+              "reason_15": "headway above standard",
+              "reason_30": null
+            },
+            "direction": 1,
+            "median_change_s": 0,
+            "period": "pm_peak"
+          }
+        ],
+        "flipped_15_min_standard": [],
+        "flipped_30_min_standard": [
+          {
+            "after_passes": false,
+            "before_passes": true,
+            "direction": 0,
+            "max_after_s": 1920,
+            "max_before_s": 1920,
+            "median_after_mmss": "31:00",
+            "median_after_s": 1860,
+            "median_before_mmss": "30:00",
+            "median_before_s": 1800,
+            "n_after": 6,
+            "n_before": 6,
+            "period": "pm_peak"
+          }
+        ],
+        "long_name": "Shamrock Drive",
+        "span_after": {
+          "end": "25:58:00",
+          "pass": false,
+          "start": "05:20:00"
+        },
+        "span_before": {
+          "end": "26:02:00",
+          "pass": false,
+          "start": "05:25:00"
+        },
+        "tier_after": "below standard",
+        "tier_before": "30-min"
+      },
+      "5": {
+        "change": "up",
+        "direction_periods": [
+          {
+            "after": {
+              "covers_15": true,
+              "covers_30": true,
+              "max_mmss": "17:00",
+              "max_s": 1020,
+              "median_mmss": "15:00",
+              "median_s": 900,
+              "n_departures": 11,
+              "passes_15": true,
+              "passes_30": true,
+              "reason_15": null,
+              "reason_30": null
+            },
+            "before": {
+              "covers_15": true,
+              "covers_30": true,
+              "max_mmss": "35:00",
+              "max_s": 2100,
+              "median_mmss": "29:00",
+              "median_s": 1740,
+              "n_departures": 7,
+              "passes_15": false,
+              "passes_30": true,
+              "reason_15": "headway above standard",
+              "reason_30": null
+            },
+            "direction": 0,
+            "median_change_s": -840,
+            "period": "am_peak"
+          },
+          {
+            "after": {
+              "covers_15": false,
+              "covers_30": true,
+              "max_mmss": "16:00",
+              "max_s": 960,
+              "median_mmss": "15:00",
+              "median_s": 900,
+              "n_departures": 24,
+              "passes_15": null,
+              "passes_30": true,
+              "reason_15": null,
+              "reason_30": null
+            },
+            "before": {
+              "covers_15": false,
+              "covers_30": true,
+              "max_mmss": "27:00",
+              "max_s": 1620,
+              "median_mmss": "25:00",
+              "median_s": 1500,
+              "n_departures": 14,
+              "passes_15": null,
+              "passes_30": true,
+              "reason_15": null,
+              "reason_30": null
+            },
+            "direction": 0,
+            "median_change_s": -600,
+            "period": "midday"
+          },
+          {
+            "after": {
+              "covers_15": true,
+              "covers_30": true,
+              "max_mmss": "16:00",
+              "max_s": 960,
+              "median_mmss": "15:00",
+              "median_s": 900,
+              "n_departures": 12,
+              "passes_15": true,
+              "passes_30": true,
+              "reason_15": null,
+              "reason_30": null
+            },
+            "before": {
+              "covers_15": true,
+              "covers_30": true,
+              "max_mmss": "28:00",
+              "max_s": 1680,
+              "median_mmss": "25:00",
+              "median_s": 1500,
+              "n_departures": 7,
+              "passes_15": false,
+              "passes_30": true,
+              "reason_15": "headway above standard",
+              "reason_30": null
+            },
+            "direction": 0,
+            "median_change_s": -600,
+            "period": "pm_peak"
+          },
+          {
+            "after": {
+              "covers_15": true,
+              "covers_30": true,
+              "max_mmss": "15:00",
+              "max_s": 900,
+              "median_mmss": "15:00",
+              "median_s": 900,
+              "n_departures": 12,
+              "passes_15": true,
+              "passes_30": true,
+              "reason_15": null,
+              "reason_30": null
+            },
+            "before": {
+              "covers_15": true,
+              "covers_30": true,
+              "max_mmss": "30:00",
+              "max_s": 1800,
+              "median_mmss": "30:00",
+              "median_s": 1800,
+              "n_departures": 7,
+              "passes_15": false,
+              "passes_30": true,
+              "reason_15": "headway above standard",
+              "reason_30": null
+            },
+            "direction": 1,
+            "median_change_s": -900,
+            "period": "am_peak"
+          },
+          {
+            "after": {
+              "covers_15": false,
+              "covers_30": true,
+              "max_mmss": "15:00",
+              "max_s": 900,
+              "median_mmss": "15:00",
+              "median_s": 900,
+              "n_departures": 24,
+              "passes_15": null,
+              "passes_30": true,
+              "reason_15": null,
+              "reason_30": null
+            },
+            "before": {
+              "covers_15": false,
+              "covers_30": true,
+              "max_mmss": "25:00",
+              "max_s": 1500,
+              "median_mmss": "25:00",
+              "median_s": 1500,
+              "n_departures": 14,
+              "passes_15": null,
+              "passes_30": true,
+              "reason_15": null,
+              "reason_30": null
+            },
+            "direction": 1,
+            "median_change_s": -600,
+            "period": "midday"
+          },
+          {
+            "after": {
+              "covers_15": true,
+              "covers_30": true,
+              "max_mmss": "15:00",
+              "max_s": 900,
+              "median_mmss": "15:00",
+              "median_s": 900,
+              "n_departures": 12,
+              "passes_15": true,
+              "passes_30": true,
+              "reason_15": null,
+              "reason_30": null
+            },
+            "before": {
+              "covers_15": true,
+              "covers_30": true,
+              "max_mmss": "25:00",
+              "max_s": 1500,
+              "median_mmss": "25:00",
+              "median_s": 1500,
+              "n_departures": 7,
+              "passes_15": false,
+              "passes_30": true,
+              "reason_15": "headway above standard",
+              "reason_30": null
+            },
+            "direction": 1,
+            "median_change_s": -600,
+            "period": "pm_peak"
+          }
+        ],
+        "flipped_15_min_standard": [
+          {
+            "after_passes": true,
+            "before_passes": false,
+            "direction": 0,
+            "max_after_s": 1020,
+            "max_before_s": 2100,
+            "median_after_mmss": "15:00",
+            "median_after_s": 900,
+            "median_before_mmss": "29:00",
+            "median_before_s": 1740,
+            "n_after": 11,
+            "n_before": 7,
+            "period": "am_peak"
+          },
+          {
+            "after_passes": true,
+            "before_passes": false,
+            "direction": 0,
+            "max_after_s": 960,
+            "max_before_s": 1680,
+            "median_after_mmss": "15:00",
+            "median_after_s": 900,
+            "median_before_mmss": "25:00",
+            "median_before_s": 1500,
+            "n_after": 12,
+            "n_before": 7,
+            "period": "pm_peak"
+          },
+          {
+            "after_passes": true,
+            "before_passes": false,
+            "direction": 1,
+            "max_after_s": 900,
+            "max_before_s": 1800,
+            "median_after_mmss": "15:00",
+            "median_after_s": 900,
+            "median_before_mmss": "30:00",
+            "median_before_s": 1800,
+            "n_after": 12,
+            "n_before": 7,
+            "period": "am_peak"
+          },
+          {
+            "after_passes": true,
+            "before_passes": false,
+            "direction": 1,
+            "max_after_s": 900,
+            "max_before_s": 1500,
+            "median_after_mmss": "15:00",
+            "median_after_s": 900,
+            "median_before_mmss": "25:00",
+            "median_before_s": 1500,
+            "n_after": 12,
+            "n_before": 7,
+            "period": "pm_peak"
+          }
+        ],
+        "flipped_30_min_standard": [],
+        "long_name": "Airport",
+        "span_after": {
+          "end": "25:54:00",
+          "pass": true,
+          "start": "05:00:00"
+        },
+        "span_before": {
+          "end": "25:22:00",
+          "pass": false,
+          "start": "05:30:00"
+        },
+        "tier_after": "15-min",
+        "tier_before": "30-min"
+      },
+      "9": {
+        "change": "down",
+        "direction_periods": [
+          {
+            "after": {
+              "covers_15": true,
+              "covers_30": true,
+              "max_mmss": "16:00",
+              "max_s": 960,
+              "median_mmss": "15:00",
+              "median_s": 900,
+              "n_departures": 12,
+              "passes_15": true,
+              "passes_30": true,
+              "reason_15": null,
+              "reason_30": null
+            },
+            "before": {
+              "covers_15": true,
+              "covers_30": true,
+              "max_mmss": "15:00",
+              "max_s": 900,
+              "median_mmss": "15:00",
+              "median_s": 900,
+              "n_departures": 12,
+              "passes_15": true,
+              "passes_30": true,
+              "reason_15": null,
+              "reason_30": null
+            },
+            "direction": 0,
+            "median_change_s": 0,
+            "period": "am_peak"
+          },
+          {
+            "after": {
+              "covers_15": false,
+              "covers_30": true,
+              "max_mmss": "19:00",
+              "max_s": 1140,
+              "median_mmss": "15:00",
+              "median_s": 900,
+              "n_departures": 24,
+              "passes_15": null,
+              "passes_30": true,
+              "reason_15": null,
+              "reason_30": null
+            },
+            "before": {
+              "covers_15": false,
+              "covers_30": true,
+              "max_mmss": "15:00",
+              "max_s": 900,
+              "median_mmss": "15:00",
+              "median_s": 900,
+              "n_departures": 24,
+              "passes_15": null,
+              "passes_30": true,
+              "reason_15": null,
+              "reason_30": null
+            },
+            "direction": 0,
+            "median_change_s": 0,
+            "period": "midday"
+          },
+          {
+            "after": {
+              "covers_15": true,
+              "covers_30": true,
+              "max_mmss": "18:00",
+              "max_s": 1080,
+              "median_mmss": "15:30",
+              "median_s": 930,
+              "n_departures": 11,
+              "passes_15": false,
+              "passes_30": true,
+              "reason_15": "headway above standard",
+              "reason_30": null
+            },
+            "before": {
+              "covers_15": true,
+              "covers_30": true,
+              "max_mmss": "15:00",
+              "max_s": 900,
+              "median_mmss": "15:00",
+              "median_s": 900,
+              "n_departures": 12,
+              "passes_15": true,
+              "passes_30": true,
+              "reason_15": null,
+              "reason_30": null
+            },
+            "direction": 0,
+            "median_change_s": 30,
+            "period": "pm_peak"
+          },
+          {
+            "after": {
+              "covers_15": true,
+              "covers_30": true,
+              "max_mmss": "15:00",
+              "max_s": 900,
+              "median_mmss": "15:00",
+              "median_s": 900,
+              "n_departures": 12,
+              "passes_15": true,
+              "passes_30": true,
+              "reason_15": null,
+              "reason_30": null
+            },
+            "before": {
+              "covers_15": true,
+              "covers_30": true,
+              "max_mmss": "15:00",
+              "max_s": 900,
+              "median_mmss": "15:00",
+              "median_s": 900,
+              "n_departures": 12,
+              "passes_15": true,
+              "passes_30": true,
+              "reason_15": null,
+              "reason_30": null
+            },
+            "direction": 1,
+            "median_change_s": 0,
+            "period": "am_peak"
+          },
+          {
+            "after": {
+              "covers_15": false,
+              "covers_30": true,
+              "max_mmss": "15:00",
+              "max_s": 900,
+              "median_mmss": "15:00",
+              "median_s": 900,
+              "n_departures": 24,
+              "passes_15": null,
+              "passes_30": true,
+              "reason_15": null,
+              "reason_30": null
+            },
+            "before": {
+              "covers_15": false,
+              "covers_30": true,
+              "max_mmss": "15:00",
+              "max_s": 900,
+              "median_mmss": "15:00",
+              "median_s": 900,
+              "n_departures": 24,
+              "passes_15": null,
+              "passes_30": true,
+              "reason_15": null,
+              "reason_30": null
+            },
+            "direction": 1,
+            "median_change_s": 0,
+            "period": "midday"
+          },
+          {
+            "after": {
+              "covers_15": true,
+              "covers_30": true,
+              "max_mmss": "15:00",
+              "max_s": 900,
+              "median_mmss": "10:00",
+              "median_s": 600,
+              "n_departures": 16,
+              "passes_15": true,
+              "passes_30": true,
+              "reason_15": null,
+              "reason_30": null
+            },
+            "before": {
+              "covers_15": true,
+              "covers_30": true,
+              "max_mmss": "15:00",
+              "max_s": 900,
+              "median_mmss": "10:00",
+              "median_s": 600,
+              "n_departures": 16,
+              "passes_15": true,
+              "passes_30": true,
+              "reason_15": null,
+              "reason_30": null
+            },
+            "direction": 1,
+            "median_change_s": 0,
+            "period": "pm_peak"
+          }
+        ],
+        "flipped_15_min_standard": [
+          {
+            "after_passes": false,
+            "before_passes": true,
+            "direction": 0,
+            "max_after_s": 1080,
+            "max_before_s": 900,
+            "median_after_mmss": "15:30",
+            "median_after_s": 930,
+            "median_before_mmss": "15:00",
+            "median_before_s": 900,
+            "n_after": 11,
+            "n_before": 12,
+            "period": "pm_peak"
+          }
+        ],
+        "flipped_30_min_standard": [],
+        "long_name": "Central Avenue",
+        "other_scored_direction_periods_after": {
+          "at_or_below_15_min": 5,
+          "count": 5
+        },
+        "span_after": {
+          "end": "25:52:00",
+          "pass": true,
+          "start": "04:50:00"
+        },
+        "span_before": {
+          "end": "26:01:00",
+          "pass": true,
+          "start": "04:50:00"
+        },
+        "tier_after": "30-min",
+        "tier_before": "15-min"
+      }
+    },
+    "source": "data/marts/route_period_headway.csv and before_after.csv"
+  },
+  "otp": {
+    "definition": "A delivered timepoint is on-time when departure is no more than one minute early or five minutes late (packet, page 101). Cancelled or undelivered service is not in the OTP calculation.",
+    "measure": "on-time performance",
+    "meeting_date": "2026-10-14",
+    "mode": "bus",
+    "month": "2026-08",
+    "pdf_page": 102,
+    "period": "2026-08",
+    "retrieved_utc": "2026-10-16T19:44:30Z",
+    "route_level_note": "no route-level OTP is published (checked the Aug 12 and Oct 14, 2026 packets)",
+    "same_month_prior_year_pct": 84,
+    "scope": "system-wide (all bus routes together; not by route)",
+    "source": "MPTA Board of Trustees meeting packet (CATS Monthly Performance Reports; Bus Service Performance Report - August 2026)",
+    "status": "context only",
+    "url": "https://mpta.granicus.com/AgendaViewer.php?view_id=5&clip_id=290",
+    "value_pct": 85
+  },
+  "policy": {
+    "name": "MPTA-04 (formerly MTC-06)",
+    "note": "Clause numbers and quotes come from data/reference/mtc06.md; sections 3.3 and 3.7 read the same in the MPTA-04 text (data/reference/mpta04.md).",
+    "reference": "data/reference/mtc06.md"
+  },
+  "question": "Did the Oct 5, 2026 service change move routes into compliance with MPTA-04 (formerly MTC-06) scheduled frequency and span, and where does every route stand after it?",
+  "routes": {
+    "period": {
+      "after": "2026-10-14",
+      "before": "2026-09-30",
+      "feeds": {
+        "after": "2026-09-29",
+        "before": "2026-09-10"
+      }
+    },
+    "rows": [
+      {
+        "category": "bus",
+        "change": "same",
+        "express_result_after": null,
+        "express_result_before": null,
+        "long_name": "Mt. Holly Road",
+        "route": "1",
+        "span_end_after": "26:04:00",
+        "span_pass_after": false,
+        "span_start_after": "05:46:00",
+        "tier_after": "below standard",
+        "tier_before": "below standard",
+        "weakest_direction_after": 0,
+        "weakest_median_after_mmss": "35:30",
+        "weakest_median_after_s": 2130,
+        "weakest_note": null,
+        "weakest_period_after": "am_peak"
+      },
+      {
+        "category": "bus",
+        "change": "same",
+        "express_result_after": null,
+        "express_result_before": null,
+        "long_name": "Ashley/Scaleybark Crosstown",
+        "route": "2",
+        "span_end_after": "25:29:00",
+        "span_pass_after": false,
+        "span_start_after": "05:15:00",
+        "tier_after": "below standard",
+        "tier_before": "below standard",
+        "weakest_direction_after": 0,
+        "weakest_median_after_mmss": "40:00",
+        "weakest_median_after_s": 2400,
+        "weakest_note": null,
+        "weakest_period_after": "pm_peak"
+      },
+      {
+        "category": "bus",
+        "change": "same",
+        "express_result_after": null,
+        "express_result_before": null,
+        "long_name": "The Plaza",
+        "route": "3",
+        "span_end_after": "25:40:00",
+        "span_pass_after": false,
+        "span_start_after": "05:07:00",
+        "tier_after": "below standard",
+        "tier_before": "below standard",
+        "weakest_direction_after": 0,
+        "weakest_median_after_mmss": "32:00",
+        "weakest_median_after_s": 1920,
+        "weakest_note": null,
+        "weakest_period_after": "pm_peak"
+      },
+      {
+        "category": "bus",
+        "change": "same",
+        "express_result_after": null,
+        "express_result_before": null,
+        "long_name": "Belmont",
+        "route": "4",
+        "span_end_after": "25:45:00",
+        "span_pass_after": false,
+        "span_start_after": "05:56:00",
+        "tier_after": "below standard",
+        "tier_before": "below standard",
+        "weakest_direction_after": 0,
+        "weakest_median_after_mmss": "31:00",
+        "weakest_median_after_s": 1860,
+        "weakest_note": null,
+        "weakest_period_after": "am_peak"
+      },
+      {
+        "category": "bus",
+        "change": "up",
+        "express_result_after": null,
+        "express_result_before": null,
+        "long_name": "Airport",
+        "route": "5",
+        "span_end_after": "25:54:00",
+        "span_pass_after": true,
+        "span_start_after": "05:00:00",
+        "tier_after": "15-min",
+        "tier_before": "30-min",
+        "weakest_direction_after": 0,
+        "weakest_median_after_mmss": "15:00",
+        "weakest_median_after_s": 900,
+        "weakest_note": null,
+        "weakest_period_after": "am_peak"
+      },
+      {
+        "category": "bus",
+        "change": "same",
+        "express_result_after": null,
+        "express_result_before": null,
+        "long_name": "Kings Drive",
+        "route": "6",
+        "span_end_after": "24:57:00",
+        "span_pass_after": false,
+        "span_start_after": "06:00:00",
+        "tier_after": "30-min",
+        "tier_before": "30-min",
+        "weakest_direction_after": 0,
+        "weakest_median_after_mmss": "20:00",
+        "weakest_median_after_s": 1200,
+        "weakest_note": null,
+        "weakest_period_after": "am_peak"
+      },
+      {
+        "category": "bus",
+        "change": "same",
+        "express_result_after": null,
+        "express_result_before": null,
+        "long_name": "Beatties Ford",
+        "route": "7",
+        "span_end_after": "25:58:00",
+        "span_pass_after": false,
+        "span_start_after": "05:26:00",
+        "tier_after": "30-min",
+        "tier_before": "30-min",
+        "weakest_direction_after": 0,
+        "weakest_median_after_mmss": "20:30",
+        "weakest_median_after_s": 1230,
+        "weakest_note": null,
+        "weakest_period_after": "am_peak"
+      },
+      {
+        "category": "bus",
+        "change": "same",
+        "express_result_after": null,
+        "express_result_before": null,
+        "long_name": "Tuckaseegee Road",
+        "route": "8",
+        "span_end_after": "26:05:00",
+        "span_pass_after": false,
+        "span_start_after": "05:38:00",
+        "tier_after": "30-min",
+        "tier_before": "30-min",
+        "weakest_direction_after": 0,
+        "weakest_median_after_mmss": "30:00",
+        "weakest_median_after_s": 1800,
+        "weakest_note": null,
+        "weakest_period_after": "am_peak"
+      },
+      {
+        "category": "bus",
+        "change": "down",
+        "express_result_after": null,
+        "express_result_before": null,
+        "long_name": "Central Avenue",
+        "route": "9",
+        "span_end_after": "25:52:00",
+        "span_pass_after": true,
+        "span_start_after": "04:50:00",
+        "tier_after": "30-min",
+        "tier_before": "15-min",
+        "weakest_direction_after": 0,
+        "weakest_median_after_mmss": "15:30",
+        "weakest_median_after_s": 930,
+        "weakest_note": null,
+        "weakest_period_after": "pm_peak"
+      },
+      {
+        "category": "bus",
+        "change": "same",
+        "express_result_after": null,
+        "express_result_before": null,
+        "long_name": "West Boulevard",
+        "route": "10",
+        "span_end_after": "25:56:00",
+        "span_pass_after": false,
+        "span_start_after": "05:45:00",
+        "tier_after": "30-min",
+        "tier_before": "30-min",
+        "weakest_direction_after": 0,
+        "weakest_median_after_mmss": "30:00",
+        "weakest_median_after_s": 1800,
+        "weakest_note": null,
+        "weakest_period_after": "am_peak"
+      },
+      {
+        "category": "bus",
+        "change": "same",
+        "express_result_after": null,
+        "express_result_before": null,
+        "long_name": "North Tryon",
+        "route": "11",
+        "span_end_after": "26:00:00",
+        "span_pass_after": true,
+        "span_start_after": "05:00:00",
+        "tier_after": "30-min",
+        "tier_before": "30-min",
+        "weakest_direction_after": 0,
+        "weakest_median_after_mmss": "30:00",
+        "weakest_median_after_s": 1800,
+        "weakest_note": null,
+        "weakest_period_after": "am_peak"
+      },
+      {
+        "category": "bus",
+        "change": "same",
+        "express_result_after": null,
+        "express_result_before": null,
+        "long_name": "South Boulevard",
+        "route": "12",
+        "span_end_after": "24:25:00",
+        "span_pass_after": false,
+        "span_start_after": "05:57:00",
+        "tier_after": "below standard",
+        "tier_before": "below standard",
+        "weakest_direction_after": 0,
+        "weakest_median_after_mmss": "48:00",
+        "weakest_median_after_s": 2880,
+        "weakest_note": null,
+        "weakest_period_after": "pm_peak"
+      },
+      {
+        "category": "bus",
+        "change": "same",
+        "express_result_after": null,
+        "express_result_before": null,
+        "long_name": "Nevin Road",
+        "route": "13",
+        "span_end_after": "25:09:00",
+        "span_pass_after": false,
+        "span_start_after": "05:37:00",
+        "tier_after": "below standard",
+        "tier_before": "below standard",
+        "weakest_direction_after": 0,
+        "weakest_median_after_mmss": "35:00",
+        "weakest_median_after_s": 2100,
+        "weakest_note": null,
+        "weakest_period_after": "am_peak"
+      },
+      {
+        "category": "bus",
+        "change": "same",
+        "express_result_after": null,
+        "express_result_before": null,
+        "long_name": "Providence Road",
+        "route": "14",
+        "span_end_after": "24:16:00",
+        "span_pass_after": false,
+        "span_start_after": "06:00:00",
+        "tier_after": "30-min",
+        "tier_before": "30-min",
+        "weakest_direction_after": 0,
+        "weakest_median_after_mmss": "30:00",
+        "weakest_median_after_s": 1800,
+        "weakest_note": null,
+        "weakest_period_after": "am_peak"
+      },
+      {
+        "category": "bus",
+        "change": "same",
+        "express_result_after": null,
+        "express_result_before": null,
+        "long_name": "Randolph Road",
+        "route": "15",
+        "span_end_after": "25:55:00",
+        "span_pass_after": false,
+        "span_start_after": "06:31:00",
+        "tier_after": "30-min",
+        "tier_before": "30-min",
+        "weakest_direction_after": 0,
+        "weakest_median_after_mmss": "30:00",
+        "weakest_median_after_s": 1800,
+        "weakest_note": null,
+        "weakest_period_after": "am_peak"
+      },
+      {
+        "category": "bus",
+        "change": "same",
+        "express_result_after": null,
+        "express_result_before": null,
+        "long_name": "South Tryon",
+        "route": "16",
+        "span_end_after": "26:04:00",
+        "span_pass_after": false,
+        "span_start_after": "05:15:00",
+        "tier_after": "30-min",
+        "tier_before": "30-min",
+        "weakest_direction_after": 0,
+        "weakest_median_after_mmss": "30:00",
+        "weakest_median_after_s": 1800,
+        "weakest_note": null,
+        "weakest_period_after": "am_peak"
+      },
+      {
+        "category": "bus",
+        "change": "same",
+        "express_result_after": null,
+        "express_result_before": null,
+        "long_name": "Commonwealth Avenue",
+        "route": "17",
+        "span_end_after": "26:06:00",
+        "span_pass_after": false,
+        "span_start_after": "06:15:00",
+        "tier_after": "30-min",
+        "tier_before": "30-min",
+        "weakest_direction_after": 0,
+        "weakest_median_after_mmss": "30:00",
+        "weakest_median_after_s": 1800,
+        "weakest_note": null,
+        "weakest_period_after": "am_peak"
+      },
+      {
+        "category": "bus",
+        "change": "same",
+        "express_result_after": null,
+        "express_result_before": null,
+        "long_name": "Paw Creek/Rosa Parks Crosstown",
+        "route": "18",
+        "span_end_after": "21:57:00",
+        "span_pass_after": false,
+        "span_start_after": "06:15:00",
+        "tier_after": "below standard",
+        "tier_before": "below standard",
+        "weakest_direction_after": 0,
+        "weakest_median_after_mmss": "49:00",
+        "weakest_median_after_s": 2940,
+        "weakest_note": null,
+        "weakest_period_after": "am_peak"
+      },
+      {
+        "category": "bus",
+        "change": "same",
+        "express_result_after": null,
+        "express_result_before": null,
+        "long_name": "Park Road",
+        "route": "19",
+        "span_end_after": "25:03:00",
+        "span_pass_after": false,
+        "span_start_after": "05:31:00",
+        "tier_after": "below standard",
+        "tier_before": "below standard",
+        "weakest_direction_after": 1,
+        "weakest_median_after_mmss": "35:00",
+        "weakest_median_after_s": 2100,
+        "weakest_note": null,
+        "weakest_period_after": "am_peak"
+      },
+      {
+        "category": "bus",
+        "change": "same",
+        "express_result_after": null,
+        "express_result_before": null,
+        "long_name": "Sharon Road",
+        "route": "20",
+        "span_end_after": "20:24:00",
+        "span_pass_after": false,
+        "span_start_after": "07:35:00",
+        "tier_after": "below standard",
+        "tier_before": "below standard",
+        "weakest_direction_after": 0,
+        "weakest_median_after_mmss": "65:00",
+        "weakest_median_after_s": 3900,
+        "weakest_note": null,
+        "weakest_period_after": "pm_peak"
+      },
+      {
+        "category": "bus",
+        "change": "same",
+        "express_result_after": null,
+        "express_result_before": null,
+        "long_name": "Statesville Ave",
+        "route": "21",
+        "span_end_after": "25:50:00",
+        "span_pass_after": false,
+        "span_start_after": "05:21:00",
+        "tier_after": "30-min",
+        "tier_before": "30-min",
+        "weakest_direction_after": 0,
+        "weakest_median_after_mmss": "30:00",
+        "weakest_median_after_s": 1800,
+        "weakest_note": null,
+        "weakest_period_after": "am_peak"
+      },
+      {
+        "category": "bus",
+        "change": "same",
+        "express_result_after": null,
+        "express_result_before": null,
+        "long_name": "Graham Street",
+        "route": "22",
+        "span_end_after": "25:58:00",
+        "span_pass_after": false,
+        "span_start_after": "06:20:00",
+        "tier_after": "below standard",
+        "tier_before": "below standard",
+        "weakest_direction_after": 0,
+        "weakest_median_after_mmss": "32:00",
+        "weakest_median_after_s": 1920,
+        "weakest_note": null,
+        "weakest_period_after": "pm_peak"
+      },
+      {
+        "category": "bus",
+        "change": "down",
+        "express_result_after": null,
+        "express_result_before": null,
+        "long_name": "Shamrock Drive",
+        "route": "23",
+        "span_end_after": "25:58:00",
+        "span_pass_after": false,
+        "span_start_after": "05:20:00",
+        "tier_after": "below standard",
+        "tier_before": "30-min",
+        "weakest_direction_after": 0,
+        "weakest_median_after_mmss": "31:00",
+        "weakest_median_after_s": 1860,
+        "weakest_note": null,
+        "weakest_period_after": "pm_peak"
+      },
+      {
+        "category": "bus",
+        "change": "same",
+        "express_result_after": null,
+        "express_result_before": null,
+        "long_name": "Nations Ford Road",
+        "route": "24",
+        "span_end_after": "24:39:00",
+        "span_pass_after": false,
+        "span_start_after": "05:56:00",
+        "tier_after": "30-min",
+        "tier_before": "30-min",
+        "weakest_direction_after": 0,
+        "weakest_median_after_mmss": "30:00",
+        "weakest_median_after_s": 1800,
+        "weakest_note": null,
+        "weakest_period_after": "am_peak"
+      },
+      {
+        "category": "bus",
+        "change": "same",
+        "express_result_after": null,
+        "express_result_before": null,
+        "long_name": "Oaklawn Avenue",
+        "route": "26",
+        "span_end_after": "24:40:00",
+        "span_pass_after": false,
+        "span_start_after": "05:50:00",
+        "tier_after": "below standard",
+        "tier_before": "below standard",
+        "weakest_direction_after": 0,
+        "weakest_median_after_mmss": "47:00",
+        "weakest_median_after_s": 2820,
+        "weakest_note": null,
+        "weakest_period_after": "pm_peak"
+      },
+      {
+        "category": "bus",
+        "change": "same",
+        "express_result_after": null,
+        "express_result_before": null,
+        "long_name": "Monroe Road",
+        "route": "27",
+        "span_end_after": "26:01:00",
+        "span_pass_after": false,
+        "span_start_after": "05:25:00",
+        "tier_after": "below standard",
+        "tier_before": "below standard",
+        "weakest_direction_after": 0,
+        "weakest_median_after_mmss": "31:00",
+        "weakest_median_after_s": 1860,
+        "weakest_note": null,
+        "weakest_period_after": "am_peak"
+      },
+      {
+        "category": "bus",
+        "change": "same",
+        "express_result_after": null,
+        "express_result_before": null,
+        "long_name": "Fairview Road",
+        "route": "28",
+        "span_end_after": "19:19:00",
+        "span_pass_after": false,
+        "span_start_after": "08:22:00",
+        "tier_after": "below standard",
+        "tier_before": "below standard",
+        "weakest_direction_after": 0,
+        "weakest_median_after_mmss": null,
+        "weakest_median_after_s": null,
+        "weakest_note": "fewer than 2 departures in period",
+        "weakest_period_after": "am_peak"
+      },
+      {
+        "category": "bus",
+        "change": "same",
+        "express_result_after": null,
+        "express_result_before": null,
+        "long_name": "UNCC/JW Clay",
+        "route": "29",
+        "span_end_after": "25:21:00",
+        "span_pass_after": false,
+        "span_start_after": "06:03:00",
+        "tier_after": "below standard",
+        "tier_before": "below standard",
+        "weakest_direction_after": 1,
+        "weakest_median_after_mmss": "32:00",
+        "weakest_median_after_s": 1920,
+        "weakest_note": null,
+        "weakest_period_after": "pm_peak"
+      },
+      {
+        "category": "bus",
+        "change": "same",
+        "express_result_after": null,
+        "express_result_before": null,
+        "long_name": "Woodlawn/Scaleybark/Crosstown",
+        "route": "30",
+        "span_end_after": "22:50:00",
+        "span_pass_after": false,
+        "span_start_after": "07:02:00",
+        "tier_after": "below standard",
+        "tier_before": "below standard",
+        "weakest_direction_after": 1,
+        "weakest_median_after_mmss": "38:30",
+        "weakest_median_after_s": 2310,
+        "weakest_note": null,
+        "weakest_period_after": "am_peak"
+      },
+      {
+        "category": "bus",
+        "change": "same",
+        "express_result_after": null,
+        "express_result_before": null,
+        "long_name": "Freedom Drive",
+        "route": "34",
+        "span_end_after": "26:00:00",
+        "span_pass_after": false,
+        "span_start_after": "05:40:00",
+        "tier_after": "30-min",
+        "tier_before": "30-min",
+        "weakest_direction_after": 0,
+        "weakest_median_after_mmss": "30:00",
+        "weakest_median_after_s": 1800,
+        "weakest_note": null,
+        "weakest_period_after": "am_peak"
+      },
+      {
+        "category": "bus",
+        "change": "same",
+        "express_result_after": null,
+        "express_result_before": null,
+        "long_name": "Wilkinson-Amazon",
+        "route": "35",
+        "span_end_after": "18:50:00",
+        "span_pass_after": false,
+        "span_start_after": "05:15:00",
+        "tier_after": "below standard",
+        "tier_before": "below standard",
+        "weakest_direction_after": 0,
+        "weakest_median_after_mmss": null,
+        "weakest_median_after_s": null,
+        "weakest_note": "fewer than 2 departures in period",
+        "weakest_period_after": "am_peak"
+      },
+      {
+        "category": "bus",
+        "change": "same",
+        "express_result_after": null,
+        "express_result_before": null,
+        "long_name": "Eastway",
+        "route": "39",
+        "span_end_after": "25:44:00",
+        "span_pass_after": false,
+        "span_start_after": "05:42:00",
+        "tier_after": "below standard",
+        "tier_before": "below standard",
+        "weakest_direction_after": 0,
+        "weakest_median_after_mmss": "40:00",
+        "weakest_median_after_s": 2400,
+        "weakest_note": null,
+        "weakest_period_after": "am_peak"
+      },
+      {
+        "category": "express",
+        "change": "same",
+        "express_result_after": "fail",
+        "express_result_before": "fail",
+        "long_name": "Lawyers Road Express",
+        "route": "40x",
+        "span_end_after": "18:47:00",
+        "span_pass_after": null,
+        "span_start_after": "05:47:00",
+        "tier_after": "not scored (express)",
+        "tier_before": "not scored (express)",
+        "weakest_direction_after": null,
+        "weakest_median_after_mmss": null,
+        "weakest_median_after_s": null,
+        "weakest_note": null,
+        "weakest_period_after": null
+      },
+      {
+        "category": "express",
+        "change": "same",
+        "express_result_after": "pass",
+        "express_result_before": "pass",
+        "long_name": "Steele Creek Express",
+        "route": "41x",
+        "span_end_after": "18:35:00",
+        "span_pass_after": null,
+        "span_start_after": "06:30:00",
+        "tier_after": "not scored (express)",
+        "tier_before": "not scored (express)",
+        "weakest_direction_after": null,
+        "weakest_median_after_mmss": null,
+        "weakest_median_after_s": null,
+        "weakest_note": null,
+        "weakest_period_after": null
+      },
+      {
+        "category": "bus",
+        "change": "same",
+        "express_result_after": null,
+        "express_result_before": null,
+        "long_name": "Carowinds",
+        "route": "42",
+        "span_end_after": "17:43:00",
+        "span_pass_after": false,
+        "span_start_after": "06:30:00",
+        "tier_after": "below standard",
+        "tier_before": "below standard",
+        "weakest_direction_after": 0,
+        "weakest_median_after_mmss": null,
+        "weakest_median_after_s": null,
+        "weakest_note": "fewer than 2 departures in period",
+        "weakest_period_after": "am_peak"
+      },
+      {
+        "category": "bus",
+        "change": "same",
+        "express_result_after": null,
+        "express_result_before": null,
+        "long_name": "Ballantyne",
+        "route": "43",
+        "span_end_after": "21:51:00",
+        "span_pass_after": false,
+        "span_start_after": "08:50:00",
+        "tier_after": "below standard",
+        "tier_before": "below standard",
+        "weakest_direction_after": 0,
+        "weakest_median_after_mmss": null,
+        "weakest_median_after_s": null,
+        "weakest_note": "fewer than 2 departures in period",
+        "weakest_period_after": "am_peak"
+      },
+      {
+        "category": "express",
+        "change": "same",
+        "express_result_after": "pass",
+        "express_result_before": "pass",
+        "long_name": "Harrisburg Road Express",
+        "route": "46x",
+        "span_end_after": "18:30:00",
+        "span_pass_after": null,
+        "span_start_after": "06:11:00",
+        "tier_after": "not scored (express)",
+        "tier_before": "not scored (express)",
+        "weakest_direction_after": null,
+        "weakest_median_after_mmss": null,
+        "weakest_median_after_s": null,
+        "weakest_note": null,
+        "weakest_period_after": null
+      },
+      {
+        "category": "express",
+        "change": "same",
+        "express_result_after": "pass",
+        "express_result_before": "pass",
+        "long_name": "Northcross Express",
+        "route": "48x",
+        "span_end_after": "18:35:00",
+        "span_pass_after": null,
+        "span_start_after": "06:15:00",
+        "tier_after": "not scored (express)",
+        "tier_before": "not scored (express)",
+        "weakest_direction_after": null,
+        "weakest_median_after_mmss": null,
+        "weakest_median_after_s": null,
+        "weakest_note": null,
+        "weakest_period_after": null
+      },
+      {
+        "category": "bus",
+        "change": "same",
+        "express_result_after": null,
+        "express_result_before": null,
+        "long_name": "URP/CIC",
+        "route": "50",
+        "span_end_after": "18:12:00",
+        "span_pass_after": false,
+        "span_start_after": "06:35:00",
+        "tier_after": "below standard",
+        "tier_before": "below standard",
+        "weakest_direction_after": 0,
+        "weakest_median_after_mmss": null,
+        "weakest_median_after_s": null,
+        "weakest_note": "fewer than 2 departures in period",
+        "weakest_period_after": "am_peak"
+      },
+      {
+        "category": "bus",
+        "change": "same",
+        "express_result_after": null,
+        "express_result_before": null,
+        "long_name": "Pineville-Matthews Road",
+        "route": "51",
+        "span_end_after": "18:53:00",
+        "span_pass_after": false,
+        "span_start_after": "07:12:00",
+        "tier_after": "below standard",
+        "tier_before": "below standard",
+        "weakest_direction_after": 0,
+        "weakest_median_after_mmss": null,
+        "weakest_median_after_s": null,
+        "weakest_note": "fewer than 2 departures in period",
+        "weakest_period_after": "am_peak"
+      },
+      {
+        "category": "express",
+        "change": "same",
+        "express_result_after": "fail",
+        "express_result_before": "fail",
+        "long_name": "Idlewild Road Express",
+        "route": "52x",
+        "span_end_after": "18:33:00",
+        "span_pass_after": null,
+        "span_start_after": "06:40:00",
+        "tier_after": "not scored (express)",
+        "tier_before": "not scored (express)",
+        "weakest_direction_after": null,
+        "weakest_median_after_mmss": null,
+        "weakest_median_after_s": null,
+        "weakest_note": null,
+        "weakest_period_after": null
+      },
+      {
+        "category": "express",
+        "change": "same",
+        "express_result_after": "pass",
+        "express_result_before": "pass",
+        "long_name": "Northlake Express",
+        "route": "53x",
+        "span_end_after": "18:51:00",
+        "span_pass_after": null,
+        "span_start_after": "06:20:00",
+        "tier_after": "not scored (express)",
+        "tier_before": "not scored (express)",
+        "weakest_direction_after": null,
+        "weakest_median_after_mmss": null,
+        "weakest_median_after_s": null,
+        "weakest_note": null,
+        "weakest_period_after": null
+      },
+      {
+        "category": "bus",
+        "change": "same",
+        "express_result_after": null,
+        "express_result_before": null,
+        "long_name": "University Research Park",
+        "route": "54",
+        "span_end_after": "22:17:00",
+        "span_pass_after": false,
+        "span_start_after": "07:05:00",
+        "tier_after": "below standard",
+        "tier_before": "below standard",
+        "weakest_direction_after": 0,
+        "weakest_median_after_mmss": "40:00",
+        "weakest_median_after_s": 2400,
+        "weakest_note": null,
+        "weakest_period_after": "midday"
+      },
+      {
+        "category": "bus",
+        "change": "same",
+        "express_result_after": null,
+        "express_result_before": null,
+        "long_name": "Westinghouse",
+        "route": "55",
+        "span_end_after": "22:57:00",
+        "span_pass_after": false,
+        "span_start_after": "06:20:00",
+        "tier_after": "below standard",
+        "tier_before": "below standard",
+        "weakest_direction_after": 0,
+        "weakest_median_after_mmss": "69:00",
+        "weakest_median_after_s": 4140,
+        "weakest_note": null,
+        "weakest_period_after": "am_peak"
+      },
+      {
+        "category": "bus",
+        "change": "same",
+        "express_result_after": null,
+        "express_result_before": null,
+        "long_name": "Arrowood",
+        "route": "56",
+        "span_end_after": "24:57:00",
+        "span_pass_after": false,
+        "span_start_after": "06:19:00",
+        "tier_after": "below standard",
+        "tier_before": "below standard",
+        "weakest_direction_after": 0,
+        "weakest_median_after_mmss": "31:00",
+        "weakest_median_after_s": 1860,
+        "weakest_note": null,
+        "weakest_period_after": "pm_peak"
+      },
+      {
+        "category": "bus",
+        "change": "same",
+        "express_result_after": null,
+        "express_result_before": null,
+        "long_name": "Archdale/South Park",
+        "route": "57",
+        "span_end_after": "22:02:00",
+        "span_pass_after": false,
+        "span_start_after": "07:20:00",
+        "tier_after": "below standard",
+        "tier_before": "below standard",
+        "weakest_direction_after": 0,
+        "weakest_median_after_mmss": "69:00",
+        "weakest_median_after_s": 4140,
+        "weakest_note": null,
+        "weakest_period_after": "pm_peak"
+      },
+      {
+        "category": "bus",
+        "change": "same",
+        "express_result_after": null,
+        "express_result_before": null,
+        "long_name": "Pineville",
+        "route": "58",
+        "span_end_after": "23:15:00",
+        "span_pass_after": false,
+        "span_start_after": "07:12:00",
+        "tier_after": "30-min",
+        "tier_before": "30-min",
+        "weakest_direction_after": 0,
+        "weakest_median_after_mmss": "30:00",
+        "weakest_median_after_s": 1800,
+        "weakest_note": null,
+        "weakest_period_after": "midday"
+      },
+      {
+        "category": "bus",
+        "change": "same",
+        "express_result_after": null,
+        "express_result_before": null,
+        "long_name": "UNC Charlotte-Huntersville",
+        "route": "59",
+        "span_end_after": "20:09:00",
+        "span_pass_after": false,
+        "span_start_after": "08:01:00",
+        "tier_after": "below standard",
+        "tier_before": "below standard",
+        "weakest_direction_after": 0,
+        "weakest_median_after_mmss": null,
+        "weakest_median_after_s": null,
+        "weakest_note": "fewer than 2 departures in period",
+        "weakest_period_after": "am_peak"
+      },
+      {
+        "category": "bus",
+        "change": "same",
+        "express_result_after": null,
+        "express_result_before": null,
+        "long_name": "Tyvola Road",
+        "route": "60",
+        "span_end_after": "24:05:00",
+        "span_pass_after": false,
+        "span_start_after": "04:54:00",
+        "tier_after": "below standard",
+        "tier_before": "below standard",
+        "weakest_direction_after": 0,
+        "weakest_median_after_mmss": "34:30",
+        "weakest_median_after_s": 2070,
+        "weakest_note": null,
+        "weakest_period_after": "pm_peak"
+      },
+      {
+        "category": "express",
+        "change": "same",
+        "express_result_after": "pass",
+        "express_result_before": "pass",
+        "long_name": "Arboretum Express",
+        "route": "61x",
+        "span_end_after": "18:52:00",
+        "span_pass_after": null,
+        "span_start_after": "06:15:00",
+        "tier_after": "not scored (express)",
+        "tier_before": "not scored (express)",
+        "weakest_direction_after": null,
+        "weakest_median_after_mmss": null,
+        "weakest_median_after_s": null,
+        "weakest_note": null,
+        "weakest_period_after": null
+      },
+      {
+        "category": "express",
+        "change": "same",
+        "express_result_after": "pass",
+        "express_result_before": "pass",
+        "long_name": "Rea Road Express",
+        "route": "62x",
+        "span_end_after": "18:40:00",
+        "span_pass_after": null,
+        "span_start_after": "06:09:00",
+        "tier_after": "not scored (express)",
+        "tier_before": "not scored (express)",
+        "weakest_direction_after": null,
+        "weakest_median_after_mmss": null,
+        "weakest_median_after_s": null,
+        "weakest_note": null,
+        "weakest_period_after": null
+      },
+      {
+        "category": "express",
+        "change": "same",
+        "express_result_after": "pass",
+        "express_result_before": "pass",
+        "long_name": "Huntersville Express",
+        "route": "63x",
+        "span_end_after": "18:36:00",
+        "span_pass_after": null,
+        "span_start_after": "06:36:00",
+        "tier_after": "not scored (express)",
+        "tier_before": "not scored (express)",
+        "weakest_direction_after": null,
+        "weakest_median_after_mmss": null,
+        "weakest_median_after_s": null,
+        "weakest_note": null,
+        "weakest_period_after": null
+      },
+      {
+        "category": "express",
+        "change": "same",
+        "express_result_after": "pass",
+        "express_result_before": "pass",
+        "long_name": "Independence Blvd Express",
+        "route": "64x",
+        "span_end_after": "18:47:00",
+        "span_pass_after": null,
+        "span_start_after": "06:15:00",
+        "tier_after": "not scored (express)",
+        "tier_before": "not scored (express)",
+        "weakest_direction_after": null,
+        "weakest_median_after_mmss": null,
+        "weakest_median_after_s": null,
+        "weakest_note": null,
+        "weakest_period_after": null
+      },
+      {
+        "category": "express",
+        "change": "same",
+        "express_result_after": "fail",
+        "express_result_before": "fail",
+        "long_name": "Union County Express",
+        "route": "74x",
+        "span_end_after": "18:16:00",
+        "span_pass_after": null,
+        "span_start_after": "06:33:00",
+        "tier_after": "not scored (express)",
+        "tier_before": "not scored (express)",
+        "weakest_direction_after": null,
+        "weakest_median_after_mmss": null,
+        "weakest_median_after_s": null,
+        "weakest_note": null,
+        "weakest_period_after": null
+      },
+      {
+        "category": "express",
+        "change": "same",
+        "express_result_after": "pass",
+        "express_result_before": "pass",
+        "long_name": "North Mecklenburg Express",
+        "route": "77x",
+        "span_end_after": "19:37:00",
+        "span_pass_after": null,
+        "span_start_after": "06:06:00",
+        "tier_after": "not scored (express)",
+        "tier_before": "not scored (express)",
+        "weakest_direction_after": null,
+        "weakest_median_after_mmss": null,
+        "weakest_median_after_s": null,
+        "weakest_note": null,
+        "weakest_period_after": null
+      },
+      {
+        "category": "express",
+        "change": "same",
+        "express_result_after": "fail",
+        "express_result_before": "fail",
+        "long_name": "Gastonia Express",
+        "route": "85x",
+        "span_end_after": "18:17:00",
+        "span_pass_after": null,
+        "span_start_after": "06:35:00",
+        "tier_after": "not scored (express)",
+        "tier_before": "not scored (express)",
+        "weakest_direction_after": null,
+        "weakest_median_after_mmss": null,
+        "weakest_median_after_s": null,
+        "weakest_note": null,
+        "weakest_period_after": null
+      },
+      {
+        "category": "express",
+        "change": "same",
+        "express_result_after": "pass",
+        "express_result_before": "pass",
+        "long_name": "Mountain Island Express",
+        "route": "88x",
+        "span_end_after": "18:37:00",
+        "span_pass_after": null,
+        "span_start_after": "06:20:00",
+        "tier_after": "not scored (express)",
+        "tier_before": "not scored (express)",
+        "weakest_direction_after": null,
+        "weakest_median_after_mmss": null,
+        "weakest_median_after_s": null,
+        "weakest_note": null,
+        "weakest_period_after": null
+      },
+      {
+        "category": "bus",
+        "change": "new",
+        "express_result_after": null,
+        "express_result_before": null,
+        "long_name": "Northern Meck Connector",
+        "route": "177",
+        "span_end_after": "17:01:00",
+        "span_pass_after": false,
+        "span_start_after": "09:00:00",
+        "tier_after": "below standard",
+        "tier_before": "no service on date",
+        "weakest_direction_after": 0,
+        "weakest_median_after_mmss": null,
+        "weakest_median_after_s": null,
+        "weakest_note": "fewer than 2 departures in period",
+        "weakest_period_after": "am_peak"
+      },
+      {
+        "category": "bus",
+        "change": "same",
+        "express_result_after": null,
+        "express_result_before": null,
+        "long_name": "Hidden Valley",
+        "route": "211",
+        "span_end_after": "25:15:00",
+        "span_pass_after": false,
+        "span_start_after": "05:18:00",
+        "tier_after": "30-min",
+        "tier_before": "30-min",
+        "weakest_direction_after": 1,
+        "weakest_median_after_mmss": "23:00",
+        "weakest_median_after_s": 1380,
+        "weakest_note": null,
+        "weakest_period_after": "pm_peak"
+      },
+      {
+        "category": "bus",
+        "change": "same",
+        "express_result_after": null,
+        "express_result_before": null,
+        "long_name": "E. Harris Blvd-Idlewild Rd",
+        "route": "221",
+        "span_end_after": "23:05:00",
+        "span_pass_after": false,
+        "span_start_after": "06:35:00",
+        "tier_after": "below standard",
+        "tier_before": "below standard",
+        "weakest_direction_after": 0,
+        "weakest_median_after_mmss": "61:00",
+        "weakest_median_after_s": 3660,
+        "weakest_note": null,
+        "weakest_period_after": "am_peak"
+      },
+      {
+        "category": "bus",
+        "change": "same",
+        "express_result_after": null,
+        "express_result_before": null,
+        "long_name": "Pence Road",
+        "route": "222",
+        "span_end_after": "21:00:00",
+        "span_pass_after": false,
+        "span_start_after": "08:10:00",
+        "tier_after": "below standard",
+        "tier_before": "below standard",
+        "weakest_direction_after": 0,
+        "weakest_median_after_mmss": null,
+        "weakest_median_after_s": null,
+        "weakest_note": "fewer than 2 departures in period",
+        "weakest_period_after": "am_peak"
+      },
+      {
+        "category": "bus",
+        "change": "same",
+        "express_result_after": null,
+        "express_result_before": null,
+        "long_name": "West Charlotte Connector",
+        "route": "235",
+        "span_end_after": "23:20:00",
+        "span_pass_after": false,
+        "span_start_after": "06:28:00",
+        "tier_after": "below standard",
+        "tier_before": "below standard",
+        "weakest_direction_after": 1,
+        "weakest_median_after_mmss": "58:00",
+        "weakest_median_after_s": 3480,
+        "weakest_note": null,
+        "weakest_period_after": "am_peak"
+      }
+    ],
+    "source": "data/marts/routes.csv, before_after.csv and route_compliance.csv"
+  },
+  "title": "Better Bus Baseline v1: findings",
+  "weekend": {
+    "callouts": {
+      "5": {
+        "after_longest_gap_s": 1380,
+        "after_medians_s": [
+          1200
+        ],
+        "claim": {
+          "retrieved_utc": "2026-10-16T19:50:41Z",
+          "source": "CATS web page \"Service Change\", section \"October 2026 Service Changes\", heading \"15 - minute service\"",
+          "text": "Route 5: Sprinter Airport (15-minute, weekday/20-minute weekend)",
+          "url": "https://www.charlottenc.gov/CATS/Plans-Projects/Service-Change"
+        },
+        "schedule_after": {
+          "saturday": [
+            {
+              "direction": 0,
+              "max_after_s": 1380,
+              "max_before_s": 1680,
+              "median_after_mmss": "20:00",
+              "median_after_s": 1200,
+              "median_before_mmss": "25:00",
+              "median_before_s": 1500,
+              "n_after": 27,
+              "n_before": 21
+            },
+            {
+              "direction": 1,
+              "max_after_s": 1200,
+              "max_before_s": 1500,
+              "median_after_mmss": "20:00",
+              "median_after_s": 1200,
+              "median_before_mmss": "25:00",
+              "median_before_s": 1500,
+              "n_after": 27,
+              "n_before": 22
+            }
+          ],
+          "sunday": [
+            {
+              "direction": 0,
+              "max_after_s": 1320,
+              "max_before_s": 1920,
+              "median_after_mmss": "20:00",
+              "median_after_s": 1200,
+              "median_before_mmss": "30:00",
+              "median_before_s": 1800,
+              "n_after": 27,
+              "n_before": 18
+            },
+            {
+              "direction": 1,
+              "max_after_s": 1200,
+              "max_before_s": 1800,
+              "median_after_mmss": "20:00",
+              "median_after_s": 1200,
+              "median_before_mmss": "30:00",
+              "median_before_s": 1800,
+              "n_after": 27,
+              "n_before": 18
+            }
+          ]
+        }
+      },
+      "9": {
+        "after_longest_gap_s": 1080,
+        "after_medians_s": [
+          900
+        ],
+        "claim": {
+          "retrieved_utc": "2026-10-16T19:50:41Z",
+          "source": "CATS web page \"Service Change\", section \"October 2026 Service Changes\", heading \"15 - minute service\"",
+          "text": "Route 9: Central Ave (15-minute, everyday)",
+          "url": "https://www.charlottenc.gov/CATS/Plans-Projects/Service-Change"
+        },
+        "schedule_after": {
+          "saturday": [
+            {
+              "direction": 0,
+              "max_after_s": 1080,
+              "max_before_s": 1200,
+              "median_after_mmss": "15:00",
+              "median_after_s": 900,
+              "median_before_mmss": "15:00",
+              "median_before_s": 900,
+              "n_after": 35,
+              "n_before": 36
+            },
+            {
+              "direction": 1,
+              "max_after_s": 900,
+              "max_before_s": 1200,
+              "median_after_mmss": "15:00",
+              "median_after_s": 900,
+              "median_before_mmss": "15:00",
+              "median_before_s": 900,
+              "n_after": 36,
+              "n_before": 35
+            }
+          ],
+          "sunday": [
+            {
+              "direction": 0,
+              "max_after_s": 1080,
+              "max_before_s": 1800,
+              "median_after_mmss": "15:00",
+              "median_after_s": 900,
+              "median_before_mmss": "20:00",
+              "median_before_s": 1200,
+              "n_after": 36,
+              "n_before": 23
+            },
+            {
+              "direction": 1,
+              "max_after_s": 900,
+              "max_before_s": 1800,
+              "median_after_mmss": "15:00",
+              "median_after_s": 900,
+              "median_before_mmss": "20:00",
+              "median_before_s": 1200,
+              "n_after": 36,
+              "n_before": 23
+            }
+          ]
+        }
+      }
+    },
+    "period": {
+      "daytime": "09:00:00 up to but not including 18:00:00",
+      "feeds": {
+        "after": "2026-09-29",
+        "before": "2026-09-10"
+      },
+      "saturday": {
+        "after": "2026-10-17",
+        "before": "2026-09-26"
+      },
+      "sunday": {
+        "after": "2026-10-18",
+        "before": "2026-09-27"
+      }
+    },
+    "routes": [
+      {
+        "long_name": "Mt. Holly Road",
+        "route": "1",
+        "saturday": {
+          "directions": [
+            {
+              "direction": 0,
+              "max_after_s": 1920,
+              "max_before_s": 1920,
+              "median_after_mmss": "30:00",
+              "median_after_s": 1800,
+              "median_before_mmss": "30:00",
+              "median_before_s": 1800,
+              "n_after": 18,
+              "n_before": 18
+            },
+            {
+              "direction": 1,
+              "max_after_s": 1800,
+              "max_before_s": 1800,
+              "median_after_mmss": "30:00",
+              "median_after_s": 1800,
+              "median_before_mmss": "30:00",
+              "median_before_s": 1800,
+              "n_after": 18,
+              "n_before": 18
+            }
+          ],
+          "status_after": "report only",
+          "status_before": "report only"
+        },
+        "sunday": {
+          "directions": [
+            {
+              "direction": 0,
+              "max_after_s": 3660,
+              "max_before_s": 3660,
+              "median_after_mmss": "60:00",
+              "median_after_s": 3600,
+              "median_before_mmss": "60:00",
+              "median_before_s": 3600,
+              "n_after": 8,
+              "n_before": 8
+            },
+            {
+              "direction": 1,
+              "max_after_s": 3600,
+              "max_before_s": 3600,
+              "median_after_mmss": "60:00",
+              "median_after_s": 3600,
+              "median_before_mmss": "60:00",
+              "median_before_s": 3600,
+              "n_after": 9,
+              "n_before": 9
+            }
+          ],
+          "status_after": "report only",
+          "status_before": "report only"
+        }
+      },
+      {
+        "long_name": "Ashley/Scaleybark Crosstown",
+        "route": "2",
+        "saturday": {
+          "directions": [
+            {
+              "direction": 0,
+              "max_after_s": 2280,
+              "max_before_s": 2280,
+              "median_after_mmss": "35:00",
+              "median_after_s": 2100,
+              "median_before_mmss": "35:00",
+              "median_before_s": 2100,
+              "n_after": 16,
+              "n_before": 16
+            },
+            {
+              "direction": 1,
+              "max_after_s": 2280,
+              "max_before_s": 2280,
+              "median_after_mmss": "35:00",
+              "median_after_s": 2100,
+              "median_before_mmss": "35:00",
+              "median_before_s": 2100,
+              "n_after": 16,
+              "n_before": 16
+            }
+          ],
+          "status_after": "report only",
+          "status_before": "report only"
+        },
+        "sunday": {
+          "directions": [
+            {
+              "direction": 0,
+              "max_after_s": 4140,
+              "max_before_s": 4140,
+              "median_after_mmss": "60:00",
+              "median_after_s": 3600,
+              "median_before_mmss": "60:00",
+              "median_before_s": 3600,
+              "n_after": 9,
+              "n_before": 9
+            },
+            {
+              "direction": 1,
+              "max_after_s": 4440,
+              "max_before_s": 4440,
+              "median_after_mmss": "60:00",
+              "median_after_s": 3600,
+              "median_before_mmss": "60:00",
+              "median_before_s": 3600,
+              "n_after": 9,
+              "n_before": 9
+            }
+          ],
+          "status_after": "report only",
+          "status_before": "report only"
+        }
+      },
+      {
+        "long_name": "The Plaza",
+        "route": "3",
+        "saturday": {
+          "directions": [
+            {
+              "direction": 0,
+              "max_after_s": 2040,
+              "max_before_s": 2040,
+              "median_after_mmss": "30:00",
+              "median_after_s": 1800,
+              "median_before_mmss": "30:00",
+              "median_before_s": 1800,
+              "n_after": 18,
+              "n_before": 18
+            },
+            {
+              "direction": 1,
+              "max_after_s": 1800,
+              "max_before_s": 1800,
+              "median_after_mmss": "30:00",
+              "median_after_s": 1800,
+              "median_before_mmss": "30:00",
+              "median_before_s": 1800,
+              "n_after": 18,
+              "n_before": 18
+            }
+          ],
+          "status_after": "report only",
+          "status_before": "report only"
+        },
+        "sunday": {
+          "directions": [
+            {
+              "direction": 0,
+              "max_after_s": 2220,
+              "max_before_s": 2220,
+              "median_after_mmss": "30:00",
+              "median_after_s": 1800,
+              "median_before_mmss": "30:00",
+              "median_before_s": 1800,
+              "n_after": 17,
+              "n_before": 17
+            },
+            {
+              "direction": 1,
+              "max_after_s": 2100,
+              "max_before_s": 2100,
+              "median_after_mmss": "30:00",
+              "median_after_s": 1800,
+              "median_before_mmss": "30:00",
+              "median_before_s": 1800,
+              "n_after": 18,
+              "n_before": 18
+            }
+          ],
+          "status_after": "report only",
+          "status_before": "report only"
+        }
+      },
+      {
+        "long_name": "Belmont",
+        "route": "4",
+        "saturday": {
+          "directions": [
+            {
+              "direction": 0,
+              "max_after_s": 1980,
+              "max_before_s": 1980,
+              "median_after_mmss": "30:00",
+              "median_after_s": 1800,
+              "median_before_mmss": "30:00",
+              "median_before_s": 1800,
+              "n_after": 18,
+              "n_before": 18
+            },
+            {
+              "direction": 1,
+              "max_after_s": 1920,
+              "max_before_s": 1920,
+              "median_after_mmss": "30:00",
+              "median_after_s": 1800,
+              "median_before_mmss": "30:00",
+              "median_before_s": 1800,
+              "n_after": 17,
+              "n_before": 17
+            }
+          ],
+          "status_after": "report only",
+          "status_before": "report only"
+        },
+        "sunday": {
+          "directions": [
+            {
+              "direction": 0,
+              "max_after_s": 1860,
+              "max_before_s": 1860,
+              "median_after_mmss": "30:00",
+              "median_after_s": 1800,
+              "median_before_mmss": "30:00",
+              "median_before_s": 1800,
+              "n_after": 18,
+              "n_before": 18
+            },
+            {
+              "direction": 1,
+              "max_after_s": 1800,
+              "max_before_s": 1800,
+              "median_after_mmss": "30:00",
+              "median_after_s": 1800,
+              "median_before_mmss": "30:00",
+              "median_before_s": 1800,
+              "n_after": 18,
+              "n_before": 18
+            }
+          ],
+          "status_after": "report only",
+          "status_before": "report only"
+        }
+      },
+      {
+        "long_name": "Airport",
+        "route": "5",
+        "saturday": {
+          "directions": [
+            {
+              "direction": 0,
+              "max_after_s": 1380,
+              "max_before_s": 1680,
+              "median_after_mmss": "20:00",
+              "median_after_s": 1200,
+              "median_before_mmss": "25:00",
+              "median_before_s": 1500,
+              "n_after": 27,
+              "n_before": 21
+            },
+            {
+              "direction": 1,
+              "max_after_s": 1200,
+              "max_before_s": 1500,
+              "median_after_mmss": "20:00",
+              "median_after_s": 1200,
+              "median_before_mmss": "25:00",
+              "median_before_s": 1500,
+              "n_after": 27,
+              "n_before": 22
+            }
+          ],
+          "status_after": "report only",
+          "status_before": "report only"
+        },
+        "sunday": {
+          "directions": [
+            {
+              "direction": 0,
+              "max_after_s": 1320,
+              "max_before_s": 1920,
+              "median_after_mmss": "20:00",
+              "median_after_s": 1200,
+              "median_before_mmss": "30:00",
+              "median_before_s": 1800,
+              "n_after": 27,
+              "n_before": 18
+            },
+            {
+              "direction": 1,
+              "max_after_s": 1200,
+              "max_before_s": 1800,
+              "median_after_mmss": "20:00",
+              "median_after_s": 1200,
+              "median_before_mmss": "30:00",
+              "median_before_s": 1800,
+              "n_after": 27,
+              "n_before": 18
+            }
+          ],
+          "status_after": "report only",
+          "status_before": "report only"
+        }
+      },
+      {
+        "long_name": "Kings Drive",
+        "route": "6",
+        "saturday": {
+          "directions": [
+            {
+              "direction": 0,
+              "max_after_s": 1920,
+              "max_before_s": 2760,
+              "median_after_mmss": "30:00",
+              "median_after_s": 1800,
+              "median_before_mmss": "45:00",
+              "median_before_s": 2700,
+              "n_after": 18,
+              "n_before": 12
+            },
+            {
+              "direction": 1,
+              "max_after_s": 1800,
+              "max_before_s": 2700,
+              "median_after_mmss": "30:00",
+              "median_after_s": 1800,
+              "median_before_mmss": "45:00",
+              "median_before_s": 2700,
+              "n_after": 18,
+              "n_before": 12
+            }
+          ],
+          "status_after": "report only",
+          "status_before": "report only"
+        },
+        "sunday": {
+          "directions": [
+            {
+              "direction": 0,
+              "max_after_s": 1860,
+              "max_before_s": 3660,
+              "median_after_mmss": "30:00",
+              "median_after_s": 1800,
+              "median_before_mmss": "60:00",
+              "median_before_s": 3600,
+              "n_after": 18,
+              "n_before": 9
+            },
+            {
+              "direction": 1,
+              "max_after_s": 1800,
+              "max_before_s": 3600,
+              "median_after_mmss": "30:00",
+              "median_after_s": 1800,
+              "median_before_mmss": "60:00",
+              "median_before_s": 3600,
+              "n_after": 18,
+              "n_before": 9
+            }
+          ],
+          "status_after": "report only",
+          "status_before": "report only"
+        }
+      },
+      {
+        "long_name": "Beatties Ford",
+        "route": "7",
+        "saturday": {
+          "directions": [
+            {
+              "direction": 0,
+              "max_after_s": 1260,
+              "max_before_s": 1260,
+              "median_after_mmss": "20:00",
+              "median_after_s": 1200,
+              "median_before_mmss": "20:00",
+              "median_before_s": 1200,
+              "n_after": 27,
+              "n_before": 27
+            },
+            {
+              "direction": 1,
+              "max_after_s": 1200,
+              "max_before_s": 1200,
+              "median_after_mmss": "20:00",
+              "median_after_s": 1200,
+              "median_before_mmss": "20:00",
+              "median_before_s": 1200,
+              "n_after": 27,
+              "n_before": 27
+            }
+          ],
+          "status_after": "report only",
+          "status_before": "report only"
+        },
+        "sunday": {
+          "directions": [
+            {
+              "direction": 0,
+              "max_after_s": 1380,
+              "max_before_s": 1380,
+              "median_after_mmss": "20:30",
+              "median_after_s": 1230,
+              "median_before_mmss": "20:30",
+              "median_before_s": 1230,
+              "n_after": 27,
+              "n_before": 27
+            },
+            {
+              "direction": 1,
+              "max_after_s": 1200,
+              "max_before_s": 1200,
+              "median_after_mmss": "20:00",
+              "median_after_s": 1200,
+              "median_before_mmss": "20:00",
+              "median_before_s": 1200,
+              "n_after": 27,
+              "n_before": 27
+            }
+          ],
+          "status_after": "report only",
+          "status_before": "report only"
+        }
+      },
+      {
+        "long_name": "Tuckaseegee Road",
+        "route": "8",
+        "saturday": {
+          "directions": [
+            {
+              "direction": 0,
+              "max_after_s": 1860,
+              "max_before_s": 1860,
+              "median_after_mmss": "30:00",
+              "median_after_s": 1800,
+              "median_before_mmss": "30:00",
+              "median_before_s": 1800,
+              "n_after": 18,
+              "n_before": 18
+            },
+            {
+              "direction": 1,
+              "max_after_s": 1800,
+              "max_before_s": 1800,
+              "median_after_mmss": "30:00",
+              "median_after_s": 1800,
+              "median_before_mmss": "30:00",
+              "median_before_s": 1800,
+              "n_after": 17,
+              "n_before": 17
+            }
+          ],
+          "status_after": "report only",
+          "status_before": "report only"
+        },
+        "sunday": {
+          "directions": [
+            {
+              "direction": 0,
+              "max_after_s": 2820,
+              "max_before_s": 2820,
+              "median_after_mmss": "45:00",
+              "median_after_s": 2700,
+              "median_before_mmss": "45:00",
+              "median_before_s": 2700,
+              "n_after": 12,
+              "n_before": 12
+            },
+            {
+              "direction": 1,
+              "max_after_s": 2700,
+              "max_before_s": 2700,
+              "median_after_mmss": "45:00",
+              "median_after_s": 2700,
+              "median_before_mmss": "45:00",
+              "median_before_s": 2700,
+              "n_after": 12,
+              "n_before": 12
+            }
+          ],
+          "status_after": "report only",
+          "status_before": "report only"
+        }
+      },
+      {
+        "long_name": "Central Avenue",
+        "route": "9",
+        "saturday": {
+          "directions": [
+            {
+              "direction": 0,
+              "max_after_s": 1080,
+              "max_before_s": 1200,
+              "median_after_mmss": "15:00",
+              "median_after_s": 900,
+              "median_before_mmss": "15:00",
+              "median_before_s": 900,
+              "n_after": 35,
+              "n_before": 36
+            },
+            {
+              "direction": 1,
+              "max_after_s": 900,
+              "max_before_s": 1200,
+              "median_after_mmss": "15:00",
+              "median_after_s": 900,
+              "median_before_mmss": "15:00",
+              "median_before_s": 900,
+              "n_after": 36,
+              "n_before": 35
+            }
+          ],
+          "status_after": "report only",
+          "status_before": "report only"
+        },
+        "sunday": {
+          "directions": [
+            {
+              "direction": 0,
+              "max_after_s": 1080,
+              "max_before_s": 1800,
+              "median_after_mmss": "15:00",
+              "median_after_s": 900,
+              "median_before_mmss": "20:00",
+              "median_before_s": 1200,
+              "n_after": 36,
+              "n_before": 23
+            },
+            {
+              "direction": 1,
+              "max_after_s": 900,
+              "max_before_s": 1800,
+              "median_after_mmss": "15:00",
+              "median_after_s": 900,
+              "median_before_mmss": "20:00",
+              "median_before_s": 1200,
+              "n_after": 36,
+              "n_before": 23
+            }
+          ],
+          "status_after": "report only",
+          "status_before": "report only"
+        }
+      },
+      {
+        "long_name": "West Boulevard",
+        "route": "10",
+        "saturday": {
+          "directions": [
+            {
+              "direction": 0,
+              "max_after_s": 1980,
+              "max_before_s": 1980,
+              "median_after_mmss": "30:00",
+              "median_after_s": 1800,
+              "median_before_mmss": "30:00",
+              "median_before_s": 1800,
+              "n_after": 18,
+              "n_before": 18
+            },
+            {
+              "direction": 1,
+              "max_after_s": 1800,
+              "max_before_s": 1800,
+              "median_after_mmss": "30:00",
+              "median_after_s": 1800,
+              "median_before_mmss": "30:00",
+              "median_before_s": 1800,
+              "n_after": 18,
+              "n_before": 18
+            }
+          ],
+          "status_after": "report only",
+          "status_before": "report only"
+        },
+        "sunday": {
+          "directions": [
+            {
+              "direction": 0,
+              "max_after_s": 1920,
+              "max_before_s": 1920,
+              "median_after_mmss": "30:00",
+              "median_after_s": 1800,
+              "median_before_mmss": "30:00",
+              "median_before_s": 1800,
+              "n_after": 17,
+              "n_before": 17
+            },
+            {
+              "direction": 1,
+              "max_after_s": 1800,
+              "max_before_s": 1800,
+              "median_after_mmss": "30:00",
+              "median_after_s": 1800,
+              "median_before_mmss": "30:00",
+              "median_before_s": 1800,
+              "n_after": 18,
+              "n_before": 18
+            }
+          ],
+          "status_after": "report only",
+          "status_before": "report only"
+        }
+      },
+      {
+        "long_name": "North Tryon",
+        "route": "11",
+        "saturday": {
+          "directions": [
+            {
+              "direction": 0,
+              "max_after_s": 1920,
+              "max_before_s": 1920,
+              "median_after_mmss": "30:00",
+              "median_after_s": 1800,
+              "median_before_mmss": "30:00",
+              "median_before_s": 1800,
+              "n_after": 21,
+              "n_before": 21
+            },
+            {
+              "direction": 1,
+              "max_after_s": 1800,
+              "max_before_s": 1800,
+              "median_after_mmss": "30:00",
+              "median_after_s": 1800,
+              "median_before_mmss": "30:00",
+              "median_before_s": 1800,
+              "n_after": 18,
+              "n_before": 18
+            }
+          ],
+          "status_after": "report only",
+          "status_before": "report only"
+        },
+        "sunday": {
+          "directions": [
+            {
+              "direction": 0,
+              "max_after_s": 2040,
+              "max_before_s": 2040,
+              "median_after_mmss": "30:00",
+              "median_after_s": 1800,
+              "median_before_mmss": "30:00",
+              "median_before_s": 1800,
+              "n_after": 21,
+              "n_before": 21
+            },
+            {
+              "direction": 1,
+              "max_after_s": 1800,
+              "max_before_s": 1800,
+              "median_after_mmss": "30:00",
+              "median_after_s": 1800,
+              "median_before_mmss": "30:00",
+              "median_before_s": 1800,
+              "n_after": 18,
+              "n_before": 18
+            }
+          ],
+          "status_after": "report only",
+          "status_before": "report only"
+        }
+      },
+      {
+        "long_name": "South Boulevard",
+        "route": "12",
+        "saturday": {
+          "directions": [
+            {
+              "direction": 0,
+              "max_after_s": 2940,
+              "max_before_s": 2940,
+              "median_after_mmss": "45:00",
+              "median_after_s": 2700,
+              "median_before_mmss": "45:00",
+              "median_before_s": 2700,
+              "n_after": 12,
+              "n_before": 12
+            },
+            {
+              "direction": 1,
+              "max_after_s": 2940,
+              "max_before_s": 2940,
+              "median_after_mmss": "46:00",
+              "median_after_s": 2760,
+              "median_before_mmss": "46:00",
+              "median_before_s": 2760,
+              "n_after": 11,
+              "n_before": 11
+            }
+          ],
+          "status_after": "report only",
+          "status_before": "report only"
+        },
+        "sunday": {
+          "directions": [
+            {
+              "direction": 0,
+              "max_after_s": 2700,
+              "max_before_s": 2700,
+              "median_after_mmss": "45:00",
+              "median_after_s": 2700,
+              "median_before_mmss": "45:00",
+              "median_before_s": 2700,
+              "n_after": 12,
+              "n_before": 12
+            },
+            {
+              "direction": 1,
+              "max_after_s": 2760,
+              "max_before_s": 2760,
+              "median_after_mmss": "45:00",
+              "median_after_s": 2700,
+              "median_before_mmss": "45:00",
+              "median_before_s": 2700,
+              "n_after": 12,
+              "n_before": 12
+            }
+          ],
+          "status_after": "report only",
+          "status_before": "report only"
+        }
+      },
+      {
+        "long_name": "Nevin Road",
+        "route": "13",
+        "saturday": {
+          "directions": [
+            {
+              "direction": 0,
+              "max_after_s": 2160,
+              "max_before_s": 2160,
+              "median_after_mmss": "35:00",
+              "median_after_s": 2100,
+              "median_before_mmss": "35:00",
+              "median_before_s": 2100,
+              "n_after": 16,
+              "n_before": 16
+            },
+            {
+              "direction": 1,
+              "max_after_s": 2100,
+              "max_before_s": 2100,
+              "median_after_mmss": "35:00",
+              "median_after_s": 2100,
+              "median_before_mmss": "35:00",
+              "median_before_s": 2100,
+              "n_after": 16,
+              "n_before": 16
+            }
+          ],
+          "status_after": "report only",
+          "status_before": "report only"
+        },
+        "sunday": {
+          "directions": [
+            {
+              "direction": 0,
+              "max_after_s": 3660,
+              "max_before_s": 3660,
+              "median_after_mmss": "60:00",
+              "median_after_s": 3600,
+              "median_before_mmss": "60:00",
+              "median_before_s": 3600,
+              "n_after": 9,
+              "n_before": 9
+            },
+            {
+              "direction": 1,
+              "max_after_s": 3600,
+              "max_before_s": 3600,
+              "median_after_mmss": "60:00",
+              "median_after_s": 3600,
+              "median_before_mmss": "60:00",
+              "median_before_s": 3600,
+              "n_after": 9,
+              "n_before": 9
+            }
+          ],
+          "status_after": "report only",
+          "status_before": "report only"
+        }
+      },
+      {
+        "long_name": "Providence Road",
+        "route": "14",
+        "saturday": {
+          "directions": [
+            {
+              "direction": 0,
+              "max_after_s": 1920,
+              "max_before_s": 1920,
+              "median_after_mmss": "30:00",
+              "median_after_s": 1800,
+              "median_before_mmss": "30:00",
+              "median_before_s": 1800,
+              "n_after": 18,
+              "n_before": 18
+            },
+            {
+              "direction": 1,
+              "max_after_s": 2100,
+              "max_before_s": 2100,
+              "median_after_mmss": "30:00",
+              "median_after_s": 1800,
+              "median_before_mmss": "30:00",
+              "median_before_s": 1800,
+              "n_after": 18,
+              "n_before": 18
+            }
+          ],
+          "status_after": "report only",
+          "status_before": "report only"
+        },
+        "sunday": {
+          "directions": [
+            {
+              "direction": 0,
+              "max_after_s": 3660,
+              "max_before_s": 3660,
+              "median_after_mmss": "60:00",
+              "median_after_s": 3600,
+              "median_before_mmss": "60:00",
+              "median_before_s": 3600,
+              "n_after": 9,
+              "n_before": 9
+            },
+            {
+              "direction": 1,
+              "max_after_s": 3600,
+              "max_before_s": 3600,
+              "median_after_mmss": "60:00",
+              "median_after_s": 3600,
+              "median_before_mmss": "60:00",
+              "median_before_s": 3600,
+              "n_after": 9,
+              "n_before": 9
+            }
+          ],
+          "status_after": "report only",
+          "status_before": "report only"
+        }
+      },
+      {
+        "long_name": "Randolph Road",
+        "route": "15",
+        "saturday": {
+          "directions": [
+            {
+              "direction": 0,
+              "max_after_s": 1920,
+              "max_before_s": 1920,
+              "median_after_mmss": "30:00",
+              "median_after_s": 1800,
+              "median_before_mmss": "30:00",
+              "median_before_s": 1800,
+              "n_after": 18,
+              "n_before": 18
+            },
+            {
+              "direction": 1,
+              "max_after_s": 1800,
+              "max_before_s": 1800,
+              "median_after_mmss": "30:00",
+              "median_after_s": 1800,
+              "median_before_mmss": "30:00",
+              "median_before_s": 1800,
+              "n_after": 18,
+              "n_before": 18
+            }
+          ],
+          "status_after": "report only",
+          "status_before": "report only"
+        },
+        "sunday": {
+          "directions": [
+            {
+              "direction": 0,
+              "max_after_s": 1800,
+              "max_before_s": 1800,
+              "median_after_mmss": "30:00",
+              "median_after_s": 1800,
+              "median_before_mmss": "30:00",
+              "median_before_s": 1800,
+              "n_after": 18,
+              "n_before": 18
+            },
+            {
+              "direction": 1,
+              "max_after_s": 1800,
+              "max_before_s": 1800,
+              "median_after_mmss": "30:00",
+              "median_after_s": 1800,
+              "median_before_mmss": "30:00",
+              "median_before_s": 1800,
+              "n_after": 18,
+              "n_before": 18
+            }
+          ],
+          "status_after": "report only",
+          "status_before": "report only"
+        }
+      },
+      {
+        "long_name": "South Tryon",
+        "route": "16",
+        "saturday": {
+          "directions": [
+            {
+              "direction": 0,
+              "max_after_s": 2040,
+              "max_before_s": 2040,
+              "median_after_mmss": "30:00",
+              "median_after_s": 1800,
+              "median_before_mmss": "30:00",
+              "median_before_s": 1800,
+              "n_after": 17,
+              "n_before": 17
+            },
+            {
+              "direction": 1,
+              "max_after_s": 1800,
+              "max_before_s": 1800,
+              "median_after_mmss": "30:00",
+              "median_after_s": 1800,
+              "median_before_mmss": "30:00",
+              "median_before_s": 1800,
+              "n_after": 18,
+              "n_before": 18
+            }
+          ],
+          "status_after": "report only",
+          "status_before": "report only"
+        },
+        "sunday": {
+          "directions": [
+            {
+              "direction": 0,
+              "max_after_s": 2160,
+              "max_before_s": 2160,
+              "median_after_mmss": "30:00",
+              "median_after_s": 1800,
+              "median_before_mmss": "30:00",
+              "median_before_s": 1800,
+              "n_after": 18,
+              "n_before": 18
+            },
+            {
+              "direction": 1,
+              "max_after_s": 1800,
+              "max_before_s": 1800,
+              "median_after_mmss": "30:00",
+              "median_after_s": 1800,
+              "median_before_mmss": "30:00",
+              "median_before_s": 1800,
+              "n_after": 18,
+              "n_before": 18
+            }
+          ],
+          "status_after": "report only",
+          "status_before": "report only"
+        }
+      },
+      {
+        "long_name": "Commonwealth Avenue",
+        "route": "17",
+        "saturday": {
+          "directions": [
+            {
+              "direction": 0,
+              "max_after_s": 1980,
+              "max_before_s": 1980,
+              "median_after_mmss": "30:00",
+              "median_after_s": 1800,
+              "median_before_mmss": "30:00",
+              "median_before_s": 1800,
+              "n_after": 18,
+              "n_before": 18
+            },
+            {
+              "direction": 1,
+              "max_after_s": 1800,
+              "max_before_s": 1800,
+              "median_after_mmss": "30:00",
+              "median_after_s": 1800,
+              "median_before_mmss": "30:00",
+              "median_before_s": 1800,
+              "n_after": 18,
+              "n_before": 18
+            }
+          ],
+          "status_after": "report only",
+          "status_before": "report only"
+        },
+        "sunday": {
+          "directions": [
+            {
+              "direction": 0,
+              "max_after_s": 3840,
+              "max_before_s": 3840,
+              "median_after_mmss": "60:00",
+              "median_after_s": 3600,
+              "median_before_mmss": "60:00",
+              "median_before_s": 3600,
+              "n_after": 8,
+              "n_before": 8
+            },
+            {
+              "direction": 1,
+              "max_after_s": 3600,
+              "max_before_s": 3600,
+              "median_after_mmss": "60:00",
+              "median_after_s": 3600,
+              "median_before_mmss": "60:00",
+              "median_before_s": 3600,
+              "n_after": 9,
+              "n_before": 9
+            }
+          ],
+          "status_after": "report only",
+          "status_before": "report only"
+        }
+      },
+      {
+        "long_name": "Paw Creek/Rosa Parks Crosstown",
+        "route": "18",
+        "saturday": {
+          "directions": [
+            {
+              "direction": 0,
+              "max_after_s": 2880,
+              "max_before_s": 2880,
+              "median_after_mmss": "45:00",
+              "median_after_s": 2700,
+              "median_before_mmss": "45:00",
+              "median_before_s": 2700,
+              "n_after": 12,
+              "n_before": 12
+            },
+            {
+              "direction": 1,
+              "max_after_s": 2700,
+              "max_before_s": 2700,
+              "median_after_mmss": "45:00",
+              "median_after_s": 2700,
+              "median_before_mmss": "45:00",
+              "median_before_s": 2700,
+              "n_after": 12,
+              "n_before": 12
+            }
+          ],
+          "status_after": "report only",
+          "status_before": "report only"
+        },
+        "sunday": {
+          "directions": [
+            {
+              "direction": 0,
+              "max_after_s": 2820,
+              "max_before_s": 2820,
+              "median_after_mmss": "45:00",
+              "median_after_s": 2700,
+              "median_before_mmss": "45:00",
+              "median_before_s": 2700,
+              "n_after": 12,
+              "n_before": 12
+            },
+            {
+              "direction": 1,
+              "max_after_s": 2700,
+              "max_before_s": 2700,
+              "median_after_mmss": "45:00",
+              "median_after_s": 2700,
+              "median_before_mmss": "45:00",
+              "median_before_s": 2700,
+              "n_after": 12,
+              "n_before": 12
+            }
+          ],
+          "status_after": "report only",
+          "status_before": "report only"
+        }
+      },
+      {
+        "long_name": "Park Road",
+        "route": "19",
+        "saturday": {
+          "directions": [
+            {
+              "direction": 0,
+              "max_after_s": 2460,
+              "max_before_s": 2460,
+              "median_after_mmss": "25:00",
+              "median_after_s": 1500,
+              "median_before_mmss": "25:00",
+              "median_before_s": 1500,
+              "n_after": 18,
+              "n_before": 18
+            },
+            {
+              "direction": 1,
+              "max_after_s": 2100,
+              "max_before_s": 2100,
+              "median_after_mmss": "35:00",
+              "median_after_s": 2100,
+              "median_before_mmss": "35:00",
+              "median_before_s": 2100,
+              "n_after": 18,
+              "n_before": 18
+            }
+          ],
+          "status_after": "report only",
+          "status_before": "report only"
+        },
+        "sunday": {
+          "directions": [
+            {
+              "direction": 0,
+              "max_after_s": 2280,
+              "max_before_s": 2280,
+              "median_after_mmss": "27:00",
+              "median_after_s": 1620,
+              "median_before_mmss": "27:00",
+              "median_before_s": 1620,
+              "n_after": 18,
+              "n_before": 18
+            },
+            {
+              "direction": 1,
+              "max_after_s": 2100,
+              "max_before_s": 2100,
+              "median_after_mmss": "35:00",
+              "median_after_s": 2100,
+              "median_before_mmss": "35:00",
+              "median_before_s": 2100,
+              "n_after": 18,
+              "n_before": 18
+            }
+          ],
+          "status_after": "report only",
+          "status_before": "report only"
+        }
+      },
+      {
+        "long_name": "Sharon Road",
+        "route": "20",
+        "saturday": {
+          "directions": [
+            {
+              "direction": 0,
+              "max_after_s": 3660,
+              "max_before_s": 3660,
+              "median_after_mmss": "60:00",
+              "median_after_s": 3600,
+              "median_before_mmss": "60:00",
+              "median_before_s": 3600,
+              "n_after": 9,
+              "n_before": 9
+            },
+            {
+              "direction": 1,
+              "max_after_s": 3600,
+              "max_before_s": 3600,
+              "median_after_mmss": "60:00",
+              "median_after_s": 3600,
+              "median_before_mmss": "60:00",
+              "median_before_s": 3600,
+              "n_after": 9,
+              "n_before": 9
+            }
+          ],
+          "status_after": "report only",
+          "status_before": "report only"
+        },
+        "sunday": {
+          "directions": [],
+          "status_after": "no service on date",
+          "status_before": "no service on date"
+        }
+      },
+      {
+        "long_name": "Statesville Ave",
+        "route": "21",
+        "saturday": {
+          "directions": [
+            {
+              "direction": 0,
+              "max_after_s": 1860,
+              "max_before_s": 1860,
+              "median_after_mmss": "30:00",
+              "median_after_s": 1800,
+              "median_before_mmss": "30:00",
+              "median_before_s": 1800,
+              "n_after": 18,
+              "n_before": 18
+            },
+            {
+              "direction": 1,
+              "max_after_s": 1800,
+              "max_before_s": 1800,
+              "median_after_mmss": "30:00",
+              "median_after_s": 1800,
+              "median_before_mmss": "30:00",
+              "median_before_s": 1800,
+              "n_after": 18,
+              "n_before": 18
+            }
+          ],
+          "status_after": "report only",
+          "status_before": "report only"
+        },
+        "sunday": {
+          "directions": [
+            {
+              "direction": 0,
+              "max_after_s": 3840,
+              "max_before_s": 3840,
+              "median_after_mmss": "60:00",
+              "median_after_s": 3600,
+              "median_before_mmss": "60:00",
+              "median_before_s": 3600,
+              "n_after": 9,
+              "n_before": 9
+            },
+            {
+              "direction": 1,
+              "max_after_s": 3600,
+              "max_before_s": 3600,
+              "median_after_mmss": "60:00",
+              "median_after_s": 3600,
+              "median_before_mmss": "60:00",
+              "median_before_s": 3600,
+              "n_after": 9,
+              "n_before": 9
+            }
+          ],
+          "status_after": "report only",
+          "status_before": "report only"
+        }
+      },
+      {
+        "long_name": "Graham Street",
+        "route": "22",
+        "saturday": {
+          "directions": [
+            {
+              "direction": 0,
+              "max_after_s": 2100,
+              "max_before_s": 2100,
+              "median_after_mmss": "30:00",
+              "median_after_s": 1800,
+              "median_before_mmss": "30:00",
+              "median_before_s": 1800,
+              "n_after": 18,
+              "n_before": 18
+            },
+            {
+              "direction": 1,
+              "max_after_s": 1800,
+              "max_before_s": 1800,
+              "median_after_mmss": "30:00",
+              "median_after_s": 1800,
+              "median_before_mmss": "30:00",
+              "median_before_s": 1800,
+              "n_after": 18,
+              "n_before": 18
+            }
+          ],
+          "status_after": "report only",
+          "status_before": "report only"
+        },
+        "sunday": {
+          "directions": [
+            {
+              "direction": 0,
+              "max_after_s": 3600,
+              "max_before_s": 3600,
+              "median_after_mmss": "60:00",
+              "median_after_s": 3600,
+              "median_before_mmss": "60:00",
+              "median_before_s": 3600,
+              "n_after": 9,
+              "n_before": 9
+            },
+            {
+              "direction": 1,
+              "max_after_s": 3600,
+              "max_before_s": 3600,
+              "median_after_mmss": "60:00",
+              "median_after_s": 3600,
+              "median_before_mmss": "60:00",
+              "median_before_s": 3600,
+              "n_after": 9,
+              "n_before": 9
+            }
+          ],
+          "status_after": "report only",
+          "status_before": "report only"
+        }
+      },
+      {
+        "long_name": "Shamrock Drive",
+        "route": "23",
+        "saturday": {
+          "directions": [
+            {
+              "direction": 0,
+              "max_after_s": 2040,
+              "max_before_s": 2040,
+              "median_after_mmss": "30:00",
+              "median_after_s": 1800,
+              "median_before_mmss": "30:00",
+              "median_before_s": 1800,
+              "n_after": 18,
+              "n_before": 18
+            },
+            {
+              "direction": 1,
+              "max_after_s": 1800,
+              "max_before_s": 1800,
+              "median_after_mmss": "30:00",
+              "median_after_s": 1800,
+              "median_before_mmss": "30:00",
+              "median_before_s": 1800,
+              "n_after": 18,
+              "n_before": 18
+            }
+          ],
+          "status_after": "report only",
+          "status_before": "report only"
+        },
+        "sunday": {
+          "directions": [
+            {
+              "direction": 0,
+              "max_after_s": 3720,
+              "max_before_s": 3600,
+              "median_after_mmss": "60:00",
+              "median_after_s": 3600,
+              "median_before_mmss": "60:00",
+              "median_before_s": 3600,
+              "n_after": 9,
+              "n_before": 9
+            },
+            {
+              "direction": 1,
+              "max_after_s": 3600,
+              "max_before_s": 3600,
+              "median_after_mmss": "60:00",
+              "median_after_s": 3600,
+              "median_before_mmss": "60:00",
+              "median_before_s": 3600,
+              "n_after": 9,
+              "n_before": 9
+            }
+          ],
+          "status_after": "report only",
+          "status_before": "report only"
+        }
+      },
+      {
+        "long_name": "Nations Ford Road",
+        "route": "24",
+        "saturday": {
+          "directions": [
+            {
+              "direction": 0,
+              "max_after_s": 1800,
+              "max_before_s": 1800,
+              "median_after_mmss": "30:00",
+              "median_after_s": 1800,
+              "median_before_mmss": "30:00",
+              "median_before_s": 1800,
+              "n_after": 18,
+              "n_before": 18
+            },
+            {
+              "direction": 1,
+              "max_after_s": 1920,
+              "max_before_s": 1920,
+              "median_after_mmss": "30:00",
+              "median_after_s": 1800,
+              "median_before_mmss": "30:00",
+              "median_before_s": 1800,
+              "n_after": 18,
+              "n_before": 18
+            }
+          ],
+          "status_after": "report only",
+          "status_before": "report only"
+        },
+        "sunday": {
+          "directions": [
+            {
+              "direction": 0,
+              "max_after_s": 2700,
+              "max_before_s": 2700,
+              "median_after_mmss": "45:00",
+              "median_after_s": 2700,
+              "median_before_mmss": "45:00",
+              "median_before_s": 2700,
+              "n_after": 12,
+              "n_before": 12
+            },
+            {
+              "direction": 1,
+              "max_after_s": 2700,
+              "max_before_s": 2700,
+              "median_after_mmss": "45:00",
+              "median_after_s": 2700,
+              "median_before_mmss": "45:00",
+              "median_before_s": 2700,
+              "n_after": 12,
+              "n_before": 12
+            }
+          ],
+          "status_after": "report only",
+          "status_before": "report only"
+        }
+      },
+      {
+        "long_name": "Oaklawn Avenue",
+        "route": "26",
+        "saturday": {
+          "directions": [
+            {
+              "direction": 0,
+              "max_after_s": 2880,
+              "max_before_s": 2880,
+              "median_after_mmss": "45:00",
+              "median_after_s": 2700,
+              "median_before_mmss": "45:00",
+              "median_before_s": 2700,
+              "n_after": 12,
+              "n_before": 12
+            },
+            {
+              "direction": 1,
+              "max_after_s": 2700,
+              "max_before_s": 2700,
+              "median_after_mmss": "45:00",
+              "median_after_s": 2700,
+              "median_before_mmss": "45:00",
+              "median_before_s": 2700,
+              "n_after": 12,
+              "n_before": 12
+            }
+          ],
+          "status_after": "report only",
+          "status_before": "report only"
+        },
+        "sunday": {
+          "directions": [
+            {
+              "direction": 0,
+              "max_after_s": 3660,
+              "max_before_s": 3660,
+              "median_after_mmss": "60:00",
+              "median_after_s": 3600,
+              "median_before_mmss": "60:00",
+              "median_before_s": 3600,
+              "n_after": 9,
+              "n_before": 9
+            },
+            {
+              "direction": 1,
+              "max_after_s": 3600,
+              "max_before_s": 3600,
+              "median_after_mmss": "60:00",
+              "median_after_s": 3600,
+              "median_before_mmss": "60:00",
+              "median_before_s": 3600,
+              "n_after": 9,
+              "n_before": 9
+            }
+          ],
+          "status_after": "report only",
+          "status_before": "report only"
+        }
+      },
+      {
+        "long_name": "Monroe Road",
+        "route": "27",
+        "saturday": {
+          "directions": [
+            {
+              "direction": 0,
+              "max_after_s": 2040,
+              "max_before_s": 2040,
+              "median_after_mmss": "30:00",
+              "median_after_s": 1800,
+              "median_before_mmss": "30:00",
+              "median_before_s": 1800,
+              "n_after": 18,
+              "n_before": 18
+            },
+            {
+              "direction": 1,
+              "max_after_s": 1800,
+              "max_before_s": 1800,
+              "median_after_mmss": "30:00",
+              "median_after_s": 1800,
+              "median_before_mmss": "30:00",
+              "median_before_s": 1800,
+              "n_after": 18,
+              "n_before": 18
+            }
+          ],
+          "status_after": "report only",
+          "status_before": "report only"
+        },
+        "sunday": {
+          "directions": [
+            {
+              "direction": 0,
+              "max_after_s": 2940,
+              "max_before_s": 2940,
+              "median_after_mmss": "45:00",
+              "median_after_s": 2700,
+              "median_before_mmss": "45:00",
+              "median_before_s": 2700,
+              "n_after": 12,
+              "n_before": 12
+            },
+            {
+              "direction": 1,
+              "max_after_s": 2700,
+              "max_before_s": 2700,
+              "median_after_mmss": "45:00",
+              "median_after_s": 2700,
+              "median_before_mmss": "45:00",
+              "median_before_s": 2700,
+              "n_after": 12,
+              "n_before": 12
+            }
+          ],
+          "status_after": "report only",
+          "status_before": "report only"
+        }
+      },
+      {
+        "long_name": "Fairview Road",
+        "route": "28",
+        "saturday": {
+          "directions": [
+            {
+              "direction": 0,
+              "max_after_s": 2400,
+              "max_before_s": 2400,
+              "median_after_mmss": "40:00",
+              "median_after_s": 2400,
+              "median_before_mmss": "40:00",
+              "median_before_s": 2400,
+              "n_after": 14,
+              "n_before": 14
+            },
+            {
+              "direction": 1,
+              "max_after_s": 2580,
+              "max_before_s": 2580,
+              "median_after_mmss": "40:00",
+              "median_after_s": 2400,
+              "median_before_mmss": "40:00",
+              "median_before_s": 2400,
+              "n_after": 13,
+              "n_before": 13
+            }
+          ],
+          "status_after": "report only",
+          "status_before": "report only"
+        },
+        "sunday": {
+          "directions": [],
+          "status_after": "no service on date",
+          "status_before": "no service on date"
+        }
+      },
+      {
+        "long_name": "UNCC/JW Clay",
+        "route": "29",
+        "saturday": {
+          "directions": [
+            {
+              "direction": 0,
+              "max_after_s": 2040,
+              "max_before_s": 2040,
+              "median_after_mmss": "30:00",
+              "median_after_s": 1800,
+              "median_before_mmss": "30:00",
+              "median_before_s": 1800,
+              "n_after": 17,
+              "n_before": 17
+            },
+            {
+              "direction": 1,
+              "max_after_s": 2040,
+              "max_before_s": 2040,
+              "median_after_mmss": "30:00",
+              "median_after_s": 1800,
+              "median_before_mmss": "30:00",
+              "median_before_s": 1800,
+              "n_after": 18,
+              "n_before": 18
+            }
+          ],
+          "status_after": "report only",
+          "status_before": "report only"
+        },
+        "sunday": {
+          "directions": [
+            {
+              "direction": 0,
+              "max_after_s": 1860,
+              "max_before_s": 1860,
+              "median_after_mmss": "30:00",
+              "median_after_s": 1800,
+              "median_before_mmss": "30:00",
+              "median_before_s": 1800,
+              "n_after": 18,
+              "n_before": 18
+            },
+            {
+              "direction": 1,
+              "max_after_s": 1800,
+              "max_before_s": 1800,
+              "median_after_mmss": "30:00",
+              "median_after_s": 1800,
+              "median_before_mmss": "30:00",
+              "median_before_s": 1800,
+              "n_after": 18,
+              "n_before": 18
+            }
+          ],
+          "status_after": "report only",
+          "status_before": "report only"
+        }
+      },
+      {
+        "long_name": "Woodlawn/Scaleybark/Crosstown",
+        "route": "30",
+        "saturday": {
+          "directions": [
+            {
+              "direction": 0,
+              "max_after_s": 2100,
+              "max_before_s": 2100,
+              "median_after_mmss": "35:00",
+              "median_after_s": 2100,
+              "median_before_mmss": "35:00",
+              "median_before_s": 2100,
+              "n_after": 15,
+              "n_before": 15
+            },
+            {
+              "direction": 1,
+              "max_after_s": 2100,
+              "max_before_s": 2100,
+              "median_after_mmss": "35:00",
+              "median_after_s": 2100,
+              "median_before_mmss": "35:00",
+              "median_before_s": 2100,
+              "n_after": 16,
+              "n_before": 16
+            }
+          ],
+          "status_after": "report only",
+          "status_before": "report only"
+        },
+        "sunday": {
+          "directions": [],
+          "status_after": "no service on date",
+          "status_before": "no service on date"
+        }
+      },
+      {
+        "long_name": "Freedom Drive",
+        "route": "34",
+        "saturday": {
+          "directions": [
+            {
+              "direction": 0,
+              "max_after_s": 1920,
+              "max_before_s": 1920,
+              "median_after_mmss": "30:00",
+              "median_after_s": 1800,
+              "median_before_mmss": "30:00",
+              "median_before_s": 1800,
+              "n_after": 18,
+              "n_before": 18
+            },
+            {
+              "direction": 1,
+              "max_after_s": 1800,
+              "max_before_s": 1800,
+              "median_after_mmss": "30:00",
+              "median_after_s": 1800,
+              "median_before_mmss": "30:00",
+              "median_before_s": 1800,
+              "n_after": 18,
+              "n_before": 18
+            }
+          ],
+          "status_after": "report only",
+          "status_before": "report only"
+        },
+        "sunday": {
+          "directions": [
+            {
+              "direction": 0,
+              "max_after_s": 2700,
+              "max_before_s": 2700,
+              "median_after_mmss": "45:00",
+              "median_after_s": 2700,
+              "median_before_mmss": "45:00",
+              "median_before_s": 2700,
+              "n_after": 12,
+              "n_before": 12
+            },
+            {
+              "direction": 1,
+              "max_after_s": 2700,
+              "max_before_s": 2700,
+              "median_after_mmss": "45:00",
+              "median_after_s": 2700,
+              "median_before_mmss": "45:00",
+              "median_before_s": 2700,
+              "n_after": 12,
+              "n_before": 12
+            }
+          ],
+          "status_after": "report only",
+          "status_before": "report only"
+        }
+      },
+      {
+        "long_name": "Wilkinson-Amazon",
+        "route": "35",
+        "saturday": {
+          "directions": [
+            {
+              "direction": 0,
+              "max_after_s": null,
+              "max_before_s": null,
+              "median_after_mmss": null,
+              "median_after_s": null,
+              "median_before_mmss": null,
+              "median_before_s": null,
+              "n_after": 1,
+              "n_before": 1
+            },
+            {
+              "direction": 1,
+              "max_after_s": null,
+              "max_before_s": null,
+              "median_after_mmss": null,
+              "median_after_s": null,
+              "median_before_mmss": null,
+              "median_before_s": null,
+              "n_after": 1,
+              "n_before": 1
+            }
+          ],
+          "status_after": "report only",
+          "status_before": "report only"
+        },
+        "sunday": {
+          "directions": [
+            {
+              "direction": 0,
+              "max_after_s": null,
+              "max_before_s": null,
+              "median_after_mmss": null,
+              "median_after_s": null,
+              "median_before_mmss": null,
+              "median_before_s": null,
+              "n_after": 1,
+              "n_before": 1
+            },
+            {
+              "direction": 1,
+              "max_after_s": null,
+              "max_before_s": null,
+              "median_after_mmss": null,
+              "median_after_s": null,
+              "median_before_mmss": null,
+              "median_before_s": null,
+              "n_after": 1,
+              "n_before": 1
+            }
+          ],
+          "status_after": "report only",
+          "status_before": "report only"
+        }
+      },
+      {
+        "long_name": "Eastway",
+        "route": "39",
+        "saturday": {
+          "directions": [
+            {
+              "direction": 0,
+              "max_after_s": 2520,
+              "max_before_s": 2520,
+              "median_after_mmss": "40:00",
+              "median_after_s": 2400,
+              "median_before_mmss": "40:00",
+              "median_before_s": 2400,
+              "n_after": 13,
+              "n_before": 13
+            },
+            {
+              "direction": 1,
+              "max_after_s": 2400,
+              "max_before_s": 2400,
+              "median_after_mmss": "40:00",
+              "median_after_s": 2400,
+              "median_before_mmss": "40:00",
+              "median_before_s": 2400,
+              "n_after": 13,
+              "n_before": 13
+            }
+          ],
+          "status_after": "report only",
+          "status_before": "report only"
+        },
+        "sunday": {
+          "directions": [
+            {
+              "direction": 0,
+              "max_after_s": 2520,
+              "max_before_s": 2520,
+              "median_after_mmss": "40:00",
+              "median_after_s": 2400,
+              "median_before_mmss": "40:00",
+              "median_before_s": 2400,
+              "n_after": 13,
+              "n_before": 13
+            },
+            {
+              "direction": 1,
+              "max_after_s": 2400,
+              "max_before_s": 2400,
+              "median_after_mmss": "40:00",
+              "median_after_s": 2400,
+              "median_before_mmss": "40:00",
+              "median_before_s": 2400,
+              "n_after": 13,
+              "n_before": 13
+            }
+          ],
+          "status_after": "report only",
+          "status_before": "report only"
+        }
+      },
+      {
+        "long_name": "Carowinds",
+        "route": "42",
+        "saturday": {
+          "directions": [],
+          "status_after": "no service on date",
+          "status_before": "no service on date"
+        },
+        "sunday": {
+          "directions": [],
+          "status_after": "no service on date",
+          "status_before": "no service on date"
+        }
+      },
+      {
+        "long_name": "Ballantyne",
+        "route": "43",
+        "saturday": {
+          "directions": [
+            {
+              "direction": 0,
+              "max_after_s": 3660,
+              "max_before_s": 3660,
+              "median_after_mmss": "60:00",
+              "median_after_s": 3600,
+              "median_before_mmss": "60:00",
+              "median_before_s": 3600,
+              "n_after": 9,
+              "n_before": 9
+            },
+            {
+              "direction": 1,
+              "max_after_s": 3600,
+              "max_before_s": 3600,
+              "median_after_mmss": "60:00",
+              "median_after_s": 3600,
+              "median_before_mmss": "60:00",
+              "median_before_s": 3600,
+              "n_after": 9,
+              "n_before": 9
+            }
+          ],
+          "status_after": "report only",
+          "status_before": "report only"
+        },
+        "sunday": {
+          "directions": [],
+          "status_after": "no service on date",
+          "status_before": "no service on date"
+        }
+      },
+      {
+        "long_name": "URP/CIC",
+        "route": "50",
+        "saturday": {
+          "directions": [],
+          "status_after": "no service on date",
+          "status_before": "no service on date"
+        },
+        "sunday": {
+          "directions": [],
+          "status_after": "no service on date",
+          "status_before": "no service on date"
+        }
+      },
+      {
+        "long_name": "Pineville-Matthews Road",
+        "route": "51",
+        "saturday": {
+          "directions": [
+            {
+              "direction": 0,
+              "max_after_s": 2700,
+              "max_before_s": 2700,
+              "median_after_mmss": "45:00",
+              "median_after_s": 2700,
+              "median_before_mmss": "45:00",
+              "median_before_s": 2700,
+              "n_after": 12,
+              "n_before": 12
+            },
+            {
+              "direction": 1,
+              "max_after_s": 3000,
+              "max_before_s": 3000,
+              "median_after_mmss": "45:00",
+              "median_after_s": 2700,
+              "median_before_mmss": "45:00",
+              "median_before_s": 2700,
+              "n_after": 12,
+              "n_before": 12
+            }
+          ],
+          "status_after": "report only",
+          "status_before": "report only"
+        },
+        "sunday": {
+          "directions": [],
+          "status_after": "no service on date",
+          "status_before": "no service on date"
+        }
+      },
+      {
+        "long_name": "University Research Park",
+        "route": "54",
+        "saturday": {
+          "directions": [
+            {
+              "direction": 0,
+              "max_after_s": 2400,
+              "max_before_s": 2400,
+              "median_after_mmss": "40:00",
+              "median_after_s": 2400,
+              "median_before_mmss": "40:00",
+              "median_before_s": 2400,
+              "n_after": 14,
+              "n_before": 14
+            },
+            {
+              "direction": 1,
+              "max_after_s": 2400,
+              "max_before_s": 2400,
+              "median_after_mmss": "40:00",
+              "median_after_s": 2400,
+              "median_before_mmss": "40:00",
+              "median_before_s": 2400,
+              "n_after": 13,
+              "n_before": 13
+            }
+          ],
+          "status_after": "report only",
+          "status_before": "report only"
+        },
+        "sunday": {
+          "directions": [],
+          "status_after": "no service on date",
+          "status_before": "no service on date"
+        }
+      },
+      {
+        "long_name": "Westinghouse",
+        "route": "55",
+        "saturday": {
+          "directions": [
+            {
+              "direction": 0,
+              "max_after_s": 3360,
+              "max_before_s": 3360,
+              "median_after_mmss": "40:00",
+              "median_after_s": 2400,
+              "median_before_mmss": "40:00",
+              "median_before_s": 2400,
+              "n_after": 14,
+              "n_before": 14
+            },
+            {
+              "direction": 1,
+              "max_after_s": 2400,
+              "max_before_s": 2400,
+              "median_after_mmss": "40:00",
+              "median_after_s": 2400,
+              "median_before_mmss": "40:00",
+              "median_before_s": 2400,
+              "n_after": 13,
+              "n_before": 13
+            }
+          ],
+          "status_after": "report only",
+          "status_before": "report only"
+        },
+        "sunday": {
+          "directions": [
+            {
+              "direction": 0,
+              "max_after_s": 2400,
+              "max_before_s": 2400,
+              "median_after_mmss": "40:00",
+              "median_after_s": 2400,
+              "median_before_mmss": "40:00",
+              "median_before_s": 2400,
+              "n_after": 14,
+              "n_before": 14
+            },
+            {
+              "direction": 1,
+              "max_after_s": 2400,
+              "max_before_s": 2400,
+              "median_after_mmss": "40:00",
+              "median_after_s": 2400,
+              "median_before_mmss": "40:00",
+              "median_before_s": 2400,
+              "n_after": 14,
+              "n_before": 14
+            }
+          ],
+          "status_after": "report only",
+          "status_before": "report only"
+        }
+      },
+      {
+        "long_name": "Arrowood",
+        "route": "56",
+        "saturday": {
+          "directions": [
+            {
+              "direction": 0,
+              "max_after_s": 2040,
+              "max_before_s": 2040,
+              "median_after_mmss": "30:00",
+              "median_after_s": 1800,
+              "median_before_mmss": "30:00",
+              "median_before_s": 1800,
+              "n_after": 18,
+              "n_before": 18
+            },
+            {
+              "direction": 1,
+              "max_after_s": 1860,
+              "max_before_s": 1860,
+              "median_after_mmss": "30:00",
+              "median_after_s": 1800,
+              "median_before_mmss": "30:00",
+              "median_before_s": 1800,
+              "n_after": 18,
+              "n_before": 18
+            }
+          ],
+          "status_after": "report only",
+          "status_before": "report only"
+        },
+        "sunday": {
+          "directions": [
+            {
+              "direction": 0,
+              "max_after_s": 1800,
+              "max_before_s": 1800,
+              "median_after_mmss": "30:00",
+              "median_after_s": 1800,
+              "median_before_mmss": "30:00",
+              "median_before_s": 1800,
+              "n_after": 18,
+              "n_before": 18
+            },
+            {
+              "direction": 1,
+              "max_after_s": 1800,
+              "max_before_s": 1800,
+              "median_after_mmss": "30:00",
+              "median_after_s": 1800,
+              "median_before_mmss": "30:00",
+              "median_before_s": 1800,
+              "n_after": 18,
+              "n_before": 18
+            }
+          ],
+          "status_after": "report only",
+          "status_before": "report only"
+        }
+      },
+      {
+        "long_name": "Archdale/South Park",
+        "route": "57",
+        "saturday": {
+          "directions": [
+            {
+              "direction": 0,
+              "max_after_s": 3960,
+              "max_before_s": 3960,
+              "median_after_mmss": "62:00",
+              "median_after_s": 3720,
+              "median_before_mmss": "62:00",
+              "median_before_s": 3720,
+              "n_after": 8,
+              "n_before": 8
+            },
+            {
+              "direction": 1,
+              "max_after_s": 3900,
+              "max_before_s": 3900,
+              "median_after_mmss": "62:00",
+              "median_after_s": 3720,
+              "median_before_mmss": "62:00",
+              "median_before_s": 3720,
+              "n_after": 9,
+              "n_before": 9
+            }
+          ],
+          "status_after": "report only",
+          "status_before": "report only"
+        },
+        "sunday": {
+          "directions": [
+            {
+              "direction": 0,
+              "max_after_s": 3900,
+              "max_before_s": 3900,
+              "median_after_mmss": "62:00",
+              "median_after_s": 3720,
+              "median_before_mmss": "62:00",
+              "median_before_s": 3720,
+              "n_after": 8,
+              "n_before": 8
+            },
+            {
+              "direction": 1,
+              "max_after_s": 3900,
+              "max_before_s": 3900,
+              "median_after_mmss": "61:00",
+              "median_after_s": 3660,
+              "median_before_mmss": "61:00",
+              "median_before_s": 3660,
+              "n_after": 9,
+              "n_before": 9
+            }
+          ],
+          "status_after": "report only",
+          "status_before": "report only"
+        }
+      },
+      {
+        "long_name": "Pineville",
+        "route": "58",
+        "saturday": {
+          "directions": [
+            {
+              "direction": 0,
+              "max_after_s": 2220,
+              "max_before_s": 2220,
+              "median_after_mmss": "30:00",
+              "median_after_s": 1800,
+              "median_before_mmss": "30:00",
+              "median_before_s": 1800,
+              "n_after": 18,
+              "n_before": 18
+            },
+            {
+              "direction": 1,
+              "max_after_s": 2160,
+              "max_before_s": 2160,
+              "median_after_mmss": "30:00",
+              "median_after_s": 1800,
+              "median_before_mmss": "30:00",
+              "median_before_s": 1800,
+              "n_after": 18,
+              "n_before": 18
+            }
+          ],
+          "status_after": "report only",
+          "status_before": "report only"
+        },
+        "sunday": {
+          "directions": [
+            {
+              "direction": 0,
+              "max_after_s": 1800,
+              "max_before_s": 1800,
+              "median_after_mmss": "30:00",
+              "median_after_s": 1800,
+              "median_before_mmss": "30:00",
+              "median_before_s": 1800,
+              "n_after": 18,
+              "n_before": 18
+            },
+            {
+              "direction": 1,
+              "max_after_s": 1800,
+              "max_before_s": 1800,
+              "median_after_mmss": "30:00",
+              "median_after_s": 1800,
+              "median_before_mmss": "30:00",
+              "median_before_s": 1800,
+              "n_after": 18,
+              "n_before": 18
+            }
+          ],
+          "status_after": "report only",
+          "status_before": "report only"
+        }
+      },
+      {
+        "long_name": "UNC Charlotte-Huntersville",
+        "route": "59",
+        "saturday": {
+          "directions": [
+            {
+              "direction": 0,
+              "max_after_s": 3600,
+              "max_before_s": 3600,
+              "median_after_mmss": "60:00",
+              "median_after_s": 3600,
+              "median_before_mmss": "60:00",
+              "median_before_s": 3600,
+              "n_after": 9,
+              "n_before": 9
+            },
+            {
+              "direction": 1,
+              "max_after_s": 3600,
+              "max_before_s": 3600,
+              "median_after_mmss": "60:00",
+              "median_after_s": 3600,
+              "median_before_mmss": "60:00",
+              "median_before_s": 3600,
+              "n_after": 9,
+              "n_before": 9
+            }
+          ],
+          "status_after": "report only",
+          "status_before": "report only"
+        },
+        "sunday": {
+          "directions": [],
+          "status_after": "no service on date",
+          "status_before": "no service on date"
+        }
+      },
+      {
+        "long_name": "Tyvola Road",
+        "route": "60",
+        "saturday": {
+          "directions": [
+            {
+              "direction": 0,
+              "max_after_s": 1920,
+              "max_before_s": 1920,
+              "median_after_mmss": "30:00",
+              "median_after_s": 1800,
+              "median_before_mmss": "30:00",
+              "median_before_s": 1800,
+              "n_after": 18,
+              "n_before": 18
+            },
+            {
+              "direction": 1,
+              "max_after_s": 2100,
+              "max_before_s": 2100,
+              "median_after_mmss": "30:00",
+              "median_after_s": 1800,
+              "median_before_mmss": "30:00",
+              "median_before_s": 1800,
+              "n_after": 17,
+              "n_before": 17
+            }
+          ],
+          "status_after": "report only",
+          "status_before": "report only"
+        },
+        "sunday": {
+          "directions": [
+            {
+              "direction": 0,
+              "max_after_s": 1860,
+              "max_before_s": 1860,
+              "median_after_mmss": "30:00",
+              "median_after_s": 1800,
+              "median_before_mmss": "30:00",
+              "median_before_s": 1800,
+              "n_after": 18,
+              "n_before": 18
+            },
+            {
+              "direction": 1,
+              "max_after_s": 1800,
+              "max_before_s": 1800,
+              "median_after_mmss": "30:00",
+              "median_after_s": 1800,
+              "median_before_mmss": "30:00",
+              "median_before_s": 1800,
+              "n_after": 18,
+              "n_before": 18
+            }
+          ],
+          "status_after": "report only",
+          "status_before": "report only"
+        }
+      },
+      {
+        "long_name": "Northern Meck Connector",
+        "route": "177",
+        "saturday": {
+          "directions": [],
+          "status_after": "no service on date",
+          "status_before": "no service on date"
+        },
+        "sunday": {
+          "directions": [],
+          "status_after": "no service on date",
+          "status_before": "no service on date"
+        }
+      },
+      {
+        "long_name": "Hidden Valley",
+        "route": "211",
+        "saturday": {
+          "directions": [
+            {
+              "direction": 0,
+              "max_after_s": 1440,
+              "max_before_s": 1440,
+              "median_after_mmss": "22:00",
+              "median_after_s": 1320,
+              "median_before_mmss": "22:00",
+              "median_before_s": 1320,
+              "n_after": 25,
+              "n_before": 25
+            },
+            {
+              "direction": 1,
+              "max_after_s": 1380,
+              "max_before_s": 1380,
+              "median_after_mmss": "22:00",
+              "median_after_s": 1320,
+              "median_before_mmss": "22:00",
+              "median_before_s": 1320,
+              "n_after": 25,
+              "n_before": 25
+            }
+          ],
+          "status_after": "report only",
+          "status_before": "report only"
+        },
+        "sunday": {
+          "directions": [
+            {
+              "direction": 0,
+              "max_after_s": 2820,
+              "max_before_s": 2820,
+              "median_after_mmss": "45:00",
+              "median_after_s": 2700,
+              "median_before_mmss": "45:00",
+              "median_before_s": 2700,
+              "n_after": 12,
+              "n_before": 12
+            },
+            {
+              "direction": 1,
+              "max_after_s": 2700,
+              "max_before_s": 2700,
+              "median_after_mmss": "45:00",
+              "median_after_s": 2700,
+              "median_before_mmss": "45:00",
+              "median_before_s": 2700,
+              "n_after": 12,
+              "n_before": 12
+            }
+          ],
+          "status_after": "report only",
+          "status_before": "report only"
+        }
+      },
+      {
+        "long_name": "E. Harris Blvd-Idlewild Rd",
+        "route": "221",
+        "saturday": {
+          "directions": [
+            {
+              "direction": 0,
+              "max_after_s": 2100,
+              "max_before_s": 2100,
+              "median_after_mmss": "30:00",
+              "median_after_s": 1800,
+              "median_before_mmss": "30:00",
+              "median_before_s": 1800,
+              "n_after": 18,
+              "n_before": 18
+            },
+            {
+              "direction": 1,
+              "max_after_s": 1800,
+              "max_before_s": 1800,
+              "median_after_mmss": "30:00",
+              "median_after_s": 1800,
+              "median_before_mmss": "30:00",
+              "median_before_s": 1800,
+              "n_after": 18,
+              "n_before": 18
+            }
+          ],
+          "status_after": "report only",
+          "status_before": "report only"
+        },
+        "sunday": {
+          "directions": [
+            {
+              "direction": 0,
+              "max_after_s": 3660,
+              "max_before_s": 3660,
+              "median_after_mmss": "60:00",
+              "median_after_s": 3600,
+              "median_before_mmss": "60:00",
+              "median_before_s": 3600,
+              "n_after": 9,
+              "n_before": 9
+            },
+            {
+              "direction": 1,
+              "max_after_s": 3600,
+              "max_before_s": 3600,
+              "median_after_mmss": "60:00",
+              "median_after_s": 3600,
+              "median_before_mmss": "60:00",
+              "median_before_s": 3600,
+              "n_after": 9,
+              "n_before": 9
+            }
+          ],
+          "status_after": "report only",
+          "status_before": "report only"
+        }
+      },
+      {
+        "long_name": "Pence Road",
+        "route": "222",
+        "saturday": {
+          "directions": [
+            {
+              "direction": 0,
+              "max_after_s": 3720,
+              "max_before_s": 3720,
+              "median_after_mmss": "60:00",
+              "median_after_s": 3600,
+              "median_before_mmss": "60:00",
+              "median_before_s": 3600,
+              "n_after": 9,
+              "n_before": 9
+            },
+            {
+              "direction": 1,
+              "max_after_s": 3720,
+              "max_before_s": 3720,
+              "median_after_mmss": "60:00",
+              "median_after_s": 3600,
+              "median_before_mmss": "60:00",
+              "median_before_s": 3600,
+              "n_after": 9,
+              "n_before": 9
+            }
+          ],
+          "status_after": "report only",
+          "status_before": "report only"
+        },
+        "sunday": {
+          "directions": [
+            {
+              "direction": 0,
+              "max_after_s": 3600,
+              "max_before_s": 3600,
+              "median_after_mmss": "60:00",
+              "median_after_s": 3600,
+              "median_before_mmss": "60:00",
+              "median_before_s": 3600,
+              "n_after": 9,
+              "n_before": 9
+            },
+            {
+              "direction": 1,
+              "max_after_s": 3600,
+              "max_before_s": 3600,
+              "median_after_mmss": "60:00",
+              "median_after_s": 3600,
+              "median_before_mmss": "60:00",
+              "median_before_s": 3600,
+              "n_after": 9,
+              "n_before": 9
+            }
+          ],
+          "status_after": "report only",
+          "status_before": "report only"
+        }
+      },
+      {
+        "long_name": "West Charlotte Connector",
+        "route": "235",
+        "saturday": {
+          "directions": [
+            {
+              "direction": 0,
+              "max_after_s": 3000,
+              "max_before_s": 3000,
+              "median_after_mmss": "50:00",
+              "median_after_s": 3000,
+              "median_before_mmss": "50:00",
+              "median_before_s": 3000,
+              "n_after": 11,
+              "n_before": 11
+            },
+            {
+              "direction": 1,
+              "max_after_s": 3000,
+              "max_before_s": 3000,
+              "median_after_mmss": "50:00",
+              "median_after_s": 3000,
+              "median_before_mmss": "50:00",
+              "median_before_s": 3000,
+              "n_after": 11,
+              "n_before": 11
+            }
+          ],
+          "status_after": "report only",
+          "status_before": "report only"
+        },
+        "sunday": {
+          "directions": [
+            {
+              "direction": 0,
+              "max_after_s": 3000,
+              "max_before_s": 3000,
+              "median_after_mmss": "50:00",
+              "median_after_s": 3000,
+              "median_before_mmss": "50:00",
+              "median_before_s": 3000,
+              "n_after": 11,
+              "n_before": 11
+            },
+            {
+              "direction": 1,
+              "max_after_s": 3000,
+              "max_before_s": 3000,
+              "median_after_mmss": "50:00",
+              "median_after_s": 3000,
+              "median_before_mmss": "50:00",
+              "median_before_s": 3000,
+              "n_after": 11,
+              "n_before": 11
+            }
+          ],
+          "status_after": "report only",
+          "status_before": "report only"
+        }
+      }
+    ],
+    "source": "data/marts/before_after_headway.csv, before_after.csv and data/reference/cats_claims.csv",
+    "status": "report only: MPTA-04 (formerly MTC-06) sets no weekend frequency standard, so no weekend value is scored"
+  }
+}

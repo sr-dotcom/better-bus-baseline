@@ -1,8 +1,8 @@
 # Better Bus Baseline
 
-A public-data prototype of a performance monitoring plan for CATS (Charlotte Area Transit System) bus service, scored against CATS policy MTC-06 (Transit Service Guidelines).
+A public-data prototype of a performance monitoring plan for CATS (Charlotte Area Transit System) bus service, scored against CATS policy MPTA-04 (formerly MTC-06), the Transit Service Guidelines.
 
-Version 1 measures the October 5, 2026 service change against CATS policy MTC-06 (scheduled frequency and span), route by route, from published GTFS schedules. The live-feed collector in collector/ is paused until version 1.1.
+Version 1 measures the October 5, 2026 service change against CATS policy MPTA-04 (formerly MTC-06) for scheduled frequency and span, route by route, from published GTFS schedules. The live-feed collector in collector/ is paused until version 1.1.
 
 ## Layout
 

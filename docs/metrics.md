@@ -1,7 +1,9 @@
-# Metric sheet
+# Metric sheet: MPTA-04 (formerly MTC-06)
 
-Every metric below is scored against Policy MTC-06 (Transit Service Guidelines, approved July 26, 2023). The policy text
-is quoted in `data/reference/mtc06.md`. Hand-calculated answers are in `docs/known-answers.md`. The pure helpers live in
+Every metric below is scored against Policy MPTA-04 (formerly MTC-06), the Transit Service Guidelines. The clause numbers
+and quotes are those of the MTC-06 text approved July 26, 2023, quoted in `data/reference/mtc06.md`; the current MPTA-04
+text (effective July 1, 2026) reads the same in sections 3.3 and 3.7 (`data/reference/mpta04.md`). The clauses below keep
+their MTC-06 numbers. Hand-calculated answers are in `docs/known-answers.md`. The pure helpers live in
 `ingest/headway.py`; the marts in `sql/marts/` reproduce the helpers and the known answers (tests below).
 
 Owner of every metric: Naga Sathwik Reddy Gona (author).
