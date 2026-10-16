@@ -17,6 +17,7 @@ pythonpath = ["collector"]
 
 [dependency-groups]
 dev = [
+    "gtfs-kit>=13.0.1",
     "pytest>=9.1.1",
     "ruff>=0.17.1",
     "tzdata>=2026.5",
