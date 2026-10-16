@@ -1,37 +1,74 @@
 {
   "equity": {
     "acs_vintage": "2024 5-year",
-    "after": {
-      "date": "2026-10-14",
-      "n_stops": 33,
-      "residents": 21796,
-      "routes": [
-        "5"
-      ],
-      "tracts_touched": 23,
-      "tracts_without_estimate": 0
-    },
-    "before": {
-      "date": "2026-09-30",
-      "n_stops": 67,
-      "residents": 41296,
-      "routes": [
-        "9"
-      ],
-      "tracts_touched": 33,
-      "tracts_without_estimate": 0
-    },
     "buffer_m": 800,
     "caveats": [
       "Area weighting assumes people are spread evenly inside a census tract.",
       "A tier is a schedule property of the published timetable, not delivered service.",
       "Each date has one route in the 15-min tier, so the change mostly compares the corridors of two routes.",
       "Distance is a straight line of 800 m, not a walking distance.",
-      "ACS values are 5-year estimates with margins of error that are not carried through."
+      "ACS values are 5-year estimates with margins of error that are not carried through.",
+      "The near-miss row adds routes that miss the 15-minute standard by at most 60 seconds on a median; they still fail it, and the tiers do not change."
     ],
-    "change_residents": -19500,
     "crs": "EPSG:32119",
-    "method": "Residents = sum over census tracts of total population (ACS 5-year B01003_001E) x share of the tract's area inside the union of 800 m straight-line buffers around every stop served on the date by a route in the 15-min tier; area weighting assumes uniform density inside a tract.",
+    "method": "Residents = sum over census tracts of total population (ACS 5-year B01003_001E) x share of the tract's area inside the union of 800 m straight-line buffers around every stop served on the date by the routes of the row (strict tier: routes in the 15-min tier; incl. near-miss routes: those plus routes with a 15-min near miss, a covered direction-period with a median of 901-960 s); area weighting assumes uniform density inside a tract.",
+    "rows": [
+      {
+        "after": {
+          "date": "2026-10-14",
+          "n_stops": 33,
+          "near_miss_routes_added": [],
+          "residents": 21796,
+          "routes": [
+            "5"
+          ],
+          "tracts_touched": 23,
+          "tracts_without_estimate": 0
+        },
+        "before": {
+          "date": "2026-09-30",
+          "n_stops": 67,
+          "near_miss_routes_added": [],
+          "residents": 41296,
+          "routes": [
+            "9"
+          ],
+          "tracts_touched": 33,
+          "tracts_without_estimate": 0
+        },
+        "change_residents": -19500,
+        "label": "strict tier"
+      },
+      {
+        "after": {
+          "date": "2026-10-14",
+          "n_stops": 100,
+          "near_miss_routes_added": [
+            "9"
+          ],
+          "residents": 56396,
+          "routes": [
+            "5",
+            "9"
+          ],
+          "tracts_touched": 47,
+          "tracts_without_estimate": 0
+        },
+        "before": {
+          "date": "2026-09-30",
+          "n_stops": 67,
+          "near_miss_routes_added": [],
+          "residents": 41296,
+          "routes": [
+            "9"
+          ],
+          "tracts_touched": 33,
+          "tracts_without_estimate": 0
+        },
+        "change_residents": 15100,
+        "label": "incl. near-miss routes"
+      }
+    ],
     "source": "data/equity.csv (analysis/equity.py)",
     "status": "computed",
     "tiger_vintage": 2024
@@ -595,7 +632,7 @@
     }
   },
   "inputs_sha256": {
-    "data/equity.csv": "043787d5d36c212c4f3d4c4abadc630e2737e93f802106b93904a331c9fbfccf",
+    "data/equity.csv": "b30eccf308d1ac7edc22882ae79684968e31eea9a6c1f3ce742b825280c654ca",
     "data/marts/before_after.csv": "ae9e4e0cbb13a8c9a9c1f542f7554c66cd66d88d66ac9ad296d58e40bd2e9c6e",
     "data/marts/before_after_headway.csv": "61e0443ad27e0ec8962e9f9ee9c39dfbf38bcb8c672e72f2244674e1a43cd1c7",
     "data/marts/express_peak_trips.csv": "63b1c940c9c49d1476e0dd90aeb83643c7ba33a5ec84449b33933daab836d9ad",
@@ -609,25 +646,25 @@
   "limits": {
     "cannot_measure": [
       {
-        "clause": "MTC-06 3.2 (load standards)",
+        "clause": "MPTA-04 (formerly MTC-06) 3.2 (load standards)",
         "item": "crowding",
         "needs": "automatic passenger count data by trip and stop",
         "why": "GTFS holds no boardings or loads"
       },
       {
-        "clause": "MTC-06 3.0 (route monitoring, passengers per hour)",
+        "clause": "MPTA-04 (formerly MTC-06) 3.0 (route monitoring, passengers per hour)",
         "item": "route-level ridership",
         "needs": "boardings by route from CATS",
         "why": "GTFS holds no boardings; the public board packets give ridership by mode, not by route"
       },
       {
-        "clause": "MTC-06 3.3",
+        "clause": "MPTA-04 (formerly MTC-06) 3.3",
         "item": "delivered on-time performance (schedule adherence)",
         "needs": "automatic vehicle location or stop-arrival records per trip with the scheduled time",
         "why": "the audit reads the published schedule, which holds scheduled times and no observed arrivals"
       },
       {
-        "clause": "MTC-06 3.7",
+        "clause": "MPTA-04 (formerly MTC-06) 3.7",
         "item": "missed trips and headway as riders see it",
         "needs": "the same observed arrival records",
         "why": "scheduled spacing only: a trip that did not run, or buses that bunched, are not visible"
@@ -636,13 +673,13 @@
     "policy_gaps": [
       {
         "clauses": "2.4, 3.2, 3.7",
-        "gap": "MTC-06 defines no peak hours",
+        "gap": "MPTA-04 (formerly MTC-06) defines no peak hours",
         "method_choice": "docs/metrics.md decision 1: AM peak 06:00-09:00, midday 09:00-15:00, PM peak 15:00-18:00, evening 18:00-22:00",
         "quote": "CATS will strive to provide at least 15-minute peak service on high frequency routes"
       },
       {
         "clauses": "2.4, 3.7",
-        "gap": "MTC-06 sets no weekend frequency standard",
+        "gap": "MPTA-04 (formerly MTC-06) sets no weekend frequency standard",
         "method_choice": "docs/metrics.md decision 3: weekend headways are reported, with no pass or fail",
         "quote": "Common / Local Routes - Bus routes that provide all day service on weekdays and weekends"
       },
@@ -673,7 +710,7 @@
     ],
     "scope": [
       "Schedule-based audit: it scores the published timetable (GTFS), not the buses that ran.",
-      "One service change only: MTC-06 3.3 looks over two service changes.",
+      "One service change only: MPTA-04 (formerly MTC-06) 3.3 looks over two service changes.",
       "Rail (routes 501 and 510) is out of scope.",
       "Two Wednesdays, not a month: the schedule on those days is read as typical."
     ],
@@ -1821,7 +1858,12 @@
     "url": "https://mpta.granicus.com/AgendaViewer.php?view_id=5&clip_id=290",
     "value_pct": 85
   },
-  "question": "Did the Oct 5, 2026 service change move routes into compliance with MTC-06 scheduled frequency and span, and where does every route stand after it?",
+  "policy": {
+    "name": "MPTA-04 (formerly MTC-06)",
+    "note": "Clause numbers and quotes come from data/reference/mtc06.md; sections 3.3 and 3.7 read the same in the MPTA-04 text (data/reference/mpta04.md).",
+    "reference": "data/reference/mtc06.md"
+  },
+  "question": "Did the Oct 5, 2026 service change move routes into compliance with MPTA-04 (formerly MTC-06) scheduled frequency and span, and where does every route stand after it?",
   "routes": {
     "period": {
       "after": "2026-10-14",
@@ -5678,6 +5720,6 @@
       }
     ],
     "source": "data/marts/before_after_headway.csv, before_after.csv and data/reference/cats_claims.csv",
-    "status": "report only: MTC-06 sets no weekend frequency standard, so no weekend value is scored"
+    "status": "report only: MPTA-04 (formerly MTC-06) sets no weekend frequency standard, so no weekend value is scored"
   }
 }

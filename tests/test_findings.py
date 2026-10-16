@@ -347,14 +347,44 @@ def test_otp_and_equity_equal_their_csv(f):
     otp = pd.read_csv(ROOT / "data/reference/otp.csv").iloc[0]
     assert f["otp"]["value_pct"] == otp.value_pct and f["otp"]["month"] == otp.month and f["otp"]["url"] == otp.url
     assert f["otp"]["pdf_page"] == otp.pdf_page and f["otp"]["status"] == "context only"
-    eq = pd.read_csv(ROOT / "data/equity.csv").set_index("side")
-    for side in ("before", "after"):
-        assert f["equity"][side]["residents"] == eq.loc[side, "residents"]
-        assert f["equity"][side]["n_stops"] == eq.loc[side, "n_stops"]
-        assert f["equity"][side]["tracts_touched"] == eq.loc[side, "tracts_touched"]
-    assert f["equity"]["change_residents"] == eq.loc["after", "residents"] - eq.loc["before", "residents"]
+    eq = pd.read_csv(ROOT / "data/equity.csv", dtype={"routes": str, "near_miss_routes_added": str}).fillna("")
+    assert [r["label"] for r in f["equity"]["rows"]] == ["strict tier", "incl. near-miss routes"]
+    for row in f["equity"]["rows"]:
+        part = eq[eq.scenario == row["label"]].set_index("side")
+        for side in ("before", "after"):
+            assert row[side]["residents"] == part.loc[side, "residents"]
+            assert row[side]["n_stops"] == part.loc[side, "n_stops"]
+            assert row[side]["tracts_touched"] == part.loc[side, "tracts_touched"]
+            assert row[side]["routes"] == part.loc[side, "routes"].split()
+        assert row["change_residents"] == part.loc["after", "residents"] - part.loc["before", "residents"]
     assert len(f["equity"]["caveats"]) >= 4
     assert any("evenly" in c for c in f["equity"]["caveats"])
+
+
+def test_equity_rows_use_the_right_route_sets(f, headway, compliance):
+    # Strict tier: the 15-min tier routes of each Wednesday. Near-miss row: those plus routes with a covered
+    # direction-period whose median is 901-960 s that day (found here with pandas, not with the helper).
+    tier = compliance[compliance.tier == "15-min"]
+    strict, wide = f["equity"]["rows"]
+    for side, date in (("before", BEFORE), ("after", AFTER)):
+        base = sorted(tier[tier.date == date].route_short_name)
+        day = headway[headway.date == date]
+        near = set(day[day.covers_15 & (day.headway_median_s > 900) & (day.headway_median_s <= 960)].route_short_name)
+        assert strict[side]["routes"] == base and strict[side]["near_miss_routes_added"] == []
+        assert set(wide[side]["routes"]) == set(base) | near
+        assert wide[side]["near_miss_routes_added"] == sorted(near - set(base))
+        assert wide[side]["residents"] >= strict[side]["residents"]
+    # Known answer: route 9 is a 15-min near miss after the change (15:30), so the after row holds routes 5 and 9;
+    # the stops of the two routes do not overlap (33 + 67 = 100), but their buffers do, so residents are not a sum.
+    assert wide["after"]["routes"] == ["5", "9"] and wide["after"]["n_stops"] == 100
+    assert wide["after"]["residents"] < strict["after"]["residents"] + wide["before"]["residents"]
+    assert wide["before"] == {**strict["before"]}
+
+
+def test_policy_name_is_always_given_with_the_former_name(f):
+    raw = json.dumps(f)
+    assert f["policy"]["name"] == "MPTA-04 (formerly MTC-06)"
+    assert raw.count("MTC-06") == raw.count("MPTA-04 (formerly MTC-06)") > 5
 
 
 def mtc06_text():

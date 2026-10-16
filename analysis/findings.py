@@ -35,6 +35,7 @@ LIMIT_30_S = 1800
 NEAR_MISS_S = 60  # reported range: above the limit, up to this many seconds above it
 NOTABLE = ("5", "9", "23", "177")
 CALLOUT_WEEKEND_ROUTES = ("5", "9")
+POLICY = "MPTA-04 (formerly MTC-06)"
 EQUITY_NOT_COMPUTED = "equity: not computed in v1"
 OTP_GAP_NOTE = "no route-level OTP is published; the latest system figure was not found in public packets"
 
@@ -461,7 +462,7 @@ def weekend(data: Data) -> dict:
             "feeds": FEEDS,
             "daytime": "09:00:00 up to but not including 18:00:00",
         },
-        "status": "report only: MTC-06 sets no weekend frequency standard, so no weekend value is scored",
+        "status": "report only: MPTA-04 (formerly MTC-06) sets no weekend frequency standard, so no weekend value is scored",
         "routes": routes,
         "callouts": callouts,
     }
@@ -497,24 +498,37 @@ EQUITY_CAVEATS = (
     "Each date has one route in the 15-min tier, so the change mostly compares the corridors of two routes.",
     "Distance is a straight line of 800 m, not a walking distance.",
     "ACS values are 5-year estimates with margins of error that are not carried through.",
+    "The near-miss row adds routes that miss the 15-minute standard by at most 60 seconds on a median; they still fail it, and the tiers do not change.",
 )
+
+
+def equity_side(r: dict) -> dict:
+    return {
+        "date": r["date"],
+        "routes": r["routes"].split(),
+        "near_miss_routes_added": r["near_miss_routes_added"].split(),
+        "n_stops": int(r["n_stops"]),
+        "residents": int(r["residents"]),
+        "tracts_touched": int(r["tracts_touched"]),
+        "tracts_without_estimate": int(r["tracts_without_estimate"]),
+    }
 
 
 def equity() -> dict:
     rows = read_rows("data/equity.csv")
     if not rows:
         return {"status": EQUITY_NOT_COMPUTED}
-    by_side = {
-        r["side"]: {
-            "date": r["date"],
-            "routes": r["routes"].split(),
-            "n_stops": int(r["n_stops"]),
-            "residents": int(r["residents"]),
-            "tracts_touched": int(r["tracts_touched"]),
-            "tracts_without_estimate": int(r["tracts_without_estimate"]),
-        }
-        for r in rows
-    }
+    scenarios = []
+    for label in dict.fromkeys(r["scenario"] for r in rows):  # file order: strict tier first
+        sides = {r["side"]: equity_side(r) for r in rows if r["scenario"] == label}
+        scenarios.append(
+            {
+                "label": label,
+                "before": sides["before"],
+                "after": sides["after"],
+                "change_residents": sides["after"]["residents"] - sides["before"]["residents"],
+            }
+        )
     first = rows[0]
     return {
         "status": "computed",
@@ -524,9 +538,7 @@ def equity() -> dict:
         "crs": first["crs"],
         "tiger_vintage": int(first["tiger_vintage"]),
         "acs_vintage": first["acs_vintage"],
-        "before": by_side["before"],
-        "after": by_side["after"],
-        "change_residents": by_side["after"]["residents"] - by_side["before"]["residents"],
+        "rows": scenarios,
         "caveats": list(EQUITY_CAVEATS),
     }
 
@@ -537,38 +549,38 @@ def limits() -> dict:
         "cannot_measure": [
             {
                 "item": "crowding",
-                "clause": "MTC-06 3.2 (load standards)",
+                "clause": "MPTA-04 (formerly MTC-06) 3.2 (load standards)",
                 "why": "GTFS holds no boardings or loads",
                 "needs": "automatic passenger count data by trip and stop",
             },
             {
                 "item": "route-level ridership",
-                "clause": "MTC-06 3.0 (route monitoring, passengers per hour)",
+                "clause": "MPTA-04 (formerly MTC-06) 3.0 (route monitoring, passengers per hour)",
                 "why": "GTFS holds no boardings; the public board packets give ridership by mode, not by route",
                 "needs": "boardings by route from CATS",
             },
             {
                 "item": "delivered on-time performance (schedule adherence)",
-                "clause": "MTC-06 3.3",
+                "clause": "MPTA-04 (formerly MTC-06) 3.3",
                 "why": "the audit reads the published schedule, which holds scheduled times and no observed arrivals",
                 "needs": "automatic vehicle location or stop-arrival records per trip with the scheduled time",
             },
             {
                 "item": "missed trips and headway as riders see it",
-                "clause": "MTC-06 3.7",
+                "clause": "MPTA-04 (formerly MTC-06) 3.7",
                 "why": "scheduled spacing only: a trip that did not run, or buses that bunched, are not visible",
                 "needs": "the same observed arrival records",
             },
         ],
         "policy_gaps": [
             {
-                "gap": "MTC-06 defines no peak hours",
+                "gap": "MPTA-04 (formerly MTC-06) defines no peak hours",
                 "clauses": "2.4, 3.2, 3.7",
                 "quote": "CATS will strive to provide at least 15-minute peak service on high frequency routes",
                 "method_choice": "docs/metrics.md decision 1: AM peak 06:00-09:00, midday 09:00-15:00, PM peak 15:00-18:00, evening 18:00-22:00",
             },
             {
-                "gap": "MTC-06 sets no weekend frequency standard",
+                "gap": "MPTA-04 (formerly MTC-06) sets no weekend frequency standard",
                 "clauses": "2.4, 3.7",
                 "quote": "Common / Local Routes - Bus routes that provide all day service on weekdays and weekends",
                 "method_choice": "docs/metrics.md decision 3: weekend headways are reported, with no pass or fail",
@@ -600,7 +612,7 @@ def limits() -> dict:
         ],
         "scope": [
             "Schedule-based audit: it scores the published timetable (GTFS), not the buses that ran.",
-            "One service change only: MTC-06 3.3 looks over two service changes.",
+            "One service change only: MPTA-04 (formerly MTC-06) 3.3 looks over two service changes.",
             "Rail (routes 501 and 510) is out of scope.",
             "Two Wednesdays, not a month: the schedule on those days is read as typical.",
         ],
@@ -616,9 +628,15 @@ def build() -> dict:
     data = Data()
     return {
         "title": "Better Bus Baseline v1: findings",
-        "question": "Did the Oct 5, 2026 service change move routes into compliance with MTC-06 scheduled frequency and span, "
+        "question": "Did the Oct 5, 2026 service change move routes into compliance with MPTA-04 (formerly MTC-06) scheduled frequency and span, "
         "and where does every route stand after it?",
         "generated_by": "analysis/findings.py",
+        "policy": {
+            "name": POLICY,
+            "reference": "data/reference/mtc06.md",
+            "note": "Clause numbers and quotes come from data/reference/mtc06.md; sections 3.3 and 3.7 read the same in the "
+            "MPTA-04 text (data/reference/mpta04.md).",
+        },
         "inputs_sha256": {rel: sha256_text(rel) for rel in INPUTS if (ROOT / rel).exists()},
         "headline": headline(data),
         "routes": routes_table(data),
