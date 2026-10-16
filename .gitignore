@@ -7,3 +7,6 @@ __pycache__/
 .ruff_cache/
 .pytest_cache/
 data/census/
+site/node_modules/
+site/.evidence/
+site/build/

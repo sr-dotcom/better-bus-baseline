@@ -14,7 +14,7 @@ Version 1 measures the October 5, 2026 service change against CATS policy MPTA-0
 | `sql/` | Staging, intermediate and mart models, plus SQL tests |
 | `analysis/` | Build runner (`build.py`), gtfs-kit cross-check (`crosscheck.py`, report in `crosscheck_report.md`) |
 | `data/marts/` | The mart tables as CSV, written by the build |
-| `site/` | Static results page |
+| `site/` | Results page at bus.gnsr.dev: an Evidence site that reads `data/findings.json` and the reference files |
 | `memo/` | Memo |
 | `collector/` | GTFS-Realtime poller (paused until version 1.1) |
 | `fixtures/`, `tests/` | Small recorded samples and tests (no network calls) |
@@ -45,6 +45,14 @@ Cross-check the marts against gtfs-kit (about a minute; writes `analysis/crossch
 
 ```
 uv run python analysis/crosscheck.py
+```
+
+Build the results page (needs Node 24). The build writes `site/page-data.json` from `data/findings.json`, then builds the static site into `site/build/`; `tests/test_page.py` checks the built page against `data/findings.json` and the marts:
+
+```
+cd site
+npm ci
+npm run build
 ```
 
 Run the collector (writes under `DATA_DIR`, default `/data`; set `NTFY_TOPIC` for notifications):
