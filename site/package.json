@@ -1,0 +1,17 @@
+{
+  "name": "better-bus-baseline-site",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "data": "node scripts/prepare.mjs",
+    "build": "node scripts/prepare.mjs && evidence build",
+    "dev": "evidence dev"
+  },
+  "dependencies": {
+    "@evidence-dev/core-components": "^5",
+    "@evidence-dev/csv": "^1",
+    "@evidence-dev/evidence": "^40",
+    "typescript": "^5"
+  }
+}
