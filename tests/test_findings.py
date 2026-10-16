@@ -390,9 +390,15 @@ def test_input_hashes_are_the_hashes_of_the_files(f):
 
 
 def test_findings_json_is_byte_identical_on_rerun():
-    before = FINDINGS.read_bytes()
-    subprocess.run([sys.executable, str(ROOT / "analysis/findings.py")], check=True, capture_output=True, cwd=ROOT)
-    assert FINDINGS.read_bytes() == before
+    # Two runs give the same bytes, and they equal the committed file (a Windows checkout may turn its line endings
+    # into CRLF, so the committed bytes are compared with CRLF turned back into LF).
+    committed = FINDINGS.read_bytes().replace(b"\r\n", b"\n")
+    runs = []
+    for _ in range(2):
+        subprocess.run([sys.executable, str(ROOT / "analysis/findings.py")], check=True, capture_output=True, cwd=ROOT)
+        runs.append(FINDINGS.read_bytes())
+    assert runs[0] == runs[1]
+    assert runs[0] == committed
 
 
 def test_findings_json_has_no_run_time_and_no_nan():
