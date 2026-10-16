@@ -30,6 +30,19 @@ MARTS = (
 )
 MARTS_DIR = ROOT / "data/marts"
 
+# One row per bus route with its long name, for the findings table. The after feed (2026-09-29) names the route;
+# a route only in the before feed (2026-09-10) falls back to that name. Not a model: it adds no metric.
+ROUTES_QUERY = """
+select route_short_name, route_long_name, category
+from (
+    select route_short_name, route_long_name, category,
+        row_number() over (partition by route_short_name order by feed_version desc) as rn
+    from bus_routes
+)
+where rn = 1
+order by route_short_name
+"""
+
 
 def run_models(con) -> None:
     """Run every model file in staging, intermediate, marts order (file-name order inside a folder)."""
@@ -71,6 +84,14 @@ def export_marts(con, out_dir: Path = MARTS_DIR) -> list[Path]:
     return paths
 
 
+def export_routes(con, out_dir: Path = MARTS_DIR) -> Path:
+    """Write <out_dir>/routes.csv (route_short_name, route_long_name, category)."""
+    out_dir.mkdir(parents=True, exist_ok=True)
+    path = out_dir / "routes.csv"
+    con.execute(f"copy ({ROUTES_QUERY}) to '{path.as_posix()}' (format csv, header)")
+    return path
+
+
 def build(con, parquet_dir: Path) -> None:
     """Load the raw zips into con, then run the models. Parquet goes to parquet_dir."""
     loaded_at = datetime.now(UTC).strftime("%Y-%m-%dT%H:%M:%SZ")
@@ -101,6 +122,8 @@ def main() -> int:
         print(
             f"wrote {path.relative_to(ROOT).as_posix()} ({con.execute(f'select count(*) from {path.stem}').fetchone()[0]} rows)"
         )
+    routes = export_routes(con)
+    print(f"wrote {routes.relative_to(ROOT).as_posix()} ({con.execute(f'select count(*) from ({ROUTES_QUERY})').fetchone()[0]} rows)")
     return 0
 
 

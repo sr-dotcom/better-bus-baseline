@@ -1,0 +1,63 @@
+route_short_name,route_long_name,category
+1,Mt. Holly Road,bus
+10,West Boulevard,bus
+11,North Tryon,bus
+12,South Boulevard,bus
+13,Nevin Road,bus
+14,Providence Road,bus
+15,Randolph Road,bus
+16,South Tryon,bus
+17,Commonwealth Avenue,bus
+177,Northern Meck Connector,bus
+18,Paw Creek/Rosa Parks Crosstown,bus
+19,Park Road,bus
+2,Ashley/Scaleybark Crosstown,bus
+20,Sharon Road,bus
+21,Statesville Ave,bus
+211,Hidden Valley,bus
+22,Graham Street,bus
+221,E. Harris Blvd-Idlewild Rd,bus
+222,Pence Road,bus
+23,Shamrock Drive,bus
+235,West Charlotte Connector,bus
+24,Nations Ford Road,bus
+26,Oaklawn Avenue,bus
+27,Monroe Road,bus
+28,Fairview Road,bus
+29,UNCC/JW Clay,bus
+3,The Plaza,bus
+30,Woodlawn/Scaleybark/Crosstown,bus
+34,Freedom Drive,bus
+35,Wilkinson-Amazon,bus
+39,Eastway,bus
+4,Belmont,bus
+40x,Lawyers Road Express,express
+41x,Steele Creek Express,express
+42,Carowinds,bus
+43,Ballantyne,bus
+46x,Harrisburg Road Express,express
+48x,Northcross Express,express
+5,Airport,bus
+50,URP/CIC,bus
+51,Pineville-Matthews Road,bus
+52x,Idlewild Road Express,express
+53x,Northlake Express,express
+54,University Research Park,bus
+55,Westinghouse,bus
+56,Arrowood,bus
+57,Archdale/South Park,bus
+58,Pineville,bus
+59,UNC Charlotte-Huntersville,bus
+6,Kings Drive,bus
+60,Tyvola Road,bus
+61x,Arboretum Express,express
+62x,Rea Road Express,express
+63x,Huntersville Express,express
+64x,Independence Blvd Express,express
+7,Beatties Ford,bus
+74x,Union County Express,express
+77x,North Mecklenburg Express,express
+8,Tuckaseegee Road,bus
+85x,Gastonia Express,express
+88x,Mountain Island Express,express
+9,Central Avenue,bus
