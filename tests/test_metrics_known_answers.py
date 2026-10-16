@@ -8,10 +8,10 @@ import pytest
 
 from ingest.gtfs_time import parse_gtfs_time
 from ingest.headway import (
+    FEWER_THAN_2_DEPARTURES,
     HEADWAY_ABOVE_STANDARD,
     LIMIT_15_SECONDS,
     LIMIT_30_SECONDS,
-    NO_SERVICE_IN_PERIOD,
     departures_in_period,
     express_meets_standard,
     express_peak_meets_standard,
@@ -127,14 +127,14 @@ def test_span_boundaries(start, end, ok):
     assert span_meets_standard(parse_gtfs_time(start), parse_gtfs_time(end)) is ok
 
 
-# ---- fail_reason on the tier metrics: "no service in period" (fewer than 2 departures) vs "headway above standard"
+# ---- fail_reason on the tier metrics: "fewer than 2 departures in period" (fewer than 2 departures) vs "headway above standard"
 
 
-def test_fail_reason_no_service_in_period_for_zero_or_one_departure():
+def test_fail_reason_fewer_than_2_departures_for_zero_or_one_departure():
     # Decision: fewer than 2 in-period departures means no headway; the period fails with its own reason.
-    assert period_fail_reason(headway_stats([]), LIMIT_30_SECONDS) == NO_SERVICE_IN_PERIOD
-    assert period_fail_reason(headway_stats([7 * 3600]), LIMIT_30_SECONDS) == NO_SERVICE_IN_PERIOD
-    assert NO_SERVICE_IN_PERIOD == "no service in period"
+    assert period_fail_reason(headway_stats([]), LIMIT_30_SECONDS) == FEWER_THAN_2_DEPARTURES
+    assert period_fail_reason(headway_stats([7 * 3600]), LIMIT_30_SECONDS) == FEWER_THAN_2_DEPARTURES
+    assert FEWER_THAN_2_DEPARTURES == "fewer than 2 departures in period"
 
 
 def test_fail_reason_headway_above_standard_for_a_real_long_median():
@@ -153,10 +153,10 @@ def test_fail_reason_is_none_on_the_boundary_and_below():
 
 def test_route_fail_reason_collects_distinct_reasons():
     assert route_fail_reason([None, None]) is None
-    assert route_fail_reason([None, NO_SERVICE_IN_PERIOD, NO_SERVICE_IN_PERIOD]) == NO_SERVICE_IN_PERIOD
+    assert route_fail_reason([None, FEWER_THAN_2_DEPARTURES, FEWER_THAN_2_DEPARTURES]) == FEWER_THAN_2_DEPARTURES
     assert route_fail_reason([HEADWAY_ABOVE_STANDARD, None]) == HEADWAY_ABOVE_STANDARD
-    assert route_fail_reason([NO_SERVICE_IN_PERIOD, HEADWAY_ABOVE_STANDARD]) == (
-        f"{HEADWAY_ABOVE_STANDARD}; {NO_SERVICE_IN_PERIOD}"
+    assert route_fail_reason([FEWER_THAN_2_DEPARTURES, HEADWAY_ABOVE_STANDARD]) == (
+        f"{FEWER_THAN_2_DEPARTURES}; {HEADWAY_ABOVE_STANDARD}"
     )
 
 
@@ -298,7 +298,7 @@ def test_mart_express_peak_flow_counts(route, am_flow, pm_flow, express_pass):
 @MARTS_LAND_IN_L3
 @pytest.mark.parametrize(
     ("route", "direction", "reason"),
-    [("35", "0", NO_SERVICE_IN_PERIOD), ("28", "0", NO_SERVICE_IN_PERIOD), ("39", "0", HEADWAY_ABOVE_STANDARD)],
+    [("35", "0", FEWER_THAN_2_DEPARTURES), ("28", "0", FEWER_THAN_2_DEPARTURES), ("39", "0", HEADWAY_ABOVE_STANDARD)],
 )
 def test_mart_tier_fail_reason_am_peak(route, direction, reason):
     # docs/known-answers.md section 6: route 35 has 0 AM-peak departures, route 28 has 1, route 39 has a 40:00 median.
