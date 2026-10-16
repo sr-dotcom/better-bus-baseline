@@ -216,7 +216,9 @@ class Collector:
 
 def main() -> None:
     logging.Formatter.converter = time.gmtime
-    logging.basicConfig(level=logging.INFO, format="%(asctime)sZ %(levelname)s %(message)s", datefmt="%Y-%m-%dT%H:%M:%S")
+    logging.basicConfig(
+        level=logging.INFO, format="%(asctime)sZ %(levelname)s %(message)s", datefmt="%Y-%m-%dT%H:%M:%S"
+    )
     Collector(
         os.environ.get("DATA_DIR", "/data"),
         clock=lambda: datetime.now(UTC),
