@@ -1,5 +1,9 @@
 """Residents within 800 m of a stop served by a 15-min-tier route, before and after the Oct 5, 2026 change.
 
+Two rows per date. "strict tier": routes in the 15-min tier. "incl. near-miss routes": those routes plus every route
+with a 15-min near miss that day (a direction-period the 15-minute standard covers whose median is 901-960 s, the same
+rule as the near_miss section of findings.json), buffers dissolved so a resident is counted once.
+
 Run: uv run python analysis/equity.py   (writes data/equity.csv; downloads go to data/census/, which is git-ignored)
 
 Method, in order:
@@ -35,6 +39,8 @@ from shapely.ops import unary_union
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 
+from analysis.findings import LIMIT_15_S, NEAR_MISS_S
+
 BUFFER_M = 800
 CRS_M = "EPSG:32119"  # NAD83 / North Carolina, metres
 TIGER_YEAR = 2024
@@ -45,10 +51,14 @@ CENSUS_DIR = ROOT / "data/census"
 OUT = ROOT / "data/equity.csv"
 TIGER_URL = f"https://www2.census.gov/geo/tiger/TIGER{TIGER_YEAR}/TRACT/tl_{TIGER_YEAR}_{STATE_FIPS}_tract.zip"
 ACS_URL = f"https://api.census.gov/data/{ACS_YEAR}/acs/acs5"
+STRICT = "strict tier"
+WITH_NEAR_MISS = "incl. near-miss routes"
 FIELDS = [
+    "scenario",
     "date",
     "side",
     "routes",
+    "near_miss_routes_added",
     "n_routes",
     "n_stops",
     "residents",
@@ -63,8 +73,9 @@ FIELDS = [
 ]
 METHOD = (
     "Residents = sum over census tracts of total population (ACS 5-year B01003_001E) x share of the tract's area inside "
-    "the union of 800 m straight-line buffers around every stop served on the date by a route in the 15-min tier; "
-    "area weighting assumes uniform density inside a tract."
+    "the union of 800 m straight-line buffers around every stop served on the date by the routes of the row (strict "
+    "tier: routes in the 15-min tier; incl. near-miss routes: those plus routes with a 15-min near miss, a covered "
+    "direction-period with a median of 901-960 s); area weighting assumes uniform density inside a tract."
 )
 
 
@@ -192,6 +203,25 @@ def tier_15_routes() -> dict[str, list[str]]:
     return {date: sorted(routes) for date, routes in found.items()}
 
 
+def near_miss_15_routes(headway_rows, date: str) -> list[str]:
+    """Routes with at least one direction-period on `date` that the 15-minute standard covers and whose median is above
+    900 s by at most 60 s. headway_rows: dicts as read from route_period_headway.csv."""
+    found = {
+        r["route_short_name"]
+        for r in headway_rows
+        if r["date"] == date
+        and r["covers_15"] == "true"
+        and r["headway_median_s"] != ""
+        and LIMIT_15_S < float(r["headway_median_s"]) <= LIMIT_15_S + NEAR_MISS_S
+    }
+    return sorted(found)
+
+
+def read_headway_rows() -> list[dict]:
+    with (ROOT / "data/marts/route_period_headway.csv").open(newline="", encoding="utf-8") as handle:
+        return list(csv.DictReader(handle))
+
+
 def served_stops(con, date: str, routes: list[str]) -> gpd.GeoDataFrame:
     """Stops that an active trip of the routes calls at on the date (stops open for neither pickup nor drop-off excluded)."""
     if not routes:
@@ -220,34 +250,43 @@ def run() -> int:
     from analysis.build import build_in_memory
 
     con = build_in_memory()
-    routes_by_date = tier_15_routes()
+    tier_routes = tier_15_routes()
+    headway_rows = read_headway_rows()
     tracts = load_tracts()
     tracts_union = unary_union(list(tracts.geometry))
     rows = []
-    for side, date in DATES:
-        routes = routes_by_date[date]
-        stops = served_stops(con, date, routes).to_crs(CRS_M)
-        buffer_geom = stop_buffers(stops)
-        residents, touched, missing = weighted_population(buffer_geom, tracts)
-        outside = buffer_geom.difference(tracts_union).area
-        rows.append(
-            {
-                "date": date,
-                "side": side,
-                "routes": " ".join(routes),
-                "n_routes": len(routes),
-                "n_stops": len(stops),
-                "residents": round(residents),
-                "tracts_touched": touched,
-                "tracts_without_estimate": missing,
-                "buffer_outside_tracts_m2": round(outside),
-                "buffer_m": BUFFER_M,
-                "crs": CRS_M,
-                "tiger_vintage": TIGER_YEAR,
-                "acs_vintage": f"{ACS_YEAR} 5-year",
-                "method": METHOD,
-            }
-        )
+    for scenario in (STRICT, WITH_NEAR_MISS):
+        for side, date in DATES:
+            added = (
+                []
+                if scenario == STRICT
+                else [r for r in near_miss_15_routes(headway_rows, date) if r not in tier_routes[date]]
+            )
+            routes = sorted(set(tier_routes[date]) | set(added), key=lambda r: (int(r.rstrip("x")), r))
+            stops = served_stops(con, date, routes).to_crs(CRS_M)
+            buffer_geom = stop_buffers(stops)
+            residents, touched, missing = weighted_population(buffer_geom, tracts)
+            outside = buffer_geom.difference(tracts_union).area
+            rows.append(
+                {
+                    "scenario": scenario,
+                    "date": date,
+                    "side": side,
+                    "routes": " ".join(routes),
+                    "near_miss_routes_added": " ".join(added),
+                    "n_routes": len(routes),
+                    "n_stops": len(stops),
+                    "residents": round(residents),
+                    "tracts_touched": touched,
+                    "tracts_without_estimate": missing,
+                    "buffer_outside_tracts_m2": round(outside),
+                    "buffer_m": BUFFER_M,
+                    "crs": CRS_M,
+                    "tiger_vintage": TIGER_YEAR,
+                    "acs_vintage": f"{ACS_YEAR} 5-year",
+                    "method": METHOD,
+                }
+            )
     with OUT.open("w", newline="", encoding="utf-8") as handle:
         writer = csv.DictWriter(handle, fieldnames=FIELDS, lineterminator="\n")
         writer.writeheader()

@@ -4,7 +4,7 @@ import geopandas as gpd
 import pytest
 from shapely.geometry import Point, box
 
-from analysis.equity import BUFFER_M, CRS_M, stop_buffers, weighted_population
+from analysis.equity import BUFFER_M, CRS_M, near_miss_15_routes, stop_buffers, weighted_population
 
 
 def tracts(*specs):
@@ -71,3 +71,22 @@ def test_buffer_reaches_a_tract_at_799_m_but_not_at_801_m():
     far = tracts((box(801, -50, 1800, 50), 100))
     assert weighted_population(buffer_geom, near)[1] == 1
     assert weighted_population(buffer_geom, far)[1] == 0
+
+
+def test_near_miss_routes_use_the_901_to_960_window_on_covered_periods_only():
+    # Boundary: 900 passes 15-min (not a near miss); 901 and 960 are; 961 is not. A period the 15-minute standard does
+    # not cover (midday) never counts, and neither does another date or an empty median.
+    def row(route, median, covers_15="true", date="2026-10-14"):
+        return {"date": date, "route_short_name": route, "covers_15": covers_15, "headway_median_s": median}
+
+    rows = [
+        row("1", "900.0"),
+        row("2", "901.0"),
+        row("3", "960.0"),
+        row("4", "961.0"),
+        row("5", "930.0", covers_15="false"),
+        row("6", "930.0", date="2026-09-30"),
+        row("7", ""),
+        row("2", "930.0"),
+    ]
+    assert near_miss_15_routes(rows, "2026-10-14") == ["2", "3"]
