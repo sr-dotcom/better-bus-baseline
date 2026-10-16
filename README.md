@@ -2,16 +2,20 @@
 
 A public-data prototype of a performance monitoring plan for CATS (Charlotte Area Transit System) bus service, scored against CATS policy MTC-06 (Transit Service Guidelines).
 
-Everything here is built from free public sources: NTD monthly data, CATS board packets, published GTFS schedule versions, the City of Charlotte bus stops layer, Census ACS, and the CATS GTFS-Realtime feed.
+Version 1 measures the October 5, 2026 service change against CATS policy MTC-06 (scheduled frequency and span), route by route, from published GTFS schedules. The live-feed collector in collector/ is paused until version 1.1.
 
 ## Layout
 
 | Folder | Contents |
 | --- | --- |
-| `collector/` | GTFS-Realtime poller that saves raw feed responses |
-| `ingest/` | One loader per public archive |
+| `data/raw/` | Published GTFS schedule versions, unchanged, with sources in `data/sources.md` |
+| `data/reference/` | Small reference files used by the analysis |
+| `ingest/` | Loaders into DuckDB and Parquet |
 | `sql/` | Staging, intermediate and mart models, plus SQL tests |
-| `analysis/`, `dashboard/`, `ai/`, `memo/` | Analysis, dashboard extracts, governed AI layer, memo |
+| `analysis/` | Analysis scripts |
+| `site/` | Static results page |
+| `memo/` | Memo |
+| `collector/` | GTFS-Realtime poller (paused until version 1.1) |
 | `fixtures/`, `tests/` | Small recorded samples and tests (no network calls) |
 
 ## Setup
@@ -26,7 +30,7 @@ uv run pytest
 Run the collector (writes under `DATA_DIR`, default `/data`; set `NTFY_TOPIC` for notifications):
 
 ```
-DATA_DIR=./data python collector/collect.py
+DATA_DIR=./data/collector python collector/collect.py
 ```
 
 All timestamps are stored in UTC.
