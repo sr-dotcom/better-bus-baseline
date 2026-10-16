@@ -157,8 +157,10 @@ because its first trip leaves at 05:42:00, after 05:00:00, although its last tri
 ## 4. Express peak trips (MTC-06 3.7: "a minimum of three trips in each peak direction")
 
 Express routes are the 14 route_ids whose `route_short_name` ends in `x`. Peaks are AM `06:00:00 <= t < 09:00:00` and
-PM `15:00:00 <= t < 18:00:00`. The decided rule counts every direction in both peaks and needs 3 in each; the counts
-are reported so a different reading of "peak direction" can be applied without recomputing.
+PM `15:00:00 <= t < 18:00:00`. Rule: in each peak, count the trips in the peak-flow direction, which is the direction
+with more trips in that peak (AM and PM are decided separately). The route passes when that count is at least 3 in
+both peaks. The other direction is ignored. If both directions have the same count, that count is the peak-flow count
+and no tie-break is needed. Weekday only; express routes have no headway test.
 
 Route 64x, Wed 2026-10-14, feed `2026-09-29`, first-stop departures inside a peak:
 
@@ -181,8 +183,7 @@ Route 64x, Wed 2026-10-14, feed `2026-09-29`, first-stop departures inside a pea
 
 Counts: direction 0 am_peak = 6; direction 0 pm_peak = 1; direction 1 am_peak = 0; direction 1 pm_peak = 7.
 
-Under the decided rule, 64x fails (direction 1 has 0 AM-peak trips and direction 0 has 1 PM-peak trip). Read as the
-peak-flow direction only (direction 0 in the AM, direction 1 in the PM), it would pass with 6 and 7 trips.
+64x passes: AM peak-flow direction is 0 with 6 trips, PM peak-flow direction is 1 with 7 trips.
 
 Route 40x, Wed 2026-10-14, feed `2026-09-29`, first-stop departures inside a peak:
 
@@ -197,8 +198,27 @@ Route 40x, Wed 2026-10-14, feed `2026-09-29`, first-stop departures inside a pea
 
 Counts: direction 0 am_peak = 2; direction 0 pm_peak = 0; direction 1 am_peak = 1; direction 1 pm_peak = 3.
 
-Under the decided rule, 40x fails. Read as the peak-flow direction only, it would still fail the AM peak with 2 trips
-(its 05:47:00 trip is before 06:00:00) and pass the PM peak with 3.
+40x fails: AM peak-flow direction is 0 with 2 trips (its 05:47:00 trip is before 06:00:00), so the AM count is below 3;
+the PM peak-flow count is 3 (direction 1), which would pass on its own.
+
+All 14 express routes, Wed 2026-10-14, feed `2026-09-29` (first-stop departures by direction in each peak):
+
+| route | AM peak, direction 0 | AM peak, direction 1 | PM peak, direction 0 | PM peak, direction 1 | AM peak-flow count | PM peak-flow count | express pass |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 40x | 2 | 1 | 0 | 3 | 2 | 3 | fail |
+| 41x | 3 | 0 | 0 | 3 | 3 | 3 | pass |
+| 46x | 3 | 0 | 0 | 3 | 3 | 3 | pass |
+| 48x | 7 | 2 | 2 | 6 | 7 | 6 | pass |
+| 52x | 3 | 0 | 0 | 2 | 3 | 2 | fail |
+| 53x | 6 | 0 | 1 | 6 | 6 | 6 | pass |
+| 61x | 6 | 0 | 0 | 6 | 6 | 6 | pass |
+| 62x | 3 | 1 | 1 | 3 | 3 | 3 | pass |
+| 63x | 7 | 2 | 1 | 6 | 7 | 6 | pass |
+| 64x | 6 | 0 | 1 | 7 | 6 | 7 | pass |
+| 74x | 2 | 1 | 1 | 2 | 2 | 2 | fail |
+| 77x | 7 | 2 | 1 | 6 | 7 | 6 | pass |
+| 85x | 2 | 0 | 1 | 2 | 2 | 2 | fail |
+| 88x | 3 | 0 | 0 | 3 | 3 | 3 | pass |
 
 ## 5. No service on a date
 
@@ -213,3 +233,46 @@ Route 50 (URP/CIC) has trips on the weekday date and none on the weekend dates a
 
 The 4 trips on Wed 2026-10-14 are 5604787, 5604791, 5604761, 5604768. For the two weekend dates the join returns no rows, so the
 metric reports "no service on date" for route 50, not a failed standard.
+
+## 6. Fail reasons on a scored period
+
+A scored period that fails carries a reason. "no service in period" means fewer than 2 departures in the period (none or
+one), so there is no headway to compare. "headway above standard" means a real median above the limit. Wed 2026-10-14,
+feed `2026-09-29`, direction 0, AM peak (scored against both 15:00 and 30:00):
+
+| route | AM-peak departures | median | fail reason against 15 | fail reason against 30 |
+| --- | --- | --- | --- | --- |
+| 35 | 0 | none | no service in period | no service in period |
+| 28 | 1 | none | no service in period | no service in period |
+| 39 | 5 | 40:00 | headway above standard | headway above standard |
+
+Route 35 has no AM-peak departure; every direction-0 trip it runs that day (the AM-peak flag shows none):
+
+| trip_id | stop_id | stop_sequence | departure_time | in AM peak |
+| --- | --- | --- | --- | --- |
+| 5606243 | 60531 | 1 | 05:15:00 | no |
+| 5606244 | 45726 | 1 | 05:40:00 | no |
+| 5606245 | 45726 | 1 | 17:50:00 | no |
+
+Route 28 has exactly one AM-peak departure, so no gap exists; every direction-0 trip it runs that day:
+
+| trip_id | stop_id | stop_sequence | departure_time | in AM peak |
+| --- | --- | --- | --- | --- |
+| 5604557 | 30190 | 1 | 08:22:00 | yes |
+| 5604560 | 30190 | 1 | 09:01:00 | no |
+| 5604565 | 30190 | 1 | 09:41:00 | no |
+| 5604569 | 30190 | 1 | 10:21:00 | no |
+| 5604575 | 30190 | 1 | 11:00:00 | no |
+| 5604581 | 30190 | 1 | 11:40:00 | no |
+| 5604588 | 30190 | 1 | 12:20:00 | no |
+| 5604591 | 30190 | 1 | 13:00:00 | no |
+| 5604598 | 30190 | 1 | 13:40:00 | no |
+| 5604604 | 30190 | 1 | 14:22:00 | no |
+| 5604605 | 30190 | 1 | 15:00:00 | no |
+| 5604612 | 30190 | 1 | 15:30:00 | no |
+| 5604619 | 30190 | 1 | 16:07:00 | no |
+| 5604622 | 30190 | 1 | 17:00:00 | no |
+| 5604628 | 30190 | 1 | 17:54:00 | no |
+| 5604635 | 30190 | 1 | 18:40:00 | no |
+
+Route 39 is the section 2 route: it has a real median above both limits.
