@@ -27,6 +27,13 @@ uv sync
 uv run pytest
 ```
 
+Load the saved GTFS schedules into `data/bbb.duckdb` and `data/parquet/` (both git-ignored), then write the service-date probe to `data/probe.md`:
+
+```
+uv run python -m ingest.load_gtfs
+uv run python -m ingest.probe
+```
+
 Run the collector (writes under `DATA_DIR`, default `/data`; set `NTFY_TOPIC` for notifications):
 
 ```
