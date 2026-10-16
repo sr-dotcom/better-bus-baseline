@@ -1,7 +1,11 @@
-# Default gitleaks rules. Skip the local, git-ignored virtual environment (third-party code).
+# Default gitleaks rules. Skip local, git-ignored folders: the virtual environment and the page build (third-party code and generated files).
 [extend]
 useDefault = true
 
 [[allowlists]]
 description = "local virtual environment"
 paths = ['''(^|[/\\])\.venv[/\\]''']
+
+[[allowlists]]
+description = "page build: git-ignored npm packages, Evidence template and build output"
+paths = ['''(^|[/\\])site[/\\](node_modules|\.evidence|build)[/\\]''']
