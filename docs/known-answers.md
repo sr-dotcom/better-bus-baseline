@@ -2,7 +2,7 @@
 
 Hand-checkable numbers for the metrics in `docs/metrics.md`. Everything here comes from the raw tables (`raw_trips`,
 `raw_stop_times`, `raw_calendar_dates`) with plain SQL and the pure helper `ingest/headway.py`; no mart is involved.
-The marts land in L3 and must reproduce these numbers. Source feeds: `data/sources.md`.
+The marts in `sql/marts/` reproduce these numbers (`sql/tests/60_known_answers.sql` and `tests/test_metrics_known_answers.py`). Source feeds: `data/sources.md`.
 
 ## Method in one paragraph
 

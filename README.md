@@ -12,7 +12,8 @@ Version 1 measures the October 5, 2026 service change against CATS policy MTC-06
 | `data/reference/` | Small reference files used by the analysis |
 | `ingest/` | Loaders into DuckDB and Parquet |
 | `sql/` | Staging, intermediate and mart models, plus SQL tests |
-| `analysis/` | Analysis scripts |
+| `analysis/` | Build runner (`build.py`), gtfs-kit cross-check (`crosscheck.py`, report in `crosscheck_report.md`) |
+| `data/marts/` | The mart tables as CSV, written by the build |
 | `site/` | Static results page |
 | `memo/` | Memo |
 | `collector/` | GTFS-Realtime poller (paused until version 1.1) |
@@ -32,6 +33,18 @@ Load the saved GTFS schedules into `data/bbb.duckdb` and `data/parquet/` (both g
 ```
 uv run python -m ingest.load_gtfs
 uv run python -m ingest.probe
+```
+
+Build everything from the raw zips with one command. It loads the schedules, runs the SQL in `sql/staging`, `sql/intermediate` and `sql/marts`, runs the SQL tests in `sql/tests` (a failing test exits non-zero), and writes each mart to `data/marts/<name>.csv`:
+
+```
+uv run python analysis/build.py
+```
+
+Cross-check the marts against gtfs-kit (about a minute; writes `analysis/crosscheck_report.md`):
+
+```
+uv run python analysis/crosscheck.py
 ```
 
 Run the collector (writes under `DATA_DIR`, default `/data`; set `NTFY_TOPIC` for notifications):
