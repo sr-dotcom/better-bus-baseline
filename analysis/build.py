@@ -123,7 +123,9 @@ def main() -> int:
             f"wrote {path.relative_to(ROOT).as_posix()} ({con.execute(f'select count(*) from {path.stem}').fetchone()[0]} rows)"
         )
     routes = export_routes(con)
-    print(f"wrote {routes.relative_to(ROOT).as_posix()} ({con.execute(f'select count(*) from ({ROUTES_QUERY})').fetchone()[0]} rows)")
+    print(
+        f"wrote {routes.relative_to(ROOT).as_posix()} ({con.execute(f'select count(*) from ({ROUTES_QUERY})').fetchone()[0]} rows)"
+    )
     return 0
 
 
