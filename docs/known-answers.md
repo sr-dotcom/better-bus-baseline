@@ -2,7 +2,7 @@
 
 Hand-checkable numbers for the metrics in `docs/metrics.md`. Everything here comes from the raw tables (`raw_trips`,
 `raw_stop_times`, `raw_calendar_dates`) with plain SQL and the pure helper `ingest/headway.py`; no mart is involved.
-The marts land in L3 and must reproduce these numbers. Source feeds: `data/sources.md`.
+The marts in `sql/marts/` reproduce these numbers (`sql/tests/60_known_answers.sql` and `tests/test_metrics_known_answers.py`). Source feeds: `data/sources.md`.
 
 ## Method in one paragraph
 
@@ -236,14 +236,14 @@ metric reports "no service on date" for route 50, not a failed standard.
 
 ## 6. Fail reasons on a scored period
 
-A scored period that fails carries a reason. "no service in period" means fewer than 2 departures in the period (none or
-one), so there is no headway to compare. "headway above standard" means a real median above the limit. Wed 2026-10-14,
+A scored period that fails carries a reason. "fewer than 2 departures in period" covers none or one
+departure, so there is no headway to compare. "headway above standard" means a real median above the limit. Wed 2026-10-14,
 feed `2026-09-29`, direction 0, AM peak (scored against both 15:00 and 30:00):
 
 | route | AM-peak departures | median | fail reason against 15 | fail reason against 30 |
 | --- | --- | --- | --- | --- |
-| 35 | 0 | none | no service in period | no service in period |
-| 28 | 1 | none | no service in period | no service in period |
+| 35 | 0 | none | fewer than 2 departures in period | fewer than 2 departures in period |
+| 28 | 1 | none | fewer than 2 departures in period | fewer than 2 departures in period |
 | 39 | 5 | 40:00 | headway above standard | headway above standard |
 
 Route 35 has no AM-peak departure; every direction-0 trip it runs that day (the AM-peak flag shows none):

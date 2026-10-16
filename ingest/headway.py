@@ -45,14 +45,14 @@ def meets_standard(stats: dict | None, limit_seconds: int) -> bool:
 
 # Why a scored period failed. "No service in period" means fewer than 2 departures, so there is no headway to compare
 # (zero or one trip in the window); "headway above standard" means a real median above the limit.
-NO_SERVICE_IN_PERIOD = "no service in period"
+FEWER_THAN_2_DEPARTURES = "fewer than 2 departures in period"
 HEADWAY_ABOVE_STANDARD = "headway above standard"
 
 
 def period_fail_reason(stats: dict | None, limit_seconds: int) -> str | None:
     """None when the period passes, else the reason it failed."""
     if stats is None:
-        return NO_SERVICE_IN_PERIOD
+        return FEWER_THAN_2_DEPARTURES
     if not meets_standard(stats, limit_seconds):
         return HEADWAY_ABOVE_STANDARD
     return None

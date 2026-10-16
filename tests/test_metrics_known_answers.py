@@ -1,17 +1,18 @@
 """Known-answer and boundary tests for the metric helpers (docs/metrics.md, docs/known-answers.md).
 
-Live tests run on synthetic or hand-copied departure seconds. Tests marked skip compare the L3 marts with the numbers
-in docs/known-answers.md and switch on when the marts exist.
+The first group runs on synthetic or hand-copied departure seconds. The `test_mart_*` group compares the marts, built
+from the zips in data/raw/, with the numbers in docs/known-answers.md.
 """
 
 import pytest
 
+from analysis.build import build_in_memory
 from ingest.gtfs_time import parse_gtfs_time
 from ingest.headway import (
+    FEWER_THAN_2_DEPARTURES,
     HEADWAY_ABOVE_STANDARD,
     LIMIT_15_SECONDS,
     LIMIT_30_SECONDS,
-    NO_SERVICE_IN_PERIOD,
     departures_in_period,
     express_meets_standard,
     express_peak_meets_standard,
@@ -127,14 +128,14 @@ def test_span_boundaries(start, end, ok):
     assert span_meets_standard(parse_gtfs_time(start), parse_gtfs_time(end)) is ok
 
 
-# ---- fail_reason on the tier metrics: "no service in period" (fewer than 2 departures) vs "headway above standard"
+# ---- fail_reason on the tier metrics: "fewer than 2 departures in period" (fewer than 2 departures) vs "headway above standard"
 
 
-def test_fail_reason_no_service_in_period_for_zero_or_one_departure():
+def test_fail_reason_fewer_than_2_departures_for_zero_or_one_departure():
     # Decision: fewer than 2 in-period departures means no headway; the period fails with its own reason.
-    assert period_fail_reason(headway_stats([]), LIMIT_30_SECONDS) == NO_SERVICE_IN_PERIOD
-    assert period_fail_reason(headway_stats([7 * 3600]), LIMIT_30_SECONDS) == NO_SERVICE_IN_PERIOD
-    assert NO_SERVICE_IN_PERIOD == "no service in period"
+    assert period_fail_reason(headway_stats([]), LIMIT_30_SECONDS) == FEWER_THAN_2_DEPARTURES
+    assert period_fail_reason(headway_stats([7 * 3600]), LIMIT_30_SECONDS) == FEWER_THAN_2_DEPARTURES
+    assert FEWER_THAN_2_DEPARTURES == "fewer than 2 departures in period"
 
 
 def test_fail_reason_headway_above_standard_for_a_real_long_median():
@@ -153,10 +154,10 @@ def test_fail_reason_is_none_on_the_boundary_and_below():
 
 def test_route_fail_reason_collects_distinct_reasons():
     assert route_fail_reason([None, None]) is None
-    assert route_fail_reason([None, NO_SERVICE_IN_PERIOD, NO_SERVICE_IN_PERIOD]) == NO_SERVICE_IN_PERIOD
+    assert route_fail_reason([None, FEWER_THAN_2_DEPARTURES, FEWER_THAN_2_DEPARTURES]) == FEWER_THAN_2_DEPARTURES
     assert route_fail_reason([HEADWAY_ABOVE_STANDARD, None]) == HEADWAY_ABOVE_STANDARD
-    assert route_fail_reason([NO_SERVICE_IN_PERIOD, HEADWAY_ABOVE_STANDARD]) == (
-        f"{HEADWAY_ABOVE_STANDARD}; {NO_SERVICE_IN_PERIOD}"
+    assert route_fail_reason([FEWER_THAN_2_DEPARTURES, HEADWAY_ABOVE_STANDARD]) == (
+        f"{FEWER_THAN_2_DEPARTURES}; {HEADWAY_ABOVE_STANDARD}"
     )
 
 
@@ -236,17 +237,67 @@ def test_express_known_answers_64x_and_40x():
     assert not express_meets_standard([2, 1], [0, 3])  # 40x: AM flow 2 -> fail; PM flow 3 would pass
 
 
-# ---- mart checks: expected values from docs/known-answers.md, switched on in L3
+# ---- mart checks: expected values from docs/known-answers.md, run against the marts built from data/raw/
+
+# The marts are built once per test run (analysis/build.py, in memory). mart() reads one row and renames the mart
+# columns to the names these tests use: headway_median = headway_median_s, tier_15 = passes_15, and so on.
 
 
 def mart(metric, **keys):
-    raise NotImplementedError("marts land in L3")
+    con = build_in_memory()
+    if metric == "headway":
+        sql = (
+            "select headway_median_s as headway_median, headway_max_s as headway_max, passes_15 as tier_15 "
+            "from route_period_headway where feed_version = ? and date = ? and route_short_name = ? "
+            "and direction_id = ? and period = ?"
+        )
+        args = [keys["feed"], keys["date"], keys["route"], int(keys["direction"]), keys["period"]]
+    elif metric == "tier" and "period" in keys:
+        sql = (
+            "select reason_15 as tier_15_fail_reason, reason_30 as tier_30_fail_reason "
+            "from route_period_headway where feed_version = ? and date = ? and route_short_name = ? "
+            "and direction_id = ? and period = ?"
+        )
+        args = [keys["feed"], keys["date"], keys["route"], int(keys["direction"]), keys["period"]]
+    elif metric == "tier":
+        sql = "select tier from route_compliance where feed_version = ? and date = ? and route_short_name = ?"
+        args = [keys["feed"], keys["date"], keys["route"]]
+    elif metric == "span":
+        sql = (
+            "select span_start, span_end, span_pass from route_span "
+            "where feed_version = ? and date = ? and route_short_name = ?"
+        )
+        args = [keys["feed"], keys["date"], keys["route"]]
+    elif metric == "express_peak_trips":
+        sql = (
+            "select max(e.peak_flow_count) filter (where e.period = 'am_peak') as am_peak_flow_count, "
+            "max(e.peak_flow_count) filter (where e.period = 'pm_peak') as pm_peak_flow_count, "
+            "any_value(c.express_pass) as express_pass "
+            "from express_peak_trips e join route_compliance c using (feed_version, date, route_short_name) "
+            "where e.feed_version = ? and e.date = ? and e.route_short_name = ?"
+        )
+        args = [keys["feed"], keys["date"], keys["route"]]
+    elif metric == "service":
+        sql = (
+            "select no_service_on_date from route_compliance "
+            "where feed_version = ? and date = ? and route_short_name = ?"
+        )
+        args = [keys["feed"], keys["date"], keys["route"]]
+    elif metric == "before_after":
+        sql = (
+            "select median_change_s as median_change_seconds, max_change_s as max_change_seconds "
+            "from before_after_headway where before_date = ? and after_date = ? and route_short_name = ? "
+            "and direction_id = ? and period = ?"
+        )
+        args = [keys["before"], keys["after"], keys["route"], int(keys["direction"]), keys["period"]]
+    else:
+        raise ValueError(f"unknown mart metric {metric!r}")
+    cur = con.execute(sql, args)
+    rows = cur.fetchall()
+    assert len(rows) == 1, f"{metric} {keys}: expected one mart row, got {len(rows)}"
+    return dict(zip([c[0] for c in cur.description], rows[0]))
 
 
-MARTS_LAND_IN_L3 = pytest.mark.skip(reason="marts land in L3")
-
-
-@MARTS_LAND_IN_L3
 @pytest.mark.parametrize(
     ("feed", "date", "route", "median", "maximum", "tier_15"),
     [
@@ -260,13 +311,11 @@ def test_mart_headway_am_peak_direction_0(feed, date, route, median, maximum, ti
     assert (row["headway_median"], row["headway_max"], row["tier_15"]) == (median, maximum, tier_15)
 
 
-@MARTS_LAND_IN_L3
 def test_mart_route39_tier_is_below_standard():
     # Route 39 fails 15 and 30 in both directions on Wed 2026-10-14 AM peak (medians 40:00 and 39:30).
     assert mart("tier", feed="2026-09-29", date="2026-10-14", route="39")["tier"] == "below standard"
 
 
-@MARTS_LAND_IN_L3
 @pytest.mark.parametrize(
     ("feed", "date", "route", "start", "end", "span_pass"),
     [
@@ -281,7 +330,6 @@ def test_mart_span(feed, date, route, start, end, span_pass):
     assert (row["span_start"], row["span_end"], row["span_pass"]) == (start, end, span_pass)
 
 
-@MARTS_LAND_IN_L3
 @pytest.mark.parametrize(
     ("route", "am_flow", "pm_flow", "express_pass"),
     [("64x", 6, 7, True), ("40x", 2, 3, False)],  # docs/known-answers.md section 4, Wed 2026-10-14
@@ -295,10 +343,9 @@ def test_mart_express_peak_flow_counts(route, am_flow, pm_flow, express_pass):
     )
 
 
-@MARTS_LAND_IN_L3
 @pytest.mark.parametrize(
     ("route", "direction", "reason"),
-    [("35", "0", NO_SERVICE_IN_PERIOD), ("28", "0", NO_SERVICE_IN_PERIOD), ("39", "0", HEADWAY_ABOVE_STANDARD)],
+    [("35", "0", FEWER_THAN_2_DEPARTURES), ("28", "0", FEWER_THAN_2_DEPARTURES), ("39", "0", HEADWAY_ABOVE_STANDARD)],
 )
 def test_mart_tier_fail_reason_am_peak(route, direction, reason):
     # docs/known-answers.md section 6: route 35 has 0 AM-peak departures, route 28 has 1, route 39 has a 40:00 median.
@@ -306,14 +353,12 @@ def test_mart_tier_fail_reason_am_peak(route, direction, reason):
     assert (row["tier_15_fail_reason"], row["tier_30_fail_reason"]) == (reason, reason)
 
 
-@MARTS_LAND_IN_L3
 @pytest.mark.parametrize(("date", "has_service"), [("2026-10-14", True), ("2026-10-17", False), ("2026-10-18", False)])
 def test_mart_no_service_on_date_route_50(date, has_service):
     row = mart("service", feed="2026-09-29", date=date, route="50")
     assert row["no_service_on_date"] is (not has_service)
 
 
-@MARTS_LAND_IN_L3
 def test_mart_before_after_change_route_9():
     # Median unchanged at 15:00, max gap 15:00 -> 16:00 (docs/known-answers.md section 1).
     row = mart("before_after", before="2026-09-30", after="2026-10-14", route="9", direction="0", period="am_peak")

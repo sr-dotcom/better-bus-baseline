@@ -1,0 +1,1317 @@
+feed_version,date,day_type,route_short_name,category,direction_id,period,n_departures,headway_median_s,headway_max_s,covers_15,covers_30,passes_15,passes_30,reason_15,reason_30
+2026-09-10,2026-09-26,saturday,1,bus,0,weekend_day,18,1800.0,1920,false,false,,,,
+2026-09-10,2026-09-26,saturday,1,bus,1,weekend_day,18,1800.0,1800,false,false,,,,
+2026-09-10,2026-09-26,saturday,10,bus,0,weekend_day,18,1800.0,1980,false,false,,,,
+2026-09-10,2026-09-26,saturday,10,bus,1,weekend_day,18,1800.0,1800,false,false,,,,
+2026-09-10,2026-09-26,saturday,11,bus,0,weekend_day,21,1800.0,1920,false,false,,,,
+2026-09-10,2026-09-26,saturday,11,bus,1,weekend_day,18,1800.0,1800,false,false,,,,
+2026-09-10,2026-09-26,saturday,12,bus,0,weekend_day,12,2700.0,2940,false,false,,,,
+2026-09-10,2026-09-26,saturday,12,bus,1,weekend_day,11,2760.0,2940,false,false,,,,
+2026-09-10,2026-09-26,saturday,13,bus,0,weekend_day,16,2100.0,2160,false,false,,,,
+2026-09-10,2026-09-26,saturday,13,bus,1,weekend_day,16,2100.0,2100,false,false,,,,
+2026-09-10,2026-09-26,saturday,14,bus,0,weekend_day,18,1800.0,1920,false,false,,,,
+2026-09-10,2026-09-26,saturday,14,bus,1,weekend_day,18,1800.0,2100,false,false,,,,
+2026-09-10,2026-09-26,saturday,15,bus,0,weekend_day,18,1800.0,1920,false,false,,,,
+2026-09-10,2026-09-26,saturday,15,bus,1,weekend_day,18,1800.0,1800,false,false,,,,
+2026-09-10,2026-09-26,saturday,16,bus,0,weekend_day,17,1800.0,2040,false,false,,,,
+2026-09-10,2026-09-26,saturday,16,bus,1,weekend_day,18,1800.0,1800,false,false,,,,
+2026-09-10,2026-09-26,saturday,17,bus,0,weekend_day,18,1800.0,1980,false,false,,,,
+2026-09-10,2026-09-26,saturday,17,bus,1,weekend_day,18,1800.0,1800,false,false,,,,
+2026-09-10,2026-09-26,saturday,18,bus,0,weekend_day,12,2700.0,2880,false,false,,,,
+2026-09-10,2026-09-26,saturday,18,bus,1,weekend_day,12,2700.0,2700,false,false,,,,
+2026-09-10,2026-09-26,saturday,19,bus,0,weekend_day,18,1500.0,2460,false,false,,,,
+2026-09-10,2026-09-26,saturday,19,bus,1,weekend_day,18,2100.0,2100,false,false,,,,
+2026-09-10,2026-09-26,saturday,2,bus,0,weekend_day,16,2100.0,2280,false,false,,,,
+2026-09-10,2026-09-26,saturday,2,bus,1,weekend_day,16,2100.0,2280,false,false,,,,
+2026-09-10,2026-09-26,saturday,20,bus,0,weekend_day,9,3600.0,3660,false,false,,,,
+2026-09-10,2026-09-26,saturday,20,bus,1,weekend_day,9,3600.0,3600,false,false,,,,
+2026-09-10,2026-09-26,saturday,21,bus,0,weekend_day,18,1800.0,1860,false,false,,,,
+2026-09-10,2026-09-26,saturday,21,bus,1,weekend_day,18,1800.0,1800,false,false,,,,
+2026-09-10,2026-09-26,saturday,211,bus,0,weekend_day,25,1320.0,1440,false,false,,,,
+2026-09-10,2026-09-26,saturday,211,bus,1,weekend_day,25,1320.0,1380,false,false,,,,
+2026-09-10,2026-09-26,saturday,22,bus,0,weekend_day,18,1800.0,2100,false,false,,,,
+2026-09-10,2026-09-26,saturday,22,bus,1,weekend_day,18,1800.0,1800,false,false,,,,
+2026-09-10,2026-09-26,saturday,221,bus,0,weekend_day,18,1800.0,2100,false,false,,,,
+2026-09-10,2026-09-26,saturday,221,bus,1,weekend_day,18,1800.0,1800,false,false,,,,
+2026-09-10,2026-09-26,saturday,222,bus,0,weekend_day,9,3600.0,3720,false,false,,,,
+2026-09-10,2026-09-26,saturday,222,bus,1,weekend_day,9,3600.0,3720,false,false,,,,
+2026-09-10,2026-09-26,saturday,23,bus,0,weekend_day,18,1800.0,2040,false,false,,,,
+2026-09-10,2026-09-26,saturday,23,bus,1,weekend_day,18,1800.0,1800,false,false,,,,
+2026-09-10,2026-09-26,saturday,235,bus,0,weekend_day,11,3000.0,3000,false,false,,,,
+2026-09-10,2026-09-26,saturday,235,bus,1,weekend_day,11,3000.0,3000,false,false,,,,
+2026-09-10,2026-09-26,saturday,24,bus,0,weekend_day,18,1800.0,1800,false,false,,,,
+2026-09-10,2026-09-26,saturday,24,bus,1,weekend_day,18,1800.0,1920,false,false,,,,
+2026-09-10,2026-09-26,saturday,26,bus,0,weekend_day,12,2700.0,2880,false,false,,,,
+2026-09-10,2026-09-26,saturday,26,bus,1,weekend_day,12,2700.0,2700,false,false,,,,
+2026-09-10,2026-09-26,saturday,27,bus,0,weekend_day,18,1800.0,2040,false,false,,,,
+2026-09-10,2026-09-26,saturday,27,bus,1,weekend_day,18,1800.0,1800,false,false,,,,
+2026-09-10,2026-09-26,saturday,28,bus,0,weekend_day,14,2400.0,2400,false,false,,,,
+2026-09-10,2026-09-26,saturday,28,bus,1,weekend_day,13,2400.0,2580,false,false,,,,
+2026-09-10,2026-09-26,saturday,29,bus,0,weekend_day,17,1800.0,2040,false,false,,,,
+2026-09-10,2026-09-26,saturday,29,bus,1,weekend_day,18,1800.0,2040,false,false,,,,
+2026-09-10,2026-09-26,saturday,3,bus,0,weekend_day,18,1800.0,2040,false,false,,,,
+2026-09-10,2026-09-26,saturday,3,bus,1,weekend_day,18,1800.0,1800,false,false,,,,
+2026-09-10,2026-09-26,saturday,30,bus,0,weekend_day,15,2100.0,2100,false,false,,,,
+2026-09-10,2026-09-26,saturday,30,bus,1,weekend_day,16,2100.0,2100,false,false,,,,
+2026-09-10,2026-09-26,saturday,34,bus,0,weekend_day,18,1800.0,1920,false,false,,,,
+2026-09-10,2026-09-26,saturday,34,bus,1,weekend_day,18,1800.0,1800,false,false,,,,
+2026-09-10,2026-09-26,saturday,35,bus,0,weekend_day,1,,,false,false,,,,
+2026-09-10,2026-09-26,saturday,35,bus,1,weekend_day,1,,,false,false,,,,
+2026-09-10,2026-09-26,saturday,39,bus,0,weekend_day,13,2400.0,2520,false,false,,,,
+2026-09-10,2026-09-26,saturday,39,bus,1,weekend_day,13,2400.0,2400,false,false,,,,
+2026-09-10,2026-09-26,saturday,4,bus,0,weekend_day,18,1800.0,1980,false,false,,,,
+2026-09-10,2026-09-26,saturday,4,bus,1,weekend_day,17,1800.0,1920,false,false,,,,
+2026-09-10,2026-09-26,saturday,43,bus,0,weekend_day,9,3600.0,3660,false,false,,,,
+2026-09-10,2026-09-26,saturday,43,bus,1,weekend_day,9,3600.0,3600,false,false,,,,
+2026-09-10,2026-09-26,saturday,5,bus,0,weekend_day,21,1500.0,1680,false,false,,,,
+2026-09-10,2026-09-26,saturday,5,bus,1,weekend_day,22,1500.0,1500,false,false,,,,
+2026-09-10,2026-09-26,saturday,51,bus,0,weekend_day,12,2700.0,2700,false,false,,,,
+2026-09-10,2026-09-26,saturday,51,bus,1,weekend_day,12,2700.0,3000,false,false,,,,
+2026-09-10,2026-09-26,saturday,54,bus,0,weekend_day,14,2400.0,2400,false,false,,,,
+2026-09-10,2026-09-26,saturday,54,bus,1,weekend_day,13,2400.0,2400,false,false,,,,
+2026-09-10,2026-09-26,saturday,55,bus,0,weekend_day,14,2400.0,3360,false,false,,,,
+2026-09-10,2026-09-26,saturday,55,bus,1,weekend_day,13,2400.0,2400,false,false,,,,
+2026-09-10,2026-09-26,saturday,56,bus,0,weekend_day,18,1800.0,2040,false,false,,,,
+2026-09-10,2026-09-26,saturday,56,bus,1,weekend_day,18,1800.0,1860,false,false,,,,
+2026-09-10,2026-09-26,saturday,57,bus,0,weekend_day,8,3720.0,3960,false,false,,,,
+2026-09-10,2026-09-26,saturday,57,bus,1,weekend_day,9,3720.0,3900,false,false,,,,
+2026-09-10,2026-09-26,saturday,58,bus,0,weekend_day,18,1800.0,2220,false,false,,,,
+2026-09-10,2026-09-26,saturday,58,bus,1,weekend_day,18,1800.0,2160,false,false,,,,
+2026-09-10,2026-09-26,saturday,59,bus,0,weekend_day,9,3600.0,3600,false,false,,,,
+2026-09-10,2026-09-26,saturday,59,bus,1,weekend_day,9,3600.0,3600,false,false,,,,
+2026-09-10,2026-09-26,saturday,6,bus,0,weekend_day,12,2700.0,2760,false,false,,,,
+2026-09-10,2026-09-26,saturday,6,bus,1,weekend_day,12,2700.0,2700,false,false,,,,
+2026-09-10,2026-09-26,saturday,60,bus,0,weekend_day,18,1800.0,1920,false,false,,,,
+2026-09-10,2026-09-26,saturday,60,bus,1,weekend_day,17,1800.0,2100,false,false,,,,
+2026-09-10,2026-09-26,saturday,7,bus,0,weekend_day,27,1200.0,1260,false,false,,,,
+2026-09-10,2026-09-26,saturday,7,bus,1,weekend_day,27,1200.0,1200,false,false,,,,
+2026-09-10,2026-09-26,saturday,8,bus,0,weekend_day,18,1800.0,1860,false,false,,,,
+2026-09-10,2026-09-26,saturday,8,bus,1,weekend_day,17,1800.0,1800,false,false,,,,
+2026-09-10,2026-09-26,saturday,9,bus,0,weekend_day,36,900.0,1200,false,false,,,,
+2026-09-10,2026-09-26,saturday,9,bus,1,weekend_day,35,900.0,1200,false,false,,,,
+2026-09-10,2026-09-27,sunday,1,bus,0,weekend_day,8,3600.0,3660,false,false,,,,
+2026-09-10,2026-09-27,sunday,1,bus,1,weekend_day,9,3600.0,3600,false,false,,,,
+2026-09-10,2026-09-27,sunday,10,bus,0,weekend_day,17,1800.0,1920,false,false,,,,
+2026-09-10,2026-09-27,sunday,10,bus,1,weekend_day,18,1800.0,1800,false,false,,,,
+2026-09-10,2026-09-27,sunday,11,bus,0,weekend_day,21,1800.0,2040,false,false,,,,
+2026-09-10,2026-09-27,sunday,11,bus,1,weekend_day,18,1800.0,1800,false,false,,,,
+2026-09-10,2026-09-27,sunday,12,bus,0,weekend_day,12,2700.0,2700,false,false,,,,
+2026-09-10,2026-09-27,sunday,12,bus,1,weekend_day,12,2700.0,2760,false,false,,,,
+2026-09-10,2026-09-27,sunday,13,bus,0,weekend_day,9,3600.0,3660,false,false,,,,
+2026-09-10,2026-09-27,sunday,13,bus,1,weekend_day,9,3600.0,3600,false,false,,,,
+2026-09-10,2026-09-27,sunday,14,bus,0,weekend_day,9,3600.0,3660,false,false,,,,
+2026-09-10,2026-09-27,sunday,14,bus,1,weekend_day,9,3600.0,3600,false,false,,,,
+2026-09-10,2026-09-27,sunday,15,bus,0,weekend_day,18,1800.0,1800,false,false,,,,
+2026-09-10,2026-09-27,sunday,15,bus,1,weekend_day,18,1800.0,1800,false,false,,,,
+2026-09-10,2026-09-27,sunday,16,bus,0,weekend_day,18,1800.0,2160,false,false,,,,
+2026-09-10,2026-09-27,sunday,16,bus,1,weekend_day,18,1800.0,1800,false,false,,,,
+2026-09-10,2026-09-27,sunday,17,bus,0,weekend_day,8,3600.0,3840,false,false,,,,
+2026-09-10,2026-09-27,sunday,17,bus,1,weekend_day,9,3600.0,3600,false,false,,,,
+2026-09-10,2026-09-27,sunday,18,bus,0,weekend_day,12,2700.0,2820,false,false,,,,
+2026-09-10,2026-09-27,sunday,18,bus,1,weekend_day,12,2700.0,2700,false,false,,,,
+2026-09-10,2026-09-27,sunday,19,bus,0,weekend_day,18,1620.0,2280,false,false,,,,
+2026-09-10,2026-09-27,sunday,19,bus,1,weekend_day,18,2100.0,2100,false,false,,,,
+2026-09-10,2026-09-27,sunday,2,bus,0,weekend_day,9,3600.0,4140,false,false,,,,
+2026-09-10,2026-09-27,sunday,2,bus,1,weekend_day,9,3600.0,4440,false,false,,,,
+2026-09-10,2026-09-27,sunday,21,bus,0,weekend_day,9,3600.0,3840,false,false,,,,
+2026-09-10,2026-09-27,sunday,21,bus,1,weekend_day,9,3600.0,3600,false,false,,,,
+2026-09-10,2026-09-27,sunday,211,bus,0,weekend_day,12,2700.0,2820,false,false,,,,
+2026-09-10,2026-09-27,sunday,211,bus,1,weekend_day,12,2700.0,2700,false,false,,,,
+2026-09-10,2026-09-27,sunday,22,bus,0,weekend_day,9,3600.0,3600,false,false,,,,
+2026-09-10,2026-09-27,sunday,22,bus,1,weekend_day,9,3600.0,3600,false,false,,,,
+2026-09-10,2026-09-27,sunday,221,bus,0,weekend_day,9,3600.0,3660,false,false,,,,
+2026-09-10,2026-09-27,sunday,221,bus,1,weekend_day,9,3600.0,3600,false,false,,,,
+2026-09-10,2026-09-27,sunday,222,bus,0,weekend_day,9,3600.0,3600,false,false,,,,
+2026-09-10,2026-09-27,sunday,222,bus,1,weekend_day,9,3600.0,3600,false,false,,,,
+2026-09-10,2026-09-27,sunday,23,bus,0,weekend_day,9,3600.0,3600,false,false,,,,
+2026-09-10,2026-09-27,sunday,23,bus,1,weekend_day,9,3600.0,3600,false,false,,,,
+2026-09-10,2026-09-27,sunday,235,bus,0,weekend_day,11,3000.0,3000,false,false,,,,
+2026-09-10,2026-09-27,sunday,235,bus,1,weekend_day,11,3000.0,3000,false,false,,,,
+2026-09-10,2026-09-27,sunday,24,bus,0,weekend_day,12,2700.0,2700,false,false,,,,
+2026-09-10,2026-09-27,sunday,24,bus,1,weekend_day,12,2700.0,2700,false,false,,,,
+2026-09-10,2026-09-27,sunday,26,bus,0,weekend_day,9,3600.0,3660,false,false,,,,
+2026-09-10,2026-09-27,sunday,26,bus,1,weekend_day,9,3600.0,3600,false,false,,,,
+2026-09-10,2026-09-27,sunday,27,bus,0,weekend_day,12,2700.0,2940,false,false,,,,
+2026-09-10,2026-09-27,sunday,27,bus,1,weekend_day,12,2700.0,2700,false,false,,,,
+2026-09-10,2026-09-27,sunday,29,bus,0,weekend_day,18,1800.0,1860,false,false,,,,
+2026-09-10,2026-09-27,sunday,29,bus,1,weekend_day,18,1800.0,1800,false,false,,,,
+2026-09-10,2026-09-27,sunday,3,bus,0,weekend_day,17,1800.0,2220,false,false,,,,
+2026-09-10,2026-09-27,sunday,3,bus,1,weekend_day,18,1800.0,2100,false,false,,,,
+2026-09-10,2026-09-27,sunday,34,bus,0,weekend_day,12,2700.0,2700,false,false,,,,
+2026-09-10,2026-09-27,sunday,34,bus,1,weekend_day,12,2700.0,2700,false,false,,,,
+2026-09-10,2026-09-27,sunday,35,bus,0,weekend_day,1,,,false,false,,,,
+2026-09-10,2026-09-27,sunday,35,bus,1,weekend_day,1,,,false,false,,,,
+2026-09-10,2026-09-27,sunday,39,bus,0,weekend_day,13,2400.0,2520,false,false,,,,
+2026-09-10,2026-09-27,sunday,39,bus,1,weekend_day,13,2400.0,2400,false,false,,,,
+2026-09-10,2026-09-27,sunday,4,bus,0,weekend_day,18,1800.0,1860,false,false,,,,
+2026-09-10,2026-09-27,sunday,4,bus,1,weekend_day,18,1800.0,1800,false,false,,,,
+2026-09-10,2026-09-27,sunday,5,bus,0,weekend_day,18,1800.0,1920,false,false,,,,
+2026-09-10,2026-09-27,sunday,5,bus,1,weekend_day,18,1800.0,1800,false,false,,,,
+2026-09-10,2026-09-27,sunday,55,bus,0,weekend_day,14,2400.0,2400,false,false,,,,
+2026-09-10,2026-09-27,sunday,55,bus,1,weekend_day,14,2400.0,2400,false,false,,,,
+2026-09-10,2026-09-27,sunday,56,bus,0,weekend_day,18,1800.0,1800,false,false,,,,
+2026-09-10,2026-09-27,sunday,56,bus,1,weekend_day,18,1800.0,1800,false,false,,,,
+2026-09-10,2026-09-27,sunday,57,bus,0,weekend_day,8,3720.0,3900,false,false,,,,
+2026-09-10,2026-09-27,sunday,57,bus,1,weekend_day,9,3660.0,3900,false,false,,,,
+2026-09-10,2026-09-27,sunday,58,bus,0,weekend_day,18,1800.0,1800,false,false,,,,
+2026-09-10,2026-09-27,sunday,58,bus,1,weekend_day,18,1800.0,1800,false,false,,,,
+2026-09-10,2026-09-27,sunday,6,bus,0,weekend_day,9,3600.0,3660,false,false,,,,
+2026-09-10,2026-09-27,sunday,6,bus,1,weekend_day,9,3600.0,3600,false,false,,,,
+2026-09-10,2026-09-27,sunday,60,bus,0,weekend_day,18,1800.0,1860,false,false,,,,
+2026-09-10,2026-09-27,sunday,60,bus,1,weekend_day,18,1800.0,1800,false,false,,,,
+2026-09-10,2026-09-27,sunday,7,bus,0,weekend_day,27,1230.0,1380,false,false,,,,
+2026-09-10,2026-09-27,sunday,7,bus,1,weekend_day,27,1200.0,1200,false,false,,,,
+2026-09-10,2026-09-27,sunday,8,bus,0,weekend_day,12,2700.0,2820,false,false,,,,
+2026-09-10,2026-09-27,sunday,8,bus,1,weekend_day,12,2700.0,2700,false,false,,,,
+2026-09-10,2026-09-27,sunday,9,bus,0,weekend_day,23,1200.0,1800,false,false,,,,
+2026-09-10,2026-09-27,sunday,9,bus,1,weekend_day,23,1200.0,1800,false,false,,,,
+2026-09-10,2026-09-30,weekday,1,bus,0,am_peak,5,2130.0,2520,true,true,false,false,headway above standard,headway above standard
+2026-09-10,2026-09-30,weekday,1,bus,0,evening,8,1800.0,1800,false,false,,,,
+2026-09-10,2026-09-30,weekday,1,bus,0,midday,12,1800.0,1980,false,true,,true,,
+2026-09-10,2026-09-30,weekday,1,bus,0,pm_peak,6,1800.0,1920,true,true,false,true,headway above standard,
+2026-09-10,2026-09-30,weekday,1,bus,1,am_peak,5,2100.0,2520,true,true,false,false,headway above standard,headway above standard
+2026-09-10,2026-09-30,weekday,1,bus,1,evening,8,1800.0,1800,false,false,,,,
+2026-09-10,2026-09-30,weekday,1,bus,1,midday,12,1800.0,1800,false,true,,true,,
+2026-09-10,2026-09-30,weekday,1,bus,1,pm_peak,6,1800.0,1800,true,true,false,true,headway above standard,
+2026-09-10,2026-09-30,weekday,10,bus,0,am_peak,6,1800.0,2160,true,true,false,true,headway above standard,
+2026-09-10,2026-09-30,weekday,10,bus,0,evening,8,1800.0,1800,false,false,,,,
+2026-09-10,2026-09-30,weekday,10,bus,0,midday,12,1800.0,2040,false,true,,true,,
+2026-09-10,2026-09-30,weekday,10,bus,0,pm_peak,6,1800.0,2100,true,true,false,true,headway above standard,
+2026-09-10,2026-09-30,weekday,10,bus,1,am_peak,6,1800.0,1800,true,true,false,true,headway above standard,
+2026-09-10,2026-09-30,weekday,10,bus,1,evening,8,1800.0,1800,false,false,,,,
+2026-09-10,2026-09-30,weekday,10,bus,1,midday,12,1800.0,1800,false,true,,true,,
+2026-09-10,2026-09-30,weekday,10,bus,1,pm_peak,6,1800.0,1800,true,true,false,true,headway above standard,
+2026-09-10,2026-09-30,weekday,11,bus,0,am_peak,6,1800.0,2100,true,true,false,true,headway above standard,
+2026-09-10,2026-09-30,weekday,11,bus,0,evening,10,1320.0,1800,false,false,,,,
+2026-09-10,2026-09-30,weekday,11,bus,0,midday,14,1800.0,2100,false,true,,true,,
+2026-09-10,2026-09-30,weekday,11,bus,0,pm_peak,7,1800.0,2100,true,true,false,true,headway above standard,
+2026-09-10,2026-09-30,weekday,11,bus,1,am_peak,6,1800.0,1800,true,true,false,true,headway above standard,
+2026-09-10,2026-09-30,weekday,11,bus,1,evening,8,1800.0,1800,false,false,,,,
+2026-09-10,2026-09-30,weekday,11,bus,1,midday,12,1800.0,1800,false,true,,true,,
+2026-09-10,2026-09-30,weekday,11,bus,1,pm_peak,6,1800.0,1800,true,true,false,true,headway above standard,
+2026-09-10,2026-09-30,weekday,12,bus,0,am_peak,3,2790.0,2880,true,true,false,false,headway above standard,headway above standard
+2026-09-10,2026-09-30,weekday,12,bus,0,evening,6,2640.0,2760,false,false,,,,
+2026-09-10,2026-09-30,weekday,12,bus,0,midday,8,2700.0,2700,false,true,,false,,headway above standard
+2026-09-10,2026-09-30,weekday,12,bus,0,pm_peak,4,2880.0,2940,true,true,false,false,headway above standard,headway above standard
+2026-09-10,2026-09-30,weekday,12,bus,1,am_peak,4,2460.0,2760,true,true,false,false,headway above standard,headway above standard
+2026-09-10,2026-09-30,weekday,12,bus,1,evening,6,2580.0,2760,false,false,,,,
+2026-09-10,2026-09-30,weekday,12,bus,1,midday,7,2700.0,2940,false,true,,false,,headway above standard
+2026-09-10,2026-09-30,weekday,12,bus,1,pm_peak,4,2880.0,3180,true,true,false,false,headway above standard,headway above standard
+2026-09-10,2026-09-30,weekday,13,bus,0,am_peak,5,2100.0,2100,true,true,false,false,headway above standard,headway above standard
+2026-09-10,2026-09-30,weekday,13,bus,0,evening,7,2100.0,2100,false,false,,,,
+2026-09-10,2026-09-30,weekday,13,bus,0,midday,11,2100.0,2100,false,true,,false,,headway above standard
+2026-09-10,2026-09-30,weekday,13,bus,0,pm_peak,5,2100.0,2100,true,true,false,false,headway above standard,headway above standard
+2026-09-10,2026-09-30,weekday,13,bus,1,am_peak,5,2100.0,2100,true,true,false,false,headway above standard,headway above standard
+2026-09-10,2026-09-30,weekday,13,bus,1,evening,7,2100.0,2100,false,false,,,,
+2026-09-10,2026-09-30,weekday,13,bus,1,midday,11,2100.0,2100,false,true,,false,,headway above standard
+2026-09-10,2026-09-30,weekday,13,bus,1,pm_peak,5,2100.0,2100,true,true,false,false,headway above standard,headway above standard
+2026-09-10,2026-09-30,weekday,14,bus,0,am_peak,6,1800.0,2220,true,true,false,true,headway above standard,
+2026-09-10,2026-09-30,weekday,14,bus,0,evening,5,3480.0,3600,false,false,,,,
+2026-09-10,2026-09-30,weekday,14,bus,0,midday,12,1800.0,1860,false,true,,true,,
+2026-09-10,2026-09-30,weekday,14,bus,0,pm_peak,6,1800.0,2280,true,true,false,true,headway above standard,
+2026-09-10,2026-09-30,weekday,14,bus,1,am_peak,6,1800.0,1800,true,true,false,true,headway above standard,
+2026-09-10,2026-09-30,weekday,14,bus,1,evening,4,3600.0,3600,false,false,,,,
+2026-09-10,2026-09-30,weekday,14,bus,1,midday,12,1800.0,1800,false,true,,true,,
+2026-09-10,2026-09-30,weekday,14,bus,1,pm_peak,6,1800.0,2100,true,true,false,true,headway above standard,
+2026-09-10,2026-09-30,weekday,15,bus,0,am_peak,5,1800.0,2100,true,true,false,true,headway above standard,
+2026-09-10,2026-09-30,weekday,15,bus,0,evening,5,2790.0,3600,false,false,,,,
+2026-09-10,2026-09-30,weekday,15,bus,0,midday,12,1800.0,1800,false,true,,true,,
+2026-09-10,2026-09-30,weekday,15,bus,0,pm_peak,6,1800.0,1920,true,true,false,true,headway above standard,
+2026-09-10,2026-09-30,weekday,15,bus,1,am_peak,5,1800.0,1800,true,true,false,true,headway above standard,
+2026-09-10,2026-09-30,weekday,15,bus,1,evening,5,3600.0,3600,false,false,,,,
+2026-09-10,2026-09-30,weekday,15,bus,1,midday,12,1800.0,1800,false,true,,true,,
+2026-09-10,2026-09-30,weekday,15,bus,1,pm_peak,6,1800.0,1800,true,true,false,true,headway above standard,
+2026-09-10,2026-09-30,weekday,16,bus,0,am_peak,5,1800.0,2160,true,true,false,true,headway above standard,
+2026-09-10,2026-09-30,weekday,16,bus,0,evening,9,1770.0,2460,false,false,,,,
+2026-09-10,2026-09-30,weekday,16,bus,0,midday,12,1800.0,2280,false,true,,true,,
+2026-09-10,2026-09-30,weekday,16,bus,0,pm_peak,6,1800.0,2460,true,true,false,true,headway above standard,
+2026-09-10,2026-09-30,weekday,16,bus,1,am_peak,6,1800.0,1800,true,true,false,true,headway above standard,
+2026-09-10,2026-09-30,weekday,16,bus,1,evening,8,1800.0,1800,false,false,,,,
+2026-09-10,2026-09-30,weekday,16,bus,1,midday,12,1800.0,1800,false,true,,true,,
+2026-09-10,2026-09-30,weekday,16,bus,1,pm_peak,8,1200.0,1800,true,true,false,true,headway above standard,
+2026-09-10,2026-09-30,weekday,17,bus,0,am_peak,4,1800.0,2040,true,true,false,true,headway above standard,
+2026-09-10,2026-09-30,weekday,17,bus,0,evening,6,1800.0,3300,false,false,,,,
+2026-09-10,2026-09-30,weekday,17,bus,0,midday,12,1800.0,2100,false,true,,true,,
+2026-09-10,2026-09-30,weekday,17,bus,0,pm_peak,6,1800.0,2220,true,true,false,true,headway above standard,
+2026-09-10,2026-09-30,weekday,17,bus,1,am_peak,6,1800.0,1800,true,true,false,true,headway above standard,
+2026-09-10,2026-09-30,weekday,17,bus,1,evening,5,3300.0,3600,false,false,,,,
+2026-09-10,2026-09-30,weekday,17,bus,1,midday,12,1800.0,1800,false,true,,true,,
+2026-09-10,2026-09-30,weekday,17,bus,1,pm_peak,6,1800.0,1800,true,true,false,true,headway above standard,
+2026-09-10,2026-09-30,weekday,18,bus,0,am_peak,3,2940.0,3180,true,true,false,false,headway above standard,headway above standard
+2026-09-10,2026-09-30,weekday,18,bus,0,evening,5,2700.0,2700,false,false,,,,
+2026-09-10,2026-09-30,weekday,18,bus,0,midday,8,2700.0,2820,false,true,,false,,headway above standard
+2026-09-10,2026-09-30,weekday,18,bus,0,pm_peak,4,2700.0,2820,true,true,false,false,headway above standard,headway above standard
+2026-09-10,2026-09-30,weekday,18,bus,1,am_peak,4,2700.0,3180,true,true,false,false,headway above standard,headway above standard
+2026-09-10,2026-09-30,weekday,18,bus,1,evening,4,2700.0,2700,false,false,,,,
+2026-09-10,2026-09-30,weekday,18,bus,1,midday,8,2700.0,2700,false,true,,false,,headway above standard
+2026-09-10,2026-09-30,weekday,18,bus,1,pm_peak,4,2700.0,2700,true,true,false,false,headway above standard,headway above standard
+2026-09-10,2026-09-30,weekday,19,bus,0,am_peak,6,1500.0,2400,true,true,false,true,headway above standard,
+2026-09-10,2026-09-30,weekday,19,bus,0,evening,9,1650.0,2520,false,false,,,,
+2026-09-10,2026-09-30,weekday,19,bus,0,midday,12,1380.0,2520,false,true,,true,,
+2026-09-10,2026-09-30,weekday,19,bus,0,pm_peak,5,1890.0,2100,true,true,false,false,headway above standard,headway above standard
+2026-09-10,2026-09-30,weekday,19,bus,1,am_peak,6,2100.0,2100,true,true,false,false,headway above standard,headway above standard
+2026-09-10,2026-09-30,weekday,19,bus,1,evening,8,2100.0,2100,false,false,,,,
+2026-09-10,2026-09-30,weekday,19,bus,1,midday,12,2100.0,2100,false,true,,false,,headway above standard
+2026-09-10,2026-09-30,weekday,19,bus,1,pm_peak,6,2100.0,2100,true,true,false,false,headway above standard,headway above standard
+2026-09-10,2026-09-30,weekday,2,bus,0,am_peak,5,2100.0,2160,true,true,false,false,headway above standard,headway above standard
+2026-09-10,2026-09-30,weekday,2,bus,0,evening,4,2400.0,4200,false,false,,,,
+2026-09-10,2026-09-30,weekday,2,bus,0,midday,10,2100.0,2760,false,true,,false,,headway above standard
+2026-09-10,2026-09-30,weekday,2,bus,0,pm_peak,5,2400.0,2400,true,true,false,false,headway above standard,headway above standard
+2026-09-10,2026-09-30,weekday,2,bus,1,am_peak,5,2100.0,2100,true,true,false,false,headway above standard,headway above standard
+2026-09-10,2026-09-30,weekday,2,bus,1,evening,6,2400.0,3900,false,false,,,,
+2026-09-10,2026-09-30,weekday,2,bus,1,midday,10,2100.0,2700,false,true,,false,,headway above standard
+2026-09-10,2026-09-30,weekday,2,bus,1,pm_peak,4,2400.0,2400,true,true,false,false,headway above standard,headway above standard
+2026-09-10,2026-09-30,weekday,20,bus,0,am_peak,2,2400.0,2400,true,true,false,false,headway above standard,headway above standard
+2026-09-10,2026-09-30,weekday,20,bus,0,evening,3,3240.0,3420,false,false,,,,
+2026-09-10,2026-09-30,weekday,20,bus,0,midday,6,3600.0,3780,false,true,,false,,headway above standard
+2026-09-10,2026-09-30,weekday,20,bus,0,pm_peak,2,3900.0,3900,true,true,false,false,headway above standard,headway above standard
+2026-09-10,2026-09-30,weekday,20,bus,1,am_peak,2,2400.0,2400,true,true,false,false,headway above standard,headway above standard
+2026-09-10,2026-09-30,weekday,20,bus,1,evening,2,3600.0,3600,false,false,,,,
+2026-09-10,2026-09-30,weekday,20,bus,1,midday,6,3600.0,3600,false,true,,false,,headway above standard
+2026-09-10,2026-09-30,weekday,20,bus,1,pm_peak,3,3600.0,3600,true,true,false,false,headway above standard,headway above standard
+2026-09-10,2026-09-30,weekday,21,bus,0,am_peak,6,1800.0,1920,true,true,false,true,headway above standard,
+2026-09-10,2026-09-30,weekday,21,bus,0,evening,8,1800.0,1800,false,false,,,,
+2026-09-10,2026-09-30,weekday,21,bus,0,midday,12,1800.0,2040,false,true,,true,,
+2026-09-10,2026-09-30,weekday,21,bus,0,pm_peak,6,1800.0,2160,true,true,false,true,headway above standard,
+2026-09-10,2026-09-30,weekday,21,bus,1,am_peak,6,1800.0,1800,true,true,false,true,headway above standard,
+2026-09-10,2026-09-30,weekday,21,bus,1,evening,8,1800.0,1800,false,false,,,,
+2026-09-10,2026-09-30,weekday,21,bus,1,midday,12,1800.0,1800,false,true,,true,,
+2026-09-10,2026-09-30,weekday,21,bus,1,pm_peak,8,1200.0,1800,true,true,false,true,headway above standard,
+2026-09-10,2026-09-30,weekday,211,bus,0,am_peak,8,1200.0,1380,true,true,false,true,headway above standard,
+2026-09-10,2026-09-30,weekday,211,bus,0,evening,10,1380.0,1560,false,false,,,,
+2026-09-10,2026-09-30,weekday,211,bus,0,midday,17,1320.0,1440,false,true,,true,,
+2026-09-10,2026-09-30,weekday,211,bus,0,pm_peak,8,1320.0,1380,true,true,false,true,headway above standard,
+2026-09-10,2026-09-30,weekday,211,bus,1,am_peak,8,1200.0,1380,true,true,false,true,headway above standard,
+2026-09-10,2026-09-30,weekday,211,bus,1,evening,10,1380.0,1680,false,false,,,,
+2026-09-10,2026-09-30,weekday,211,bus,1,midday,17,1320.0,1380,false,true,,true,,
+2026-09-10,2026-09-30,weekday,211,bus,1,pm_peak,8,1380.0,1380,true,true,false,true,headway above standard,
+2026-09-10,2026-09-30,weekday,22,bus,0,am_peak,5,1800.0,1800,true,true,false,true,headway above standard,
+2026-09-10,2026-09-30,weekday,22,bus,0,evening,8,1680.0,1980,false,false,,,,
+2026-09-10,2026-09-30,weekday,22,bus,0,midday,12,1800.0,2040,false,true,,true,,
+2026-09-10,2026-09-30,weekday,22,bus,0,pm_peak,6,1920.0,2100,true,true,false,false,headway above standard,headway above standard
+2026-09-10,2026-09-30,weekday,22,bus,1,am_peak,6,1800.0,1800,true,true,false,true,headway above standard,
+2026-09-10,2026-09-30,weekday,22,bus,1,evening,8,1800.0,1800,false,false,,,,
+2026-09-10,2026-09-30,weekday,22,bus,1,midday,12,1800.0,1800,false,true,,true,,
+2026-09-10,2026-09-30,weekday,22,bus,1,pm_peak,6,1800.0,1800,true,true,false,true,headway above standard,
+2026-09-10,2026-09-30,weekday,221,bus,0,am_peak,2,3660.0,3660,true,true,false,false,headway above standard,headway above standard
+2026-09-10,2026-09-30,weekday,221,bus,0,evening,8,1800.0,1800,false,false,,,,
+2026-09-10,2026-09-30,weekday,221,bus,0,midday,12,1800.0,2100,false,true,,true,,
+2026-09-10,2026-09-30,weekday,221,bus,0,pm_peak,6,1800.0,1800,true,true,false,true,headway above standard,
+2026-09-10,2026-09-30,weekday,221,bus,1,am_peak,3,3600.0,3660,true,true,false,false,headway above standard,headway above standard
+2026-09-10,2026-09-30,weekday,221,bus,1,evening,8,1800.0,1800,false,false,,,,
+2026-09-10,2026-09-30,weekday,221,bus,1,midday,12,1800.0,1800,false,true,,true,,
+2026-09-10,2026-09-30,weekday,221,bus,1,pm_peak,6,1800.0,1800,true,true,false,true,headway above standard,
+2026-09-10,2026-09-30,weekday,222,bus,0,am_peak,1,,,true,true,false,false,fewer than 2 departures in period,fewer than 2 departures in period
+2026-09-10,2026-09-30,weekday,222,bus,0,evening,3,3600.0,3600,false,false,,,,
+2026-09-10,2026-09-30,weekday,222,bus,0,midday,6,3600.0,3720,false,true,,false,,headway above standard
+2026-09-10,2026-09-30,weekday,222,bus,0,pm_peak,3,3600.0,3600,true,true,false,false,headway above standard,headway above standard
+2026-09-10,2026-09-30,weekday,222,bus,1,am_peak,1,,,true,true,false,false,fewer than 2 departures in period,fewer than 2 departures in period
+2026-09-10,2026-09-30,weekday,222,bus,1,evening,3,3600.0,3600,false,false,,,,
+2026-09-10,2026-09-30,weekday,222,bus,1,midday,6,3600.0,3600,false,true,,false,,headway above standard
+2026-09-10,2026-09-30,weekday,222,bus,1,pm_peak,3,3600.0,3600,true,true,false,false,headway above standard,headway above standard
+2026-09-10,2026-09-30,weekday,23,bus,0,am_peak,6,1800.0,2280,true,true,false,true,headway above standard,
+2026-09-10,2026-09-30,weekday,23,bus,0,evening,8,1800.0,2040,false,false,,,,
+2026-09-10,2026-09-30,weekday,23,bus,0,midday,12,1800.0,1980,false,true,,true,,
+2026-09-10,2026-09-30,weekday,23,bus,0,pm_peak,6,1800.0,1920,true,true,false,true,headway above standard,
+2026-09-10,2026-09-30,weekday,23,bus,1,am_peak,6,1800.0,2100,true,true,false,true,headway above standard,
+2026-09-10,2026-09-30,weekday,23,bus,1,evening,8,1800.0,1920,false,false,,,,
+2026-09-10,2026-09-30,weekday,23,bus,1,midday,12,1800.0,1800,false,true,,true,,
+2026-09-10,2026-09-30,weekday,23,bus,1,pm_peak,6,1800.0,1800,true,true,false,true,headway above standard,
+2026-09-10,2026-09-30,weekday,235,bus,0,am_peak,3,3240.0,3480,true,true,false,false,headway above standard,headway above standard
+2026-09-10,2026-09-30,weekday,235,bus,0,evening,5,3000.0,3000,false,false,,,,
+2026-09-10,2026-09-30,weekday,235,bus,0,midday,7,3000.0,3000,false,true,,false,,headway above standard
+2026-09-10,2026-09-30,weekday,235,bus,0,pm_peak,3,3000.0,3000,true,true,false,false,headway above standard,headway above standard
+2026-09-10,2026-09-30,weekday,235,bus,1,am_peak,3,3480.0,3780,true,true,false,false,headway above standard,headway above standard
+2026-09-10,2026-09-30,weekday,235,bus,1,evening,5,3000.0,3000,false,false,,,,
+2026-09-10,2026-09-30,weekday,235,bus,1,midday,7,3000.0,3000,false,true,,false,,headway above standard
+2026-09-10,2026-09-30,weekday,235,bus,1,pm_peak,4,3000.0,3060,true,true,false,false,headway above standard,headway above standard
+2026-09-10,2026-09-30,weekday,24,bus,0,am_peak,5,1800.0,1920,true,true,false,true,headway above standard,
+2026-09-10,2026-09-30,weekday,24,bus,0,evening,6,1920.0,2700,false,false,,,,
+2026-09-10,2026-09-30,weekday,24,bus,0,midday,12,1800.0,1860,false,true,,true,,
+2026-09-10,2026-09-30,weekday,24,bus,0,pm_peak,7,1770.0,1800,true,true,false,true,headway above standard,
+2026-09-10,2026-09-30,weekday,24,bus,1,am_peak,6,1800.0,1920,true,true,false,true,headway above standard,
+2026-09-10,2026-09-30,weekday,24,bus,1,evening,7,1800.0,2700,false,false,,,,
+2026-09-10,2026-09-30,weekday,24,bus,1,midday,12,1800.0,1860,false,true,,true,,
+2026-09-10,2026-09-30,weekday,24,bus,1,pm_peak,6,1800.0,1800,true,true,false,true,headway above standard,
+2026-09-10,2026-09-30,weekday,26,bus,0,am_peak,3,2700.0,2700,true,true,false,false,headway above standard,headway above standard
+2026-09-10,2026-09-30,weekday,26,bus,0,evening,5,2490.0,2700,false,false,,,,
+2026-09-10,2026-09-30,weekday,26,bus,0,midday,8,2700.0,2940,false,true,,false,,headway above standard
+2026-09-10,2026-09-30,weekday,26,bus,0,pm_peak,4,2820.0,3060,true,true,false,false,headway above standard,headway above standard
+2026-09-10,2026-09-30,weekday,26,bus,1,am_peak,4,2700.0,2700,true,true,false,false,headway above standard,headway above standard
+2026-09-10,2026-09-30,weekday,26,bus,1,evening,5,2700.0,2700,false,false,,,,
+2026-09-10,2026-09-30,weekday,26,bus,1,midday,8,2700.0,2700,false,true,,false,,headway above standard
+2026-09-10,2026-09-30,weekday,26,bus,1,pm_peak,4,2700.0,2700,true,true,false,false,headway above standard,headway above standard
+2026-09-10,2026-09-30,weekday,27,bus,0,am_peak,6,1860.0,1980,true,true,false,false,headway above standard,headway above standard
+2026-09-10,2026-09-30,weekday,27,bus,0,evening,7,2100.0,2700,false,false,,,,
+2026-09-10,2026-09-30,weekday,27,bus,0,midday,12,1800.0,2040,false,true,,true,,
+2026-09-10,2026-09-30,weekday,27,bus,0,pm_peak,6,1800.0,2400,true,true,false,true,headway above standard,
+2026-09-10,2026-09-30,weekday,27,bus,1,am_peak,6,1800.0,1800,true,true,false,true,headway above standard,
+2026-09-10,2026-09-30,weekday,27,bus,1,evening,6,2700.0,2700,false,false,,,,
+2026-09-10,2026-09-30,weekday,27,bus,1,midday,12,1800.0,1800,false,true,,true,,
+2026-09-10,2026-09-30,weekday,27,bus,1,pm_peak,9,1200.0,1200,true,true,false,true,headway above standard,
+2026-09-10,2026-09-30,weekday,28,bus,0,am_peak,1,,,true,true,false,false,fewer than 2 departures in period,fewer than 2 departures in period
+2026-09-10,2026-09-30,weekday,28,bus,0,evening,1,,,false,false,,,,
+2026-09-10,2026-09-30,weekday,28,bus,0,midday,9,2400.0,2520,false,true,,false,,headway above standard
+2026-09-10,2026-09-30,weekday,28,bus,0,pm_peak,5,2700.0,3240,true,true,false,false,headway above standard,headway above standard
+2026-09-10,2026-09-30,weekday,28,bus,1,am_peak,1,,,true,true,false,false,fewer than 2 departures in period,fewer than 2 departures in period
+2026-09-10,2026-09-30,weekday,28,bus,1,evening,0,,,false,false,,,,
+2026-09-10,2026-09-30,weekday,28,bus,1,midday,8,2400.0,2520,false,true,,false,,headway above standard
+2026-09-10,2026-09-30,weekday,28,bus,1,pm_peak,5,2700.0,3180,true,true,false,false,headway above standard,headway above standard
+2026-09-10,2026-09-30,weekday,29,bus,0,am_peak,6,1860.0,2100,true,true,false,false,headway above standard,headway above standard
+2026-09-10,2026-09-30,weekday,29,bus,0,evening,7,1800.0,3660,false,false,,,,
+2026-09-10,2026-09-30,weekday,29,bus,0,midday,12,1800.0,2160,false,true,,true,,
+2026-09-10,2026-09-30,weekday,29,bus,0,pm_peak,6,1800.0,2520,true,true,false,true,headway above standard,
+2026-09-10,2026-09-30,weekday,29,bus,1,am_peak,5,1800.0,1860,true,true,false,true,headway above standard,
+2026-09-10,2026-09-30,weekday,29,bus,1,evening,7,1800.0,2400,false,false,,,,
+2026-09-10,2026-09-30,weekday,29,bus,1,midday,12,1800.0,2160,false,true,,true,,
+2026-09-10,2026-09-30,weekday,29,bus,1,pm_peak,6,1920.0,2100,true,true,false,false,headway above standard,headway above standard
+2026-09-10,2026-09-30,weekday,3,bus,0,am_peak,6,1800.0,1860,true,true,false,true,headway above standard,
+2026-09-10,2026-09-30,weekday,3,bus,0,evening,7,2010.0,2880,false,false,,,,
+2026-09-10,2026-09-30,weekday,3,bus,0,midday,12,1800.0,2100,false,true,,true,,
+2026-09-10,2026-09-30,weekday,3,bus,0,pm_peak,6,1920.0,2160,true,true,false,false,headway above standard,headway above standard
+2026-09-10,2026-09-30,weekday,3,bus,1,am_peak,6,1800.0,1800,true,true,false,true,headway above standard,
+2026-09-10,2026-09-30,weekday,3,bus,1,evening,7,1860.0,2520,false,false,,,,
+2026-09-10,2026-09-30,weekday,3,bus,1,midday,12,1800.0,2100,false,true,,true,,
+2026-09-10,2026-09-30,weekday,3,bus,1,pm_peak,6,1740.0,2160,true,true,false,true,headway above standard,
+2026-09-10,2026-09-30,weekday,30,bus,0,am_peak,4,2100.0,2580,true,true,false,false,headway above standard,headway above standard
+2026-09-10,2026-09-30,weekday,30,bus,0,evening,7,2100.0,2400,false,false,,,,
+2026-09-10,2026-09-30,weekday,30,bus,0,midday,10,2100.0,2100,false,true,,false,,headway above standard
+2026-09-10,2026-09-30,weekday,30,bus,0,pm_peak,5,2100.0,2100,true,true,false,false,headway above standard,headway above standard
+2026-09-10,2026-09-30,weekday,30,bus,1,am_peak,3,2310.0,2700,true,true,false,false,headway above standard,headway above standard
+2026-09-10,2026-09-30,weekday,30,bus,1,evening,7,2100.0,2100,false,false,,,,
+2026-09-10,2026-09-30,weekday,30,bus,1,midday,11,2100.0,2100,false,true,,false,,headway above standard
+2026-09-10,2026-09-30,weekday,30,bus,1,pm_peak,5,2100.0,2100,true,true,false,false,headway above standard,headway above standard
+2026-09-10,2026-09-30,weekday,34,bus,0,am_peak,5,1800.0,2100,true,true,false,true,headway above standard,
+2026-09-10,2026-09-30,weekday,34,bus,0,evening,8,1800.0,1800,false,false,,,,
+2026-09-10,2026-09-30,weekday,34,bus,0,midday,12,1800.0,2100,false,true,,true,,
+2026-09-10,2026-09-30,weekday,34,bus,0,pm_peak,6,1800.0,1800,true,true,false,true,headway above standard,
+2026-09-10,2026-09-30,weekday,34,bus,1,am_peak,6,1800.0,1800,true,true,false,true,headway above standard,
+2026-09-10,2026-09-30,weekday,34,bus,1,evening,8,1800.0,1800,false,false,,,,
+2026-09-10,2026-09-30,weekday,34,bus,1,midday,12,1800.0,2100,false,true,,true,,
+2026-09-10,2026-09-30,weekday,34,bus,1,pm_peak,6,1800.0,1800,true,true,false,true,headway above standard,
+2026-09-10,2026-09-30,weekday,35,bus,0,am_peak,0,,,true,true,false,false,fewer than 2 departures in period,fewer than 2 departures in period
+2026-09-10,2026-09-30,weekday,35,bus,0,evening,0,,,false,false,,,,
+2026-09-10,2026-09-30,weekday,35,bus,0,midday,0,,,false,true,,false,,fewer than 2 departures in period
+2026-09-10,2026-09-30,weekday,35,bus,0,pm_peak,1,,,true,true,false,false,fewer than 2 departures in period,fewer than 2 departures in period
+2026-09-10,2026-09-30,weekday,35,bus,1,am_peak,1,,,true,true,false,false,fewer than 2 departures in period,fewer than 2 departures in period
+2026-09-10,2026-09-30,weekday,35,bus,1,evening,1,,,false,false,,,,
+2026-09-10,2026-09-30,weekday,35,bus,1,midday,0,,,false,true,,false,,fewer than 2 departures in period
+2026-09-10,2026-09-30,weekday,35,bus,1,pm_peak,1,,,true,true,false,false,fewer than 2 departures in period,fewer than 2 departures in period
+2026-09-10,2026-09-30,weekday,39,bus,0,am_peak,5,2400.0,2580,true,true,false,false,headway above standard,headway above standard
+2026-09-10,2026-09-30,weekday,39,bus,0,evening,7,2100.0,2760,false,false,,,,
+2026-09-10,2026-09-30,weekday,39,bus,0,midday,9,2400.0,2460,false,true,,false,,headway above standard
+2026-09-10,2026-09-30,weekday,39,bus,0,pm_peak,4,2400.0,2760,true,true,false,false,headway above standard,headway above standard
+2026-09-10,2026-09-30,weekday,39,bus,1,am_peak,5,2370.0,2400,true,true,false,false,headway above standard,headway above standard
+2026-09-10,2026-09-30,weekday,39,bus,1,evening,7,2160.0,2400,false,false,,,,
+2026-09-10,2026-09-30,weekday,39,bus,1,midday,9,2400.0,2460,false,true,,false,,headway above standard
+2026-09-10,2026-09-30,weekday,39,bus,1,pm_peak,4,2280.0,2760,true,true,false,false,headway above standard,headway above standard
+2026-09-10,2026-09-30,weekday,4,bus,0,am_peak,6,1860.0,1860,true,true,false,false,headway above standard,headway above standard
+2026-09-10,2026-09-30,weekday,4,bus,0,evening,7,1800.0,1800,false,false,,,,
+2026-09-10,2026-09-30,weekday,4,bus,0,midday,12,1800.0,1920,false,true,,true,,
+2026-09-10,2026-09-30,weekday,4,bus,0,pm_peak,6,1800.0,1920,true,true,false,true,headway above standard,
+2026-09-10,2026-09-30,weekday,4,bus,1,am_peak,6,1800.0,1860,true,true,false,true,headway above standard,
+2026-09-10,2026-09-30,weekday,4,bus,1,evening,7,1800.0,1860,false,false,,,,
+2026-09-10,2026-09-30,weekday,4,bus,1,midday,12,1800.0,1920,false,true,,true,,
+2026-09-10,2026-09-30,weekday,4,bus,1,pm_peak,5,1800.0,1860,true,true,false,true,headway above standard,
+2026-09-10,2026-09-30,weekday,40x,express,0,am_peak,2,3600.0,3600,false,false,,,,
+2026-09-10,2026-09-30,weekday,40x,express,0,evening,0,,,false,false,,,,
+2026-09-10,2026-09-30,weekday,40x,express,0,midday,0,,,false,false,,,,
+2026-09-10,2026-09-30,weekday,40x,express,0,pm_peak,0,,,false,false,,,,
+2026-09-10,2026-09-30,weekday,40x,express,1,am_peak,1,,,false,false,,,,
+2026-09-10,2026-09-30,weekday,40x,express,1,evening,0,,,false,false,,,,
+2026-09-10,2026-09-30,weekday,40x,express,1,midday,0,,,false,false,,,,
+2026-09-10,2026-09-30,weekday,40x,express,1,pm_peak,3,3300.0,3300,false,false,,,,
+2026-09-10,2026-09-30,weekday,41x,express,0,am_peak,3,2100.0,2400,false,false,,,,
+2026-09-10,2026-09-30,weekday,41x,express,0,evening,0,,,false,false,,,,
+2026-09-10,2026-09-30,weekday,41x,express,0,midday,0,,,false,false,,,,
+2026-09-10,2026-09-30,weekday,41x,express,0,pm_peak,0,,,false,false,,,,
+2026-09-10,2026-09-30,weekday,41x,express,1,am_peak,0,,,false,false,,,,
+2026-09-10,2026-09-30,weekday,41x,express,1,evening,0,,,false,false,,,,
+2026-09-10,2026-09-30,weekday,41x,express,1,midday,0,,,false,false,,,,
+2026-09-10,2026-09-30,weekday,41x,express,1,pm_peak,3,2700.0,2700,false,false,,,,
+2026-09-10,2026-09-30,weekday,42,bus,0,am_peak,0,,,true,true,false,false,fewer than 2 departures in period,fewer than 2 departures in period
+2026-09-10,2026-09-30,weekday,42,bus,0,evening,0,,,false,false,,,,
+2026-09-10,2026-09-30,weekday,42,bus,0,midday,0,,,false,true,,false,,fewer than 2 departures in period
+2026-09-10,2026-09-30,weekday,42,bus,0,pm_peak,2,5400.0,5400,true,true,false,false,headway above standard,headway above standard
+2026-09-10,2026-09-30,weekday,42,bus,1,am_peak,2,2880.0,2880,true,true,false,false,headway above standard,headway above standard
+2026-09-10,2026-09-30,weekday,42,bus,1,evening,0,,,false,false,,,,
+2026-09-10,2026-09-30,weekday,42,bus,1,midday,0,,,false,true,,false,,fewer than 2 departures in period
+2026-09-10,2026-09-30,weekday,42,bus,1,pm_peak,0,,,true,true,false,false,fewer than 2 departures in period,fewer than 2 departures in period
+2026-09-10,2026-09-30,weekday,43,bus,0,am_peak,0,,,true,true,false,false,fewer than 2 departures in period,fewer than 2 departures in period
+2026-09-10,2026-09-30,weekday,43,bus,0,evening,4,3600.0,3780,false,false,,,,
+2026-09-10,2026-09-30,weekday,43,bus,0,midday,6,3660.0,3840,false,true,,false,,headway above standard
+2026-09-10,2026-09-30,weekday,43,bus,0,pm_peak,3,3870.0,4140,true,true,false,false,headway above standard,headway above standard
+2026-09-10,2026-09-30,weekday,43,bus,1,am_peak,1,,,true,true,false,false,fewer than 2 departures in period,fewer than 2 departures in period
+2026-09-10,2026-09-30,weekday,43,bus,1,evening,3,3750.0,3900,false,false,,,,
+2026-09-10,2026-09-30,weekday,43,bus,1,midday,6,3600.0,3840,false,true,,false,,headway above standard
+2026-09-10,2026-09-30,weekday,43,bus,1,pm_peak,3,3330.0,3900,true,true,false,false,headway above standard,headway above standard
+2026-09-10,2026-09-30,weekday,46x,express,0,am_peak,3,3420.0,3660,false,false,,,,
+2026-09-10,2026-09-30,weekday,46x,express,0,evening,0,,,false,false,,,,
+2026-09-10,2026-09-30,weekday,46x,express,0,midday,0,,,false,false,,,,
+2026-09-10,2026-09-30,weekday,46x,express,0,pm_peak,0,,,false,false,,,,
+2026-09-10,2026-09-30,weekday,46x,express,1,am_peak,0,,,false,false,,,,
+2026-09-10,2026-09-30,weekday,46x,express,1,evening,0,,,false,false,,,,
+2026-09-10,2026-09-30,weekday,46x,express,1,midday,0,,,false,false,,,,
+2026-09-10,2026-09-30,weekday,46x,express,1,pm_peak,3,2400.0,3300,false,false,,,,
+2026-09-10,2026-09-30,weekday,48x,express,0,am_peak,7,1200.0,1800,false,false,,,,
+2026-09-10,2026-09-30,weekday,48x,express,0,evening,0,,,false,false,,,,
+2026-09-10,2026-09-30,weekday,48x,express,0,midday,0,,,false,false,,,,
+2026-09-10,2026-09-30,weekday,48x,express,0,pm_peak,2,3780.0,3780,false,false,,,,
+2026-09-10,2026-09-30,weekday,48x,express,1,am_peak,2,3600.0,3600,false,false,,,,
+2026-09-10,2026-09-30,weekday,48x,express,1,evening,1,,,false,false,,,,
+2026-09-10,2026-09-30,weekday,48x,express,1,midday,0,,,false,false,,,,
+2026-09-10,2026-09-30,weekday,48x,express,1,pm_peak,6,1200.0,1200,false,false,,,,
+2026-09-10,2026-09-30,weekday,5,bus,0,am_peak,7,1740.0,2100,true,true,false,true,headway above standard,
+2026-09-10,2026-09-30,weekday,5,bus,0,evening,8,1260.0,1920,false,false,,,,
+2026-09-10,2026-09-30,weekday,5,bus,0,midday,14,1500.0,1620,false,true,,true,,
+2026-09-10,2026-09-30,weekday,5,bus,0,pm_peak,7,1500.0,1680,true,true,false,true,headway above standard,
+2026-09-10,2026-09-30,weekday,5,bus,1,am_peak,7,1800.0,1800,true,true,false,true,headway above standard,
+2026-09-10,2026-09-30,weekday,5,bus,1,evening,8,1500.0,3600,false,false,,,,
+2026-09-10,2026-09-30,weekday,5,bus,1,midday,14,1500.0,1500,false,true,,true,,
+2026-09-10,2026-09-30,weekday,5,bus,1,pm_peak,7,1500.0,1500,true,true,false,true,headway above standard,
+2026-09-10,2026-09-30,weekday,50,bus,0,am_peak,0,,,true,true,false,false,fewer than 2 departures in period,fewer than 2 departures in period
+2026-09-10,2026-09-30,weekday,50,bus,0,evening,0,,,false,false,,,,
+2026-09-10,2026-09-30,weekday,50,bus,0,midday,0,,,false,true,,false,,fewer than 2 departures in period
+2026-09-10,2026-09-30,weekday,50,bus,0,pm_peak,2,3600.0,3600,true,true,false,false,headway above standard,headway above standard
+2026-09-10,2026-09-30,weekday,50,bus,1,am_peak,2,4980.0,4980,true,true,false,false,headway above standard,headway above standard
+2026-09-10,2026-09-30,weekday,50,bus,1,evening,0,,,false,false,,,,
+2026-09-10,2026-09-30,weekday,50,bus,1,midday,0,,,false,true,,false,,fewer than 2 departures in period
+2026-09-10,2026-09-30,weekday,50,bus,1,pm_peak,0,,,true,true,false,false,fewer than 2 departures in period,fewer than 2 departures in period
+2026-09-10,2026-09-30,weekday,51,bus,0,am_peak,1,,,true,true,false,false,fewer than 2 departures in period,fewer than 2 departures in period
+2026-09-10,2026-09-30,weekday,51,bus,0,evening,1,,,false,false,,,,
+2026-09-10,2026-09-30,weekday,51,bus,0,midday,8,2700.0,2940,false,true,,false,,headway above standard
+2026-09-10,2026-09-30,weekday,51,bus,0,pm_peak,4,3300.0,3720,true,true,false,false,headway above standard,headway above standard
+2026-09-10,2026-09-30,weekday,51,bus,1,am_peak,1,,,true,true,false,false,fewer than 2 departures in period,fewer than 2 departures in period
+2026-09-10,2026-09-30,weekday,51,bus,1,evening,1,,,false,false,,,,
+2026-09-10,2026-09-30,weekday,51,bus,1,midday,8,2700.0,3180,false,true,,false,,headway above standard
+2026-09-10,2026-09-30,weekday,51,bus,1,pm_peak,4,2940.0,2940,true,true,false,false,headway above standard,headway above standard
+2026-09-10,2026-09-30,weekday,52x,express,0,am_peak,3,2700.0,2700,false,false,,,,
+2026-09-10,2026-09-30,weekday,52x,express,0,evening,0,,,false,false,,,,
+2026-09-10,2026-09-30,weekday,52x,express,0,midday,0,,,false,false,,,,
+2026-09-10,2026-09-30,weekday,52x,express,0,pm_peak,0,,,false,false,,,,
+2026-09-10,2026-09-30,weekday,52x,express,1,am_peak,0,,,false,false,,,,
+2026-09-10,2026-09-30,weekday,52x,express,1,evening,1,,,false,false,,,,
+2026-09-10,2026-09-30,weekday,52x,express,1,midday,0,,,false,false,,,,
+2026-09-10,2026-09-30,weekday,52x,express,1,pm_peak,2,3000.0,3000,false,false,,,,
+2026-09-10,2026-09-30,weekday,53x,express,0,am_peak,4,2400.0,2700,false,false,,,,
+2026-09-10,2026-09-30,weekday,53x,express,0,evening,1,,,false,false,,,,
+2026-09-10,2026-09-30,weekday,53x,express,0,midday,0,,,false,false,,,,
+2026-09-10,2026-09-30,weekday,53x,express,0,pm_peak,1,,,false,false,,,,
+2026-09-10,2026-09-30,weekday,53x,express,1,am_peak,0,,,false,false,,,,
+2026-09-10,2026-09-30,weekday,53x,express,1,evening,0,,,false,false,,,,
+2026-09-10,2026-09-30,weekday,53x,express,1,midday,0,,,false,false,,,,
+2026-09-10,2026-09-30,weekday,53x,express,1,pm_peak,4,2100.0,2400,false,false,,,,
+2026-09-10,2026-09-30,weekday,54,bus,0,am_peak,4,2040.0,3180,true,true,false,false,headway above standard,headway above standard
+2026-09-10,2026-09-30,weekday,54,bus,0,evening,6,2280.0,2940,false,false,,,,
+2026-09-10,2026-09-30,weekday,54,bus,0,midday,9,2400.0,2760,false,true,,false,,headway above standard
+2026-09-10,2026-09-30,weekday,54,bus,0,pm_peak,5,2370.0,2400,true,true,false,false,headway above standard,headway above standard
+2026-09-10,2026-09-30,weekday,54,bus,1,am_peak,3,2340.0,2640,true,true,false,false,headway above standard,headway above standard
+2026-09-10,2026-09-30,weekday,54,bus,1,evening,6,2160.0,2400,false,false,,,,
+2026-09-10,2026-09-30,weekday,54,bus,1,midday,9,2400.0,2760,false,true,,false,,headway above standard
+2026-09-10,2026-09-30,weekday,54,bus,1,pm_peak,6,2100.0,2400,true,true,false,false,headway above standard,headway above standard
+2026-09-10,2026-09-30,weekday,55,bus,0,am_peak,3,4140.0,4620,true,true,false,false,headway above standard,headway above standard
+2026-09-10,2026-09-30,weekday,55,bus,0,evening,6,2520.0,2880,false,false,,,,
+2026-09-10,2026-09-30,weekday,55,bus,0,midday,9,2400.0,2400,false,true,,false,,headway above standard
+2026-09-10,2026-09-30,weekday,55,bus,0,pm_peak,4,2520.0,2700,true,true,false,false,headway above standard,headway above standard
+2026-09-10,2026-09-30,weekday,55,bus,1,am_peak,3,3600.0,3720,true,true,false,false,headway above standard,headway above standard
+2026-09-10,2026-09-30,weekday,55,bus,1,evening,6,2580.0,2700,false,false,,,,
+2026-09-10,2026-09-30,weekday,55,bus,1,midday,9,2400.0,2400,false,true,,false,,headway above standard
+2026-09-10,2026-09-30,weekday,55,bus,1,pm_peak,5,2550.0,2640,true,true,false,false,headway above standard,headway above standard
+2026-09-10,2026-09-30,weekday,56,bus,0,am_peak,5,1800.0,1920,true,true,false,true,headway above standard,
+2026-09-10,2026-09-30,weekday,56,bus,0,evening,9,1770.0,1800,false,false,,,,
+2026-09-10,2026-09-30,weekday,56,bus,0,midday,12,1800.0,1920,false,true,,true,,
+2026-09-10,2026-09-30,weekday,56,bus,0,pm_peak,5,1860.0,2220,true,true,false,false,headway above standard,headway above standard
+2026-09-10,2026-09-30,weekday,56,bus,1,am_peak,6,1800.0,1920,true,true,false,true,headway above standard,
+2026-09-10,2026-09-30,weekday,56,bus,1,evening,8,1800.0,1800,false,false,,,,
+2026-09-10,2026-09-30,weekday,56,bus,1,midday,12,1800.0,1920,false,true,,true,,
+2026-09-10,2026-09-30,weekday,56,bus,1,pm_peak,6,1800.0,1800,true,true,false,true,headway above standard,
+2026-09-10,2026-09-30,weekday,57,bus,0,am_peak,2,3600.0,3600,true,true,false,false,headway above standard,headway above standard
+2026-09-10,2026-09-30,weekday,57,bus,0,evening,4,3600.0,3720,false,false,,,,
+2026-09-10,2026-09-30,weekday,57,bus,0,midday,5,3750.0,3900,false,true,,false,,headway above standard
+2026-09-10,2026-09-30,weekday,57,bus,0,pm_peak,3,4140.0,4140,true,true,false,false,headway above standard,headway above standard
+2026-09-10,2026-09-30,weekday,57,bus,1,am_peak,2,3600.0,3600,true,true,false,false,headway above standard,headway above standard
+2026-09-10,2026-09-30,weekday,57,bus,1,evening,4,3600.0,3660,false,false,,,,
+2026-09-10,2026-09-30,weekday,57,bus,1,midday,6,3780.0,3900,false,true,,false,,headway above standard
+2026-09-10,2026-09-30,weekday,57,bus,1,pm_peak,3,3270.0,4140,true,true,false,false,headway above standard,headway above standard
+2026-09-10,2026-09-30,weekday,58,bus,0,am_peak,4,1620.0,1860,true,true,false,true,headway above standard,
+2026-09-10,2026-09-30,weekday,58,bus,0,evening,8,1800.0,1920,false,false,,,,
+2026-09-10,2026-09-30,weekday,58,bus,0,midday,12,1800.0,2220,false,true,,true,,
+2026-09-10,2026-09-30,weekday,58,bus,0,pm_peak,6,1800.0,1800,true,true,false,true,headway above standard,
+2026-09-10,2026-09-30,weekday,58,bus,1,am_peak,4,1620.0,1860,true,true,false,true,headway above standard,
+2026-09-10,2026-09-30,weekday,58,bus,1,evening,9,1710.0,1980,false,false,,,,
+2026-09-10,2026-09-30,weekday,58,bus,1,midday,12,1800.0,2160,false,true,,true,,
+2026-09-10,2026-09-30,weekday,58,bus,1,pm_peak,6,1800.0,1800,true,true,false,true,headway above standard,
+2026-09-10,2026-09-30,weekday,59,bus,0,am_peak,1,,,true,true,false,false,fewer than 2 departures in period,fewer than 2 departures in period
+2026-09-10,2026-09-30,weekday,59,bus,0,evening,2,3540.0,3540,false,false,,,,
+2026-09-10,2026-09-30,weekday,59,bus,0,midday,6,3600.0,3900,false,true,,false,,headway above standard
+2026-09-10,2026-09-30,weekday,59,bus,0,pm_peak,3,3810.0,3900,true,true,false,false,headway above standard,headway above standard
+2026-09-10,2026-09-30,weekday,59,bus,1,am_peak,1,,,true,true,false,false,fewer than 2 departures in period,fewer than 2 departures in period
+2026-09-10,2026-09-30,weekday,59,bus,1,evening,2,3600.0,3600,false,false,,,,
+2026-09-10,2026-09-30,weekday,59,bus,1,midday,6,3600.0,3900,false,true,,false,,headway above standard
+2026-09-10,2026-09-30,weekday,59,bus,1,pm_peak,3,3780.0,3900,true,true,false,false,headway above standard,headway above standard
+2026-09-10,2026-09-30,weekday,6,bus,0,am_peak,6,1800.0,1920,true,true,false,true,headway above standard,
+2026-09-10,2026-09-30,weekday,6,bus,0,evening,8,1800.0,1800,false,false,,,,
+2026-09-10,2026-09-30,weekday,6,bus,0,midday,12,1800.0,1920,false,true,,true,,
+2026-09-10,2026-09-30,weekday,6,bus,0,pm_peak,6,1800.0,1800,true,true,false,true,headway above standard,
+2026-09-10,2026-09-30,weekday,6,bus,1,am_peak,6,1800.0,1800,true,true,false,true,headway above standard,
+2026-09-10,2026-09-30,weekday,6,bus,1,evening,8,1800.0,1800,false,false,,,,
+2026-09-10,2026-09-30,weekday,6,bus,1,midday,12,1800.0,1800,false,true,,true,,
+2026-09-10,2026-09-30,weekday,6,bus,1,pm_peak,6,1800.0,1800,true,true,false,true,headway above standard,
+2026-09-10,2026-09-30,weekday,60,bus,0,am_peak,6,1800.0,2040,true,true,false,true,headway above standard,
+2026-09-10,2026-09-30,weekday,60,bus,0,evening,9,1680.0,1680,false,false,,,,
+2026-09-10,2026-09-30,weekday,60,bus,0,midday,12,1800.0,1860,false,true,,true,,
+2026-09-10,2026-09-30,weekday,60,bus,0,pm_peak,5,2070.0,2220,true,true,false,false,headway above standard,headway above standard
+2026-09-10,2026-09-30,weekday,60,bus,1,am_peak,6,1800.0,1800,true,true,false,true,headway above standard,
+2026-09-10,2026-09-30,weekday,60,bus,1,evening,9,1680.0,1800,false,false,,,,
+2026-09-10,2026-09-30,weekday,60,bus,1,midday,12,1800.0,1860,false,true,,true,,
+2026-09-10,2026-09-30,weekday,60,bus,1,pm_peak,5,2070.0,2280,true,true,false,false,headway above standard,headway above standard
+2026-09-10,2026-09-30,weekday,61x,express,0,am_peak,3,1920.0,1980,false,false,,,,
+2026-09-10,2026-09-30,weekday,61x,express,0,evening,0,,,false,false,,,,
+2026-09-10,2026-09-30,weekday,61x,express,0,midday,0,,,false,false,,,,
+2026-09-10,2026-09-30,weekday,61x,express,0,pm_peak,0,,,false,false,,,,
+2026-09-10,2026-09-30,weekday,61x,express,1,am_peak,0,,,false,false,,,,
+2026-09-10,2026-09-30,weekday,61x,express,1,evening,0,,,false,false,,,,
+2026-09-10,2026-09-30,weekday,61x,express,1,midday,0,,,false,false,,,,
+2026-09-10,2026-09-30,weekday,61x,express,1,pm_peak,3,2100.0,2100,false,false,,,,
+2026-09-10,2026-09-30,weekday,62x,express,0,am_peak,3,2310.0,2460,false,false,,,,
+2026-09-10,2026-09-30,weekday,62x,express,0,evening,0,,,false,false,,,,
+2026-09-10,2026-09-30,weekday,62x,express,0,midday,0,,,false,false,,,,
+2026-09-10,2026-09-30,weekday,62x,express,0,pm_peak,1,,,false,false,,,,
+2026-09-10,2026-09-30,weekday,62x,express,1,am_peak,1,,,false,false,,,,
+2026-09-10,2026-09-30,weekday,62x,express,1,evening,0,,,false,false,,,,
+2026-09-10,2026-09-30,weekday,62x,express,1,midday,0,,,false,false,,,,
+2026-09-10,2026-09-30,weekday,62x,express,1,pm_peak,3,2400.0,2700,false,false,,,,
+2026-09-10,2026-09-30,weekday,63x,express,0,am_peak,7,1200.0,1500,false,false,,,,
+2026-09-10,2026-09-30,weekday,63x,express,0,evening,0,,,false,false,,,,
+2026-09-10,2026-09-30,weekday,63x,express,0,midday,0,,,false,false,,,,
+2026-09-10,2026-09-30,weekday,63x,express,0,pm_peak,2,3600.0,3600,false,false,,,,
+2026-09-10,2026-09-30,weekday,63x,express,1,am_peak,2,3420.0,3420,false,false,,,,
+2026-09-10,2026-09-30,weekday,63x,express,1,evening,1,,,false,false,,,,
+2026-09-10,2026-09-30,weekday,63x,express,1,midday,0,,,false,false,,,,
+2026-09-10,2026-09-30,weekday,63x,express,1,pm_peak,6,1200.0,1800,false,false,,,,
+2026-09-10,2026-09-30,weekday,64x,express,0,am_peak,6,1500.0,1500,false,false,,,,
+2026-09-10,2026-09-30,weekday,64x,express,0,evening,0,,,false,false,,,,
+2026-09-10,2026-09-30,weekday,64x,express,0,midday,0,,,false,false,,,,
+2026-09-10,2026-09-30,weekday,64x,express,0,pm_peak,0,,,false,false,,,,
+2026-09-10,2026-09-30,weekday,64x,express,1,am_peak,0,,,false,false,,,,
+2026-09-10,2026-09-30,weekday,64x,express,1,evening,0,,,false,false,,,,
+2026-09-10,2026-09-30,weekday,64x,express,1,midday,0,,,false,false,,,,
+2026-09-10,2026-09-30,weekday,64x,express,1,pm_peak,6,1500.0,1800,false,false,,,,
+2026-09-10,2026-09-30,weekday,7,bus,0,am_peak,9,1230.0,1620,true,true,false,true,headway above standard,
+2026-09-10,2026-09-30,weekday,7,bus,0,evening,12,1200.0,1260,false,false,,,,
+2026-09-10,2026-09-30,weekday,7,bus,0,midday,19,1080.0,1500,false,true,,true,,
+2026-09-10,2026-09-30,weekday,7,bus,0,pm_peak,10,1200.0,1200,true,true,false,true,headway above standard,
+2026-09-10,2026-09-30,weekday,7,bus,1,am_peak,9,1200.0,1200,true,true,false,true,headway above standard,
+2026-09-10,2026-09-30,weekday,7,bus,1,evening,12,1200.0,1200,false,false,,,,
+2026-09-10,2026-09-30,weekday,7,bus,1,midday,19,1200.0,1200,false,true,,true,,
+2026-09-10,2026-09-30,weekday,7,bus,1,pm_peak,10,1200.0,1200,true,true,false,true,headway above standard,
+2026-09-10,2026-09-30,weekday,74x,express,0,am_peak,2,3000.0,3000,false,false,,,,
+2026-09-10,2026-09-30,weekday,74x,express,0,evening,0,,,false,false,,,,
+2026-09-10,2026-09-30,weekday,74x,express,0,midday,0,,,false,false,,,,
+2026-09-10,2026-09-30,weekday,74x,express,0,pm_peak,1,,,false,false,,,,
+2026-09-10,2026-09-30,weekday,74x,express,1,am_peak,1,,,false,false,,,,
+2026-09-10,2026-09-30,weekday,74x,express,1,evening,0,,,false,false,,,,
+2026-09-10,2026-09-30,weekday,74x,express,1,midday,0,,,false,false,,,,
+2026-09-10,2026-09-30,weekday,74x,express,1,pm_peak,2,4200.0,4200,false,false,,,,
+2026-09-10,2026-09-30,weekday,77x,express,0,am_peak,7,1200.0,1500,false,false,,,,
+2026-09-10,2026-09-30,weekday,77x,express,0,evening,1,,,false,false,,,,
+2026-09-10,2026-09-30,weekday,77x,express,0,midday,0,,,false,false,,,,
+2026-09-10,2026-09-30,weekday,77x,express,0,pm_peak,1,,,false,false,,,,
+2026-09-10,2026-09-30,weekday,77x,express,1,am_peak,2,5460.0,5460,false,false,,,,
+2026-09-10,2026-09-30,weekday,77x,express,1,evening,1,,,false,false,,,,
+2026-09-10,2026-09-30,weekday,77x,express,1,midday,0,,,false,false,,,,
+2026-09-10,2026-09-30,weekday,77x,express,1,pm_peak,6,1200.0,2400,false,false,,,,
+2026-09-10,2026-09-30,weekday,8,bus,0,am_peak,6,1800.0,1800,true,true,false,true,headway above standard,
+2026-09-10,2026-09-30,weekday,8,bus,0,evening,4,2340.0,3600,false,false,,,,
+2026-09-10,2026-09-30,weekday,8,bus,0,midday,12,1800.0,1860,false,true,,true,,
+2026-09-10,2026-09-30,weekday,8,bus,0,pm_peak,6,1800.0,1920,true,true,false,true,headway above standard,
+2026-09-10,2026-09-30,weekday,8,bus,1,am_peak,6,1800.0,1800,true,true,false,true,headway above standard,
+2026-09-10,2026-09-30,weekday,8,bus,1,evening,5,3000.0,3600,false,false,,,,
+2026-09-10,2026-09-30,weekday,8,bus,1,midday,12,1800.0,1800,false,true,,true,,
+2026-09-10,2026-09-30,weekday,8,bus,1,pm_peak,5,1800.0,1800,true,true,false,true,headway above standard,
+2026-09-10,2026-09-30,weekday,85x,express,0,am_peak,2,2700.0,2700,false,false,,,,
+2026-09-10,2026-09-30,weekday,85x,express,0,evening,0,,,false,false,,,,
+2026-09-10,2026-09-30,weekday,85x,express,0,midday,0,,,false,false,,,,
+2026-09-10,2026-09-30,weekday,85x,express,0,pm_peak,1,,,false,false,,,,
+2026-09-10,2026-09-30,weekday,85x,express,1,am_peak,0,,,false,false,,,,
+2026-09-10,2026-09-30,weekday,85x,express,1,evening,0,,,false,false,,,,
+2026-09-10,2026-09-30,weekday,85x,express,1,midday,0,,,false,false,,,,
+2026-09-10,2026-09-30,weekday,85x,express,1,pm_peak,2,3600.0,3600,false,false,,,,
+2026-09-10,2026-09-30,weekday,88x,express,0,am_peak,3,2940.0,3000,false,false,,,,
+2026-09-10,2026-09-30,weekday,88x,express,0,evening,0,,,false,false,,,,
+2026-09-10,2026-09-30,weekday,88x,express,0,midday,0,,,false,false,,,,
+2026-09-10,2026-09-30,weekday,88x,express,0,pm_peak,0,,,false,false,,,,
+2026-09-10,2026-09-30,weekday,88x,express,1,am_peak,0,,,false,false,,,,
+2026-09-10,2026-09-30,weekday,88x,express,1,evening,0,,,false,false,,,,
+2026-09-10,2026-09-30,weekday,88x,express,1,midday,0,,,false,false,,,,
+2026-09-10,2026-09-30,weekday,88x,express,1,pm_peak,3,3000.0,3300,false,false,,,,
+2026-09-10,2026-09-30,weekday,9,bus,0,am_peak,12,900.0,900,true,true,true,true,,
+2026-09-10,2026-09-30,weekday,9,bus,0,evening,11,1200.0,2460,false,false,,,,
+2026-09-10,2026-09-30,weekday,9,bus,0,midday,24,900.0,900,false,true,,true,,
+2026-09-10,2026-09-30,weekday,9,bus,0,pm_peak,12,900.0,900,true,true,true,true,,
+2026-09-10,2026-09-30,weekday,9,bus,1,am_peak,12,900.0,900,true,true,true,true,,
+2026-09-10,2026-09-30,weekday,9,bus,1,evening,12,1200.0,2400,false,false,,,,
+2026-09-10,2026-09-30,weekday,9,bus,1,midday,24,900.0,900,false,true,,true,,
+2026-09-10,2026-09-30,weekday,9,bus,1,pm_peak,16,600.0,900,true,true,true,true,,
+2026-09-29,2026-10-14,weekday,1,bus,0,am_peak,5,2130.0,2520,true,true,false,false,headway above standard,headway above standard
+2026-09-29,2026-10-14,weekday,1,bus,0,evening,8,1800.0,1800,false,false,,,,
+2026-09-29,2026-10-14,weekday,1,bus,0,midday,12,1800.0,1980,false,true,,true,,
+2026-09-29,2026-10-14,weekday,1,bus,0,pm_peak,6,1800.0,1920,true,true,false,true,headway above standard,
+2026-09-29,2026-10-14,weekday,1,bus,1,am_peak,5,2100.0,2520,true,true,false,false,headway above standard,headway above standard
+2026-09-29,2026-10-14,weekday,1,bus,1,evening,8,1800.0,1800,false,false,,,,
+2026-09-29,2026-10-14,weekday,1,bus,1,midday,12,1800.0,1800,false,true,,true,,
+2026-09-29,2026-10-14,weekday,1,bus,1,pm_peak,6,1800.0,1800,true,true,false,true,headway above standard,
+2026-09-29,2026-10-14,weekday,10,bus,0,am_peak,6,1800.0,2160,true,true,false,true,headway above standard,
+2026-09-29,2026-10-14,weekday,10,bus,0,evening,8,1800.0,1800,false,false,,,,
+2026-09-29,2026-10-14,weekday,10,bus,0,midday,12,1800.0,2040,false,true,,true,,
+2026-09-29,2026-10-14,weekday,10,bus,0,pm_peak,6,1800.0,2100,true,true,false,true,headway above standard,
+2026-09-29,2026-10-14,weekday,10,bus,1,am_peak,6,1800.0,1800,true,true,false,true,headway above standard,
+2026-09-29,2026-10-14,weekday,10,bus,1,evening,8,1800.0,1800,false,false,,,,
+2026-09-29,2026-10-14,weekday,10,bus,1,midday,12,1800.0,1800,false,true,,true,,
+2026-09-29,2026-10-14,weekday,10,bus,1,pm_peak,6,1800.0,1800,true,true,false,true,headway above standard,
+2026-09-29,2026-10-14,weekday,11,bus,0,am_peak,6,1800.0,2100,true,true,false,true,headway above standard,
+2026-09-29,2026-10-14,weekday,11,bus,0,evening,10,1320.0,1800,false,false,,,,
+2026-09-29,2026-10-14,weekday,11,bus,0,midday,14,1800.0,2100,false,true,,true,,
+2026-09-29,2026-10-14,weekday,11,bus,0,pm_peak,7,1800.0,2100,true,true,false,true,headway above standard,
+2026-09-29,2026-10-14,weekday,11,bus,1,am_peak,6,1800.0,1800,true,true,false,true,headway above standard,
+2026-09-29,2026-10-14,weekday,11,bus,1,evening,8,1800.0,1800,false,false,,,,
+2026-09-29,2026-10-14,weekday,11,bus,1,midday,12,1800.0,1800,false,true,,true,,
+2026-09-29,2026-10-14,weekday,11,bus,1,pm_peak,6,1800.0,1800,true,true,false,true,headway above standard,
+2026-09-29,2026-10-14,weekday,12,bus,0,am_peak,3,2790.0,2880,true,true,false,false,headway above standard,headway above standard
+2026-09-29,2026-10-14,weekday,12,bus,0,evening,6,2640.0,2760,false,false,,,,
+2026-09-29,2026-10-14,weekday,12,bus,0,midday,8,2700.0,2700,false,true,,false,,headway above standard
+2026-09-29,2026-10-14,weekday,12,bus,0,pm_peak,4,2880.0,2940,true,true,false,false,headway above standard,headway above standard
+2026-09-29,2026-10-14,weekday,12,bus,1,am_peak,4,2460.0,2760,true,true,false,false,headway above standard,headway above standard
+2026-09-29,2026-10-14,weekday,12,bus,1,evening,6,2580.0,2760,false,false,,,,
+2026-09-29,2026-10-14,weekday,12,bus,1,midday,7,2700.0,2940,false,true,,false,,headway above standard
+2026-09-29,2026-10-14,weekday,12,bus,1,pm_peak,4,2880.0,3180,true,true,false,false,headway above standard,headway above standard
+2026-09-29,2026-10-14,weekday,13,bus,0,am_peak,5,2100.0,2100,true,true,false,false,headway above standard,headway above standard
+2026-09-29,2026-10-14,weekday,13,bus,0,evening,7,2100.0,2100,false,false,,,,
+2026-09-29,2026-10-14,weekday,13,bus,0,midday,11,2100.0,2100,false,true,,false,,headway above standard
+2026-09-29,2026-10-14,weekday,13,bus,0,pm_peak,5,2100.0,2100,true,true,false,false,headway above standard,headway above standard
+2026-09-29,2026-10-14,weekday,13,bus,1,am_peak,5,2100.0,2100,true,true,false,false,headway above standard,headway above standard
+2026-09-29,2026-10-14,weekday,13,bus,1,evening,7,2100.0,2100,false,false,,,,
+2026-09-29,2026-10-14,weekday,13,bus,1,midday,11,2100.0,2100,false,true,,false,,headway above standard
+2026-09-29,2026-10-14,weekday,13,bus,1,pm_peak,5,2100.0,2100,true,true,false,false,headway above standard,headway above standard
+2026-09-29,2026-10-14,weekday,14,bus,0,am_peak,6,1800.0,2220,true,true,false,true,headway above standard,
+2026-09-29,2026-10-14,weekday,14,bus,0,evening,5,3480.0,3600,false,false,,,,
+2026-09-29,2026-10-14,weekday,14,bus,0,midday,12,1800.0,1860,false,true,,true,,
+2026-09-29,2026-10-14,weekday,14,bus,0,pm_peak,6,1800.0,2280,true,true,false,true,headway above standard,
+2026-09-29,2026-10-14,weekday,14,bus,1,am_peak,6,1800.0,1800,true,true,false,true,headway above standard,
+2026-09-29,2026-10-14,weekday,14,bus,1,evening,4,3600.0,3600,false,false,,,,
+2026-09-29,2026-10-14,weekday,14,bus,1,midday,12,1800.0,1800,false,true,,true,,
+2026-09-29,2026-10-14,weekday,14,bus,1,pm_peak,6,1800.0,2100,true,true,false,true,headway above standard,
+2026-09-29,2026-10-14,weekday,15,bus,0,am_peak,5,1800.0,2100,true,true,false,true,headway above standard,
+2026-09-29,2026-10-14,weekday,15,bus,0,evening,5,2790.0,3600,false,false,,,,
+2026-09-29,2026-10-14,weekday,15,bus,0,midday,12,1800.0,1800,false,true,,true,,
+2026-09-29,2026-10-14,weekday,15,bus,0,pm_peak,6,1800.0,1920,true,true,false,true,headway above standard,
+2026-09-29,2026-10-14,weekday,15,bus,1,am_peak,5,1800.0,1800,true,true,false,true,headway above standard,
+2026-09-29,2026-10-14,weekday,15,bus,1,evening,5,3600.0,3600,false,false,,,,
+2026-09-29,2026-10-14,weekday,15,bus,1,midday,12,1800.0,1800,false,true,,true,,
+2026-09-29,2026-10-14,weekday,15,bus,1,pm_peak,6,1800.0,1800,true,true,false,true,headway above standard,
+2026-09-29,2026-10-14,weekday,16,bus,0,am_peak,5,1800.0,2160,true,true,false,true,headway above standard,
+2026-09-29,2026-10-14,weekday,16,bus,0,evening,9,1770.0,2460,false,false,,,,
+2026-09-29,2026-10-14,weekday,16,bus,0,midday,12,1800.0,2280,false,true,,true,,
+2026-09-29,2026-10-14,weekday,16,bus,0,pm_peak,6,1800.0,2460,true,true,false,true,headway above standard,
+2026-09-29,2026-10-14,weekday,16,bus,1,am_peak,6,1800.0,1800,true,true,false,true,headway above standard,
+2026-09-29,2026-10-14,weekday,16,bus,1,evening,8,1800.0,1800,false,false,,,,
+2026-09-29,2026-10-14,weekday,16,bus,1,midday,12,1800.0,1800,false,true,,true,,
+2026-09-29,2026-10-14,weekday,16,bus,1,pm_peak,8,1200.0,1800,true,true,false,true,headway above standard,
+2026-09-29,2026-10-14,weekday,17,bus,0,am_peak,4,1800.0,2040,true,true,false,true,headway above standard,
+2026-09-29,2026-10-14,weekday,17,bus,0,evening,6,1800.0,3300,false,false,,,,
+2026-09-29,2026-10-14,weekday,17,bus,0,midday,12,1800.0,2100,false,true,,true,,
+2026-09-29,2026-10-14,weekday,17,bus,0,pm_peak,6,1800.0,2220,true,true,false,true,headway above standard,
+2026-09-29,2026-10-14,weekday,17,bus,1,am_peak,6,1800.0,1800,true,true,false,true,headway above standard,
+2026-09-29,2026-10-14,weekday,17,bus,1,evening,5,3300.0,3600,false,false,,,,
+2026-09-29,2026-10-14,weekday,17,bus,1,midday,12,1800.0,1800,false,true,,true,,
+2026-09-29,2026-10-14,weekday,17,bus,1,pm_peak,6,1800.0,1800,true,true,false,true,headway above standard,
+2026-09-29,2026-10-14,weekday,177,bus,0,am_peak,0,,,true,true,false,false,fewer than 2 departures in period,fewer than 2 departures in period
+2026-09-29,2026-10-14,weekday,177,bus,0,evening,0,,,false,false,,,,
+2026-09-29,2026-10-14,weekday,177,bus,0,midday,6,3600.0,3600,false,true,,false,,headway above standard
+2026-09-29,2026-10-14,weekday,177,bus,0,pm_peak,2,3600.0,3600,true,true,false,false,headway above standard,headway above standard
+2026-09-29,2026-10-14,weekday,177,bus,1,am_peak,0,,,true,true,false,false,fewer than 2 departures in period,fewer than 2 departures in period
+2026-09-29,2026-10-14,weekday,177,bus,1,evening,0,,,false,false,,,,
+2026-09-29,2026-10-14,weekday,177,bus,1,midday,6,3600.0,3600,false,true,,false,,headway above standard
+2026-09-29,2026-10-14,weekday,177,bus,1,pm_peak,0,,,true,true,false,false,fewer than 2 departures in period,fewer than 2 departures in period
+2026-09-29,2026-10-14,weekday,18,bus,0,am_peak,3,2940.0,3180,true,true,false,false,headway above standard,headway above standard
+2026-09-29,2026-10-14,weekday,18,bus,0,evening,5,2700.0,2700,false,false,,,,
+2026-09-29,2026-10-14,weekday,18,bus,0,midday,8,2700.0,2820,false,true,,false,,headway above standard
+2026-09-29,2026-10-14,weekday,18,bus,0,pm_peak,4,2700.0,2820,true,true,false,false,headway above standard,headway above standard
+2026-09-29,2026-10-14,weekday,18,bus,1,am_peak,4,2700.0,3180,true,true,false,false,headway above standard,headway above standard
+2026-09-29,2026-10-14,weekday,18,bus,1,evening,4,2700.0,2700,false,false,,,,
+2026-09-29,2026-10-14,weekday,18,bus,1,midday,8,2700.0,2700,false,true,,false,,headway above standard
+2026-09-29,2026-10-14,weekday,18,bus,1,pm_peak,4,2700.0,2700,true,true,false,false,headway above standard,headway above standard
+2026-09-29,2026-10-14,weekday,19,bus,0,am_peak,6,1500.0,2400,true,true,false,true,headway above standard,
+2026-09-29,2026-10-14,weekday,19,bus,0,evening,9,1650.0,2520,false,false,,,,
+2026-09-29,2026-10-14,weekday,19,bus,0,midday,12,1380.0,2520,false,true,,true,,
+2026-09-29,2026-10-14,weekday,19,bus,0,pm_peak,5,1890.0,2100,true,true,false,false,headway above standard,headway above standard
+2026-09-29,2026-10-14,weekday,19,bus,1,am_peak,6,2100.0,2100,true,true,false,false,headway above standard,headway above standard
+2026-09-29,2026-10-14,weekday,19,bus,1,evening,8,2100.0,2100,false,false,,,,
+2026-09-29,2026-10-14,weekday,19,bus,1,midday,12,2100.0,2100,false,true,,false,,headway above standard
+2026-09-29,2026-10-14,weekday,19,bus,1,pm_peak,6,2100.0,2100,true,true,false,false,headway above standard,headway above standard
+2026-09-29,2026-10-14,weekday,2,bus,0,am_peak,5,2100.0,2160,true,true,false,false,headway above standard,headway above standard
+2026-09-29,2026-10-14,weekday,2,bus,0,evening,4,2400.0,4200,false,false,,,,
+2026-09-29,2026-10-14,weekday,2,bus,0,midday,10,2100.0,2760,false,true,,false,,headway above standard
+2026-09-29,2026-10-14,weekday,2,bus,0,pm_peak,5,2400.0,2400,true,true,false,false,headway above standard,headway above standard
+2026-09-29,2026-10-14,weekday,2,bus,1,am_peak,5,2100.0,2100,true,true,false,false,headway above standard,headway above standard
+2026-09-29,2026-10-14,weekday,2,bus,1,evening,6,2400.0,3900,false,false,,,,
+2026-09-29,2026-10-14,weekday,2,bus,1,midday,10,2100.0,2700,false,true,,false,,headway above standard
+2026-09-29,2026-10-14,weekday,2,bus,1,pm_peak,4,2400.0,2400,true,true,false,false,headway above standard,headway above standard
+2026-09-29,2026-10-14,weekday,20,bus,0,am_peak,2,2400.0,2400,true,true,false,false,headway above standard,headway above standard
+2026-09-29,2026-10-14,weekday,20,bus,0,evening,3,3240.0,3420,false,false,,,,
+2026-09-29,2026-10-14,weekday,20,bus,0,midday,6,3600.0,3780,false,true,,false,,headway above standard
+2026-09-29,2026-10-14,weekday,20,bus,0,pm_peak,2,3900.0,3900,true,true,false,false,headway above standard,headway above standard
+2026-09-29,2026-10-14,weekday,20,bus,1,am_peak,2,2400.0,2400,true,true,false,false,headway above standard,headway above standard
+2026-09-29,2026-10-14,weekday,20,bus,1,evening,2,3600.0,3600,false,false,,,,
+2026-09-29,2026-10-14,weekday,20,bus,1,midday,6,3600.0,3600,false,true,,false,,headway above standard
+2026-09-29,2026-10-14,weekday,20,bus,1,pm_peak,3,3600.0,3600,true,true,false,false,headway above standard,headway above standard
+2026-09-29,2026-10-14,weekday,21,bus,0,am_peak,6,1800.0,1920,true,true,false,true,headway above standard,
+2026-09-29,2026-10-14,weekday,21,bus,0,evening,8,1800.0,1800,false,false,,,,
+2026-09-29,2026-10-14,weekday,21,bus,0,midday,12,1800.0,2040,false,true,,true,,
+2026-09-29,2026-10-14,weekday,21,bus,0,pm_peak,6,1800.0,2160,true,true,false,true,headway above standard,
+2026-09-29,2026-10-14,weekday,21,bus,1,am_peak,6,1800.0,1800,true,true,false,true,headway above standard,
+2026-09-29,2026-10-14,weekday,21,bus,1,evening,8,1800.0,1800,false,false,,,,
+2026-09-29,2026-10-14,weekday,21,bus,1,midday,12,1800.0,1800,false,true,,true,,
+2026-09-29,2026-10-14,weekday,21,bus,1,pm_peak,8,1200.0,1800,true,true,false,true,headway above standard,
+2026-09-29,2026-10-14,weekday,211,bus,0,am_peak,8,1200.0,1380,true,true,false,true,headway above standard,
+2026-09-29,2026-10-14,weekday,211,bus,0,evening,10,1380.0,1560,false,false,,,,
+2026-09-29,2026-10-14,weekday,211,bus,0,midday,17,1320.0,1440,false,true,,true,,
+2026-09-29,2026-10-14,weekday,211,bus,0,pm_peak,8,1320.0,1380,true,true,false,true,headway above standard,
+2026-09-29,2026-10-14,weekday,211,bus,1,am_peak,8,1200.0,1380,true,true,false,true,headway above standard,
+2026-09-29,2026-10-14,weekday,211,bus,1,evening,10,1380.0,1680,false,false,,,,
+2026-09-29,2026-10-14,weekday,211,bus,1,midday,17,1320.0,1380,false,true,,true,,
+2026-09-29,2026-10-14,weekday,211,bus,1,pm_peak,8,1380.0,1380,true,true,false,true,headway above standard,
+2026-09-29,2026-10-14,weekday,22,bus,0,am_peak,5,1800.0,1800,true,true,false,true,headway above standard,
+2026-09-29,2026-10-14,weekday,22,bus,0,evening,8,1680.0,1980,false,false,,,,
+2026-09-29,2026-10-14,weekday,22,bus,0,midday,12,1800.0,2040,false,true,,true,,
+2026-09-29,2026-10-14,weekday,22,bus,0,pm_peak,6,1920.0,2100,true,true,false,false,headway above standard,headway above standard
+2026-09-29,2026-10-14,weekday,22,bus,1,am_peak,6,1800.0,1800,true,true,false,true,headway above standard,
+2026-09-29,2026-10-14,weekday,22,bus,1,evening,8,1800.0,1800,false,false,,,,
+2026-09-29,2026-10-14,weekday,22,bus,1,midday,12,1800.0,1800,false,true,,true,,
+2026-09-29,2026-10-14,weekday,22,bus,1,pm_peak,6,1800.0,1800,true,true,false,true,headway above standard,
+2026-09-29,2026-10-14,weekday,221,bus,0,am_peak,2,3660.0,3660,true,true,false,false,headway above standard,headway above standard
+2026-09-29,2026-10-14,weekday,221,bus,0,evening,8,1800.0,1800,false,false,,,,
+2026-09-29,2026-10-14,weekday,221,bus,0,midday,12,1800.0,2100,false,true,,true,,
+2026-09-29,2026-10-14,weekday,221,bus,0,pm_peak,6,1800.0,1800,true,true,false,true,headway above standard,
+2026-09-29,2026-10-14,weekday,221,bus,1,am_peak,3,3600.0,3660,true,true,false,false,headway above standard,headway above standard
+2026-09-29,2026-10-14,weekday,221,bus,1,evening,8,1800.0,1800,false,false,,,,
+2026-09-29,2026-10-14,weekday,221,bus,1,midday,12,1800.0,1800,false,true,,true,,
+2026-09-29,2026-10-14,weekday,221,bus,1,pm_peak,6,1800.0,1800,true,true,false,true,headway above standard,
+2026-09-29,2026-10-14,weekday,222,bus,0,am_peak,1,,,true,true,false,false,fewer than 2 departures in period,fewer than 2 departures in period
+2026-09-29,2026-10-14,weekday,222,bus,0,evening,3,3600.0,3600,false,false,,,,
+2026-09-29,2026-10-14,weekday,222,bus,0,midday,6,3600.0,3720,false,true,,false,,headway above standard
+2026-09-29,2026-10-14,weekday,222,bus,0,pm_peak,3,3600.0,3600,true,true,false,false,headway above standard,headway above standard
+2026-09-29,2026-10-14,weekday,222,bus,1,am_peak,1,,,true,true,false,false,fewer than 2 departures in period,fewer than 2 departures in period
+2026-09-29,2026-10-14,weekday,222,bus,1,evening,3,3600.0,3600,false,false,,,,
+2026-09-29,2026-10-14,weekday,222,bus,1,midday,6,3600.0,3600,false,true,,false,,headway above standard
+2026-09-29,2026-10-14,weekday,222,bus,1,pm_peak,3,3600.0,3600,true,true,false,false,headway above standard,headway above standard
+2026-09-29,2026-10-14,weekday,23,bus,0,am_peak,6,1800.0,1980,true,true,false,true,headway above standard,
+2026-09-29,2026-10-14,weekday,23,bus,0,evening,8,1800.0,1860,false,false,,,,
+2026-09-29,2026-10-14,weekday,23,bus,0,midday,12,1800.0,1920,false,true,,true,,
+2026-09-29,2026-10-14,weekday,23,bus,0,pm_peak,6,1860.0,1920,true,true,false,false,headway above standard,headway above standard
+2026-09-29,2026-10-14,weekday,23,bus,1,am_peak,6,1800.0,1800,true,true,false,true,headway above standard,
+2026-09-29,2026-10-14,weekday,23,bus,1,evening,8,1800.0,1800,false,false,,,,
+2026-09-29,2026-10-14,weekday,23,bus,1,midday,12,1800.0,1800,false,true,,true,,
+2026-09-29,2026-10-14,weekday,23,bus,1,pm_peak,6,1800.0,1800,true,true,false,true,headway above standard,
+2026-09-29,2026-10-14,weekday,235,bus,0,am_peak,3,3240.0,3480,true,true,false,false,headway above standard,headway above standard
+2026-09-29,2026-10-14,weekday,235,bus,0,evening,5,3000.0,3000,false,false,,,,
+2026-09-29,2026-10-14,weekday,235,bus,0,midday,7,3000.0,3000,false,true,,false,,headway above standard
+2026-09-29,2026-10-14,weekday,235,bus,0,pm_peak,3,3000.0,3000,true,true,false,false,headway above standard,headway above standard
+2026-09-29,2026-10-14,weekday,235,bus,1,am_peak,3,3480.0,3780,true,true,false,false,headway above standard,headway above standard
+2026-09-29,2026-10-14,weekday,235,bus,1,evening,5,3000.0,3000,false,false,,,,
+2026-09-29,2026-10-14,weekday,235,bus,1,midday,7,3000.0,3000,false,true,,false,,headway above standard
+2026-09-29,2026-10-14,weekday,235,bus,1,pm_peak,4,3000.0,3060,true,true,false,false,headway above standard,headway above standard
+2026-09-29,2026-10-14,weekday,24,bus,0,am_peak,5,1800.0,1920,true,true,false,true,headway above standard,
+2026-09-29,2026-10-14,weekday,24,bus,0,evening,6,1920.0,2700,false,false,,,,
+2026-09-29,2026-10-14,weekday,24,bus,0,midday,12,1800.0,1860,false,true,,true,,
+2026-09-29,2026-10-14,weekday,24,bus,0,pm_peak,7,1770.0,1800,true,true,false,true,headway above standard,
+2026-09-29,2026-10-14,weekday,24,bus,1,am_peak,6,1800.0,1920,true,true,false,true,headway above standard,
+2026-09-29,2026-10-14,weekday,24,bus,1,evening,7,1800.0,2700,false,false,,,,
+2026-09-29,2026-10-14,weekday,24,bus,1,midday,12,1800.0,1860,false,true,,true,,
+2026-09-29,2026-10-14,weekday,24,bus,1,pm_peak,6,1800.0,1800,true,true,false,true,headway above standard,
+2026-09-29,2026-10-14,weekday,26,bus,0,am_peak,3,2700.0,2700,true,true,false,false,headway above standard,headway above standard
+2026-09-29,2026-10-14,weekday,26,bus,0,evening,5,2490.0,2700,false,false,,,,
+2026-09-29,2026-10-14,weekday,26,bus,0,midday,8,2700.0,2940,false,true,,false,,headway above standard
+2026-09-29,2026-10-14,weekday,26,bus,0,pm_peak,4,2820.0,3060,true,true,false,false,headway above standard,headway above standard
+2026-09-29,2026-10-14,weekday,26,bus,1,am_peak,4,2700.0,2700,true,true,false,false,headway above standard,headway above standard
+2026-09-29,2026-10-14,weekday,26,bus,1,evening,5,2700.0,2700,false,false,,,,
+2026-09-29,2026-10-14,weekday,26,bus,1,midday,8,2700.0,2700,false,true,,false,,headway above standard
+2026-09-29,2026-10-14,weekday,26,bus,1,pm_peak,4,2700.0,2700,true,true,false,false,headway above standard,headway above standard
+2026-09-29,2026-10-14,weekday,27,bus,0,am_peak,6,1860.0,1980,true,true,false,false,headway above standard,headway above standard
+2026-09-29,2026-10-14,weekday,27,bus,0,evening,7,2100.0,2700,false,false,,,,
+2026-09-29,2026-10-14,weekday,27,bus,0,midday,12,1800.0,2040,false,true,,true,,
+2026-09-29,2026-10-14,weekday,27,bus,0,pm_peak,6,1800.0,2400,true,true,false,true,headway above standard,
+2026-09-29,2026-10-14,weekday,27,bus,1,am_peak,6,1800.0,1800,true,true,false,true,headway above standard,
+2026-09-29,2026-10-14,weekday,27,bus,1,evening,6,2700.0,2700,false,false,,,,
+2026-09-29,2026-10-14,weekday,27,bus,1,midday,12,1800.0,1800,false,true,,true,,
+2026-09-29,2026-10-14,weekday,27,bus,1,pm_peak,9,1200.0,1200,true,true,false,true,headway above standard,
+2026-09-29,2026-10-14,weekday,28,bus,0,am_peak,1,,,true,true,false,false,fewer than 2 departures in period,fewer than 2 departures in period
+2026-09-29,2026-10-14,weekday,28,bus,0,evening,1,,,false,false,,,,
+2026-09-29,2026-10-14,weekday,28,bus,0,midday,9,2400.0,2520,false,true,,false,,headway above standard
+2026-09-29,2026-10-14,weekday,28,bus,0,pm_peak,5,2700.0,3240,true,true,false,false,headway above standard,headway above standard
+2026-09-29,2026-10-14,weekday,28,bus,1,am_peak,1,,,true,true,false,false,fewer than 2 departures in period,fewer than 2 departures in period
+2026-09-29,2026-10-14,weekday,28,bus,1,evening,0,,,false,false,,,,
+2026-09-29,2026-10-14,weekday,28,bus,1,midday,8,2400.0,2520,false,true,,false,,headway above standard
+2026-09-29,2026-10-14,weekday,28,bus,1,pm_peak,5,2700.0,3180,true,true,false,false,headway above standard,headway above standard
+2026-09-29,2026-10-14,weekday,29,bus,0,am_peak,6,1860.0,2100,true,true,false,false,headway above standard,headway above standard
+2026-09-29,2026-10-14,weekday,29,bus,0,evening,7,1800.0,3660,false,false,,,,
+2026-09-29,2026-10-14,weekday,29,bus,0,midday,12,1800.0,2160,false,true,,true,,
+2026-09-29,2026-10-14,weekday,29,bus,0,pm_peak,6,1800.0,2520,true,true,false,true,headway above standard,
+2026-09-29,2026-10-14,weekday,29,bus,1,am_peak,5,1800.0,1860,true,true,false,true,headway above standard,
+2026-09-29,2026-10-14,weekday,29,bus,1,evening,7,1800.0,2400,false,false,,,,
+2026-09-29,2026-10-14,weekday,29,bus,1,midday,12,1800.0,2160,false,true,,true,,
+2026-09-29,2026-10-14,weekday,29,bus,1,pm_peak,6,1920.0,2100,true,true,false,false,headway above standard,headway above standard
+2026-09-29,2026-10-14,weekday,3,bus,0,am_peak,6,1800.0,1860,true,true,false,true,headway above standard,
+2026-09-29,2026-10-14,weekday,3,bus,0,evening,7,2010.0,2880,false,false,,,,
+2026-09-29,2026-10-14,weekday,3,bus,0,midday,12,1800.0,2100,false,true,,true,,
+2026-09-29,2026-10-14,weekday,3,bus,0,pm_peak,6,1920.0,2160,true,true,false,false,headway above standard,headway above standard
+2026-09-29,2026-10-14,weekday,3,bus,1,am_peak,6,1800.0,1800,true,true,false,true,headway above standard,
+2026-09-29,2026-10-14,weekday,3,bus,1,evening,7,1860.0,2520,false,false,,,,
+2026-09-29,2026-10-14,weekday,3,bus,1,midday,12,1800.0,2100,false,true,,true,,
+2026-09-29,2026-10-14,weekday,3,bus,1,pm_peak,6,1740.0,2160,true,true,false,true,headway above standard,
+2026-09-29,2026-10-14,weekday,30,bus,0,am_peak,4,2100.0,2580,true,true,false,false,headway above standard,headway above standard
+2026-09-29,2026-10-14,weekday,30,bus,0,evening,7,2100.0,2400,false,false,,,,
+2026-09-29,2026-10-14,weekday,30,bus,0,midday,10,2100.0,2100,false,true,,false,,headway above standard
+2026-09-29,2026-10-14,weekday,30,bus,0,pm_peak,5,2100.0,2100,true,true,false,false,headway above standard,headway above standard
+2026-09-29,2026-10-14,weekday,30,bus,1,am_peak,3,2310.0,2700,true,true,false,false,headway above standard,headway above standard
+2026-09-29,2026-10-14,weekday,30,bus,1,evening,7,2100.0,2100,false,false,,,,
+2026-09-29,2026-10-14,weekday,30,bus,1,midday,11,2100.0,2100,false,true,,false,,headway above standard
+2026-09-29,2026-10-14,weekday,30,bus,1,pm_peak,5,2100.0,2100,true,true,false,false,headway above standard,headway above standard
+2026-09-29,2026-10-14,weekday,34,bus,0,am_peak,5,1800.0,2100,true,true,false,true,headway above standard,
+2026-09-29,2026-10-14,weekday,34,bus,0,evening,8,1800.0,1800,false,false,,,,
+2026-09-29,2026-10-14,weekday,34,bus,0,midday,12,1800.0,2100,false,true,,true,,
+2026-09-29,2026-10-14,weekday,34,bus,0,pm_peak,6,1800.0,1800,true,true,false,true,headway above standard,
+2026-09-29,2026-10-14,weekday,34,bus,1,am_peak,6,1800.0,1800,true,true,false,true,headway above standard,
+2026-09-29,2026-10-14,weekday,34,bus,1,evening,8,1800.0,1800,false,false,,,,
+2026-09-29,2026-10-14,weekday,34,bus,1,midday,12,1800.0,2100,false,true,,true,,
+2026-09-29,2026-10-14,weekday,34,bus,1,pm_peak,6,1800.0,1800,true,true,false,true,headway above standard,
+2026-09-29,2026-10-14,weekday,35,bus,0,am_peak,0,,,true,true,false,false,fewer than 2 departures in period,fewer than 2 departures in period
+2026-09-29,2026-10-14,weekday,35,bus,0,evening,0,,,false,false,,,,
+2026-09-29,2026-10-14,weekday,35,bus,0,midday,0,,,false,true,,false,,fewer than 2 departures in period
+2026-09-29,2026-10-14,weekday,35,bus,0,pm_peak,1,,,true,true,false,false,fewer than 2 departures in period,fewer than 2 departures in period
+2026-09-29,2026-10-14,weekday,35,bus,1,am_peak,1,,,true,true,false,false,fewer than 2 departures in period,fewer than 2 departures in period
+2026-09-29,2026-10-14,weekday,35,bus,1,evening,1,,,false,false,,,,
+2026-09-29,2026-10-14,weekday,35,bus,1,midday,0,,,false,true,,false,,fewer than 2 departures in period
+2026-09-29,2026-10-14,weekday,35,bus,1,pm_peak,1,,,true,true,false,false,fewer than 2 departures in period,fewer than 2 departures in period
+2026-09-29,2026-10-14,weekday,39,bus,0,am_peak,5,2400.0,2580,true,true,false,false,headway above standard,headway above standard
+2026-09-29,2026-10-14,weekday,39,bus,0,evening,7,2100.0,2760,false,false,,,,
+2026-09-29,2026-10-14,weekday,39,bus,0,midday,9,2400.0,2460,false,true,,false,,headway above standard
+2026-09-29,2026-10-14,weekday,39,bus,0,pm_peak,4,2400.0,2760,true,true,false,false,headway above standard,headway above standard
+2026-09-29,2026-10-14,weekday,39,bus,1,am_peak,5,2370.0,2400,true,true,false,false,headway above standard,headway above standard
+2026-09-29,2026-10-14,weekday,39,bus,1,evening,7,2160.0,2400,false,false,,,,
+2026-09-29,2026-10-14,weekday,39,bus,1,midday,9,2400.0,2460,false,true,,false,,headway above standard
+2026-09-29,2026-10-14,weekday,39,bus,1,pm_peak,4,2280.0,2760,true,true,false,false,headway above standard,headway above standard
+2026-09-29,2026-10-14,weekday,4,bus,0,am_peak,6,1860.0,1860,true,true,false,false,headway above standard,headway above standard
+2026-09-29,2026-10-14,weekday,4,bus,0,evening,7,1800.0,1800,false,false,,,,
+2026-09-29,2026-10-14,weekday,4,bus,0,midday,12,1800.0,1920,false,true,,true,,
+2026-09-29,2026-10-14,weekday,4,bus,0,pm_peak,6,1800.0,1920,true,true,false,true,headway above standard,
+2026-09-29,2026-10-14,weekday,4,bus,1,am_peak,6,1800.0,1860,true,true,false,true,headway above standard,
+2026-09-29,2026-10-14,weekday,4,bus,1,evening,7,1800.0,1860,false,false,,,,
+2026-09-29,2026-10-14,weekday,4,bus,1,midday,12,1800.0,1920,false,true,,true,,
+2026-09-29,2026-10-14,weekday,4,bus,1,pm_peak,5,1800.0,1860,true,true,false,true,headway above standard,
+2026-09-29,2026-10-14,weekday,40x,express,0,am_peak,2,3600.0,3600,false,false,,,,
+2026-09-29,2026-10-14,weekday,40x,express,0,evening,0,,,false,false,,,,
+2026-09-29,2026-10-14,weekday,40x,express,0,midday,0,,,false,false,,,,
+2026-09-29,2026-10-14,weekday,40x,express,0,pm_peak,0,,,false,false,,,,
+2026-09-29,2026-10-14,weekday,40x,express,1,am_peak,1,,,false,false,,,,
+2026-09-29,2026-10-14,weekday,40x,express,1,evening,0,,,false,false,,,,
+2026-09-29,2026-10-14,weekday,40x,express,1,midday,0,,,false,false,,,,
+2026-09-29,2026-10-14,weekday,40x,express,1,pm_peak,3,3300.0,3300,false,false,,,,
+2026-09-29,2026-10-14,weekday,41x,express,0,am_peak,3,2100.0,2400,false,false,,,,
+2026-09-29,2026-10-14,weekday,41x,express,0,evening,0,,,false,false,,,,
+2026-09-29,2026-10-14,weekday,41x,express,0,midday,0,,,false,false,,,,
+2026-09-29,2026-10-14,weekday,41x,express,0,pm_peak,0,,,false,false,,,,
+2026-09-29,2026-10-14,weekday,41x,express,1,am_peak,0,,,false,false,,,,
+2026-09-29,2026-10-14,weekday,41x,express,1,evening,0,,,false,false,,,,
+2026-09-29,2026-10-14,weekday,41x,express,1,midday,0,,,false,false,,,,
+2026-09-29,2026-10-14,weekday,41x,express,1,pm_peak,3,2700.0,2700,false,false,,,,
+2026-09-29,2026-10-14,weekday,42,bus,0,am_peak,0,,,true,true,false,false,fewer than 2 departures in period,fewer than 2 departures in period
+2026-09-29,2026-10-14,weekday,42,bus,0,evening,0,,,false,false,,,,
+2026-09-29,2026-10-14,weekday,42,bus,0,midday,0,,,false,true,,false,,fewer than 2 departures in period
+2026-09-29,2026-10-14,weekday,42,bus,0,pm_peak,2,5400.0,5400,true,true,false,false,headway above standard,headway above standard
+2026-09-29,2026-10-14,weekday,42,bus,1,am_peak,2,2880.0,2880,true,true,false,false,headway above standard,headway above standard
+2026-09-29,2026-10-14,weekday,42,bus,1,evening,0,,,false,false,,,,
+2026-09-29,2026-10-14,weekday,42,bus,1,midday,0,,,false,true,,false,,fewer than 2 departures in period
+2026-09-29,2026-10-14,weekday,42,bus,1,pm_peak,0,,,true,true,false,false,fewer than 2 departures in period,fewer than 2 departures in period
+2026-09-29,2026-10-14,weekday,43,bus,0,am_peak,0,,,true,true,false,false,fewer than 2 departures in period,fewer than 2 departures in period
+2026-09-29,2026-10-14,weekday,43,bus,0,evening,4,3600.0,3780,false,false,,,,
+2026-09-29,2026-10-14,weekday,43,bus,0,midday,6,3660.0,3840,false,true,,false,,headway above standard
+2026-09-29,2026-10-14,weekday,43,bus,0,pm_peak,3,3870.0,4140,true,true,false,false,headway above standard,headway above standard
+2026-09-29,2026-10-14,weekday,43,bus,1,am_peak,1,,,true,true,false,false,fewer than 2 departures in period,fewer than 2 departures in period
+2026-09-29,2026-10-14,weekday,43,bus,1,evening,3,3750.0,3900,false,false,,,,
+2026-09-29,2026-10-14,weekday,43,bus,1,midday,6,3600.0,3840,false,true,,false,,headway above standard
+2026-09-29,2026-10-14,weekday,43,bus,1,pm_peak,3,3330.0,3900,true,true,false,false,headway above standard,headway above standard
+2026-09-29,2026-10-14,weekday,46x,express,0,am_peak,3,3420.0,3660,false,false,,,,
+2026-09-29,2026-10-14,weekday,46x,express,0,evening,0,,,false,false,,,,
+2026-09-29,2026-10-14,weekday,46x,express,0,midday,0,,,false,false,,,,
+2026-09-29,2026-10-14,weekday,46x,express,0,pm_peak,0,,,false,false,,,,
+2026-09-29,2026-10-14,weekday,46x,express,1,am_peak,0,,,false,false,,,,
+2026-09-29,2026-10-14,weekday,46x,express,1,evening,0,,,false,false,,,,
+2026-09-29,2026-10-14,weekday,46x,express,1,midday,0,,,false,false,,,,
+2026-09-29,2026-10-14,weekday,46x,express,1,pm_peak,3,2400.0,3300,false,false,,,,
+2026-09-29,2026-10-14,weekday,48x,express,0,am_peak,7,1200.0,1800,false,false,,,,
+2026-09-29,2026-10-14,weekday,48x,express,0,evening,0,,,false,false,,,,
+2026-09-29,2026-10-14,weekday,48x,express,0,midday,0,,,false,false,,,,
+2026-09-29,2026-10-14,weekday,48x,express,0,pm_peak,2,3780.0,3780,false,false,,,,
+2026-09-29,2026-10-14,weekday,48x,express,1,am_peak,2,3600.0,3600,false,false,,,,
+2026-09-29,2026-10-14,weekday,48x,express,1,evening,1,,,false,false,,,,
+2026-09-29,2026-10-14,weekday,48x,express,1,midday,0,,,false,false,,,,
+2026-09-29,2026-10-14,weekday,48x,express,1,pm_peak,6,1200.0,1200,false,false,,,,
+2026-09-29,2026-10-14,weekday,5,bus,0,am_peak,11,900.0,1020,true,true,true,true,,
+2026-09-29,2026-10-14,weekday,5,bus,0,evening,10,1740.0,1800,false,false,,,,
+2026-09-29,2026-10-14,weekday,5,bus,0,midday,24,900.0,960,false,true,,true,,
+2026-09-29,2026-10-14,weekday,5,bus,0,pm_peak,12,900.0,960,true,true,true,true,,
+2026-09-29,2026-10-14,weekday,5,bus,1,am_peak,12,900.0,900,true,true,true,true,,
+2026-09-29,2026-10-14,weekday,5,bus,1,evening,9,1800.0,1800,false,false,,,,
+2026-09-29,2026-10-14,weekday,5,bus,1,midday,24,900.0,900,false,true,,true,,
+2026-09-29,2026-10-14,weekday,5,bus,1,pm_peak,12,900.0,900,true,true,true,true,,
+2026-09-29,2026-10-14,weekday,50,bus,0,am_peak,0,,,true,true,false,false,fewer than 2 departures in period,fewer than 2 departures in period
+2026-09-29,2026-10-14,weekday,50,bus,0,evening,0,,,false,false,,,,
+2026-09-29,2026-10-14,weekday,50,bus,0,midday,0,,,false,true,,false,,fewer than 2 departures in period
+2026-09-29,2026-10-14,weekday,50,bus,0,pm_peak,2,3600.0,3600,true,true,false,false,headway above standard,headway above standard
+2026-09-29,2026-10-14,weekday,50,bus,1,am_peak,2,4980.0,4980,true,true,false,false,headway above standard,headway above standard
+2026-09-29,2026-10-14,weekday,50,bus,1,evening,0,,,false,false,,,,
+2026-09-29,2026-10-14,weekday,50,bus,1,midday,0,,,false,true,,false,,fewer than 2 departures in period
+2026-09-29,2026-10-14,weekday,50,bus,1,pm_peak,0,,,true,true,false,false,fewer than 2 departures in period,fewer than 2 departures in period
+2026-09-29,2026-10-14,weekday,51,bus,0,am_peak,1,,,true,true,false,false,fewer than 2 departures in period,fewer than 2 departures in period
+2026-09-29,2026-10-14,weekday,51,bus,0,evening,1,,,false,false,,,,
+2026-09-29,2026-10-14,weekday,51,bus,0,midday,8,2700.0,2940,false,true,,false,,headway above standard
+2026-09-29,2026-10-14,weekday,51,bus,0,pm_peak,4,3300.0,3720,true,true,false,false,headway above standard,headway above standard
+2026-09-29,2026-10-14,weekday,51,bus,1,am_peak,1,,,true,true,false,false,fewer than 2 departures in period,fewer than 2 departures in period
+2026-09-29,2026-10-14,weekday,51,bus,1,evening,1,,,false,false,,,,
+2026-09-29,2026-10-14,weekday,51,bus,1,midday,8,2700.0,3180,false,true,,false,,headway above standard
+2026-09-29,2026-10-14,weekday,51,bus,1,pm_peak,4,2940.0,2940,true,true,false,false,headway above standard,headway above standard
+2026-09-29,2026-10-14,weekday,52x,express,0,am_peak,3,2700.0,2700,false,false,,,,
+2026-09-29,2026-10-14,weekday,52x,express,0,evening,0,,,false,false,,,,
+2026-09-29,2026-10-14,weekday,52x,express,0,midday,0,,,false,false,,,,
+2026-09-29,2026-10-14,weekday,52x,express,0,pm_peak,0,,,false,false,,,,
+2026-09-29,2026-10-14,weekday,52x,express,1,am_peak,0,,,false,false,,,,
+2026-09-29,2026-10-14,weekday,52x,express,1,evening,1,,,false,false,,,,
+2026-09-29,2026-10-14,weekday,52x,express,1,midday,0,,,false,false,,,,
+2026-09-29,2026-10-14,weekday,52x,express,1,pm_peak,2,3000.0,3000,false,false,,,,
+2026-09-29,2026-10-14,weekday,53x,express,0,am_peak,6,1800.0,1800,false,false,,,,
+2026-09-29,2026-10-14,weekday,53x,express,0,evening,1,,,false,false,,,,
+2026-09-29,2026-10-14,weekday,53x,express,0,midday,0,,,false,false,,,,
+2026-09-29,2026-10-14,weekday,53x,express,0,pm_peak,1,,,false,false,,,,
+2026-09-29,2026-10-14,weekday,53x,express,1,am_peak,0,,,false,false,,,,
+2026-09-29,2026-10-14,weekday,53x,express,1,evening,1,,,false,false,,,,
+2026-09-29,2026-10-14,weekday,53x,express,1,midday,0,,,false,false,,,,
+2026-09-29,2026-10-14,weekday,53x,express,1,pm_peak,6,1800.0,1800,false,false,,,,
+2026-09-29,2026-10-14,weekday,54,bus,0,am_peak,4,2040.0,3180,true,true,false,false,headway above standard,headway above standard
+2026-09-29,2026-10-14,weekday,54,bus,0,evening,6,2280.0,2940,false,false,,,,
+2026-09-29,2026-10-14,weekday,54,bus,0,midday,9,2400.0,2760,false,true,,false,,headway above standard
+2026-09-29,2026-10-14,weekday,54,bus,0,pm_peak,5,2370.0,2400,true,true,false,false,headway above standard,headway above standard
+2026-09-29,2026-10-14,weekday,54,bus,1,am_peak,3,2340.0,2640,true,true,false,false,headway above standard,headway above standard
+2026-09-29,2026-10-14,weekday,54,bus,1,evening,6,2160.0,2400,false,false,,,,
+2026-09-29,2026-10-14,weekday,54,bus,1,midday,9,2400.0,2760,false,true,,false,,headway above standard
+2026-09-29,2026-10-14,weekday,54,bus,1,pm_peak,6,2100.0,2400,true,true,false,false,headway above standard,headway above standard
+2026-09-29,2026-10-14,weekday,55,bus,0,am_peak,3,4140.0,4620,true,true,false,false,headway above standard,headway above standard
+2026-09-29,2026-10-14,weekday,55,bus,0,evening,6,2520.0,2880,false,false,,,,
+2026-09-29,2026-10-14,weekday,55,bus,0,midday,9,2400.0,2400,false,true,,false,,headway above standard
+2026-09-29,2026-10-14,weekday,55,bus,0,pm_peak,4,2520.0,2700,true,true,false,false,headway above standard,headway above standard
+2026-09-29,2026-10-14,weekday,55,bus,1,am_peak,3,3600.0,3720,true,true,false,false,headway above standard,headway above standard
+2026-09-29,2026-10-14,weekday,55,bus,1,evening,6,2580.0,2700,false,false,,,,
+2026-09-29,2026-10-14,weekday,55,bus,1,midday,9,2400.0,2400,false,true,,false,,headway above standard
+2026-09-29,2026-10-14,weekday,55,bus,1,pm_peak,5,2550.0,2640,true,true,false,false,headway above standard,headway above standard
+2026-09-29,2026-10-14,weekday,56,bus,0,am_peak,5,1800.0,1920,true,true,false,true,headway above standard,
+2026-09-29,2026-10-14,weekday,56,bus,0,evening,9,1770.0,1800,false,false,,,,
+2026-09-29,2026-10-14,weekday,56,bus,0,midday,12,1800.0,1920,false,true,,true,,
+2026-09-29,2026-10-14,weekday,56,bus,0,pm_peak,5,1860.0,2220,true,true,false,false,headway above standard,headway above standard
+2026-09-29,2026-10-14,weekday,56,bus,1,am_peak,6,1800.0,1920,true,true,false,true,headway above standard,
+2026-09-29,2026-10-14,weekday,56,bus,1,evening,8,1800.0,1800,false,false,,,,
+2026-09-29,2026-10-14,weekday,56,bus,1,midday,12,1800.0,1920,false,true,,true,,
+2026-09-29,2026-10-14,weekday,56,bus,1,pm_peak,6,1800.0,1800,true,true,false,true,headway above standard,
+2026-09-29,2026-10-14,weekday,57,bus,0,am_peak,2,3600.0,3600,true,true,false,false,headway above standard,headway above standard
+2026-09-29,2026-10-14,weekday,57,bus,0,evening,4,3600.0,3720,false,false,,,,
+2026-09-29,2026-10-14,weekday,57,bus,0,midday,5,3750.0,3900,false,true,,false,,headway above standard
+2026-09-29,2026-10-14,weekday,57,bus,0,pm_peak,3,4140.0,4140,true,true,false,false,headway above standard,headway above standard
+2026-09-29,2026-10-14,weekday,57,bus,1,am_peak,2,3600.0,3600,true,true,false,false,headway above standard,headway above standard
+2026-09-29,2026-10-14,weekday,57,bus,1,evening,4,3600.0,3660,false,false,,,,
+2026-09-29,2026-10-14,weekday,57,bus,1,midday,6,3780.0,3900,false,true,,false,,headway above standard
+2026-09-29,2026-10-14,weekday,57,bus,1,pm_peak,3,3270.0,4140,true,true,false,false,headway above standard,headway above standard
+2026-09-29,2026-10-14,weekday,58,bus,0,am_peak,4,1620.0,1860,true,true,false,true,headway above standard,
+2026-09-29,2026-10-14,weekday,58,bus,0,evening,8,1800.0,1920,false,false,,,,
+2026-09-29,2026-10-14,weekday,58,bus,0,midday,12,1800.0,2220,false,true,,true,,
+2026-09-29,2026-10-14,weekday,58,bus,0,pm_peak,6,1800.0,1800,true,true,false,true,headway above standard,
+2026-09-29,2026-10-14,weekday,58,bus,1,am_peak,4,1620.0,1860,true,true,false,true,headway above standard,
+2026-09-29,2026-10-14,weekday,58,bus,1,evening,9,1710.0,1980,false,false,,,,
+2026-09-29,2026-10-14,weekday,58,bus,1,midday,12,1800.0,2160,false,true,,true,,
+2026-09-29,2026-10-14,weekday,58,bus,1,pm_peak,6,1800.0,1800,true,true,false,true,headway above standard,
+2026-09-29,2026-10-14,weekday,59,bus,0,am_peak,1,,,true,true,false,false,fewer than 2 departures in period,fewer than 2 departures in period
+2026-09-29,2026-10-14,weekday,59,bus,0,evening,2,3540.0,3540,false,false,,,,
+2026-09-29,2026-10-14,weekday,59,bus,0,midday,6,3600.0,3900,false,true,,false,,headway above standard
+2026-09-29,2026-10-14,weekday,59,bus,0,pm_peak,3,3810.0,3900,true,true,false,false,headway above standard,headway above standard
+2026-09-29,2026-10-14,weekday,59,bus,1,am_peak,1,,,true,true,false,false,fewer than 2 departures in period,fewer than 2 departures in period
+2026-09-29,2026-10-14,weekday,59,bus,1,evening,2,3600.0,3600,false,false,,,,
+2026-09-29,2026-10-14,weekday,59,bus,1,midday,6,3600.0,3900,false,true,,false,,headway above standard
+2026-09-29,2026-10-14,weekday,59,bus,1,pm_peak,3,3780.0,3900,true,true,false,false,headway above standard,headway above standard
+2026-09-29,2026-10-14,weekday,6,bus,0,am_peak,8,1200.0,1320,true,true,false,true,headway above standard,
+2026-09-29,2026-10-14,weekday,6,bus,0,evening,9,1800.0,1800,false,false,,,,
+2026-09-29,2026-10-14,weekday,6,bus,0,midday,18,1200.0,1260,false,true,,true,,
+2026-09-29,2026-10-14,weekday,6,bus,0,pm_peak,9,1200.0,1320,true,true,false,true,headway above standard,
+2026-09-29,2026-10-14,weekday,6,bus,1,am_peak,9,1200.0,1200,true,true,false,true,headway above standard,
+2026-09-29,2026-10-14,weekday,6,bus,1,evening,8,1800.0,1800,false,false,,,,
+2026-09-29,2026-10-14,weekday,6,bus,1,midday,18,1200.0,1200,false,true,,true,,
+2026-09-29,2026-10-14,weekday,6,bus,1,pm_peak,9,1200.0,1200,true,true,false,true,headway above standard,
+2026-09-29,2026-10-14,weekday,60,bus,0,am_peak,6,1800.0,2040,true,true,false,true,headway above standard,
+2026-09-29,2026-10-14,weekday,60,bus,0,evening,9,1680.0,1680,false,false,,,,
+2026-09-29,2026-10-14,weekday,60,bus,0,midday,12,1800.0,1860,false,true,,true,,
+2026-09-29,2026-10-14,weekday,60,bus,0,pm_peak,5,2070.0,2220,true,true,false,false,headway above standard,headway above standard
+2026-09-29,2026-10-14,weekday,60,bus,1,am_peak,6,1800.0,1800,true,true,false,true,headway above standard,
+2026-09-29,2026-10-14,weekday,60,bus,1,evening,9,1680.0,1800,false,false,,,,
+2026-09-29,2026-10-14,weekday,60,bus,1,midday,12,1800.0,1860,false,true,,true,,
+2026-09-29,2026-10-14,weekday,60,bus,1,pm_peak,5,2070.0,2280,true,true,false,false,headway above standard,headway above standard
+2026-09-29,2026-10-14,weekday,61x,express,0,am_peak,6,1800.0,1800,false,false,,,,
+2026-09-29,2026-10-14,weekday,61x,express,0,evening,0,,,false,false,,,,
+2026-09-29,2026-10-14,weekday,61x,express,0,midday,0,,,false,false,,,,
+2026-09-29,2026-10-14,weekday,61x,express,0,pm_peak,0,,,false,false,,,,
+2026-09-29,2026-10-14,weekday,61x,express,1,am_peak,0,,,false,false,,,,
+2026-09-29,2026-10-14,weekday,61x,express,1,evening,0,,,false,false,,,,
+2026-09-29,2026-10-14,weekday,61x,express,1,midday,0,,,false,false,,,,
+2026-09-29,2026-10-14,weekday,61x,express,1,pm_peak,6,1800.0,1800,false,false,,,,
+2026-09-29,2026-10-14,weekday,62x,express,0,am_peak,3,2310.0,2460,false,false,,,,
+2026-09-29,2026-10-14,weekday,62x,express,0,evening,0,,,false,false,,,,
+2026-09-29,2026-10-14,weekday,62x,express,0,midday,0,,,false,false,,,,
+2026-09-29,2026-10-14,weekday,62x,express,0,pm_peak,1,,,false,false,,,,
+2026-09-29,2026-10-14,weekday,62x,express,1,am_peak,1,,,false,false,,,,
+2026-09-29,2026-10-14,weekday,62x,express,1,evening,0,,,false,false,,,,
+2026-09-29,2026-10-14,weekday,62x,express,1,midday,0,,,false,false,,,,
+2026-09-29,2026-10-14,weekday,62x,express,1,pm_peak,3,2400.0,2700,false,false,,,,
+2026-09-29,2026-10-14,weekday,63x,express,0,am_peak,7,1200.0,1380,false,false,,,,
+2026-09-29,2026-10-14,weekday,63x,express,0,evening,1,,,false,false,,,,
+2026-09-29,2026-10-14,weekday,63x,express,0,midday,0,,,false,false,,,,
+2026-09-29,2026-10-14,weekday,63x,express,0,pm_peak,1,,,false,false,,,,
+2026-09-29,2026-10-14,weekday,63x,express,1,am_peak,2,3420.0,3420,false,false,,,,
+2026-09-29,2026-10-14,weekday,63x,express,1,evening,1,,,false,false,,,,
+2026-09-29,2026-10-14,weekday,63x,express,1,midday,0,,,false,false,,,,
+2026-09-29,2026-10-14,weekday,63x,express,1,pm_peak,6,1200.0,1800,false,false,,,,
+2026-09-29,2026-10-14,weekday,64x,express,0,am_peak,6,1500.0,1800,false,false,,,,
+2026-09-29,2026-10-14,weekday,64x,express,0,evening,0,,,false,false,,,,
+2026-09-29,2026-10-14,weekday,64x,express,0,midday,6,3600.0,3600,false,false,,,,
+2026-09-29,2026-10-14,weekday,64x,express,0,pm_peak,1,,,false,false,,,,
+2026-09-29,2026-10-14,weekday,64x,express,1,am_peak,0,,,false,false,,,,
+2026-09-29,2026-10-14,weekday,64x,express,1,evening,0,,,false,false,,,,
+2026-09-29,2026-10-14,weekday,64x,express,1,midday,6,3600.0,3600,false,false,,,,
+2026-09-29,2026-10-14,weekday,64x,express,1,pm_peak,7,1500.0,1800,false,false,,,,
+2026-09-29,2026-10-14,weekday,7,bus,0,am_peak,9,1230.0,1620,true,true,false,true,headway above standard,
+2026-09-29,2026-10-14,weekday,7,bus,0,evening,12,1200.0,1260,false,false,,,,
+2026-09-29,2026-10-14,weekday,7,bus,0,midday,19,1080.0,1500,false,true,,true,,
+2026-09-29,2026-10-14,weekday,7,bus,0,pm_peak,10,1200.0,1200,true,true,false,true,headway above standard,
+2026-09-29,2026-10-14,weekday,7,bus,1,am_peak,9,1200.0,1200,true,true,false,true,headway above standard,
+2026-09-29,2026-10-14,weekday,7,bus,1,evening,12,1200.0,1200,false,false,,,,
+2026-09-29,2026-10-14,weekday,7,bus,1,midday,19,1200.0,1200,false,true,,true,,
+2026-09-29,2026-10-14,weekday,7,bus,1,pm_peak,10,1200.0,1200,true,true,false,true,headway above standard,
+2026-09-29,2026-10-14,weekday,74x,express,0,am_peak,2,3000.0,3000,false,false,,,,
+2026-09-29,2026-10-14,weekday,74x,express,0,evening,0,,,false,false,,,,
+2026-09-29,2026-10-14,weekday,74x,express,0,midday,0,,,false,false,,,,
+2026-09-29,2026-10-14,weekday,74x,express,0,pm_peak,1,,,false,false,,,,
+2026-09-29,2026-10-14,weekday,74x,express,1,am_peak,1,,,false,false,,,,
+2026-09-29,2026-10-14,weekday,74x,express,1,evening,0,,,false,false,,,,
+2026-09-29,2026-10-14,weekday,74x,express,1,midday,0,,,false,false,,,,
+2026-09-29,2026-10-14,weekday,74x,express,1,pm_peak,2,4200.0,4200,false,false,,,,
+2026-09-29,2026-10-14,weekday,77x,express,0,am_peak,7,1200.0,1500,false,false,,,,
+2026-09-29,2026-10-14,weekday,77x,express,0,evening,1,,,false,false,,,,
+2026-09-29,2026-10-14,weekday,77x,express,0,midday,0,,,false,false,,,,
+2026-09-29,2026-10-14,weekday,77x,express,0,pm_peak,1,,,false,false,,,,
+2026-09-29,2026-10-14,weekday,77x,express,1,am_peak,2,5460.0,5460,false,false,,,,
+2026-09-29,2026-10-14,weekday,77x,express,1,evening,1,,,false,false,,,,
+2026-09-29,2026-10-14,weekday,77x,express,1,midday,0,,,false,false,,,,
+2026-09-29,2026-10-14,weekday,77x,express,1,pm_peak,6,1200.0,2400,false,false,,,,
+2026-09-29,2026-10-14,weekday,8,bus,0,am_peak,6,1800.0,1800,true,true,false,true,headway above standard,
+2026-09-29,2026-10-14,weekday,8,bus,0,evening,4,2340.0,3600,false,false,,,,
+2026-09-29,2026-10-14,weekday,8,bus,0,midday,12,1800.0,1860,false,true,,true,,
+2026-09-29,2026-10-14,weekday,8,bus,0,pm_peak,6,1800.0,1920,true,true,false,true,headway above standard,
+2026-09-29,2026-10-14,weekday,8,bus,1,am_peak,6,1800.0,1800,true,true,false,true,headway above standard,
+2026-09-29,2026-10-14,weekday,8,bus,1,evening,5,3000.0,3600,false,false,,,,
+2026-09-29,2026-10-14,weekday,8,bus,1,midday,12,1800.0,1800,false,true,,true,,
+2026-09-29,2026-10-14,weekday,8,bus,1,pm_peak,5,1800.0,1800,true,true,false,true,headway above standard,
+2026-09-29,2026-10-14,weekday,85x,express,0,am_peak,2,2700.0,2700,false,false,,,,
+2026-09-29,2026-10-14,weekday,85x,express,0,evening,0,,,false,false,,,,
+2026-09-29,2026-10-14,weekday,85x,express,0,midday,0,,,false,false,,,,
+2026-09-29,2026-10-14,weekday,85x,express,0,pm_peak,1,,,false,false,,,,
+2026-09-29,2026-10-14,weekday,85x,express,1,am_peak,0,,,false,false,,,,
+2026-09-29,2026-10-14,weekday,85x,express,1,evening,0,,,false,false,,,,
+2026-09-29,2026-10-14,weekday,85x,express,1,midday,0,,,false,false,,,,
+2026-09-29,2026-10-14,weekday,85x,express,1,pm_peak,2,3600.0,3600,false,false,,,,
+2026-09-29,2026-10-14,weekday,88x,express,0,am_peak,3,2940.0,3000,false,false,,,,
+2026-09-29,2026-10-14,weekday,88x,express,0,evening,0,,,false,false,,,,
+2026-09-29,2026-10-14,weekday,88x,express,0,midday,0,,,false,false,,,,
+2026-09-29,2026-10-14,weekday,88x,express,0,pm_peak,0,,,false,false,,,,
+2026-09-29,2026-10-14,weekday,88x,express,1,am_peak,0,,,false,false,,,,
+2026-09-29,2026-10-14,weekday,88x,express,1,evening,0,,,false,false,,,,
+2026-09-29,2026-10-14,weekday,88x,express,1,midday,0,,,false,false,,,,
+2026-09-29,2026-10-14,weekday,88x,express,1,pm_peak,3,3000.0,3300,false,false,,,,
+2026-09-29,2026-10-14,weekday,9,bus,0,am_peak,12,900.0,960,true,true,true,true,,
+2026-09-29,2026-10-14,weekday,9,bus,0,evening,12,900.0,1800,false,false,,,,
+2026-09-29,2026-10-14,weekday,9,bus,0,midday,24,900.0,1140,false,true,,true,,
+2026-09-29,2026-10-14,weekday,9,bus,0,pm_peak,11,930.0,1080,true,true,false,true,headway above standard,
+2026-09-29,2026-10-14,weekday,9,bus,1,am_peak,12,900.0,900,true,true,true,true,,
+2026-09-29,2026-10-14,weekday,9,bus,1,evening,12,900.0,1800,false,false,,,,
+2026-09-29,2026-10-14,weekday,9,bus,1,midday,24,900.0,900,false,true,,true,,
+2026-09-29,2026-10-14,weekday,9,bus,1,pm_peak,16,600.0,900,true,true,true,true,,
+2026-09-29,2026-10-17,saturday,1,bus,0,weekend_day,18,1800.0,1920,false,false,,,,
+2026-09-29,2026-10-17,saturday,1,bus,1,weekend_day,18,1800.0,1800,false,false,,,,
+2026-09-29,2026-10-17,saturday,10,bus,0,weekend_day,18,1800.0,1980,false,false,,,,
+2026-09-29,2026-10-17,saturday,10,bus,1,weekend_day,18,1800.0,1800,false,false,,,,
+2026-09-29,2026-10-17,saturday,11,bus,0,weekend_day,21,1800.0,1920,false,false,,,,
+2026-09-29,2026-10-17,saturday,11,bus,1,weekend_day,18,1800.0,1800,false,false,,,,
+2026-09-29,2026-10-17,saturday,12,bus,0,weekend_day,12,2700.0,2940,false,false,,,,
+2026-09-29,2026-10-17,saturday,12,bus,1,weekend_day,11,2760.0,2940,false,false,,,,
+2026-09-29,2026-10-17,saturday,13,bus,0,weekend_day,16,2100.0,2160,false,false,,,,
+2026-09-29,2026-10-17,saturday,13,bus,1,weekend_day,16,2100.0,2100,false,false,,,,
+2026-09-29,2026-10-17,saturday,14,bus,0,weekend_day,18,1800.0,1920,false,false,,,,
+2026-09-29,2026-10-17,saturday,14,bus,1,weekend_day,18,1800.0,2100,false,false,,,,
+2026-09-29,2026-10-17,saturday,15,bus,0,weekend_day,18,1800.0,1920,false,false,,,,
+2026-09-29,2026-10-17,saturday,15,bus,1,weekend_day,18,1800.0,1800,false,false,,,,
+2026-09-29,2026-10-17,saturday,16,bus,0,weekend_day,17,1800.0,2040,false,false,,,,
+2026-09-29,2026-10-17,saturday,16,bus,1,weekend_day,18,1800.0,1800,false,false,,,,
+2026-09-29,2026-10-17,saturday,17,bus,0,weekend_day,18,1800.0,1980,false,false,,,,
+2026-09-29,2026-10-17,saturday,17,bus,1,weekend_day,18,1800.0,1800,false,false,,,,
+2026-09-29,2026-10-17,saturday,18,bus,0,weekend_day,12,2700.0,2880,false,false,,,,
+2026-09-29,2026-10-17,saturday,18,bus,1,weekend_day,12,2700.0,2700,false,false,,,,
+2026-09-29,2026-10-17,saturday,19,bus,0,weekend_day,18,1500.0,2460,false,false,,,,
+2026-09-29,2026-10-17,saturday,19,bus,1,weekend_day,18,2100.0,2100,false,false,,,,
+2026-09-29,2026-10-17,saturday,2,bus,0,weekend_day,16,2100.0,2280,false,false,,,,
+2026-09-29,2026-10-17,saturday,2,bus,1,weekend_day,16,2100.0,2280,false,false,,,,
+2026-09-29,2026-10-17,saturday,20,bus,0,weekend_day,9,3600.0,3660,false,false,,,,
+2026-09-29,2026-10-17,saturday,20,bus,1,weekend_day,9,3600.0,3600,false,false,,,,
+2026-09-29,2026-10-17,saturday,21,bus,0,weekend_day,18,1800.0,1860,false,false,,,,
+2026-09-29,2026-10-17,saturday,21,bus,1,weekend_day,18,1800.0,1800,false,false,,,,
+2026-09-29,2026-10-17,saturday,211,bus,0,weekend_day,25,1320.0,1440,false,false,,,,
+2026-09-29,2026-10-17,saturday,211,bus,1,weekend_day,25,1320.0,1380,false,false,,,,
+2026-09-29,2026-10-17,saturday,22,bus,0,weekend_day,18,1800.0,2100,false,false,,,,
+2026-09-29,2026-10-17,saturday,22,bus,1,weekend_day,18,1800.0,1800,false,false,,,,
+2026-09-29,2026-10-17,saturday,221,bus,0,weekend_day,18,1800.0,2100,false,false,,,,
+2026-09-29,2026-10-17,saturday,221,bus,1,weekend_day,18,1800.0,1800,false,false,,,,
+2026-09-29,2026-10-17,saturday,222,bus,0,weekend_day,9,3600.0,3720,false,false,,,,
+2026-09-29,2026-10-17,saturday,222,bus,1,weekend_day,9,3600.0,3720,false,false,,,,
+2026-09-29,2026-10-17,saturday,23,bus,0,weekend_day,18,1800.0,2040,false,false,,,,
+2026-09-29,2026-10-17,saturday,23,bus,1,weekend_day,18,1800.0,1800,false,false,,,,
+2026-09-29,2026-10-17,saturday,235,bus,0,weekend_day,11,3000.0,3000,false,false,,,,
+2026-09-29,2026-10-17,saturday,235,bus,1,weekend_day,11,3000.0,3000,false,false,,,,
+2026-09-29,2026-10-17,saturday,24,bus,0,weekend_day,18,1800.0,1800,false,false,,,,
+2026-09-29,2026-10-17,saturday,24,bus,1,weekend_day,18,1800.0,1920,false,false,,,,
+2026-09-29,2026-10-17,saturday,26,bus,0,weekend_day,12,2700.0,2880,false,false,,,,
+2026-09-29,2026-10-17,saturday,26,bus,1,weekend_day,12,2700.0,2700,false,false,,,,
+2026-09-29,2026-10-17,saturday,27,bus,0,weekend_day,18,1800.0,2040,false,false,,,,
+2026-09-29,2026-10-17,saturday,27,bus,1,weekend_day,18,1800.0,1800,false,false,,,,
+2026-09-29,2026-10-17,saturday,28,bus,0,weekend_day,14,2400.0,2400,false,false,,,,
+2026-09-29,2026-10-17,saturday,28,bus,1,weekend_day,13,2400.0,2580,false,false,,,,
+2026-09-29,2026-10-17,saturday,29,bus,0,weekend_day,17,1800.0,2040,false,false,,,,
+2026-09-29,2026-10-17,saturday,29,bus,1,weekend_day,18,1800.0,2040,false,false,,,,
+2026-09-29,2026-10-17,saturday,3,bus,0,weekend_day,18,1800.0,2040,false,false,,,,
+2026-09-29,2026-10-17,saturday,3,bus,1,weekend_day,18,1800.0,1800,false,false,,,,
+2026-09-29,2026-10-17,saturday,30,bus,0,weekend_day,15,2100.0,2100,false,false,,,,
+2026-09-29,2026-10-17,saturday,30,bus,1,weekend_day,16,2100.0,2100,false,false,,,,
+2026-09-29,2026-10-17,saturday,34,bus,0,weekend_day,18,1800.0,1920,false,false,,,,
+2026-09-29,2026-10-17,saturday,34,bus,1,weekend_day,18,1800.0,1800,false,false,,,,
+2026-09-29,2026-10-17,saturday,35,bus,0,weekend_day,1,,,false,false,,,,
+2026-09-29,2026-10-17,saturday,35,bus,1,weekend_day,1,,,false,false,,,,
+2026-09-29,2026-10-17,saturday,39,bus,0,weekend_day,13,2400.0,2520,false,false,,,,
+2026-09-29,2026-10-17,saturday,39,bus,1,weekend_day,13,2400.0,2400,false,false,,,,
+2026-09-29,2026-10-17,saturday,4,bus,0,weekend_day,18,1800.0,1980,false,false,,,,
+2026-09-29,2026-10-17,saturday,4,bus,1,weekend_day,17,1800.0,1920,false,false,,,,
+2026-09-29,2026-10-17,saturday,43,bus,0,weekend_day,9,3600.0,3660,false,false,,,,
+2026-09-29,2026-10-17,saturday,43,bus,1,weekend_day,9,3600.0,3600,false,false,,,,
+2026-09-29,2026-10-17,saturday,5,bus,0,weekend_day,27,1200.0,1380,false,false,,,,
+2026-09-29,2026-10-17,saturday,5,bus,1,weekend_day,27,1200.0,1200,false,false,,,,
+2026-09-29,2026-10-17,saturday,51,bus,0,weekend_day,12,2700.0,2700,false,false,,,,
+2026-09-29,2026-10-17,saturday,51,bus,1,weekend_day,12,2700.0,3000,false,false,,,,
+2026-09-29,2026-10-17,saturday,54,bus,0,weekend_day,14,2400.0,2400,false,false,,,,
+2026-09-29,2026-10-17,saturday,54,bus,1,weekend_day,13,2400.0,2400,false,false,,,,
+2026-09-29,2026-10-17,saturday,55,bus,0,weekend_day,14,2400.0,3360,false,false,,,,
+2026-09-29,2026-10-17,saturday,55,bus,1,weekend_day,13,2400.0,2400,false,false,,,,
+2026-09-29,2026-10-17,saturday,56,bus,0,weekend_day,18,1800.0,2040,false,false,,,,
+2026-09-29,2026-10-17,saturday,56,bus,1,weekend_day,18,1800.0,1860,false,false,,,,
+2026-09-29,2026-10-17,saturday,57,bus,0,weekend_day,8,3720.0,3960,false,false,,,,
+2026-09-29,2026-10-17,saturday,57,bus,1,weekend_day,9,3720.0,3900,false,false,,,,
+2026-09-29,2026-10-17,saturday,58,bus,0,weekend_day,18,1800.0,2220,false,false,,,,
+2026-09-29,2026-10-17,saturday,58,bus,1,weekend_day,18,1800.0,2160,false,false,,,,
+2026-09-29,2026-10-17,saturday,59,bus,0,weekend_day,9,3600.0,3600,false,false,,,,
+2026-09-29,2026-10-17,saturday,59,bus,1,weekend_day,9,3600.0,3600,false,false,,,,
+2026-09-29,2026-10-17,saturday,6,bus,0,weekend_day,18,1800.0,1920,false,false,,,,
+2026-09-29,2026-10-17,saturday,6,bus,1,weekend_day,18,1800.0,1800,false,false,,,,
+2026-09-29,2026-10-17,saturday,60,bus,0,weekend_day,18,1800.0,1920,false,false,,,,
+2026-09-29,2026-10-17,saturday,60,bus,1,weekend_day,17,1800.0,2100,false,false,,,,
+2026-09-29,2026-10-17,saturday,7,bus,0,weekend_day,27,1200.0,1260,false,false,,,,
+2026-09-29,2026-10-17,saturday,7,bus,1,weekend_day,27,1200.0,1200,false,false,,,,
+2026-09-29,2026-10-17,saturday,8,bus,0,weekend_day,18,1800.0,1860,false,false,,,,
+2026-09-29,2026-10-17,saturday,8,bus,1,weekend_day,17,1800.0,1800,false,false,,,,
+2026-09-29,2026-10-17,saturday,9,bus,0,weekend_day,35,900.0,1080,false,false,,,,
+2026-09-29,2026-10-17,saturday,9,bus,1,weekend_day,36,900.0,900,false,false,,,,
+2026-09-29,2026-10-18,sunday,1,bus,0,weekend_day,8,3600.0,3660,false,false,,,,
+2026-09-29,2026-10-18,sunday,1,bus,1,weekend_day,9,3600.0,3600,false,false,,,,
+2026-09-29,2026-10-18,sunday,10,bus,0,weekend_day,17,1800.0,1920,false,false,,,,
+2026-09-29,2026-10-18,sunday,10,bus,1,weekend_day,18,1800.0,1800,false,false,,,,
+2026-09-29,2026-10-18,sunday,11,bus,0,weekend_day,21,1800.0,2040,false,false,,,,
+2026-09-29,2026-10-18,sunday,11,bus,1,weekend_day,18,1800.0,1800,false,false,,,,
+2026-09-29,2026-10-18,sunday,12,bus,0,weekend_day,12,2700.0,2700,false,false,,,,
+2026-09-29,2026-10-18,sunday,12,bus,1,weekend_day,12,2700.0,2760,false,false,,,,
+2026-09-29,2026-10-18,sunday,13,bus,0,weekend_day,9,3600.0,3660,false,false,,,,
+2026-09-29,2026-10-18,sunday,13,bus,1,weekend_day,9,3600.0,3600,false,false,,,,
+2026-09-29,2026-10-18,sunday,14,bus,0,weekend_day,9,3600.0,3660,false,false,,,,
+2026-09-29,2026-10-18,sunday,14,bus,1,weekend_day,9,3600.0,3600,false,false,,,,
+2026-09-29,2026-10-18,sunday,15,bus,0,weekend_day,18,1800.0,1800,false,false,,,,
+2026-09-29,2026-10-18,sunday,15,bus,1,weekend_day,18,1800.0,1800,false,false,,,,
+2026-09-29,2026-10-18,sunday,16,bus,0,weekend_day,18,1800.0,2160,false,false,,,,
+2026-09-29,2026-10-18,sunday,16,bus,1,weekend_day,18,1800.0,1800,false,false,,,,
+2026-09-29,2026-10-18,sunday,17,bus,0,weekend_day,8,3600.0,3840,false,false,,,,
+2026-09-29,2026-10-18,sunday,17,bus,1,weekend_day,9,3600.0,3600,false,false,,,,
+2026-09-29,2026-10-18,sunday,18,bus,0,weekend_day,12,2700.0,2820,false,false,,,,
+2026-09-29,2026-10-18,sunday,18,bus,1,weekend_day,12,2700.0,2700,false,false,,,,
+2026-09-29,2026-10-18,sunday,19,bus,0,weekend_day,18,1620.0,2280,false,false,,,,
+2026-09-29,2026-10-18,sunday,19,bus,1,weekend_day,18,2100.0,2100,false,false,,,,
+2026-09-29,2026-10-18,sunday,2,bus,0,weekend_day,9,3600.0,4140,false,false,,,,
+2026-09-29,2026-10-18,sunday,2,bus,1,weekend_day,9,3600.0,4440,false,false,,,,
+2026-09-29,2026-10-18,sunday,21,bus,0,weekend_day,9,3600.0,3840,false,false,,,,
+2026-09-29,2026-10-18,sunday,21,bus,1,weekend_day,9,3600.0,3600,false,false,,,,
+2026-09-29,2026-10-18,sunday,211,bus,0,weekend_day,12,2700.0,2820,false,false,,,,
+2026-09-29,2026-10-18,sunday,211,bus,1,weekend_day,12,2700.0,2700,false,false,,,,
+2026-09-29,2026-10-18,sunday,22,bus,0,weekend_day,9,3600.0,3600,false,false,,,,
+2026-09-29,2026-10-18,sunday,22,bus,1,weekend_day,9,3600.0,3600,false,false,,,,
+2026-09-29,2026-10-18,sunday,221,bus,0,weekend_day,9,3600.0,3660,false,false,,,,
+2026-09-29,2026-10-18,sunday,221,bus,1,weekend_day,9,3600.0,3600,false,false,,,,
+2026-09-29,2026-10-18,sunday,222,bus,0,weekend_day,9,3600.0,3600,false,false,,,,
+2026-09-29,2026-10-18,sunday,222,bus,1,weekend_day,9,3600.0,3600,false,false,,,,
+2026-09-29,2026-10-18,sunday,23,bus,0,weekend_day,9,3600.0,3720,false,false,,,,
+2026-09-29,2026-10-18,sunday,23,bus,1,weekend_day,9,3600.0,3600,false,false,,,,
+2026-09-29,2026-10-18,sunday,235,bus,0,weekend_day,11,3000.0,3000,false,false,,,,
+2026-09-29,2026-10-18,sunday,235,bus,1,weekend_day,11,3000.0,3000,false,false,,,,
+2026-09-29,2026-10-18,sunday,24,bus,0,weekend_day,12,2700.0,2700,false,false,,,,
+2026-09-29,2026-10-18,sunday,24,bus,1,weekend_day,12,2700.0,2700,false,false,,,,
+2026-09-29,2026-10-18,sunday,26,bus,0,weekend_day,9,3600.0,3660,false,false,,,,
+2026-09-29,2026-10-18,sunday,26,bus,1,weekend_day,9,3600.0,3600,false,false,,,,
+2026-09-29,2026-10-18,sunday,27,bus,0,weekend_day,12,2700.0,2940,false,false,,,,
+2026-09-29,2026-10-18,sunday,27,bus,1,weekend_day,12,2700.0,2700,false,false,,,,
+2026-09-29,2026-10-18,sunday,29,bus,0,weekend_day,18,1800.0,1860,false,false,,,,
+2026-09-29,2026-10-18,sunday,29,bus,1,weekend_day,18,1800.0,1800,false,false,,,,
+2026-09-29,2026-10-18,sunday,3,bus,0,weekend_day,17,1800.0,2220,false,false,,,,
+2026-09-29,2026-10-18,sunday,3,bus,1,weekend_day,18,1800.0,2100,false,false,,,,
+2026-09-29,2026-10-18,sunday,34,bus,0,weekend_day,12,2700.0,2700,false,false,,,,
+2026-09-29,2026-10-18,sunday,34,bus,1,weekend_day,12,2700.0,2700,false,false,,,,
+2026-09-29,2026-10-18,sunday,35,bus,0,weekend_day,1,,,false,false,,,,
+2026-09-29,2026-10-18,sunday,35,bus,1,weekend_day,1,,,false,false,,,,
+2026-09-29,2026-10-18,sunday,39,bus,0,weekend_day,13,2400.0,2520,false,false,,,,
+2026-09-29,2026-10-18,sunday,39,bus,1,weekend_day,13,2400.0,2400,false,false,,,,
+2026-09-29,2026-10-18,sunday,4,bus,0,weekend_day,18,1800.0,1860,false,false,,,,
+2026-09-29,2026-10-18,sunday,4,bus,1,weekend_day,18,1800.0,1800,false,false,,,,
+2026-09-29,2026-10-18,sunday,5,bus,0,weekend_day,27,1200.0,1320,false,false,,,,
+2026-09-29,2026-10-18,sunday,5,bus,1,weekend_day,27,1200.0,1200,false,false,,,,
+2026-09-29,2026-10-18,sunday,55,bus,0,weekend_day,14,2400.0,2400,false,false,,,,
+2026-09-29,2026-10-18,sunday,55,bus,1,weekend_day,14,2400.0,2400,false,false,,,,
+2026-09-29,2026-10-18,sunday,56,bus,0,weekend_day,18,1800.0,1800,false,false,,,,
+2026-09-29,2026-10-18,sunday,56,bus,1,weekend_day,18,1800.0,1800,false,false,,,,
+2026-09-29,2026-10-18,sunday,57,bus,0,weekend_day,8,3720.0,3900,false,false,,,,
+2026-09-29,2026-10-18,sunday,57,bus,1,weekend_day,9,3660.0,3900,false,false,,,,
+2026-09-29,2026-10-18,sunday,58,bus,0,weekend_day,18,1800.0,1800,false,false,,,,
+2026-09-29,2026-10-18,sunday,58,bus,1,weekend_day,18,1800.0,1800,false,false,,,,
+2026-09-29,2026-10-18,sunday,6,bus,0,weekend_day,18,1800.0,1860,false,false,,,,
+2026-09-29,2026-10-18,sunday,6,bus,1,weekend_day,18,1800.0,1800,false,false,,,,
+2026-09-29,2026-10-18,sunday,60,bus,0,weekend_day,18,1800.0,1860,false,false,,,,
+2026-09-29,2026-10-18,sunday,60,bus,1,weekend_day,18,1800.0,1800,false,false,,,,
+2026-09-29,2026-10-18,sunday,7,bus,0,weekend_day,27,1230.0,1380,false,false,,,,
+2026-09-29,2026-10-18,sunday,7,bus,1,weekend_day,27,1200.0,1200,false,false,,,,
+2026-09-29,2026-10-18,sunday,8,bus,0,weekend_day,12,2700.0,2820,false,false,,,,
+2026-09-29,2026-10-18,sunday,8,bus,1,weekend_day,12,2700.0,2700,false,false,,,,
+2026-09-29,2026-10-18,sunday,9,bus,0,weekend_day,36,900.0,1080,false,false,,,,
+2026-09-29,2026-10-18,sunday,9,bus,1,weekend_day,36,900.0,900,false,false,,,,
